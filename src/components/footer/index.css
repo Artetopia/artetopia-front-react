@@ -1,0 +1,32 @@
+/* font-family: 'Karla', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+.footer-divider {
+    color: #E91E63;
+    margin-bottom: 105px;
+}
+
+.about-artetopia .artetopia {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-artetopia .logo-artetopia-footer {
+    width: 75px;
+    height: 50px;
+}
+
+.about-artetopia p {
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    color: #9F9F9F;
+    margin-top: 47px;
+}
+
+.sections-footer{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 22px;
+}
