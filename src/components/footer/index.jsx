@@ -1,5 +1,5 @@
 import "./index.css";
-
+import FacebookLogo from "../../assets/FacebookLogo";
 const Footer = () => {
     return (
         <>
@@ -11,6 +11,9 @@ const Footer = () => {
                         <img className='col-lg-3 logo-artetopia-footer rounded-4' src='https://us.123rf.com/450wm/topicha/topicha1701/topicha170100155/70371032-logotipo-colorido-abstracto-con-cruzar-l%C3%ADneas-anaranjadas-y-rojas-plantilla-de-logotipo-gen%C3%A9rico.jpg' alt='logo-artetopia'/>
                         <h2 className='artetopia col-lg-9 text-start fw-semibold'>Artetopia</h2>
                         <p className='text-start lh-sm'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
+                        <div>
+                            <FacebookLogo/>
+                        </div>
                     </div>  
 
                     <div className='col-lg-2 menu-section'>

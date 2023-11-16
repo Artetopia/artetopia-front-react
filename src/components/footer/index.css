@@ -52,6 +52,7 @@ font-family: 'Roboto', sans-serif; */
   height: 42px;
   width: 46px;
   background-color: #E91E63;
+  border-radius: 8px;
 }
 
 .contact-section .phone-container {
