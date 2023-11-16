@@ -31,8 +31,8 @@ const Footer = () => {
                                 <div className="col-4 email-container">
                                 </div>
                                 <div className="col-8">
-                                    <p>Email</p>
-                                    <p className='direct-info-contact'>artetopia@arte.com</p>
+                                    <p className='email-text fw-medium lh-1'>Email</p>
+                                    <p className='direct-info-contact lh-1'>artetopia@arte.com</p>
                                 </div>
                             </div>
                         </div>
@@ -41,8 +41,8 @@ const Footer = () => {
                                 <div className="col-4 phone-container">
                                 </div>
                                 <div className="col-8">
-                                    <p>Telefono</p>
-                                    <p className='direct-info-contact'>55-ARTETOPIA</p>
+                                    <p className='phone-text fw-medium lh-1'>Telefono</p>
+                                    <p className='direct-info-contact lh-1'>55-ARTETOPIA</p>
                                 </div>
                             </div>
                         </div>
@@ -59,9 +59,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr className='footer-divider border-3 opacity-75'/>  
-                <p className='copyright-text d-flex justify-content-center'>Copyright<p className='name-artetopia'> Artetopia </p>2023 | Todos los derechos reservados</p> 
+                <small className='copyright-text d-flex justify-content-center'> Copyright <p className='name-artetopia'> Artetopia </p> 2023 | Todos los derechos reservados</small> 
+                    
+                
             </div>
-
         </>
     )
 }
