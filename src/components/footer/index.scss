@@ -21,8 +21,13 @@ font-family: 'Roboto', sans-serif; */
 
 .about-artetopia p {
     font-family: 'Karla', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #9F9F9F;
+    margin-top: 47px;
+}
+
+.social-media-icons  {
+    width: auto;
 }
 
 .sections-footer {
@@ -57,12 +62,23 @@ font-family: 'Roboto', sans-serif; */
     width: 46px;
     background-color: $primaryColor;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .contact-section .phone-container {
     height: 42px;
     width: 46px;
     background-color: $primaryColor;
+    border-radius: 8px;
+}
+
+.phone-vector {
+    position: relative;
+    right: 3px;
+    top: 3px;
 }
 
 .direct-info-contact {
