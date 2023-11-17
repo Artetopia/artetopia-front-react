@@ -2,6 +2,11 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif; */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .footer-divider {
   color: #E91E63;
   margin-bottom: 105px;
@@ -78,22 +83,31 @@ font-family: 'Roboto', sans-serif; */
 
 .direct-info-contact {
   color: #E91E63;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .more-info-button {
   background-color: #FDCCDD;
   border-radius: 4px;
-  width: 173px;
+  width: 143px;
   height: 68px;
-  margin: 15px;
 }
 
 .more-info-container .more-info-text {
   font-family: "Karla", sans-serif;
   font-size: 24px;
-  text-align: center;
-  position: relative;
-  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .more-info-container {
@@ -119,4 +133,10 @@ font-family: 'Roboto', sans-serif; */
 .phone-text {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
+}
+
+@media (max-width: 991.98px) {
+  .useful-pages-section {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

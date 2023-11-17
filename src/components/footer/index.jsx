@@ -4,6 +4,7 @@ import InstagramLogo from "../social-media/InstagramLogo";
 import LindekinLogo from "../social-media/LinkedinLogo";
 import TiktokLogo from "../social-media/TiktokLogo";
 import WhatsappLogo from "../social-media/WhatsappLogo";
+import TwitterLogo from "../social-media/TwitterLogo";
 
 
 const Footer = () => {
@@ -33,6 +34,7 @@ const Footer = () => {
                         <p className='text-start lh-sm'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
                         <div className='row row-cols-auto d-flex align-items-center' >
                             <FacebookLogo />
+                            <TwitterLogo />
                             <InstagramLogo />
                             <WhatsappLogo />
                             <LindekinLogo />
@@ -51,7 +53,7 @@ const Footer = () => {
                         <p className='link-footer'>Aviso de privacidad</p>
                         <p className='link-footer'>Términos y condiciones</p>
                     </div>
-                    <div className='col-lg-3 contact-section'>
+                    <div className='col-lg-3 col-md-4 col-6 contact-section'>
                         <p className='sections-footer'>Contactanos</p>
                         <div className="container">
                             <div className="row contact-container">
@@ -77,13 +79,16 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container more-info-container">
-                    <div className="row d-flex justify-content-center ">
-                        <div className="col-3 more-info-button">
-                            <p className="more-info-text">Artesano</p>
+                <div className="container more-info-container ">
+                    <div className="row d-flex justify-content-lg-center">
+                        <div className="row col-lg-3 col-md-4 col-4 more-info-button me-3">
+                            <p className="more-info-text col-6 m-0">Artesano</p>
+                            <svg className='col-4  d-flex align-items-center justify-content-center mt-4' width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         </div>
-                        <div className="col-3 more-info-button">
-                            <p className="more-info-text">Materiales</p>
+                        <div className="row col-lg-3 col-md-4 col-4 more-info-button ms-3">
+                            <p className="more-info-text col-6 m-0">Materiales</p>
+                            <svg className='col-4  d-flex align-items-center justify-content-center mt-4' width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
                         </div>
                     </div>
                 </div>
