@@ -139,4 +139,14 @@ font-family: 'Roboto', sans-serif; */
   .useful-pages-section {
     display: none;
   }
+}
+@media (max-width: 992px) {
+  .more-info-text {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 992px) {
+  .contact-container-text {
+    font-size: 10px !important;
+  }
 }/*# sourceMappingURL=index.css.map */
