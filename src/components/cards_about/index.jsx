@@ -2,7 +2,7 @@ import { Card, CardBody, CardTitle, CardText, Row, Col } from 'reactstrap';
 const CardsAbout = ({title,text,background_img}) => {
     return (
         <>
-          <Col className='d-flex justify-content-center'>
+          <Col className='d-flex justify-content-center pt-3'>
             <Card inverse
               style={{
                 width: '326px',
