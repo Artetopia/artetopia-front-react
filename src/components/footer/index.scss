@@ -146,6 +146,10 @@ font-family: 'Roboto', sans-serif; */
     }
 }
 
-  
+    
 
-  
+@media (min-width: 991.98px) { 
+    .copyright-text-mobile  {
+    display: none;
+    }
+} 
