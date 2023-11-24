@@ -44,8 +44,8 @@ function App() {
                     alt="Card image cap"
                   />
                 </div>
-                <div className="card-body pt-5">
-                  <div className="d-flex flex-row profile-container">
+                <div className="card-body position-relative pt-5">
+                  <div className="d-flex flex-row profile-container position-absolute">
                   <img
                     src="https://randomuser.me/api/portraits/men/64.jpg"
                     alt="profile-image"
