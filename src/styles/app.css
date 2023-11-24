@@ -1,3 +1,17 @@
+.card_about {
+  width: 100% !important;
+  height: 510px !important;
+}
+
+.card_text {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+}
+
+.card_title {
+  font-family: "Montserrat", sans-serif;
+}
+
 .card_artetopia1 {
   text-align: center;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2B2E4A 100%), url(../images/artetopia_1.png);
