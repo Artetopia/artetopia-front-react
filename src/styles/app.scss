@@ -1,56 +1,70 @@
-$primaryColor: #E91E63;
-$secondaryColor: #2B2E4A;
+$primaryColor: #e91e63;
+$secondaryColor: #2b2e4a;
 $textColorBlack: #000000;
-$textColorWhite: #FFFFFF;
+$textColorWhite: #ffffff;
 
-*{
-    font-family: 'Karla', sans-serif;
+* {
+  font-family: "Karla", sans-serif;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .heading_primary {
-    color: $primaryColor;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+  color: $primaryColor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.bg_secondary {
+  background-color: $secondaryColor;
+}
+
+.button-primary {
+  background-color: $primaryColor;
+  color: $textColorWhite;
+  border: 1px solid $primaryColor;
+  padding: 8px 10px;
+  border-radius: 4px;
+  width: 300px;
+  max-width: 100%;
 }
 
 .input_primary {
-    border: 1px solid $secondaryColor !important;
-    max-width: 500px;
-    border-radius: 30px !important;
+  border: 1px solid $secondaryColor !important;
+  max-width: 500px;
+  border-radius: 30px !important;
 }
 
-/*Profile card 2*/
-.artesano-card .card-img-block{
-    float:left;
-    width:100%;
-    height:150px;
-    overflow:hidden;
-}
-.artesano-card .card-body{
-    position:relative;
-}
-
-.artesano-card .profile-container {
-    position: absolute;
-    position: absolute;
-    top: -42px;
-    left: 15%;
-}
-.artesano-card .profile {
-  border-radius: 50%;
-  max-width: 75px;
-  border: 3px solid rgba(255, 255, 255, 1);
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
-}
-.artesano-card h5{
-    font-weight:600;
-    color:#6ab04c;
-}
-.artesano-card .card-text{
-    font-weight:300;
-    font-size:15px;
+.artesano-card {
+  .card-img-block {
+    float: left;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  .card-body {
+    position: relative;
+    .profile-container {
+      position: absolute;
+      position: absolute;
+      top: -42px;
+      left: 15%;
+      .profile {
+        border-radius: 50%;
+        max-width: 75px;
+        border: 3px solid rgba(255, 255, 255, 1);
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+      }
+      h5 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: $secondaryColor;
+      }
+    }
+  }
+  .card-text {
+    font-weight: 300;
+    font-size: 15px;
+  }
 }
