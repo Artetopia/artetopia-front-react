@@ -9,12 +9,11 @@ $gradientCard: linear-gradient(180deg,
 $fontkarla: "Karla", sans-serif;
 
 .card_about {
-  width: 100% !important;
-  height:510px !important;
+ height:30rem !important;
 }
 .card_text {
   font-family: $fontkarla;
-  font-size: 18px;
+  font-size: 18px;  
 }
 
 .card_title {

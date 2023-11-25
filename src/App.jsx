@@ -16,8 +16,7 @@ function App() {
       </section>
 
       <section id='about'>
-      <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
-        <div className="row m-5 text-center">
+        <Row lg="3" md="1" sm="1" className="text-center">
           <CardsAbout
             background_img="card_artetopia1"
             title="Autenticidad cultural"
@@ -34,8 +33,7 @@ function App() {
             title="Calidad y exclusividad"
             text="Los productos artesanales mexicanos son reconocidos por su alta calidad y atención al detalle, ofreciendo piezas únicas y exclusivas que no encontrarás en grandes cadenas comerciales." />
 
-        </div>
-        
+        </Row>
       </section>
 
       <section id='artesanos'>
@@ -53,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

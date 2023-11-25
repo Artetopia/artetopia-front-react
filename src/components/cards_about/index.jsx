@@ -1,22 +1,25 @@
 import { Card, CardBody, CardTitle, CardText, Row, Col } from 'reactstrap';
-import '../../styles/app.css';
 const CardsAbout = ({title,text,background_img}) => {
     return (
         <>
-          <div className='col-md-4 mb-4 d-flex justify-content-center '>
+          <Col className='d-flex justify-content-center pt-3'>
             <Card inverse
-              className={` card_about text-center ${background_img} position-relative p-3 shadow`}
+              //style={{
+               // width: '326px',
+                //height: '450px'
+              //}}
+              className={`card_about text-center ${background_img} position-relative w-75`}
             >
-              <CardBody className='position-absolute top-50 '>
-                <CardTitle tag="h4" className='card_title px-3 pb-1'>
+              <CardBody className='position-absolute top-50 start-0 '>
+                <CardTitle tag="h5" className='px-3 pb-1'>
                  {title}
                 </CardTitle>
-                <CardText className='card_text p-2'>
+                <CardText className='px-3'>
                   {text}
                 </CardText>
               </CardBody>
             </Card>
-          </div>
+          </Col>
         </>
     )
 }
