@@ -6,3 +6,8 @@ $textColorBlack: #000000;
 $textColorWhite: #ffffff;
 $fontkarla: "Karla", sans-serif;
 $fontMontserrat: "Montserrat", sans-serif;
+$gradientCard: linear-gradient(180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(44, 47, 75, 1) 55%,
+    rgba(44, 47, 75, 1) 82%,
+    $secondaryColor 100%);

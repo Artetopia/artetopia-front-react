@@ -1,4 +1,4 @@
-import { Card, CardBody, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, Col } from 'reactstrap';
 const CardsAbout = ({title,text,background_img}) => {
     return (
         <>

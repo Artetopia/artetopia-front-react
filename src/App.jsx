@@ -1,9 +1,10 @@
 import './styles/app.scss';
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
-import React from 'react';
+//import React from 'react';
 import CardsAbout from './components/cards_about';
 import { Row} from 'reactstrap';
+
 function App() {
   return (
     <>
