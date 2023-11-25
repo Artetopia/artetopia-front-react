@@ -1,5 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;700&family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+/* Navbar  */
+.navbar.open {
+  height: 50px; /* Adjust the height as needed */
+}
+
+.navbar {
+    background-color: hsl(234,26%,23%);  
+}
+
+.navbar_icon {
+    font-size: 32px;
+    color:white;
+    cursor: pointer;
+}
+
+/* Place of logo */
 .logo  {
     width: 47px;
     height: 40px;
     background-color: gray;
+    margin: 10px;
 }
+
+
+
+.me-auto {
+    font-family: 'Karla', sans-serif;
+}
+
+.navbar-nav {
+    text-align: center;
+    font-size: 18px; 
+}
+
+
+/* Hero section */
+
+.hero_image {
+    display: none;
+}
+
+.hero_section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+}
+
+/* Highligt word */
+
+.pink_artetopia {
+    color: #E91E63;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Title */
+
+.top_description {
+    display: none;
+}
+
+.title {
+    /* margin: 10px; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* Hero section paragraph */
+.intro_hero {
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    width: 328px;
+    height: 105px;
+    text-align: center;
+    line-height: 25px;
+}
+
+ /* Registrarse button */
+
+.registrarse_hero {
+    background-color: #E91E63;
+    color: white;
+    width: 151px;
+    height: 41px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 6px;
+    margin: 10px;
+    border: none;
+    margin-top: 60px;
+    letter-spacing: 0px;
+    transition: all 0.5s;
+}
+
+.registrarse_hero:hover {
+    background-color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border: 3px solid #E91E63;
+    color: #E91E63;
+}
+
+.desktop_video_icon {
+    display: none;
+}
+
+.video_description {
+    display: none;
+}
+
+
+
+
+/* Media Querries */
+
+@media only screen and (min-width: 744px) {
+    .title {
+        font-size: 40px;
+    }
+    .pink_artetopia {
+        font-size: 40px;
+    }
+    .intro_hero {
+        font-size: 18px;
+        width: 565px;
+        height: 63px;
+    }
+    .registrarse_hero {
+        font-size: 16px;
+        width: 151px;
+        height: 41px;
+        border-radius: 4px;
+    }
+    .desktop_menu {
+        display: flex;
+        align-items:center;
+    }
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .title {
+        font-size: 70px;
+    }
+    .pink_artetopia {
+        font-size: 70px;
+    }
+    .hero_image {
+        display: block;
+    }
+    .hero_section_desktop {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 30px;
+        margin-top: 80px;
+    }
+
+    .top_description {
+        display: block;
+    }
+
+    
+    .title {
+        width: 525px;
+        text-align: left;
+        margin: 0px;
+    }
+
+    
+    .intro_hero {
+        text-align: left;
+        font-size: 18px;
+        width: 520px;
+        margin-top: 20px;
+        margin-bottom: 58px;
+        margin-left: 58px;
+        margin-right: 58px;
+    }
+    .hero_flex_button_icon {
+        display: flex;
+        justify-content: flex-start;
+        width: 520px;
+        
+    }
+    .desktop_video_icon {
+        height: 42px;
+        margin-left: 100px;
+        margin-right: 10px;
+        display: block;
+    }
+    .registrarse_hero {
+       margin: 0px;
+    }
+
+    .desktop_video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video_description {
+        color: #2F2F2F;
+        display: block;
+    }
+
+
+}
+
