@@ -6,7 +6,6 @@ import TiktokLogo from "../social-media/TiktokLogo";
 import WhatsappLogo from "../social-media/WhatsappLogo";
 import TwitterLogo from "../social-media/TwitterLogo";
 
-
 const Footer = () => {
     return (
         <>
@@ -15,11 +14,10 @@ const Footer = () => {
             <div className="container footer-container">
                 <div className="row">
                     <div className='row col-lg-4 about-artetopia'>
-                        {/* <svg className='col-lg-1 rounded-4' width="34px" height="34px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M57 48.6c-4.5 8.2-15.7-3.1-30.8-12.6c-2.8-1.8-3.9-4.4-1.3-7.2c0 0-.1-.3-.5-.7l5.7-2.5l26.9 23" fill="#a9b5ae"> </path> <path d="M24.1 2.5C19.8-1.2 13.2-.7 9.5 3.6c-3.8 4.4-3.3 11 1.1 14.7c.5.4 1.8 1.2 1.9 1.3c8.2 4.4 11.1 7.3 12 8.5l5.7-2.5l-1.9-1.6s-6.2-2.8-6.8-4.1c1.4-.6 2.7-1.5 3.7-2.7c3.8-4.4 3.3-11-1.1-14.7m-3.2 3.8c2.3 1.9 2.5 5.3.6 7.6s-5.3 2.5-7.6.6s-2.5-5.3-.6-7.6s5.3-2.5 7.6-.6" fill="#E91E63"> </path> <path d="M57 15.4c-4.5-8.2-15.7 3-30.7 12.6c-2.8 1.8-3.9 4.4-1.3 7.2c0 0-.1.3-.5.7l5.7 2.5l26.8-23" fill="#cedbd5"> </path> <g fill="#E91E63"> <path d="M25.3 46.8c-1-1.2-2.3-2.1-3.7-2.7c.6-1.3 6.8-4.1 6.8-4.1l1.9-1.6l-5.7-2.5c-1 1.3-3.8 4.1-12 8.5c-.1.1-1.4.9-1.9 1.3c-4.5 3.7-5 10.3-1.2 14.7c3.7 4.4 10.3 4.9 14.7 1.1c4.3-3.7 4.8-10.3 1.1-14.7m-12 10.3c-1.9-2.3-1.7-5.7.6-7.6c2.3-1.9 5.6-1.7 7.6.6c1.9 2.3 1.7 5.7-.6 7.6c-2.3 1.9-5.7 1.7-7.6-.6"> </path> <path d="M31.1 33.7c-1 1.2-2.7 1.3-3.9.4c-1.2-1-1.3-2.7-.4-3.9c1-1.2 2.7-1.3 3.9-.4c1.2 1 1.3 2.8.4 3.9"> </path> </g> </g></svg> */}
                         <img src="https://htmlcolorcodes.com/assets/images/colors/dark-gray-color-solid-background-1920x1080.png" alt="artetopia logo" className="col-lg-2 logo-artetopia-footer"/>
                         <h2 className='artetopia col-lg-1 text-start fw-semibold'>Artetopia</h2>
                         <p className='text-start lh-sm mt-lg-4'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
-                        <div className='row row-cols-auto d-flex align-items-center' >
+                        <div className='row row-cols-auto d-flex align-items-center social-media-container' >
                             <FacebookLogo />
                             <TwitterLogo />
                             <InstagramLogo />
