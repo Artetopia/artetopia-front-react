@@ -1,9 +1,20 @@
 import './styles/app.css';
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
+import LoginForm from './components/login';
+
+
+
 function App() {
   return (
     <>
+    
+    <section id='login'>
+     
+    <LoginForm></LoginForm>
+
+    </section>
+
     <header>
       <HeaderComponent></HeaderComponent>
     </header>

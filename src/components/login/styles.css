@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+.tittle {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #E91E63;
+  margin-top: 30px;
+}
+
+.form_login {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+.submit_button {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: #E91E63;
+  color: white;
+  border: none;
+  width: 125px;
+  height: 42px;
+  border-radius: 4px;
+}
+
+.flex_submit_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
