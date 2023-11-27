@@ -1,10 +1,11 @@
 import './button.css'
-import Registrarse from '../registrarse_button';
+import Registrarse from '../white_button';
+import Pink_button from '../pink_button';
 
 const Button = () => {
   return (
     <div className='flex_buttons'>
-    <button className="iniciar_session">Iniciar Sessión</button>
+    <Pink_button></Pink_button>
     <Registrarse></Registrarse>
     </div>
   )
