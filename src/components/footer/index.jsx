@@ -27,7 +27,7 @@ const Footer = () => {
                         </div>
                     </div>  
 
-                    <div className='col-lg-2 menu-section'>
+                    <div className='col-lg-2 ms-lg-4 menu-section'>
                         <p className='sections-footer'>Menu</p>
                         <a href='http://www.kodemia.com' title='inicio' className='link-footer'><p>Inicio</p></a>
                         <a href='http://www.kodemia.com' title='nosotros' className='link-footer'><p>Nosotros</p></a>
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
                 <div className="container more-info-container ">
                     <div className="row d-flex justify-content-lg-center">
-                        <div className="row col-lg-2 col-md-3 col-5 more-info-button me-2 d-flex ">
+                        <div className="row col-lg-2 col-md-3 col-5 more-info-button ms-2 me-2 d-flex ">
                             <button type="button" className="btn btn-labeled btn-default more-info-text fs-4 ps-0">
                             Artesanos
                             <span className="btn-label ms-1 pr-0"><i className="fa fa-chevron-right"></i></span>
@@ -80,7 +80,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <hr className='footer-divider border-1 opacity-75'/> 
+                <hr className='footer-divider border-1 opacity-75 ms-2 me-2'/> 
                 <small className='copyright-text  d-flex flex-wrap justify-content-center'> Copyright de equipo <p className='name-artetopia'> Artetopia </p> | Todos los derechos reservados</small>                
             </div>
         </>
