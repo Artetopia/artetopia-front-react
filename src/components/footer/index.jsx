@@ -80,7 +80,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <hr className='footer-divider border-3 opacity-75'/> 
+                <hr className='footer-divider border-1 opacity-75'/> 
                 <small className='copyright-text  d-flex flex-wrap justify-content-center'> Copyright de equipo <p className='name-artetopia'> Artetopia </p> | Todos los derechos reservados</small>                
             </div>
         </>
