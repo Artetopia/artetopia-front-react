@@ -17,7 +17,7 @@ const Footer = () => {
                         <img src="https://htmlcolorcodes.com/assets/images/colors/dark-gray-color-solid-background-1920x1080.png" alt="artetopia logo" className="col-lg-2 logo-artetopia-footer"/>
                         <h2 className='artetopia col-lg-1 text-start fw-semibold'>Artetopia</h2>
                         <p className='text-start lh-sm mt-lg-4'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
-                        <div className='row row-cols-auto d-flex align-items-center social-media-container' >
+                        <div className='row row-cols-auto m-0 p-0 d-flex align-items-center social-media-container' >
                             <FacebookLogo />
                             <TwitterLogo />
                             <InstagramLogo />
@@ -38,7 +38,7 @@ const Footer = () => {
                         <a href='http://www.kodemia.com' title='aviso-privacidad' className='link-footer'><p>Aviso de privacidad</p></a>
                         <a href='http://www.kodemia.com' title='terminos-condiciones' className='link-footer'><p>Términos y condiciones</p></a>
                     </div>
-                    <div className='col-lg-3 col-md-5 col-8  contact-section'>
+                    <div className='col-lg-3 col-md-5 col-8 contact-section'>
                         <p className='sections-footer'>Contactanos</p>
                         <div className="container">
                             <div className="row contact-container">

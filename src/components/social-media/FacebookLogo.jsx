@@ -3,7 +3,7 @@ function FacebookLogo () {
 
 return (
     <div>
-        <svg fill="#e91e63" width="30px" height="30px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" stroke="#e91e63" >
+        <svg fill="#e91e63" width="25px" height="25px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" stroke="#e91e63" >
 
         <g id="SVGRepo_bgCarrier" />
 
