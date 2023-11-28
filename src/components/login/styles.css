@@ -33,8 +33,7 @@ span {
 }
 
 span:hover {
-  font-size: 19px;
-  font-weight: bolder;
+  color: #2b2e4a;
 }
 
 .submit_button {

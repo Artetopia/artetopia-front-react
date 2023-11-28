@@ -53,7 +53,7 @@ const LoginForm = () => {
       <Container>
         
         <div className="desktop_flex">
-        <div>
+        <div className="destop_left_inputs">
         <section className="flex_login">
           <h1 className="tittle">Bienvienido!</h1>
           <Form onSubmit={handleSubmit}>
@@ -72,7 +72,7 @@ const LoginForm = () => {
                 onBlur={validateEmail}
                 invalid={emailError !== ""}
                 style={{
-                  borderColor: loginError !== "#E91E63" ? "#E91E63" : "#E91E63",
+                  borderColor: loginError !== "#2b2e4a" ? "#2b2e4a" : "#2b2e4a",
                   outline: "none",
                   borderRadius: "12px",
                   height: "24px",
@@ -96,7 +96,7 @@ const LoginForm = () => {
                 onBlur={validateLogin}
                 invalid={loginError !== ""}
                 style={{
-                  borderColor: loginError !== "#E91E63" ? "#E91E63" : "#E91E63",
+                  borderColor: loginError !== "#2b2e4a" ? "#2b2e4a" : "#2b2e4a",
                   outline: "none",
                   borderRadius: "12px",
                   height: "24px",
