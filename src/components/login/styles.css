@@ -55,6 +55,10 @@ span:hover {
   flex-direction: column;
 }
 
+.login_image {
+  display: none;
+}
+
 @media only screen and (min-width: 744px) {
   .tittle {
     font-size: 60px;
@@ -82,5 +86,15 @@ span:hover {
   }
   .submit_button {
     margin: 20px;
+  }
+  .desktop_flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px;
+  }
+  .login_image {
+    margin: 20px;
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */

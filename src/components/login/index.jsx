@@ -9,6 +9,7 @@ import {
   Container,
 } from "reactstrap";
 import "./styles.css";
+import loginImage from "../../assets/login_image.png"
 
 const LoginForm = () => {
   const [login, setLogin] = useState("");
@@ -18,7 +19,7 @@ const LoginForm = () => {
 
   const validateLogin = () => {
     if (login.trim() === "") {
-      setLoginError("Login is required");
+      setLoginError("Contraseña es nesesaria");
     } else {
       setLoginError("");
     }
@@ -29,9 +30,9 @@ const LoginForm = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email.trim() === "") {
-      setEmailError("Email is required");
+      setEmailError("Email es nesesario");
     } else if (!emailRegex.test(email)) {
-      setEmailError("Invalid email format");
+      setEmailError("Formato invalido de email");
     } else {
       setEmailError("");
     }
@@ -50,6 +51,9 @@ const LoginForm = () => {
   return (
     <>
       <Container>
+        
+        <div className="desktop_flex">
+        <div>
         <section className="flex_login">
           <h1 className="tittle">Bienvienido!</h1>
           <Form onSubmit={handleSubmit}>
@@ -109,6 +113,12 @@ const LoginForm = () => {
           </p>
           <button className="submit_button">Iniciar sesión</button>
         </div>
+        </div>
+
+        <img src={loginImage} alt="Imagen de artesano trabajando" className="login_image" />
+
+        </div>
+        
       </Container>
     </>
   );

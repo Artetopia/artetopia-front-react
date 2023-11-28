@@ -60,6 +60,11 @@ span:hover {
 }
 
 
+.login_image {
+    display: none;
+}
+
+
 
 // Media querries
 
@@ -93,5 +98,17 @@ span:hover {
 
     .submit_button {
      margin: 20px;
+    }
+
+    .desktop_flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 60px;
+    }
+
+    .login_image {
+        margin: 20px;
+        display: block;
     }
  }
