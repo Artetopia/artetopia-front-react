@@ -3,7 +3,7 @@ import HeaderComponent from "./components/header";
 import Footer from './components/footer';
 import React from 'react';
 import CardsAbout from './components/cards_about';
-import { Row } from 'reactstrap';
+import { Row} from 'reactstrap';
 function App() {
   return (
     <>
@@ -16,7 +16,8 @@ function App() {
       </section>
 
       <section id='about'>
-        <Row lg="3" md="1" sm="1" className="text-center">
+      <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
+        <Row lg="3" md="1" sm="1" xs="1" className="text-center">
           <CardsAbout
             background_img="card_artetopia1"
             title="Autenticidad cultural"

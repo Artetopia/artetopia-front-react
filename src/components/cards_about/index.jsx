@@ -11,10 +11,10 @@ const CardsAbout = ({title,text,background_img}) => {
               className={`card_about text-center ${background_img} position-relative w-75`}
             >
               <CardBody className='position-absolute top-50 start-0 '>
-                <CardTitle tag="h5" className='px-3 pb-1'>
+                <CardTitle tag="h5" className='px-1 pb-1 card_title'>
                  {title}
                 </CardTitle>
-                <CardText className='px-3'>
+                <CardText className='px-1 pb-1 card_text'>
                   {text}
                 </CardText>
               </CardBody>

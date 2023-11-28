@@ -1,5 +1,7 @@
 .card_about {
   height: 30rem !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
 }
 
 .card_text {

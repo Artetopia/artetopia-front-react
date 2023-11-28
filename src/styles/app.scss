@@ -10,6 +10,7 @@ $fontkarla: "Karla", sans-serif;
 
 .card_about {
  height:30rem !important;
+ min-height: fit-content !important;
 }
 .card_text {
   font-family: $fontkarla;
