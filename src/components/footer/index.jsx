@@ -38,14 +38,14 @@ const Footer = () => {
                         <a href='http://www.kodemia.com' title='aviso-privacidad' className='link-footer'><p>Aviso de privacidad</p></a>
                         <a href='http://www.kodemia.com' title='terminos-condiciones' className='link-footer'><p>Términos y condiciones</p></a>
                     </div>
-                    <div className='col-lg-3 col-md-4 col-6 contact-section'>
+                    <div className='col-lg-3 col-md-5 col-8  contact-section'>
                         <p className='sections-footer'>Contactanos</p>
                         <div className="container">
                             <div className="row contact-container">
-                                <div className="col-4 email-container">
-                                <svg className='mail-vector' width="100px" height="40px" viewBox="0 -3.5 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" ></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <title>mail</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" fill="none" > <g id="Icon-Set-Filled" transform="translate(-414.000000, -261.000000)" fill="#ffffff"> <path d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z" id="mail" > </path> </g> </g> </g></svg>
+                                <div className="col-1 email-container">
+                                    <svg className='mail-vector' width="100px" height="40px" viewBox="0 -3.5 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" ></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <title>mail</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" fill="none" > <g id="Icon-Set-Filled" transform="translate(-414.000000, -261.000000)" fill="#ffffff"> <path d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z" id="mail" > </path> </g> </g> </g></svg>
                                 </div>
-                                <div className="col-8">
+                                <div className="col-2">
                                     <p className='contact-container-text email-text fw-medium lh-1'>Email</p>
                                     <p className='contact-container-text direct-info-contact lh-1'>artetopia@arte.com</p>
                                 </div>

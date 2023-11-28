@@ -3,7 +3,7 @@ function WhatsappLogo () {
 
     return (
         <div>
-            <svg fill="#E91E63" width="26px" height="26px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <svg fill="#E91E63" width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 
             <g id="SVGRepo_bgCarrier"/>
 
