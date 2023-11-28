@@ -66,14 +66,17 @@ const Footer = () => {
                 </div>
                 <div className="container more-info-container ">
                     <div className="row d-flex justify-content-lg-center">
-                        <div className="row col-lg-3 col-md-4 col-4 more-info-button me-3">
-                            <p className="more-info-text col-4 m-0">Artesano</p>
-                            <svg className='col-5  d-flex align-items-center justify-content-center mt-4' width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        <div className="row col-lg-2 col-md-3 col-5 more-info-button me-2 d-flex ">
+                            <button type="button" className="btn btn-labeled btn-default more-info-text fs-4 ps-0">
+                            Artesanos
+                            <span className="btn-label ms-1 pr-0"><i className="fa fa-chevron-right"></i></span>
+                            </button>
                         </div>
-                        <div className="row col-lg-3 col-md-4 col-4 more-info-button ms-3">
-                            <p className="more-info-text col-4 m-0">Materiales</p>
-                            <svg className='col-5  d-flex align-items-center justify-content-center mt-4' width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-
+                        <div className="row col-lg-2 col-md-3 col-5 more-info-button ms-2 d-flex ">
+                            <button type="button" className="btn btn-labeled btn-default more-info-text fs-4 ps-0">
+                            Materiales
+                            <span className="btn-label ms-1 pr-0"><i className="fa fa-chevron-right"></i></span>
+                            </button>
                         </div>
                     </div>
                 </div>

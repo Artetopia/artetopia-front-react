@@ -1,6 +1,7 @@
 import './styles/app.css';
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
+
 function App() {
   return (
     <>
