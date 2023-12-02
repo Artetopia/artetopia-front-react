@@ -10,7 +10,7 @@ font-family: 'Roboto', sans-serif; */
 
 .footer-divider {
   color: #E91E63;
-  margin-bottom: 105px;
+  margin-bottom: 100px;
 }
 
 .about-artetopia .artetopia {
@@ -21,7 +21,6 @@ font-family: 'Roboto', sans-serif; */
 .about-artetopia .logo-artetopia-footer {
   width: 95px;
   height: 70px;
-  border-radius: 20px;
 }
 
 .about-artetopia p {
@@ -31,52 +30,36 @@ font-family: 'Roboto', sans-serif; */
   margin-bottom: 0px;
 }
 
-.social-media-container {
-  margin: 0px;
-}
-
 .sections-footer {
   font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
   font-size: 22px;
 }
 
 .link-footer {
   font-family: "Karla", sans-serif;
   font-size: 20px;
-  color: black;
+  color: #000000;
   text-decoration: none;
 }
 
 .contact-container {
   height: 81px;
-  width: 243;
   background-color: #FDCCDD;
-  border-radius: 8px;
   margin-bottom: 47px;
-}
-
-.contact-container {
   padding-top: 16px;
   padding-left: 18px;
-  border-radius: 8px;
 }
 
 .contact-section .email-container {
   height: 42px;
   width: 46px;
   background-color: #E91E63;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contact-section .phone-container {
   height: 42px;
   width: 46px;
   background-color: #E91E63;
-  border-radius: 8px;
 }
 
 .phone-vector {
@@ -89,27 +72,16 @@ font-family: 'Roboto', sans-serif; */
   color: #E91E63;
   font-family: "Karla", sans-serif;
   font-size: 12px;
-  font-weight: bold;
 }
 
 .more-info-button {
   background-color: #FDCCDD;
-  border-radius: 4px;
   height: 50px;
 }
 
 .more-info-container .more-info-text {
   font-family: "Karla", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: content-box;
-}
-
-.arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .more-info-container {
@@ -127,21 +99,11 @@ font-family: 'Roboto', sans-serif; */
   font-size: 20px;
 }
 
-.email-text {
+.contact-text {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
 }
 
-.phone-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-}
-
-@media (max-width: 991.98px) {
-  .useful-pages-section {
-    display: none;
-  }
-}
 @media (max-width: 992px) {
   .more-info-text {
     font-size: 16px !important;
