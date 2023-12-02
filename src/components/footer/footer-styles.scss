@@ -21,19 +21,19 @@
 }
 
 .about-artetopia p {
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
     font-size: 18px;
     color: #9F9F9F;
     margin-bottom: 0px;
 }
 
 .sections-footer {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontMontserrat;
     font-size: 22px;
 }
 
 .link-footer {
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
     font-size: 20px;
     color: $textColorBlack;
     text-decoration: none;
@@ -68,7 +68,7 @@
 
 .direct-info-contact {
     color: $primaryColor;
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
     font-size: 12px;
 }
 
@@ -78,13 +78,13 @@
 }
 
 .more-info-container .more-info-text {
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
     box-sizing: content-box;
 }
 
 .more-info-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 .name-artetopia {
@@ -93,12 +93,12 @@
 }
 
 .copyright-text {
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
     font-size: 20px;
 }
 
 .contact-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontMontserrat;
     font-size: 12px;
 }
 
