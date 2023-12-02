@@ -1,10 +1,4 @@
-/* font-family: 'Karla', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif; */
-
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Karla&family=Montserrat&family=Poppins&family=Roboto:wght@100;400&display=swap');
-@import "../../styles/app.scss";
+@import "../../styles/_variables.scss";
 
 * {
     padding: 0px;
@@ -89,8 +83,8 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .more-info-container {
-    margin-top: 70px;
-    margin-bottom: 63px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .name-artetopia {

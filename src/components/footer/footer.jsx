@@ -1,4 +1,4 @@
-import "./index.css";
+import "../footer/footer-styles.scss";
 import FacebookLogo from "../social-media/FacebookLogo";
 import InstagramLogo from "../social-media/InstagramLogo";
 import LindekinLogo from "../social-media/LinkedinLogo";
