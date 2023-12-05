@@ -67,6 +67,12 @@
     border-color: $primaryColor !important;
 }
 
+.border-progress-bar {
+    border-style: solid;
+    border-color: $primaryColor !important;
+    background-color: #F2F2F2 !important;
+}
+
 @media (max-width: 767px) { 
     .subtitle-text{
         font-size: 18px;
@@ -92,3 +98,10 @@
     }
  }
 
+ @media (max-width: 767px) { 
+    .user-icon-svg {
+        width: 22px;
+        height: 20px;
+    }   
+ }
+ 
