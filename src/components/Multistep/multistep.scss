@@ -26,16 +26,31 @@
 
 .file-uploader-container {
     width: 90%;
+    height: 350px;
     border-color: $primaryColor !important;
     border-style: dashed !important;
+    border-width: 1px;
 }
 
 .upload-file-text   {
     color: $primaryColor;
 }
 
+.border-input-text {
+    border-width: 2px;
+    border-color: $secondaryColor !important;
+}   
+
 @media (max-width: 767px) { 
     .subtitle-text{
         font-size: 18px;
     }
  }
+
+ @media (max-width: 767px) { 
+    .file-uploader-container{
+        height: 194px;
+    }
+ }
+
+
