@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+.bg-custom {
+    background-color: $primaryColor !important;
+}
+
+.btn-custom {
+    background-color: $primaryColor !important;
+    color: $textColorWhite !important;
+}
+
+.body-text {
+    font-family: $fontMontserrat;
+    font-size: 16px;
+}
+
+.subtitle-text{
+    font-family: $fontMontserrat;
+    font-size: 28px;
+    color: $primaryColor;
+}
+
+.asterisk {
+    color: $primaryColor;
+}
+
+.file-uploader-container {
+    width: 90%;
+    border-color: $primaryColor !important;
+    border-style: dashed !important;
+}
+
+.upload-file-text   {
+    color: $primaryColor;
+}
+
+@media (max-width: 767px) { 
+    .subtitle-text{
+        font-size: 18px;
+    }
+ }
