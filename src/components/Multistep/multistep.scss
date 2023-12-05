@@ -25,11 +25,12 @@
 }
 
 .file-uploader-container {
-    width: 90%;
+    // width: 90%;
     height: 350px;
     border-color: $primaryColor !important;
     border-style: dashed !important;
     border-width: 1px;
+    border-radius: 20px;
 }
 
 .upload-file-text   {
@@ -40,6 +41,23 @@
     border-width: 2px;
     border-color: $secondaryColor !important;
 }   
+
+.back-button {
+    color: $primaryColor;
+    width: 100%;
+    border-width: 2px;
+    border-color: $primaryColor !important;
+}
+
+.next-button {
+    width: 100%;
+}
+
+.add-product {
+    width: 100%;
+    border-width: 2px;
+    border-color: $primaryColor !important;
+}
 
 @media (max-width: 767px) { 
     .subtitle-text{
@@ -53,4 +71,9 @@
     }
  }
 
+ @media (max-width: 767px) { 
+    .input-description {
+        height: 90px;
+    }
+ }
 
