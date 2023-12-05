@@ -2,6 +2,7 @@ import "./styles/app.css";
 import bgArtesano from './assets/bgArtesano.png'
 import HeaderComponent from "./components/header";
 import Footer from "./components/footer";
+import ButtonAction from "./components/buttonAction";
 function App() {
   return (
     <>
@@ -92,7 +93,7 @@ function App() {
               </div>
             </div>
             <div className="text-center">
-              <button className="button-primary">Ver más</button>
+              <ButtonAction buttonClass="button-primary" text="Ver más"></ButtonAction>
             </div>
           </div>
         </div>
@@ -104,7 +105,7 @@ function App() {
             <h3 className="text-white">Crea tu propio sitio web facil y rapido desde <strong className="heading_primary">Artetopia</strong> y comienza a vender tus artesanias.</h3>
           </div>
           <div className="col-md-4 text-center">
-            <button className="button-primary">Registrate</button>
+          <ButtonAction buttonClass="button-primary" text="Registrate"></ButtonAction>
           </div>
         </div>
       </section>
