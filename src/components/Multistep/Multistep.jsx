@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, ProgressBar } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
 import "./multistep.scss"
 
 
@@ -35,16 +31,31 @@ const [profilePic, setProfilePic] = useState();
 
   return (
     <Form onSubmit={handleSubmit}>
+      {step === 1 && 
+      
+      <div className='circle-step rounded-circle m-2'>
+        <svg className='d-flex justify-content-center align-items-center m-1' width="22px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#E91E63" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#E91E63" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
+      </div>
+      }
+
+      {step === 2 && 
+      <h1>Paso2</h1>
+      }
       <ProgressBar label={step} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (
         <Form.Group controlId="formStep1">
           <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion personal</Form.Label>
+        
+{/* (DAVID) *******PAGINA 1******  */}
+        
         </Form.Group>
       )}
       {step === 2 && (
-        <Form.Group controlId="formStep2">
+        <Form.Group controlId="formStep2">  
           <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion de tu sitio </Form.Label>
-          
+
+{/* (DAVID) *******PAGINA 2******  */}
+
         </Form.Group>
       )}
       {step === 3 && (
@@ -122,27 +133,45 @@ const [profilePic, setProfilePic] = useState();
             <Form.Control className="border-input-text" placeholder='$' aria-label="Default"/>
           </InputGroup>
 
-         
+          <Button variant="white" className="add-product mt-3 mb-3">Añadir  este articulo</Button>
+          
         </Form.Group>
       )}
       {step === 5 && (
         <Form.Group controlId="formStep5">
           <Form.Label className='subtitle-text d-flex justify-content-center'>Elige una plantilla</Form.Label>
-          
+
+{/* (VICTOR) *******PAGINA 5******  */}
+
         </Form.Group>
       )}
       {step === 6 && (
         <Form.Group controlId="formStep6">
           <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion adicional</Form.Label>
-          
+
+{/* (GUADALUPE) *******PAGINA 6******  */}
+
+        </Form.Group>
+      )}
+      {step === 7 && (
+        <Form.Group controlId="formStep6">
+          <Form.Label className='subtitle-text d-flex justify-content-center'>Pagos</Form.Label>
+         
+{/* (DANIEL) *******PAGINA 7******  */}
+
         </Form.Group>
       )}
       
       <div>
-        {step <= 7 && (
+        {step < 7 ? (
           <Button className='next-button mt-2' variant="custom" onClick={handleNext}>
             Siguiente
-          </Button>
+          </Button>)
+        
+          : (
+            <Button className='next-button mt-2' variant="custom" type="submit">
+              Siguiente
+            </Button>
         ) }
         {step > 1 && (
           <Button className='back-button mt-2 mb-2' variant="white" onClick={handlePrevious}>
