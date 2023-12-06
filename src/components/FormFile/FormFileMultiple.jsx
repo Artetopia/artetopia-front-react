@@ -1,7 +1,7 @@
 import { Form } from "react-bootstrap";
 
 import "../Multistep/Multistep"
-const UploadSomeFiles = () => {
+const FormFileMultiple = () => {
     return (
         <Form.Group 
         controlId="formFile" 
@@ -17,4 +17,4 @@ const UploadSomeFiles = () => {
     )
 }
 
-export default UploadSomeFiles;
+export default FormFileMultiple;

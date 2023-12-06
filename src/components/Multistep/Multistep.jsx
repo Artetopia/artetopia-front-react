@@ -9,8 +9,8 @@ import StepFourIcon from '../StepIcons/StepFourIcon';
 import StepFiveIcon from '../StepIcons/StepFiveIcon';
 import StepSixIcon from '../StepIcons/StepSixIcon';
 import StepSevenIcon from '../StepIcons/StepSevenIcon';
-import UploadOneFile from '../UploadFilesItems/UploadOneFile'
-import UploadSomeFiles from '../UploadFilesItems/UploadSomeFiles'
+import FormFile from '../FormFile/FormFile'
+import FormFileMultiple from '../FormFile/FormFileMultiple'
 
 const MultiStepForm = () => {
 const [profilePic, setProfilePic] = useState();
@@ -107,13 +107,13 @@ const [profilePic, setProfilePic] = useState();
           <div>
           {profilePic ? <img src={profilePic}/> 
           :
-          <UploadOneFile/>
+          <FormFile/>
 
           }
           <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
           {profilePic ? <img src={profilePic}/> 
           :
-          <UploadOneFile/>
+          <FormFile/>
           }
       </div>
         </Form.Group>
@@ -132,7 +132,7 @@ const [profilePic, setProfilePic] = useState();
           <small className='body-text d-flex '>Fotos del articulo <p className='asterisk'> *</p></small> 
           {profilePic ? <img src={profilePic}/> 
           :
-          <UploadSomeFiles/>
+          <FormFileMultiple/>
           }
 
           <small className='body-text d-flex '>Cantidad en inventario <p className='asterisk'> *</p></small> 
