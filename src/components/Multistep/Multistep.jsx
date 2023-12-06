@@ -39,16 +39,10 @@ const [profilePic, setProfilePic] = useState();
   return (
     <Form onSubmit={handleSubmit}>
       <div className='d-lg-none'>
-        {step === 1 && 
-          <div>
-            <StepOneIcon/>
-            <p className='progress-bar-text '>Información personal</p>
-          </div>
-        }
+        {step === 1 && <StepOneIcon/>}
         {step === 2 && 
           <div>
             <StepTwoIcon/>
-            <p className='progress-bar-text'>Información de tu sitio</p>
           </div>
         }
         {step === 3 && 
@@ -82,17 +76,19 @@ const [profilePic, setProfilePic] = useState();
           </div>
         } 
       </div>
-      <Container>
-        <Row className='m-2'>
-          <Col><StepOneIcon/></Col>
-          <Col><StepTwoIcon/></Col>
-          <Col><StepThreeIcon/></Col>
-          <Col><StepFourIcon/></Col>
-          <Col><StepFiveIcon/></Col>
-          <Col><StepSixIcon/></Col>
-          <Col><StepSevenIcon/></Col>
-        </Row>
-      </Container>
+      <div className='d-none d-lg-block m-5'>
+        <Container>
+          <Row className='m-2'>
+            <Col><StepOneIcon/></Col>
+            <Col><StepTwoIcon/></Col>
+            <Col><StepThreeIcon/></Col>
+            <Col><StepFourIcon/></Col>
+            <Col><StepFiveIcon/></Col>
+            <Col><StepSixIcon/></Col>
+            <Col><StepSevenIcon/></Col>
+          </Row>
+        </Container>
+      </div>
 
       <ProgressBar className='border-progress-bar d-lg-none' label={step} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (

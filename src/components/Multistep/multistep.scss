@@ -73,37 +73,44 @@
     width: 5% !important;
 }
 
-    .image-icon-svg {
-        width: 24px;
-        height: 24px;
-    }   
+.image-icon-svg {
+    width: 24px;
+    height: 24px;
+}   
 
-    .progress-icon-svg {
-        width: 22px;
-        height: 20px;
-    }  
+.progress-icon-svg {
+    width: 22px;
+    height: 20px;
+}  
 
-    .circle-step {
-        width: 35px;
-        height: 35px;
-    }
+.circle-step {
+    width: 35px;
+    height: 35px;
+}
 
-    .input-description {
-        height: 90px;
-    }
+.input-description {
+    height: 90px;
+}
 
-    .file-uploader-container{
-        height: 194px;
-    }
+.file-uploader-container{
+    height: 194px;
+}
 
-    .back-button {
-        color: $primaryColor;
-        width: 100%;
-        border-width: 2px;
-        border-color: $primaryColor !important;
-    }
-    
-    .next-button {
-        width: 100%;
-    }
+.back-button {
+    color: $primaryColor;
+    width: 100%;
+    border-width: 2px;
+    border-color: $primaryColor !important;
+}
+
+.next-button {
+    width: 100%;
+}
  
+@media (min-width: 992px) {
+    .progress-bar-text {
+        margin-top: 10px;
+        display: flex !important;
+    }
+ }
+

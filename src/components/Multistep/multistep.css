@@ -104,4 +104,11 @@
 
 .next-button {
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .progress-bar-text {
+    margin-top: 10px;
+    display: flex !important;
+  }
 }/*# sourceMappingURL=multistep.css.map */
