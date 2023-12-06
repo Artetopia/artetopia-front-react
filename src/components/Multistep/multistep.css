@@ -13,6 +13,12 @@
   font-size: 16px;
 }
 
+.progress-bar-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  display: ruby-base;
+}
+
 .subtitle-text {
   font-family: "Montserrat", sans-serif;
   font-size: 28px;
@@ -40,17 +46,6 @@
   border-color: #2b2e4a !important;
 }
 
-.back-button {
-  color: #e91e63;
-  width: 100%;
-  border-width: 2px;
-  border-color: #e91e63 !important;
-}
-
-.next-button {
-  width: 100%;
-}
-
 .add-product {
   width: 100%;
   border-width: 2px;
@@ -72,16 +67,6 @@
 }
 
 @media (max-width: 767px) {
-  .subtitle-text {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .file-uploader-container {
-    height: 194px;
-  }
-}
-@media (max-width: 767px) {
   .input-description {
     height: 90px;
   }
@@ -93,8 +78,31 @@
   }
 }
 @media (max-width: 767px) {
-  .user-icon-svg {
+  .progress-icon-svg {
     width: 22px;
     height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .image-icon-svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .file-uploader-container {
+    height: 194px;
+  }
+  .input-description {
+    height: 90px;
+  }
+  .back-button {
+    color: #e91e63;
+    width: 100%;
+    border-width: 2px;
+    border-color: #e91e63 !important;
+  }
+  .next-button {
+    width: 100%;
   }
 }/*# sourceMappingURL=multistep.css.map */
