@@ -96,6 +96,11 @@
     height: 194px;
 }
 
+.row-width {
+    // width: 7% !important;    
+    border-style: dashed;
+    border-color: $secondaryColor;
+}
 .back-button {
     color: $primaryColor;
     width: 100%;

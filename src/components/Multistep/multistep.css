@@ -95,6 +95,11 @@
   height: 194px;
 }
 
+.row-width {
+  border-style: dashed;
+  border-color: #2b2e4a;
+}
+
 .back-button {
   color: #e91e63;
   width: 100%;

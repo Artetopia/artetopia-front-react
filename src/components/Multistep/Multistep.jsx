@@ -40,51 +40,29 @@ const [profilePic, setProfilePic] = useState();
     <Form onSubmit={handleSubmit}>
       <div className='d-lg-none'>
         {step === 1 && <StepOneIcon/>}
-        {step === 2 && 
-          <div>
-            <StepTwoIcon/>
-          </div>
-        }
-        {step === 3 && 
-          <div>
-            <StepThreeIcon/>
-            <small className='progress-bar-text'>Sube tus fotos</small>
-          </div>
-        }
-        {step === 4 && 
-          <div>
-            <StepFourIcon/>
-            <small className='progress-bar-text'>Sube tus productos</small>
-          </div>
-        }
-        {step === 5 && 
-          <div>
-            <StepFiveIcon/>
-            <small className='progress-bar-text'>Elige una plantilla</small>
-          </div>
-        } 
-        {step === 6 && 
-          <div>
-            <StepSixIcon/>
-            <small className='progress-bar-text'>Información adicional</small>
-          </div>
-        } 
-        {step === 7 && 
-          <div>
-            <StepSevenIcon/>
-            <small className='progress-bar-text'>Pagos</small>
-          </div>
-        } 
+        {step === 2 && <StepTwoIcon/>}
+        {step === 3 && <StepThreeIcon/>}
+        {step === 4 && <StepFourIcon/>}
+        {step === 5 && <StepFiveIcon/>} 
+        {step === 6 && <StepSixIcon/>}
+        {step === 7 && <StepSevenIcon/>}
       </div>
+
       <div className='d-none d-lg-block m-5'>
         <Container>
           <Row className='m-2'>
             <Col><StepOneIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepTwoIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepThreeIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepFourIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepFiveIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepSixIcon/></Col>
+            <Col><hr className='row-width align-self-center'></hr></Col>
             <Col><StepSevenIcon/></Col>
           </Row>
         </Container>
