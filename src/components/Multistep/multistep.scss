@@ -69,7 +69,7 @@
     background-color: #F2F2F2 !important;
 }
 
- @media (max-width: 767px) { 
+
     .image-icon-svg {
         width: 25px;
         height: 25px;
@@ -93,10 +93,6 @@
         height: 194px;
     }
 
-    .input-description {
-        height: 90px;
-    }
-
     .back-button {
         color: $primaryColor;
         width: 100%;
@@ -107,6 +103,4 @@
     .next-button {
         width: 100%;
     }
- }
-
-
+ 

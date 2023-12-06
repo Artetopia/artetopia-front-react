@@ -68,35 +68,36 @@
   background-color: #F2F2F2 !important;
 }
 
-@media (max-width: 767px) {
-  .image-icon-svg {
-    width: 25px;
-    height: 25px;
-  }
-  .progress-icon-svg {
-    width: 22px;
-    height: 20px;
-  }
-  .circle-step {
-    width: 35px;
-    height: 35px;
-  }
-  .input-description {
-    height: 90px;
-  }
-  .file-uploader-container {
-    height: 194px;
-  }
-  .input-description {
-    height: 90px;
-  }
-  .back-button {
-    color: #e91e63;
-    width: 100%;
-    border-width: 2px;
-    border-color: #e91e63 !important;
-  }
-  .next-button {
-    width: 100%;
-  }
+.image-icon-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.progress-icon-svg {
+  width: 22px;
+  height: 20px;
+}
+
+.circle-step {
+  width: 35px;
+  height: 35px;
+}
+
+.input-description {
+  height: 90px;
+}
+
+.file-uploader-container {
+  height: 194px;
+}
+
+.back-button {
+  color: #e91e63;
+  width: 100%;
+  border-width: 2px;
+  border-color: #e91e63 !important;
+}
+
+.next-button {
+  width: 100%;
 }/*# sourceMappingURL=multistep.css.map */
