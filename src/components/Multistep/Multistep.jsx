@@ -11,6 +11,7 @@ import StepSixIcon from '../StepIcons/StepSixIcon';
 import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import UploadOneFile from '../UploadFilesItems/UploadOneFile'
 
+
 const MultiStepForm = () => {
 const [profilePic, setProfilePic] = useState();
 
