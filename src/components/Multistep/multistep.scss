@@ -1,6 +1,8 @@
 @import "../../styles/variables";
 
 .bg-custom {
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
     background-color: $primaryColor !important;
 }
 
@@ -72,7 +74,7 @@
         width: 25px;
         height: 25px;
     }   
-    
+
     .progress-icon-svg {
         width: 22px;
         height: 20px;
@@ -106,3 +108,5 @@
         width: 100%;
     }
  }
+
+
