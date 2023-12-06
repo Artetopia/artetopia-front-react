@@ -1,6 +1,6 @@
 import "./styles/app.scss";
 //import bgArtesano from './assets/bgArtesano.png'
-import HeaderComponent from "./components/header";
+import HeaderComponent from "./pages/header";
 import Footer from './components/footer';
 
 function App() {
@@ -9,10 +9,6 @@ function App() {
     <header>
       <HeaderComponent></HeaderComponent>
     </header>
-
-    <section id='hero-section'>
-
-    </section>
 
     <section id='about'>
 
