@@ -68,6 +68,10 @@
   background-color: #F2F2F2 !important;
 }
 
+.stepper-container {
+  width: 5% !important;
+}
+
 .image-icon-svg {
   width: 24px;
   height: 24px;

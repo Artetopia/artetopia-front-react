@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button, ProgressBar } from 'react-bootstrap';
+import { Form, Button, ProgressBar, Container, Row, Col } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
-import "./multistep.scss"
 import StepOneIcon from '../StepIcons/StepOneIcon';
 import StepTwoIcon from '../StepIcons/StepTwo';
 import StepThreeIcon from '../StepIcons/StepThreeIcon';
@@ -11,6 +10,7 @@ import StepSixIcon from '../StepIcons/StepSixIcon';
 import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
 import FormFileMultiple from '../FormFile/FormFileMultiple'
+import "./multistep.scss"
 
 const MultiStepForm = () => {
 const [profilePic, setProfilePic] = useState();
@@ -82,7 +82,18 @@ const [profilePic, setProfilePic] = useState();
           </div>
         } 
       </div>
-   
+      <Container>
+        <Row className='m-2'>
+          <Col><StepOneIcon/></Col>
+          <Col><StepTwoIcon/></Col>
+          <Col><StepThreeIcon/></Col>
+          <Col><StepFourIcon/></Col>
+          <Col><StepFiveIcon/></Col>
+          <Col><StepSixIcon/></Col>
+          <Col><StepSevenIcon/></Col>
+        </Row>
+      </Container>
+
       <ProgressBar className='border-progress-bar d-lg-none' label={step} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (
         <Form.Group controlId="formStep1">
