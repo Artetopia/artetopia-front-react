@@ -67,29 +67,21 @@
 }
 
 @media (max-width: 767px) {
-  .input-description {
-    height: 90px;
-  }
-}
-@media (max-width: 767px) {
-  .circle-step {
-    width: 35px;
-    height: 35px;
-  }
-}
-@media (max-width: 767px) {
-  .progress-icon-svg {
-    width: 22px;
-    height: 20px;
-  }
-}
-@media (max-width: 767px) {
   .image-icon-svg {
     width: 25px;
     height: 25px;
   }
-}
-@media (max-width: 767px) {
+  .progress-icon-svg {
+    width: 22px;
+    height: 20px;
+  }
+  .circle-step {
+    width: 35px;
+    height: 35px;
+  }
+  .input-description {
+    height: 90px;
+  }
   .file-uploader-container {
     height: 194px;
   }
