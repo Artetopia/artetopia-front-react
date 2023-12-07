@@ -10,6 +10,7 @@ import StepSixIcon from '../StepIcons/StepSixIcon';
 import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
 import FormFileMultiple from '../FormFile/FormFileMultiple'
+import Step_7 from '../../pages/handcraftsman_reg_step-7';
 import "./multistep.scss"
 
 const MultiStepForm = () => {
@@ -153,6 +154,7 @@ const [profilePic, setProfilePic] = useState();
       {step === 7 && (
         <Form.Group controlId="formStep6">
           <Form.Label className='subtitle-text d-flex justify-content-center'>Pagos</Form.Label>
+          <Step_7></Step_7>
          
 {/* (DANIEL) *******PAGINA 7******  */}
 
@@ -160,11 +162,12 @@ const [profilePic, setProfilePic] = useState();
       )}
       
       <div>
+
         {step < 7 ? (
+          
           <Button className='next-button mt-2' variant="custom" onClick={handleNext}>
             Siguiente
           </Button>)
-        
           : (
             <Button className='next-button mt-2' variant="custom" type="submit">
               Siguiente

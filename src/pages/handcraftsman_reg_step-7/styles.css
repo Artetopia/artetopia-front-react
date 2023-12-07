@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+* {
+  font-family: "Karla", sans-serif;
+}
+
+p {
+  margin: 19px;
+  margin-bottom: 0px;
+}
+
+.step-7_payments_button {
+  border: 1px solid #e91e63;
+  background-color: white;
+  width: 320px;
+  height: 34px;
+  border-radius: 20px;
+  margin: 19px;
+}
+
+.step-7_payments_button_tablet {
+  display: none;
+}
+
+.tutorial-link {
+  margin-bottom: 19px;
+}
+
+span {
+  text-decoration: underline;
+  color: #e91e63;
+  transition: all 1s;
+}
+
+span:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  font-size: 17px;
+}
+
+.contentFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 744px) {
+  /* For tablets: */
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .step-7_payments_button {
+    display: none;
+  }
+  .step-7_payments_button_tablet {
+    display: block;
+    border: 1px solid #e91e63;
+    color: #e91e63;
+    background-color: white;
+    width: 150px;
+    height: 42px;
+    border-radius: 20px;
+    margin: 19px;
+    margin-bottom: 0px;
+    margin-bottom: 5px;
+  }
+  .reg_step-7_image {
+    width: 497px;
+    height: 334px;
+    margin-bottom: 36px;
+    margin-right: 40px;
+  }
+}/*# sourceMappingURL=styles.css.map */
