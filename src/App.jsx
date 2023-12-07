@@ -1,4 +1,4 @@
-import "./styles/app.css";
+import "./styles/app.scss";
 import bgArtesano from './assets/bgArtesano.png'
 import HeaderComponent from "./components/header";
 import Footer from "./components/footer";
@@ -36,23 +36,191 @@ function App() {
             </form>
           </div>
           <div className="row mt-5">
-            <div className="col-md-4 mb-4">
+            <div className=" col-12 col-md-6 col-lg-4 mb-4">
               <div className="card artesano-card shadow border-0">
                 <div className="card-img-block">
                   <img
-                    className="img-fluid w-100 rounded-top"
+                    className="img-fluid w-100 h-100 rounded-top"
                     src={bgArtesano}
                     alt="Card image cap"
                   />
                 </div>
-                <div className="card-body position-relative pt-5">
-                  <div className="d-flex flex-row profile-container position-absolute">
+                <div className="card-body position-relative padding-top__65">
+                  <div className="d-flex flex-row profile-container w-100 position-absolute align-items-center">
                   <img
                     src="https://randomuser.me/api/portraits/men/64.jpg"
                     alt="profile-image"
-                    className="profile"
+                    className="profile h-100"
                   />
-                  <h5 className="card-title mt-4 pt-2">Landon Hunt</h5>
+                  <h5 className="card-title m-0 p-0">Landon Hunt</h5>
+                  </div>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat esse iusto labore et cumque impedit eum dicta pariatur dolorum voluptas tempore
+                  </p>
+                  <div className="row g-2">
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                  <div className="row g-2">
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" col-12 col-md-6 col-lg-4 mb-4">
+              <div className="card artesano-card shadow border-0">
+                <div className="card-img-block">
+                  <img
+                    className="img-fluid w-100 h-100 rounded-top"
+                    src={bgArtesano}
+                    alt="Card image cap"
+                  />
+                </div>
+                <div className="card-body position-relative padding-top__65">
+                  <div className="d-flex flex-row profile-container w-100 position-absolute align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/64.jpg"
+                    alt="profile-image"
+                    className="profile h-100"
+                  />
+                  <h5 className="card-title m-0 p-0">Landon Hunt</h5>
+                  </div>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat esse iusto labore et cumque impedit eum dicta pariatur dolorum voluptas tempore
+                  </p>
+                  <div className="row g-2">
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                  <div className="row g-2">
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" col-12 col-md-6 col-lg-4 mb-4">
+              <div className="card artesano-card shadow border-0">
+                <div className="card-img-block">
+                  <img
+                    className="img-fluid w-100 h-100 rounded-top"
+                    src={bgArtesano}
+                    alt="Card image cap"
+                  />
+                </div>
+                <div className="card-body position-relative padding-top__65">
+                  <div className="d-flex flex-row profile-container w-100 position-absolute align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/64.jpg"
+                    alt="profile-image"
+                    className="profile h-100"
+                  />
+                  <h5 className="card-title m-0 p-0">Landon Hunt</h5>
+                  </div>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat esse iusto labore et cumque impedit eum dicta pariatur dolorum voluptas tempore
+                  </p>
+                  <div className="row g-2">
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col mb-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                  <div className="row g-2">
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                    <div className="col">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
+                        alt="image 1"
+                        className="w-100 rounded-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" col-12 col-md-6 col-lg-4 mb-4">
+              <div className="card artesano-card shadow border-0">
+                <div className="card-img-block">
+                  <img
+                    className="img-fluid w-100 h-100 rounded-top"
+                    src={bgArtesano}
+                    alt="Card image cap"
+                  />
+                </div>
+                <div className="card-body position-relative padding-top__65">
+                  <div className="d-flex flex-row profile-container w-100 position-absolute align-items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/64.jpg"
+                    alt="profile-image"
+                    className="profile h-100"
+                  />
+                  <h5 className="card-title m-0 p-0">Landon Hunt</h5>
                   </div>
                   <p className="card-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. A fugiat esse iusto labore et cumque impedit eum dicta pariatur dolorum voluptas tempore
