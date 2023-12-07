@@ -1,12 +1,81 @@
-$secondaryColor: #2B2E4A;
+$primaryColor: #e91e63;
+$secondaryColor: #2b2e4a;
 $textColorBlack: #000000;
-$textColorWhite: #FFFFFF;
+$textColorWhite: #ffffff;
 $gradientCard: linear-gradient(180deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(44, 47, 75, 1) 55%,
     rgba(44, 47, 75, 1) 82%,
     $secondaryColor 100%);
 $fontkarla: "Karla", sans-serif;
+
+* {
+  font-family: "Karla", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.heading_primary {
+  color: $primaryColor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.bg_secondary {
+  background-color: $secondaryColor;
+}
+
+.button-primary {
+  background-color: $primaryColor;
+  color: $textColorWhite;
+  border: 1px solid $primaryColor;
+  padding: 8px 10px;
+  border-radius: 4px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.input_primary {
+  border: 1px solid $secondaryColor !important;
+  max-width: 500px;
+  border-radius: 30px !important;
+}
+
+.artesano-card {
+  .card-img-block {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+  }
+  .card-body {
+    .profile-container {
+      top: -22px;
+      left: 0;
+      gap: 1rem;
+      padding: 0px 1rem;
+      .profile {
+        border-radius: 50%;
+        max-width: 75px;
+        border: 3px solid rgba(255, 255, 255, 1);
+      }
+      h5
+      {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: $secondaryColor;
+        flex-grow: 1;
+      }
+    }
+    &.padding-top__65 {
+      padding-top: 65px;
+    }
+  }
+
+  .card-text {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
 
 .card_about {
  height:30rem !important;
