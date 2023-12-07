@@ -2,6 +2,12 @@ $primaryColor: #e91e63;
 $secondaryColor: #2b2e4a;
 $textColorBlack: #000000;
 $textColorWhite: #ffffff;
+$gradientCard: linear-gradient(180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(44, 47, 75, 1) 55%,
+    rgba(44, 47, 75, 1) 82%,
+    $secondaryColor 100%);
+$fontkarla: "Karla", sans-serif;
 
 * {
   font-family: "Karla", sans-serif;
@@ -64,8 +70,43 @@ $textColorWhite: #ffffff;
       padding-top: 65px;
     }
   }
+
   .card-text {
     font-weight: 300;
     font-size: 15px;
   }
+}
+
+.card_about {
+ height:30rem !important;
+ min-height: fit-content !important;
+}
+.card_text {
+  font-family: $fontkarla;
+  font-size: 18px;  
+}
+
+.card_title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card_artetopia1 {
+  text-align: center;
+  background-image: $gradientCard,
+    url("../images/artetopia_1.png");
+  background-size: cover;
+}
+
+.card_artetopia2 {
+  text-align: center;
+  background-image: $gradientCard,
+    url("../images/artetopia_2.png");
+  background-size: cover;
+}
+
+.card_artetopia3 {
+  text-align: center;
+  background-image: $gradientCard,
+    url("../images/artetopia_3.png");
+  background-size: cover;
 }
