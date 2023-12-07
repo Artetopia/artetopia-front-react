@@ -78,7 +78,7 @@ section {
     border-radius: 20px;
     margin: 19px;
     margin-bottom: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
   .reg_step-7_image {
     width: 497px;
@@ -93,6 +93,7 @@ section {
     text-align: left;
     font-size: 16px;
     width: 1290px;
+    margin-bottom: 40px;
   }
   .reg_step-7_image {
     display: none;
@@ -105,7 +106,7 @@ section {
   .desktop_flex {
     display: flex;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: flex-start;
   }
   .left_desktop {
     align-items: flex-start;
