@@ -8,7 +8,7 @@ const CardsAbout = ({title,text,background_img}) => {
                // width: '326px',
                 //height: '450px'
               //}}
-              className={`card_about text-center ${background_img} position-relative w-75`}
+              className={`card_about text-center ${background_img} position-relative w-100`}
             >
               <CardBody className='position-absolute top-50 start-0 '>
                 <CardTitle tag="h5" className='px-1 pb-1 card_title'>
