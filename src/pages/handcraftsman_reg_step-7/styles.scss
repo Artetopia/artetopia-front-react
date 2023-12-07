@@ -51,6 +51,16 @@ section {
 }
 
 
+.desktop_Image {
+    display: none;
+}
+
+.left_desktop {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 @media only screen and (min-width: 744px) {
     /* For tablets: */
@@ -80,4 +90,34 @@ section {
         margin-right: 40px;
     }
   }
+
+
+  @media only screen and (min-width: 1440px) {
+    /* For desktop: */
+    .subtittle {
+        text-align: left;
+        font-size: 16px;
+        width: 1290px;
+    }
+    .reg_step-7_image {
+        display: none;
+    }
+
+    .desktop_Image {
+        display: block;
+        width: 827px;
+        height: 559px;
+    }
+
+    .desktop_flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .left_desktop {
+        align-items: flex-start;
+    }
+   
+  }
+
 
