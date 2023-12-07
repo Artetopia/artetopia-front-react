@@ -1,4 +1,4 @@
-@use '../../styles/app.scss';
+@import url("../../styles/_variables.scss");
 
 
 .navbar.open {
@@ -6,7 +6,7 @@
   }
 
 .navbar {
-    background-color: hsl(234,26%,23%);  
+    background-color: $secondaryColor;  
 }
 
 .navbar_icon {
@@ -16,7 +16,7 @@
 }
 
 .me-auto {
-    font-family: 'Karla', sans-serif;
+    font-family: $fontkarla;
 }
 
 .navbar-nav {

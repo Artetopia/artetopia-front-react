@@ -1,12 +1,10 @@
-import './button.css'
-import Registrarse from '../white_button';
-import Pink_button from '../pink_button';
+import './button.scss'
+import ButtonAction from '../buttonAction';
 
 const Button = () => {
   return (
     <div className='flex_buttons'>
-    <Pink_button></Pink_button>
-    <Registrarse></Registrarse>
+    <ButtonAction buttonClass="button-primary" text="Iniciar sesión"></ButtonAction>
     </div>
   )
 }

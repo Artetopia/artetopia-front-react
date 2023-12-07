@@ -47,7 +47,7 @@ const Navbare = () => {
             <NavbarText className="text-light"></NavbarText>
           </div>
           <div className='desktop_buttons'>
-            <Button>Hola es una prueba</Button>
+            <Button></Button>
           </div>
         </Nav>
       </Collapse>

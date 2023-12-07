@@ -1,7 +1,6 @@
 // HeaderComponent.js
-import './header.css'
+import './header.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './header.css';
 import image from '../../assets/hero-image.svg'
 import imagePlayButtton from '../../assets/play-button.svg'
 import topDescription from '../../assets/top_descripcion.svg'
