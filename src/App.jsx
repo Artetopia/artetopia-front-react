@@ -3,6 +3,7 @@ import "./styles/app.scss";
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
 import MultiStepForm from "./components/Multistep/Multistep";
+import Step_8 from "./pages/handcraftsman_reg_step-8";
 function App() {
   return (
     <>
@@ -10,6 +11,8 @@ function App() {
       <HeaderComponent></HeaderComponent>
     </header>
     <MultiStepForm/>
+
+    
 
     <section id='hero-section'>
 

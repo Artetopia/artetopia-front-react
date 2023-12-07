@@ -1,5 +1,5 @@
 import "./styles.css"
-import Step7image from "../../assets/reg_step-7.svg"
+import Step7image from "../../../public/assets/reg_step-7.svg"
 
 const Step_7 = () => {
   return (
