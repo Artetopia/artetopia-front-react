@@ -9,14 +9,13 @@ import TwitterLogo from "../social-media/TwitterLogo";
 const Footer = () => {
     return (
         <>
-            <h1>Footer</h1>
             <hr className='footer-divider border-3 opacity-75'/>
             <div className="container footer-container">
                 <div className="row">
                     <div className='row col-lg-4 about-artetopia'>
                         <img className="col-lg-2 logo-artetopia-footer rounded-5" src="https://htmlcolorcodes.com/assets/images/colors/dark-gray-color-solid-background-1920x1080.png" alt="artetopia logo"/>
                         <h2 className='artetopia col-lg-1 text-start fw-semibold'>Artetopia</h2>
-                        <p className='text-start lh-sm mt-lg-4'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
+                        <p className='text-start lh-sm my-3 mt-lg-4'>Nuestra misión es crear un mercado de artesanías vibrante que celebre la habilidad, la pasión y la creatividad de los artesanos en todo el mundo.</p>
                         <div className='row row-cols-auto m-0 p-0 d-flex align-items-center social-media-container' >
                             <FacebookLogo />
                             <TwitterLogo />
@@ -27,7 +26,7 @@ const Footer = () => {
                         </div>
                     </div>  
 
-                    <div className='col-lg-2 ms-lg-4 menu-section'>
+                    <div className='col-lg-2 mt-3 ms-lg-4 menu-section'>
                         <p className='sections-footer fw-bolder'>Menu</p>
                         <a href='http://www.kodemia.com' title='inicio' className='link-footer'><p>Inicio</p></a>
                         <a href='http://www.kodemia.com' title='nosotros' className='link-footer'><p>Nosotros</p></a>
