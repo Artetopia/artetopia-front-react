@@ -11,10 +11,7 @@ import {
   NavbarText,
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from '../navbar_buttons';
-import image from '../../assets/hero-image.svg'
-import imagePlayButtton from '../../assets/play-button.svg'
-import topDescription from '../../assets/top_descripcion.svg'
+import Button from '../register_navbar_buttons';
 
 const Navbare = () => {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);

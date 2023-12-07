@@ -5,8 +5,8 @@ import './header.css';
 import image from '../../assets/hero-image.svg'
 import imagePlayButtton from '../../assets/play-button.svg'
 import topDescription from '../../assets/top_descripcion.svg'
-import Navbare from '../navbar'
-import AnimationButton from '../animation_button';
+import Navbare from '../../components/navbar'
+import AnimationButton from '../../components/animation_button';
 
 
 function HeaderComponent() {
@@ -14,7 +14,9 @@ function HeaderComponent() {
 
   return (
     <div>
+      {/* Navbar */}
       <Navbare></Navbare>
+      {/* Hero Section */}
       <div className='hero_section_desktop'>
       <section className='hero_section'>
       <div className='top_description'>
