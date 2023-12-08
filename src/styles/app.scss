@@ -35,6 +35,12 @@ $fontkarla: "Karla", sans-serif;
   max-width: 100%;
 }
 
+#call-to-action {
+  .max__width {
+    max-width: 75%;
+  }
+}
+
 .input_primary {
   border: 1px solid $secondaryColor !important;
   max-width: 500px;

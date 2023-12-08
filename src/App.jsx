@@ -294,7 +294,7 @@ function App() {
       </section>
 
       <section id="call-to-action" className="d-flex justify-content-center mt-5">
-        <div className="row bg_secondary p-4 p-md-5 w-75 rounded d-flex align-items-center">
+        <div className="row bg_secondary p-4 p-md-5 max__width rounded d-flex align-items-center">
           <div className="col-md-8">
             <h3 className="text-white">Crea tu propio sitio web facil y rapido desde <strong className="heading_primary">Artetopia</strong> y comienza a vender tus artesanias.</h3>
           </div>
