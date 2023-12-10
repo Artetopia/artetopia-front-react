@@ -61,4 +61,6 @@
 .website-profilePic {
   width: 140px;
   height: 134px;
+  border-color: #e91e63 !important;
+  border-style: solid;
 }/*# sourceMappingURL=dashboardClient.css.map */

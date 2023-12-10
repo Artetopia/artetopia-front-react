@@ -1,7 +1,13 @@
+import CardCraftsman from "../components/CardCraftsman";
 import "./dashboardClient.scss"
 
-const DashboardClient = ({websiteName, profilePic, rate, categories}) => {
- 
+const DashboardClient = () => {
+    const website = { 
+        name: 'ARTE | SANO',
+        profilePic: 'https://img.freepik.com/foto-gratis/florero-pintura-hombre-vista-frontal_23-2149644938.jpg?w=740&t=st=1702256764~exp=1702257364~hmac=04e5c3574d858e57c9a80d7af4d76e807685950d856b190ae64ff59f8f2ac88c',
+        rate: '4',
+        categories: ['Accesorios', 'Ropa', 'Bolsas', 'Mantel', 'Textil']
+      }
     return (
         <>
         <div className="title-head text-center">
@@ -19,14 +25,13 @@ const DashboardClient = ({websiteName, profilePic, rate, categories}) => {
             {/* <i className="fa fa-search"></i>*/}
         </div>
         </div>
-        <div className="content-craftsman-container pt-4 pb-1 px-1">
-            <div className="card-craftsman-container rounded-4">
-                <h5 className='website-name-label text-center'>{websiteName}</h5>
-                <img className='website-profilePic rounded-circle border-2 d-flex justify-content-center' src={profilePic} alt={`Foto de perfil de ${websiteName}`}/>
-                <p>{rate}</p>
-                <p>{categories}</p>
-            </div>
-        </div>
+        <CardCraftsman
+        websiteName={website.name}
+        profilePic={website.profilePic}
+        rate={website.rate}
+        categories={website.categories}
+        />
+        
         
         </>
     )}

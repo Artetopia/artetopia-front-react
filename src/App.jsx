@@ -6,12 +6,7 @@ import Footer from './components/footer';
 import DashboardClient from "./pages";
 
 function App() {
-  const website = { 
-    name: 'ARTE | SANO',
-    profilePic: 'https://img.freepik.com/foto-gratis/florero-pintura-hombre-vista-frontal_23-2149644938.jpg?w=740&t=st=1702256764~exp=1702257364~hmac=04e5c3574d858e57c9a80d7af4d76e807685950d856b190ae64ff59f8f2ac88c',
-    rate: '4',
-    categories: ['Accesorios', 'Ropa', 'Bolsas', 'Mantel', 'Textil']
-  }
+  
 
   return (
     <>
@@ -19,12 +14,7 @@ function App() {
       <HeaderComponent></HeaderComponent>
     </header>
     {/* <MultiStepForm/> */}
-    <DashboardClient 
-      websiteName={website.name}
-      profilePic={website.profilePic}
-      rate={website.rate}
-      categories={website.categories}
-    />
+    <DashboardClient />
     <section id='hero-section'>
 
     </section>
