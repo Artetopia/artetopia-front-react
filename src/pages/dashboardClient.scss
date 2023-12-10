@@ -1,0 +1,57 @@
+@import "../styles/variables";
+
+.title-head {
+    color: $secondaryColor;
+}
+ 
+.principal-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $fontMontserrat;
+}
+
+.subtitle-text {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: $fontkarla;
+}
+
+.filter-buttons {
+    width: 84px;
+    background-color: $primaryColor;
+    color: $textColorWhite;
+    border: solid;
+}
+
+.searchbar-container {
+    width: 219px;
+    height: 40px;
+    position: relative;
+}
+
+.searchbar-container input {
+    font-family: $fontkarla !important;
+    border-color: $secondaryColor;
+}
+
+.searchbar-container i{
+    position: absolute;
+    right: 12px;
+    top:10px;
+    color: $secondaryColor;
+}
+
+.content-craftsman-container {
+    background-color: $secondaryColor;
+}
+
+.card-craftsman-container {
+    background-color: white;
+}
+
+.website-name-label {
+    color: $primaryColor;
+    font-family: $fontMontserrat;
+    font-weight: 500;
+    font-size: 28px;
+}

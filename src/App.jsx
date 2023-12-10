@@ -3,14 +3,22 @@ import "./styles/app.scss";
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
 import MultiStepForm from "./components/Multistep/Multistep";
+import DashboardClient from "./pages";
 function App() {
+  const categories = ['Accesorios', 'Ropa', 'Bolsas', 'Mantel', 'Textil'];
+
   return (
     <>
     <header>
       <HeaderComponent></HeaderComponent>
     </header>
-    <MultiStepForm/>
-
+    {/* <MultiStepForm/> */}
+    <DashboardClient 
+      websiteName='ARTE | SANO'
+      // profilePic={zapateroImage}
+      rate='4'
+      categories={categories}
+    />
     <section id='hero-section'>
 
     </section>
