@@ -17,7 +17,10 @@
 }
 
 .filter-buttons {
-    width: 84px;
+    width: 90px;
+    font-family: $fontkarla;
+    font-size: 16px;
+    font-weight: 500;
     background-color: $primaryColor;
     color: $textColorWhite;
     border: solid;
@@ -54,4 +57,11 @@
     font-family: $fontMontserrat;
     font-weight: 500;
     font-size: 28px;
+}
+
+.website-profilePic {
+    width: 140px;
+    height: 134px;
+    border-color: $primaryColor !important;
+    border-style: solid;
 }
