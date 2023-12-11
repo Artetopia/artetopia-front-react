@@ -41,26 +41,4 @@
   right: 12px;
   top: 10px;
   color: #2b2e4a;
-}
-
-.content-craftsman-container {
-  background-color: #2b2e4a;
-}
-
-.card-craftsman-container {
-  background-color: white;
-}
-
-.website-name-label {
-  color: #e91e63;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 28px;
-}
-
-.website-profilePic {
-  width: 140px;
-  height: 134px;
-  border-color: #e91e63 !important;
-  border-style: solid;
 }/*# sourceMappingURL=dashboardClient.css.map */
