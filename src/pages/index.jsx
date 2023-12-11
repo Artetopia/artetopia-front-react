@@ -2,12 +2,20 @@ import CardCraftsman from "../components/CardCraftsman";
 import "./dashboardClient.scss"
 
 const DashboardClient = () => {
-    const website = { 
+    const websites = [{ 
         name: 'ARTE | SANO',
         profilePic: 'https://img.freepik.com/foto-gratis/florero-pintura-hombre-vista-frontal_23-2149644938.jpg?w=740&t=st=1702256764~exp=1702257364~hmac=04e5c3574d858e57c9a80d7af4d76e807685950d856b190ae64ff59f8f2ac88c',
         rate: '3.5',
         categories: ['Accesorios', 'Ropa', 'Bolsas', 'Mantel', 'Textil']
-      }
+      },
+      { 
+        name: 'ARTESANOS LEON',
+        profilePic: 'https://img.freepik.com/foto-gratis/sastre-creativo-trabajando-taller_23-2148970726.jpg?w=740&t=st=1702279290~exp=1702279890~hmac=234009d0e7d4fe552e54f27a6d2efaa680f75e4b09addae1436d0d7959a078a9',
+        rate: '1.5',
+        categories: ['Joyeria', 'Cuero', 'Bolsas', 'Botas', 'Textil']
+      }]
+
+      
     return (
         <>
         <div className="title-head text-center">
@@ -26,10 +34,16 @@ const DashboardClient = () => {
         </div>
         </div>
         <CardCraftsman
-        websiteName={website.name}
-        profilePic={website.profilePic}
-        rate={website.rate}
-        categories={website.categories}
+        websiteName={websites[0].name}
+        profilePic={websites[0].profilePic}
+        rate={websites[0].rate}
+        categories={websites[0].categories}
+        />
+        <CardCraftsman
+        websiteName={websites[1].name}
+        profilePic={websites[1].profilePic}
+        rate={websites[1].rate}
+        categories={websites[1].categories}
         />
         
         
