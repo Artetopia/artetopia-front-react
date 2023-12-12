@@ -15,7 +15,14 @@ const DashboardClient = () => {
         profilePic: 'https://img.freepik.com/foto-gratis/sastre-creativo-trabajando-taller_23-2148970726.jpg?w=740&t=st=1702279290~exp=1702279890~hmac=234009d0e7d4fe552e54f27a6d2efaa680f75e4b09addae1436d0d7959a078a9',
         rate: '1.5',
         categories: ['Cuero', 'Bolsas', 'Botas', 'Textil']
-      }]
+      },
+      { 
+        name: 'FLOR DE CANELA',
+        profilePic: 'https://img.freepik.com/foto-gratis/bodegon-herramientas-ceramica-alfareria_23-2150197287.jpg?w=360&t=st=1702434457~exp=1702435057~hmac=a87e51552a2df4bd5ea943d5d2b2c87cdae059fe60fbe12bef97830145f45490',
+        rate: '4',
+        categories: ['Arcilla', 'Ceramica', 'Cristal', 'Decoracion', 'Plastico']
+      }
+    ]
 
       
     return (
@@ -50,21 +57,36 @@ const DashboardClient = () => {
         <div className="d-flex justify-content-center d-lg-none">
             <Searchbar />
         </div>
-        <CardCraftsman
-        websiteName={websites[0].name}
-        profilePic={websites[0].profilePic}
-        rate={websites[0].rate}
-        categories={websites[0].categories}
-        />
-
-        <CardCraftsman
-        websiteName={websites[1].name}
-        profilePic={websites[1].profilePic}
-        rate={websites[1].rate}
-        categories={websites[1].categories}
-        />
-        
-        
+        <div className="content-craftsman-container d-flex justify-content-center py-3 px-4 px-lg-1">
+            <div className="container px-1 mx-1">
+                <div className="row d-flex justify-content-lg-between">
+                    <CardCraftsman
+                    websiteName={websites[0].name}
+                    profilePic={websites[0].profilePic}
+                    rate={websites[0].rate}
+                    categories={websites[0].categories}
+                    />
+                    <CardCraftsman
+                    websiteName={websites[1].name}
+                    profilePic={websites[1].profilePic}
+                    rate={websites[1].rate}
+                    categories={websites[1].categories}
+                    />
+                    <CardCraftsman
+                    websiteName={websites[2].name}
+                    profilePic={websites[2].profilePic}
+                    rate={websites[2].rate}
+                    categories={websites[2].categories}
+                    />
+                    <CardCraftsman
+                    websiteName={websites[1].name}
+                    profilePic={websites[1].profilePic}
+                    rate={websites[1].rate}
+                    categories={websites[1].categories}
+                    />
+                </div>
+            </div>
+        </div>
         </>
     )}
 

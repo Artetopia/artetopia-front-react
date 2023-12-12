@@ -13,6 +13,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 28px;
+  height: 100px;
 }
 
 .website-profilePic {
@@ -38,20 +39,17 @@
 }
 
 @media (min-width: 768px) {
-  .card-craftsman-container {
-    width: 60%;
-  }
   .website-profilePic {
     width: 205px;
     height: 195px;
   }
 }
 @media (min-width: 992px) {
-  .card-craftsman-container {
-    width: 30%;
-  }
   .website-profilePic {
-    width: 205px;
-    height: 195px;
+    width: 165px;
+    height: 160px;
+  }
+  .card-craftsman-container {
+    width: 30% !important;
   }
 }/*# sourceMappingURL=CardCraftsman.css.map */
