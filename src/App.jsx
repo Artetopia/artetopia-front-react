@@ -1,4 +1,4 @@
-import './styles/app.scss';
+import './styles/app.css';
 import bgArtesano from './assets/bgArtesano.png';
 import HeaderComponent from './components/header';
 import Footer from './components/footer';
