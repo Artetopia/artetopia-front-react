@@ -58,7 +58,7 @@ const DashboardClient = () => {
             <Searchbar />
         </div>
         <div className="content-craftsman-container d-flex justify-content-center py-3 px-4 px-lg-1">
-            <div className="container px-1 mx-1">
+            <div className="container px-1 mx-5">
                 <div className="row d-flex justify-content-lg-between">
                     <CardCraftsman
                     websiteName={websites[0].name}
