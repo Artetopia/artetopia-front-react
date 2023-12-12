@@ -1,0 +1,90 @@
+$primaryColor: #e91e63;
+$secondaryColor: #2b2e4a;
+$textColorBlack: #000000;
+$textColorWhite: #ffffff;
+$fontkarla: "Karla", sans-serif;
+$fontMontserrat: "Montserrat", sans-serif;
+$gradientCard: linear-gradient(180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(44, 47, 75, 1) 55%,
+        rgba(44, 47, 75, 1) 82%,
+        $secondaryColor 100%);
+
+.titles {
+    font-family: "Montserrat", sans-serif;
+    color: $primaryColor;
+}
+
+.saludo_artesano {
+    font-family: $fontMontserrat;
+    color: $secondaryColor;
+}
+
+.name_artesano {
+    font-family: $fontMontserrat;
+    color: $primaryColor;
+}
+
+.text-template-b {
+    font-family: $fontkarla;
+    color: $secondaryColor;
+}
+
+.card_text {
+    font-family: $fontkarla !important;
+}
+
+.card_title {
+    font-family: "Montserrat", sans-serif;
+}
+
+.card_materiales {
+    height: 25rem !important;
+    min-height: fit-content !important;
+    text-align: center;
+    background-image: $gradientCard,
+        url("../images/Materiales.png");
+    background-size: cover;
+}
+
+.card_historia {
+    height: 25rem !important;
+    min-height: fit-content !important;
+    text-align: center;
+    background-image: $gradientCard,
+        url("../images/Historia.png");
+    background-size: cover;
+}
+
+.card_respons {
+    height: 25rem !important;
+    min-height: fit-content !important;
+    text-align: center;
+    background-image: $gradientCard,
+        url("../images/Responsabilidad.png");
+    background-size: cover;
+}
+
+.button-primary_category {
+    background-color: $primaryColor;
+    color: $textColorWhite;
+    border: 1px solid $primaryColor;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.card_product_b {
+    background-color: $secondaryColor;
+    color: $textColorWhite;
+    font-family: $fontkarla;
+}
+
+@media (min-width: 1024px) {
+    .saludo_artesano {
+        font-size: 4rem;
+    }
+
+    .name_artesano {
+        font-size: 4rem;
+    }
+}

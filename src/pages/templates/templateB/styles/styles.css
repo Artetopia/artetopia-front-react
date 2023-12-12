@@ -1,0 +1,78 @@
+.titles {
+  font-family: "Montserrat", sans-serif;
+  color: #e91e63;
+}
+
+.saludo_artesano {
+  font-family: "Montserrat", sans-serif;
+  color: #2b2e4a;
+}
+
+.name_artesano {
+  font-family: "Montserrat", sans-serif;
+  color: #e91e63;
+}
+
+.text-template-b {
+  font-family: "Karla", sans-serif;
+  color: #2b2e4a;
+}
+
+.card_text {
+  font-family: "Karla", sans-serif !important;
+}
+
+.card_title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card_materiales {
+  height: 25rem !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/Materiales.png");
+  background-size: cover;
+}
+
+.card_historia {
+  height: 25rem !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/Historia.png");
+  background-size: cover;
+}
+
+.card_respons {
+  height: 25rem !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/Responsabilidad.png");
+  background-size: cover;
+}
+
+.button-primary_category {
+  background-color: #e91e63;
+  color: #ffffff;
+  border: 1px solid #e91e63;
+  border-radius: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card_product_b {
+  background-color: #2b2e4a;
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .saludo_artesano {
+    font-size: 4rem;
+  }
+  .name_artesano {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
