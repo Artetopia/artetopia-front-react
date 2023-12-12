@@ -23,22 +23,4 @@
   background-color: #e91e63;
   color: #ffffff;
   border: solid;
-}
-
-.searchbar-container {
-  width: 219px;
-  height: 40px;
-  position: relative;
-}
-
-.searchbar-container input {
-  font-family: "Karla", sans-serif !important;
-  border-color: #2b2e4a;
-}
-
-.searchbar-container i {
-  position: absolute;
-  right: 12px;
-  top: 10px;
-  color: #2b2e4a;
 }/*# sourceMappingURL=dashboardClient.css.map */

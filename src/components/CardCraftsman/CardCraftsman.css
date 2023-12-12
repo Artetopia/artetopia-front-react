@@ -5,6 +5,7 @@
 
 .card-craftsman-container {
   background-color: white;
+  width: 90%;
 }
 
 .website-name-label {
@@ -25,4 +26,23 @@
 
 .text-warning {
   color: yellow;
+}
+
+.categories-button-container {
+  background-color: #FFDAE1;
+  color: #e91e63;
+  border-style: solid;
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .card-craftsman-container {
+    width: 60%;
+  }
+  .website-profilePic {
+    width: 205px;
+    height: 195px;
+  }
 }/*# sourceMappingURL=CardCraftsman.css.map */

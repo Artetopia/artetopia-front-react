@@ -25,22 +25,3 @@
     color: $textColorWhite;
     border: solid;
 }
-
-.searchbar-container {
-    width: 219px;
-    height: 40px;
-    position: relative;
-}
-
-.searchbar-container input {
-    font-family: $fontkarla !important;
-    border-color: $secondaryColor;
-}
-
-.searchbar-container i{
-    position: absolute;
-    right: 12px;
-    top:10px;
-    color: $secondaryColor;
-}
-
