@@ -5,9 +5,12 @@ import Footer from "./components/footer";
 import ButtonAction from "./components/buttonAction";
 import CardsAbout from './components/cards_about';
 import { Row} from 'reactstrap';
+import {Route, Routes} from 'react-router-dom';
+import Register from "./pages/register";
 function App() {
   return (
     <>
+
     <header>
       <HeaderComponent></HeaderComponent>
     </header>
@@ -15,7 +18,10 @@ function App() {
     <section id='hero-section'>
 
     </section>
-
+    <Routes>
+      <Route path="/" element={<Register/>}></Route>
+      <Route path="/register" element={<Register/>}/>
+    </Routes>
     <section id='about' className="mb-4">
       <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
       <div className="container">

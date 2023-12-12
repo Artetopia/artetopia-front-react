@@ -6,7 +6,7 @@
 
 .footer-divider {
   color: #e91e63;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 .about-artetopia .artetopia {
@@ -98,6 +98,10 @@
 .contact-text {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
+}
+
+.more-info-text .btn-label {
+  font-size: 15px;
 }
 
 @media (max-width: 992px) {
