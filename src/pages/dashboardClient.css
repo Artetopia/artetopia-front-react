@@ -23,4 +23,26 @@
   background-color: #e91e63;
   color: #ffffff;
   border: solid;
+}
+
+.horizontal-row-container {
+  color: #2b2e4a !important;
+}
+
+.top-categories-container {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .principal-title {
+    font-size: 55px;
+  }
+  .subtitle-text {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .subtitle-text {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=dashboardClient.css.map */
