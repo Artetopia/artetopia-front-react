@@ -68,7 +68,7 @@ const [profilePic, setProfilePic] = useState();
         </Container>
       </div>
 
-      <ProgressBar className='border-progress-bar d-lg-none' label={step} variant="custom" now={(step / 7) * 100} />
+      <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={step} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (
         <Form.Group controlId="formStep1">
           <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion personal</Form.Label>
