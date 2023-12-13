@@ -40,6 +40,11 @@
   border-radius: 20px;
 }
 
+.image-uploaded-container {
+  width: 90%;
+  height: 350px;
+}
+
 .upload-file-text {
   color: #e91e63;
 }

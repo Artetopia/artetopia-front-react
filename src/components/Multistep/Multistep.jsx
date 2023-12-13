@@ -9,7 +9,6 @@ import StepFiveIcon from '../StepIcons/StepFiveIcon';
 import StepSixIcon from '../StepIcons/StepSixIcon';
 import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
-import FormFileMultiple from '../FormFile/FormFileMultiple'
 import "./multistep.scss"
 import ComponentCarousel from '../Carousel';
 
@@ -25,6 +24,16 @@ const handleBannerChange = (event) => {
   const file = event.target.files[0]; 
   setBanner(file); 
 }; 
+
+const [websiteImages, setWebsiteImages] = useState([]);
+const handleWebsiteImagesChange = (event) => {  
+  const files = event.target.files[0]; 
+  const file = event.target.files[1]; 
+  setWebsiteImages(...files, file); 
+  console.log('files', files)
+  console.log('file', file)
+}; 
+
   const [step, setStep] = useState(1);
   // const [formData, setFormData] = useState({});
 
@@ -106,7 +115,7 @@ const handleBannerChange = (event) => {
             {profilePic  == null ?
             <FormFile onChange={handleProfilePicChange} />
             : ( 
-            <img src={URL.createObjectURL(profilePic)} alt="Selected" /> 
+            <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
             )} 
           </div>
           <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
@@ -115,12 +124,19 @@ const handleBannerChange = (event) => {
             {banner  == null ?
             <FormFile onChange={handleBannerChange} />
             : ( 
-            <img src={URL.createObjectURL(banner)} alt="Selected" /> 
+            <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
             )} 
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p> 
           <ComponentCarousel />
-          <FormFile multiple={"multiple"}/>
+          <div> 
+            {websiteImages ?
+            <FormFile  multiple={"multiple"} onChange={handleWebsiteImagesChange} />
+            : ( 
+            <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websiteImages)} alt="Selected file" /> 
+            )} 
+          </div>
+          {/* <FormFile multiple={"multiple"}/> */}
           <p className='body-text'>8/10</p> 
         </Form.Group>
       )}
