@@ -73,7 +73,7 @@ const [profilePic, setProfilePic] = useState();
       <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={step} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (
         <Form.Group controlId="formStep1">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion personal</Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion personal</Form.Label>
         
 {/* (DAVID) *******PAGINA 1******  */}
         
@@ -81,7 +81,7 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 2 && (
         <Form.Group controlId="formStep2">  
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion de tu sitio </Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion de tu sitio </Form.Label>
 
 {/* (DAVID) *******PAGINA 2******  */}
 
@@ -89,7 +89,7 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 3 && (
         <Form.Group controlId="formStep3">
-        <Form.Label className='subtitle-text d-flex justify-content-center'>Sube tus fotos</Form.Label>
+        <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
         <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
         <div>
           {profilePic ? <img src={profilePic}/> :<FormFile/>}
@@ -97,30 +97,30 @@ const [profilePic, setProfilePic] = useState();
           {profilePic ? <img src={profilePic}/> :<FormFile/>}
         </div>
           <small className='body-text'>Fotos de tu tienda o artesanias</small> 
-        <div className="carousel-container my-3">
+        <div className="my-3">
           <ComponentCarousel/>
         </div>
-          <small className='body-text'>8/10</small> 
-          <FormFileMultiple className=''/>
+        <div className="my-3">
+          <FormFileMultiple />
+        </div>
+        <small className='body-text'>8/10</small> 
+
         </Form.Group>
       
       )}
       {step === 4 && (
         <Form.Group controlId="formStep4">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Sube tus productos</Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</Form.Label>
           <small className='body-text d-flex '>Nombre del articulo <p className='asterisk'> *</p></small> 
           <InputGroup className="mb-3">
             <Form.Control className="border-input-text" aria-label="Default"/>
           </InputGroup>
 
-          <small className='body-text d-flex '>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
+          <small className='body-text d-flex'>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
           
-          <small className='body-text d-flex '>Fotos del articulo <p className='asterisk'> *</p></small> 
-          {profilePic ? <img src={profilePic}/> 
-          :
-          <FormFileMultiple />
-          }
+          <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
+          {profilePic ? <img src={profilePic}/> :<FormFileMultiple />}
 
           <small className='body-text d-flex '>Cantidad en inventario <p className='asterisk'> *</p></small> 
           <InputGroup className="mb-3">
@@ -138,7 +138,7 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 5 && (
         <Form.Group controlId="formStep5">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Elige una plantilla</Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Elige una plantilla</Form.Label>
 
 {/* (VICTOR) *******PAGINA 5******  */}
 
@@ -146,7 +146,7 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 6 && (
         <Form.Group controlId="formStep6">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Informacion adicional</Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion adicional</Form.Label>
 
 {/* (GUADALUPE) *******PAGINA 6******  */}
 
@@ -154,7 +154,7 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 7 && (
         <Form.Group controlId="formStep6">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Pagos</Form.Label>
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Pagos</Form.Label>
          
 {/* (DANIEL) *******PAGINA 7******  */}
 

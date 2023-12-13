@@ -29,6 +29,7 @@
 
 .asterisk {
   color: #e91e63;
+  display: contents;
 }
 
 .file-uploader-container {
