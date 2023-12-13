@@ -15,8 +15,8 @@ const CardCraftsman = ({websiteName, profilePic, rate, categories}) => {
             <div className="container">
                 <div className="row">
                     {categories.map(category => (
-                        <div className='col d-flex justify-content-evenly justify-content-md-center mx-3' key={category}>
-                            <button className='categories-button-container d-fill text-center rounded-2 my-3 px-2 mx-md-4 px-md-5 mx-lg-1 px-lg-2'>{category}</button>
+                        <div className='col d-flex justify-content-evenly justify-content-md-center mx-1' key={category}>
+                            <button className='categories-button-container d-fill text-center rounded-2 my-3 px-1 mx-md-4 px-md-5 mx-lg-1 px-lg-2'>{category}</button>
                         </div>
                     ))}
                 </div>
