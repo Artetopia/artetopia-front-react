@@ -7,6 +7,7 @@ import {
   CarouselCaption,
 } from 'reactstrap';
 
+function ComponentCarousel(args) {
 const items = [
   {
     src: 'https://picsum.photos/id/123/1200/500',
@@ -28,7 +29,6 @@ const items = [
   },
 ];
 
-function ComponentCarousel(args) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 

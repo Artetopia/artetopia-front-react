@@ -25,13 +25,11 @@ const handleBannerChange = (event) => {
   setBanner(file); 
 }; 
 
-const [websiteImages, setWebsiteImages] = useState([]);
-const handleWebsiteImagesChange = (event) => {  
-  const files = event.target.files[0]; 
-  const file = event.target.files[1]; 
-  setWebsiteImages(...files, file); 
-  console.log('files', files)
-  console.log('file', file)
+const [websitePics, setWebsitePics] = useState(null);
+const handleWebsitePicsChange = (event) => { 
+  // let file=[];
+  const file = event.target.files[0]; 
+  setWebsitePics(file); 
 }; 
 
   const [step, setStep] = useState(1);
@@ -113,7 +111,7 @@ const handleWebsiteImagesChange = (event) => {
           {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
           <div> 
             {profilePic  == null ?
-            <FormFile onChange={handleProfilePicChange} />
+            <FormFile fileType='image/*' onChange={handleProfilePicChange} />
             : ( 
             <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
             )} 
@@ -122,22 +120,24 @@ const handleWebsiteImagesChange = (event) => {
           
           <div> 
             {banner  == null ?
-            <FormFile onChange={handleBannerChange} />
+            <FormFile fileType='image/*' onChange={handleBannerChange} />
             : ( 
             <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
             )} 
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p> 
-          <ComponentCarousel />
-          <div> 
-            {websiteImages ?
-            <FormFile  multiple={"multiple"} onChange={handleWebsiteImagesChange} />
+          <div className='mt-3'> 
+            {websitePics == null ?
+            <FormFile fileType='image/*' multiple='multiple' onChange={handleWebsitePicsChange} />
             : ( 
-            <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websiteImages)} alt="Selected file" /> 
+            <div>
+              <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websitePics)} alt="Selected file" /> 
+              <ComponentCarousel />
+            </div>
             )} 
           </div>
-          {/* <FormFile multiple={"multiple"}/> */}
-          <p className='body-text'>8/10</p> 
+
+          <p className='body-text '>4/6</p> 
         </Form.Group>
       )}
 

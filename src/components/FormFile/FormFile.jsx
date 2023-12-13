@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap";
 import "../Multistep/Multistep"
-const FormFile = ({onChange, multiple}) => {
+const FormFile = ({fileType, onChange, multiple}) => {
     return (
         <Form.Group 
         controlId="formFile" 
@@ -11,7 +11,7 @@ const FormFile = ({onChange, multiple}) => {
           <p className="body-text upload-file-text d-flex justify-content-center align-items-center">Cargar archivo</p>
         </div>
         </label>
-      <Form.Control className='d-none' type="file" accept='image/*' multiple={multiple} onChange={onChange} />
+      <Form.Control className='d-none' type="file" accept={fileType} multiple={multiple} onChange={onChange} />
       </Form.Group> 
         
     )
