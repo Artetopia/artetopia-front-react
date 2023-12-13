@@ -11,6 +11,7 @@ import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
 import FormFileMultiple from '../FormFile/FormFileMultiple'
 import "./multistep.scss"
+import ComponentCarousel from '../Carousel';
 
 const MultiStepForm = () => {
 const [profilePic, setProfilePic] = useState();
@@ -37,6 +38,7 @@ const [profilePic, setProfilePic] = useState();
   };
 
   return (
+    <div className="mx-3">
     <Form onSubmit={handleSubmit}>
       <div className='d-lg-none'>
         {step === 1 && <StepOneIcon/>}
@@ -87,21 +89,21 @@ const [profilePic, setProfilePic] = useState();
       )}
       {step === 3 && (
         <Form.Group controlId="formStep3">
-          <Form.Label className='subtitle-text d-flex justify-content-center'>Sube tus fotos</Form.Label>
-          <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
-          <div>
-          {profilePic ? <img src={profilePic}/> 
-          :
-          <FormFile/>
-
-          }
+        <Form.Label className='subtitle-text d-flex justify-content-center'>Sube tus fotos</Form.Label>
+        <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
+        <div>
+          {profilePic ? <img src={profilePic}/> :<FormFile/>}
           <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
-          {profilePic ? <img src={profilePic}/> 
-          :
-          <FormFile/>
-          }
-      </div>
+          {profilePic ? <img src={profilePic}/> :<FormFile/>}
+        </div>
+          <small className='body-text'>Fotos de tu tienda o artesanias</small> 
+        <div className="carousel-container my-3">
+          <ComponentCarousel/>
+        </div>
+          <small className='body-text'>8/10</small> 
+          <FormFileMultiple className=''/>
         </Form.Group>
+      
       )}
       {step === 4 && (
         <Form.Group controlId="formStep4">
@@ -117,7 +119,7 @@ const [profilePic, setProfilePic] = useState();
           <small className='body-text d-flex '>Fotos del articulo <p className='asterisk'> *</p></small> 
           {profilePic ? <img src={profilePic}/> 
           :
-          <FormFileMultiple/>
+          <FormFileMultiple />
           }
 
           <small className='body-text d-flex '>Cantidad en inventario <p className='asterisk'> *</p></small> 
@@ -177,6 +179,7 @@ const [profilePic, setProfilePic] = useState();
         )}
       </div>
     </Form>
+    </div>
   );
 };
 
