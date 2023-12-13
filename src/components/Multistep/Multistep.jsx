@@ -14,8 +14,17 @@ import "./multistep.scss"
 import ComponentCarousel from '../Carousel';
 
 const MultiStepForm = () => {
-const [profilePic, setProfilePic] = useState();
+const [profilePic, setProfilePic] = useState(null);
+const handleProfilePicChange = (event) => { 
+  const file = event.target.files[0]; 
+  setProfilePic(file); 
+}; 
 
+const [banner, setBanner] = useState(null);
+const handleBannerChange = (event) => { 
+  const file = event.target.files[0]; 
+  setBanner(file); 
+}; 
   const [step, setStep] = useState(1);
   // const [formData, setFormData] = useState({});
 
@@ -87,27 +96,35 @@ const [profilePic, setProfilePic] = useState();
 
         </Form.Group>
       )}
+
       {step === 3 && (
         <Form.Group controlId="formStep3">
-        <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
-        <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
-        <div>
-          {profilePic ? <img src={profilePic}/> :<FormFile/>}
+          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
+          <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
+          {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
+          <div> 
+            {profilePic  == null ?
+            <FormFile onChange={handleProfilePicChange} />
+            : ( 
+            <img src={URL.createObjectURL(profilePic)} alt="Selected" /> 
+            )} 
+          </div>
           <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
-          {profilePic ? <img src={profilePic}/> :<FormFile/>}
-        </div>
-          <small className='body-text'>Fotos de tu tienda o artesanias</small> 
-        <div className="my-3">
-          <ComponentCarousel/>
-        </div>
-        <div className="my-3">
-          <FormFileMultiple />
-        </div>
-        <small className='body-text'>8/10</small> 
-
+          
+          <div> 
+            {banner  == null ?
+            <FormFile onChange={handleBannerChange} />
+            : ( 
+            <img src={URL.createObjectURL(banner)} alt="Selected" /> 
+            )} 
+          </div>
+          <p className='body-text'>Fotos de tu tienda o artesanias</p> 
+          <ComponentCarousel />
+          <FormFile multiple={"multiple"}/>
+          <p className='body-text'>8/10</p> 
         </Form.Group>
-      
       )}
+
       {step === 4 && (
         <Form.Group controlId="formStep4">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</Form.Label>
@@ -115,25 +132,19 @@ const [profilePic, setProfilePic] = useState();
           <InputGroup className="mb-3">
             <Form.Control className="border-input-text" aria-label="Default"/>
           </InputGroup>
-
           <small className='body-text d-flex'>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
-          
           <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
-          {profilePic ? <img src={profilePic}/> :<FormFileMultiple />}
-
+          {profilePic ? <img src={profilePic}/> :<FormFile multiple={"multiple"}/>}
           <small className='body-text d-flex '>Cantidad en inventario <p className='asterisk'> *</p></small> 
           <InputGroup className="mb-3">
             <Form.Control className="border-input-text" aria-label="Default"/>
           </InputGroup>
-
           <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
           <InputGroup className="mb-3">
             <Form.Control className="border-input-text" placeholder='$' aria-label="Default"/>
           </InputGroup>
-
           <Button variant="white" className="add-product mt-3 mb-3">Añadir  este articulo</Button>
-          
         </Form.Group>
       )}
       {step === 5 && (
