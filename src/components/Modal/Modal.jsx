@@ -26,7 +26,8 @@ function MydModalWithGrid(props) {
                   #{product.number}
                 </Col>
                 <Col className='d-flex justify-content-end' xs={6} md={4}>
-                  iconos
+                  <i className='edit-icons mx-2 fa fa-pencil' />
+                  <i className='edit-icons fa fa-trash-o' />
                 </Col>
                 <Col xs={12} md={4}>
                   <p>{product.name}</p>

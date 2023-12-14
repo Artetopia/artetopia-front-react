@@ -78,8 +78,8 @@ const products = [
     number: "3",
     name: "Jarron de arcilla handmade",
     description: "Gran jarron de arcilla en varios colores. Medidas: 100x20x20 cm",
-    stock: "22",
-    price: "300"
+    stock: "82",
+    price: "950"
 
   }
 ]
