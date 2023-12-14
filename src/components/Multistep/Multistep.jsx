@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, ProgressBar, Container, Row, Col } from 'react-bootstrap';
+import { Form, Button, ProgressBar, Container, Row, Col, Modal } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
 import StepOneIcon from '../StepIcons/StepOneIcon';
 import StepTwoIcon from '../StepIcons/StepTwo';
@@ -11,8 +11,12 @@ import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
 import "./multistep.scss"
 import ComponentCarousel from '../Carousel';
+import MydModalWithGrid from '../Modal/Modal';
+
 
 const MultiStepForm = () => {
+  const [modalShow, setModalShow] = useState(false);
+  
 const [profilePic, setProfilePic] = useState(null);
 const handleProfilePicChange = (event) => { 
   const file = event.target.files[0]; 
@@ -53,6 +57,33 @@ const handleWebsitePicsChange = (event) => {
     // handle form submission
   };
 
+const products = [
+  {
+    number: "1",
+    name: "Calavera pintada a mano",
+    description: "Calavera hecha a mano por artesanos de Leon, Guanajuato. Medidas: 10x20x10 cm. Colores: azul, rojo, rosa, amarillo, azul",
+    stock: "50",
+    price: "99"
+
+  },
+  {
+    number: "2",
+    name: "Collar largo artesanal de obsidiana color plata",
+    description: "Bonito collar color plata con dije de obsidiana, hecho a mano. Largo: 30 cm. Material: acero inoxidable ",
+    stock: "22",
+    price: "300"
+
+  },
+  {
+    number: "3",
+    name: "Jarron de arcilla handmade",
+    description: "Gran jarron de arcilla en varios colores. Medidas: 100x20x20 cm",
+    stock: "22",
+    price: "300"
+
+  }
+]
+
   return (
     <div className="mx-3">
     <Form onSubmit={handleSubmit}>
@@ -90,7 +121,7 @@ const handleWebsitePicsChange = (event) => {
       {step === 1 && (
         <Form.Group controlId="formStep1">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion personal</Form.Label>
-        
+          
 {/* (DAVID) *******PAGINA 1******  */}
         
         </Form.Group>
@@ -160,7 +191,17 @@ const handleWebsitePicsChange = (event) => {
           <InputGroup className="mb-3">
             <Form.Control className="border-input-text" placeholder='$' aria-label="Default"/>
           </InputGroup>
-          <Button variant="white" className="add-product mt-3 mb-3">Añadir  este articulo</Button>
+          <Button variant="white" className="add-product">Añadir  este articulo</Button>
+          <div className="modal-container">
+          <Button variant="white" className="add-product mt-2 mb-5" onClick={() => setModalShow(true)}>
+            Ver mis productos
+          </Button>
+          <MydModalWithGrid 
+            show={modalShow} 
+            onHide={() => setModalShow(false)} 
+            products={products}
+          />
+          </div>
         </Form.Group>
       )}
       {step === 5 && (
