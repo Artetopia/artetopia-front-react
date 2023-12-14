@@ -30,6 +30,7 @@
 }
 
 .categories-button-container {
+  width: 90px;
   background-color: #FFDAE1;
   color: #e91e63;
   border-style: solid;

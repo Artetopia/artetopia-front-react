@@ -31,12 +31,13 @@
 }
 
 .categories-button-container {
-   background-color: #FFDAE1;
-   color: $primaryColor;
-   border-style: solid;
-   font-family: $fontkarla;
-   font-size: 14px;
-   font-weight: bold;
+    width: 90px;
+    background-color: #FFDAE1;
+    color: $primaryColor;
+    border-style: solid;
+    font-family: $fontkarla;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) { 

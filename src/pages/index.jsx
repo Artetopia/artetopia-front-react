@@ -35,7 +35,7 @@ const DashboardClient = () => {
                         <div className='col d-flex justify-content-between align-items-center'>
                             {categories.map(category => (
                                 <div key={category}>
-                                    <button className='categories-button-container text-center rounded-1 my-1 px-1'>{category}</button>
+                                    <button className='categories-button-container text-center rounded-1 my-1 me-1'>{category}</button>
                                 </div>
                             ))}
                             <Searchbar  />
