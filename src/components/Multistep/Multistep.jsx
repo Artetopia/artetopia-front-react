@@ -138,33 +138,47 @@ const products = [
       {step === 3 && (
         <Form.Group controlId="formStep3">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
-          <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
-          {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
-          <div className='formfile-uploader-container'> 
-            {profilePic  == null ?
-            <FormFile fileType='image/*' onChange={handleProfilePicChange} />
-            : ( 
-            <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
-            )} 
-          </div>
-          <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
-          <div> 
-            {banner  == null ?
-            <FormFile fileType='image/*' onChange={handleBannerChange} />
-            : ( 
-            <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
-            )} 
+          <div className="container m-0 p-0">
+            <div className="row">
+              <div className="col-12 col-lg-5">
+                <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
+                {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
+                <div className='formfile-uploader-container'> 
+                  {profilePic  == null ?
+                  <FormFile fileType='image/*' onChange={handleProfilePicChange} />
+                  : ( 
+                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
+                  )} 
+                </div>
+              </div>
+              <div className="col-12 col-lg-7">
+                <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
+                <div> 
+                  {banner  == null ?
+                  <FormFile fileType='image/*' onChange={handleBannerChange} />
+                  : ( 
+                  <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
+                  )} 
+                </div>
+              </div>
+            </div>
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p> 
-          <div className='mt-3'> 
-            {websitePics == null ?
-            <FormFile fileType='image/*' multiple='multiple' onChange={handleWebsitePicsChange} />
-            : ( 
-            <div>
-              <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websitePics)} alt="Selected file" /> 
-              <ComponentCarousel />
+          <ComponentCarousel />
+                    
+          <div className="container m-0 p-0">
+            <div className="row">
+              <div className='col-12 col-md-6 col-lg-4 mt-3'> 
+                {websitePics == null ?
+                <FormFile fileType='image/*' multiple='multiple' onChange={handleWebsitePicsChange} />
+                : ( 
+                <div>
+                  <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websitePics)} alt="Selected file" /> 
+                  <ComponentCarousel />
+                </div>
+                )} 
+              </div>
             </div>
-            )} 
           </div>
 
           <p className='body-text '>4/6</p> 

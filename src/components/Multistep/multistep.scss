@@ -119,6 +119,10 @@
     font-weight: 500 !important;
 }
 
+.container {
+    max-width: 100% !important;
+}
+
 @media (min-width: 768px) {
     .file-uploader-container {
         height: 300px;
@@ -134,7 +138,12 @@
 @media (min-width: 992px) {
     .progress-bar-text {
         margin-top: 10px;
-        display: flex !important;
+    }
+    .file-uploader-container {
+        height: 350px;
+    }
+    .formfile-uploader-container {
+        width: 100%;
     }
  }
 
