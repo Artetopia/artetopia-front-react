@@ -117,7 +117,7 @@ const products = [
         </Container>
       </div>
 
-      <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={step} variant="custom" now={(step / 7) * 100} />
+      <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
       {step === 1 && (
         <Form.Group controlId="formStep1">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion personal</Form.Label>
@@ -140,7 +140,7 @@ const products = [
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
           <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
           {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
-          <div> 
+          <div className='formfile-uploader-container'> 
             {profilePic  == null ?
             <FormFile fileType='image/*' onChange={handleProfilePicChange} />
             : ( 
@@ -148,7 +148,6 @@ const products = [
             )} 
           </div>
           <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
-          
           <div> 
             {banner  == null ?
             <FormFile fileType='image/*' onChange={handleBannerChange} />
@@ -229,19 +228,24 @@ const products = [
         </Form.Group>
       )}
       
-      <div>
+      <div className='d-md-flex justify-content-center'>
+        {step > 1 && (
+          <Button className='handle-buttons back-button d-none d-md-block my-2' variant="white" onClick={handlePrevious}>
+            Atras
+          </Button>
+        )}
         {step < 7 ? (
-          <Button className='next-button mt-2' variant="custom" onClick={handleNext}>
+          <Button className='handle-buttons next-button mt-2 mx-md-2' variant="custom" onClick={handleNext}>
             Siguiente
           </Button>)
         
           : (
-            <Button className='next-button mt-2' variant="custom" type="submit">
+            <Button className='handle-buttons next-button mt-2 mx-md-2' variant="custom" type="submit">
               Siguiente
             </Button>
         ) }
         {step > 1 && (
-          <Button className='back-button mt-2 mb-2' variant="white" onClick={handlePrevious}>
+          <Button className='handle-buttons back-button d-sm-block d-md-none mt-2 mb-2' variant="white" onClick={handlePrevious}>
             Atras
           </Button>
         )}

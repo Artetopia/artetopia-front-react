@@ -108,16 +108,29 @@
     border-color: $secondaryColor;
 }
 .back-button {
-    color: $primaryColor;
-    width: 100%;
-    border-width: 2px;
     border-color: $primaryColor !important;
+    color: $primaryColor !important;
 }
 
-.next-button {
+.handle-buttons {
     width: 100%;
+    font-family: $fontkarla !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
 }
- 
+
+@media (min-width: 768px) {
+    .file-uploader-container {
+        height: 300px;
+    }
+    .formfile-uploader-container {
+        width: 60%;
+    }
+    .handle-buttons {
+        width: 130px;
+        height: 40px;
+    }
+}
 @media (min-width: 992px) {
     .progress-bar-text {
         margin-top: 10px;
