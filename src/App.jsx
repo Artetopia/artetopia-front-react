@@ -15,7 +15,7 @@ function App() {
     {/* <Payments /> */}
     <DeliveryStatus
     guideNumber = '123456789ABCDMX'
-    status = 'created'
+    status = 'delivered'
     />
     <section id='hero-section'>
 
