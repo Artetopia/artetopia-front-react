@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.payments-text {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.show-dashboard-button {
+    font-weight: 500;
+    font-size: 20px;
+    background-color: $primaryColor;
+    color: white;
+    border: none;
+}
