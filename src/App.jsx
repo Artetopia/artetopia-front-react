@@ -3,7 +3,8 @@ import "./styles/app.scss";
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
 // import MultiStepForm from "./components/Multistep/Multistep";
-import Payments from './pages/Payments';
+// import Payments from './pages/Payments';
+import DeliveryStatus from './pages/DeliveryStatus'
 function App() {
   return (
     <>
@@ -11,7 +12,11 @@ function App() {
       <HeaderComponent></HeaderComponent>
     </header>
     {/* <MultiStepForm/> */}
-    <Payments />
+    {/* <Payments /> */}
+    <DeliveryStatus
+    guideNumber = '123456789ABCDMX'
+    status = 'created'
+    />
     <section id='hero-section'>
 
     </section>
