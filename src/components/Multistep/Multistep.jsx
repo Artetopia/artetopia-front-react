@@ -12,7 +12,9 @@ import FormFile from '../FormFile/FormFile'
 import "./multistep.scss"
 import ComponentCarousel from '../Carousel';
 import MydModalWithGrid from '../Modal/Modal';
+import Swal from 'sweetalert2';
 
+const MAX_ALLOWED_FILES = 6;
 
 const MultiStepForm = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -29,11 +31,21 @@ const handleBannerChange = (event) => {
   setBanner(file); 
 }; 
 
-const [websitePics, setWebsitePics] = useState(null);
+const [websitePics, setWebsitePics] = useState([]);
 const handleWebsitePicsChange = (event) => { 
-  // let file=[];
-  const file = event.target.files[0]; 
-  setWebsitePics(file); 
+  const eventFilesLength = event.target.files?.length;
+  const currentFilesLength = websitePics?.length;
+  const totalFiles = eventFilesLength +currentFilesLength
+  if(totalFiles > MAX_ALLOWED_FILES) {
+    Swal.fire({
+      icon: "error",
+      title: "Lo sentimos",
+      text: `Solo se pueden cargan un maximo de ${MAX_ALLOWED_FILES}. Por favor, intenta nuevamente`,
+    });
+    return;
+  }
+  const files = event.target.files; 
+  setWebsitePics([...websitePics, ...files]); 
 }; 
 
   const [step, setStep] = useState(1);
@@ -118,22 +130,22 @@ const products = [
       </div>
 
       <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
-      {step === 1 && (
-        <Form.Group controlId="formStep1">
-          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion personal</Form.Label>
+        {step === 1 && (
+          <Form.Group controlId="formStep1">
+            <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion personal</Form.Label>
+            
+  {/* (DAVID) *******PAGINA 1******  */}
           
-{/* (DAVID) *******PAGINA 1******  */}
-        
-        </Form.Group>
-      )}
-      {step === 2 && (
-        <Form.Group controlId="formStep2">  
-          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion de tu sitio </Form.Label>
+          </Form.Group>
+        )}
+        {step === 2 && (
+          <Form.Group controlId="formStep2">  
+            <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Informacion de tu sitio </Form.Label>
 
-{/* (DAVID) *******PAGINA 2******  */}
+  {/* (DAVID) *******PAGINA 2******  */}
 
-        </Form.Group>
-      )}
+          </Form.Group>
+        )}
 
       {step === 3 && (
         <Form.Group controlId="formStep3">
@@ -169,11 +181,14 @@ const products = [
           <div className="container m-0 p-0">
             <div className="row">
               <div className='col-12 col-md-6 col-lg-4 mt-3'> 
-                {websitePics == null ?
+                {websitePics?.length < MAX_ALLOWED_FILES &&
                 <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
-                : ( 
+                }
+                {websitePics?.length > 0 && ( 
                 <div>
-                  <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websitePics)} alt="Selected file" /> 
+                  {websitePics.map(pic => 
+                    <img key={pic} className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(pic)} alt="Selected file" /> 
+                  )}
                   <ComponentCarousel />
                 </div>
                 )} 
@@ -181,7 +196,7 @@ const products = [
             </div>
           </div>
 
-          <p className='body-text '>4/6</p> 
+          <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES}</p> 
         </Form.Group>
       )}
 
