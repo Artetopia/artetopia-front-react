@@ -8,9 +8,10 @@ import "./modal.scss"
 
 function MydModalWithGrid(props) {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+    <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
+    >
       <Modal.Header closeButton>
-        <Modal.Title className='principal-text' id="contained-modal-title-vcenter">
+        <Modal.Title className='principal-text' id="example-modal-sizes-title-lg">
           Mis productos
         </Modal.Title>
       </Modal.Header>

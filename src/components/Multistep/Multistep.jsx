@@ -218,6 +218,7 @@ const products = [
                     show={modalShow} 
                     onHide={() => setModalShow(false)} 
                     products={products}
+                    
                   />
                 </div>
               </div>
