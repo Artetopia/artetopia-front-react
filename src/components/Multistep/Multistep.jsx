@@ -145,7 +145,7 @@ const products = [
                 {/* {profilePic ? <img src={profilePic}/> :<FormFile/>} */}
                 <div className='formfile-uploader-container'> 
                   {profilePic  == null ?
-                  <FormFile fileType='image/*' onChange={handleProfilePicChange} />
+                  <FormFile fileType='image/*' controlId="form-1" onChange={handleProfilePicChange} />
                   : ( 
                   <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
                   )} 
@@ -155,7 +155,7 @@ const products = [
                 <small className='body-text d-flex '>Foto de portada <p className='asterisk'> *</p></small> 
                 <div> 
                   {banner  == null ?
-                  <FormFile fileType='image/*' onChange={handleBannerChange} />
+                  <FormFile fileType='image/*' controlId="form-2" onChange={handleBannerChange} />
                   : ( 
                   <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
                   )} 
@@ -170,7 +170,7 @@ const products = [
             <div className="row">
               <div className='col-12 col-md-6 col-lg-4 mt-3'> 
                 {websitePics == null ?
-                <FormFile fileType='image/*' multiple='multiple' onChange={handleWebsitePicsChange} />
+                <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
                 : ( 
                 <div>
                   <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(websitePics)} alt="Selected file" /> 
@@ -198,7 +198,7 @@ const products = [
             <div className="row">
               <div className="col-12 col-md-8">
                 <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
-                {profilePic ? <img src={profilePic}/> :<FormFile multiple={"multiple"}/>}
+                {websitePics ? <img src={websitePics}/> :<FormFile controlId="form-4" multiple={false}/>}
               </div>
               <div className="col-12 col-md-4">
                 <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
