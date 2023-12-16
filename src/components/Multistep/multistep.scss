@@ -55,10 +55,12 @@
     border-color: $secondaryColor !important;
 }   
 
-.add-product {
+.add-show-product {
+    font-family: $fontkarla !important;
+    font-size: 16px !important;
     width: 100%;
-    border-width: 2px;
     border-color: $primaryColor !important;
+    height: 40px;
 }
 
 .circle-step {
@@ -133,6 +135,9 @@
     .handle-buttons {
         width: 130px;
         height: 40px;
+    }
+    .subtitle-text {
+        font-size: 28px;
     }
 }
 @media (min-width: 992px) {

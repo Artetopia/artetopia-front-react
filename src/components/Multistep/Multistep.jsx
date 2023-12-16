@@ -190,30 +190,38 @@ const products = [
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</Form.Label>
           <small className='body-text d-flex '>Nombre del articulo <p className='asterisk'> *</p></small> 
           <InputGroup className="mb-3">
-            <Form.Control className="border-input-text" aria-label="Default"/>
+            <Form.Control className="border-input-text rounded-5" aria-label="Default"/>
           </InputGroup>
           <small className='body-text d-flex'>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
-          <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
-          {profilePic ? <img src={profilePic}/> :<FormFile multiple={"multiple"}/>}
-          <small className='body-text d-flex '>Cantidad en inventario <p className='asterisk'> *</p></small> 
-          <InputGroup className="mb-3">
-            <Form.Control className="border-input-text" aria-label="Default"/>
-          </InputGroup>
-          <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
-          <InputGroup className="mb-3">
-            <Form.Control className="border-input-text" placeholder='$' aria-label="Default"/>
-          </InputGroup>
-          <Button variant="white" className="add-product">Añadir  este articulo</Button>
-          <div className="modal-container">
-          <Button variant="white" className="add-product mt-2 mb-5" onClick={() => setModalShow(true)}>
-            Ver mis productos
-          </Button>
-          <MydModalWithGrid 
-            show={modalShow} 
-            onHide={() => setModalShow(false)} 
-            products={products}
-          />
+          <div className="container m-0 p-0">
+            <div className="row">
+              <div className="col-12 col-md-8">
+                <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
+                {profilePic ? <img src={profilePic}/> :<FormFile multiple={"multiple"}/>}
+              </div>
+              <div className="col-12 col-md-4">
+                <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
+                <InputGroup className="mb-3">
+                  <Form.Control className="border-input-text rounded-5" aria-label="Default"/>
+                </InputGroup>
+                <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
+                <InputGroup className="mb-3">
+                  <Form.Control className="border-input-text rounded-5" placeholder='$' aria-label="Default"/>
+                </InputGroup>
+                <Button variant="white" className="add-show-product rounded-5 mt-4">Añadir  este articulo</Button>
+                <div className="modal-container">
+                  <Button variant="white" className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
+                    Ver mis productos
+                  </Button>
+                  <MydModalWithGrid 
+                    show={modalShow} 
+                    onHide={() => setModalShow(false)} 
+                    products={products}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </Form.Group>
       )}

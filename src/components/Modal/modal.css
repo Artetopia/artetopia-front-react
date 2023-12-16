@@ -7,4 +7,21 @@
 
 .edit-icons {
   color: #e91e63;
+}
+
+.body-text {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+.close-modal-button {
+  width: 100%;
+  border-color: #e91e63 !important;
+  color: #e91e63 !important;
+}
+
+@media (min-width: 768px) {
+  .close-modal-button {
+    width: 25%;
+  }
 }/*# sourceMappingURL=modal.css.map */
