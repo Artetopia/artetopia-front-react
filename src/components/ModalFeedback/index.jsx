@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./modalFeedback.scss"
 import { useState } from "react";
-const ModalFeedback = () => {
+const ModalFeedback = ({ websiteName, profilePic }) => {
     const [rate, setRate] = useState ();
     
     const handleRateChange = (e) => {
@@ -23,6 +23,10 @@ const ModalFeedback = () => {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Body>
+          <div className="col-12 col-lg-4 card-craftsman-container rounded-4 my-3 px-lg-2">
+            <h5 className='website-name-label text-center py-3'>{websiteName}</h5>
+            <img className='website-profilePic rounded-circle my-1 border-2 d-block' src={profilePic} alt={`Foto de perfil de ${websiteName}`}/>
+          </div>
           <div className="container d-flex justify-content-center mt-100">
             <div className="row">
                 <div className="col-md-6">
