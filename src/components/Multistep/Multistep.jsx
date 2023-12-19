@@ -14,7 +14,8 @@ import ComponentCarousel from '../Carousel';
 import MydModalWithGrid from '../Modal/Modal';
 import Swal from 'sweetalert2';
 
-const MAX_ALLOWED_FILES = 6;
+const MAX_ALLOWED_FILES_WEBSITE = 6;
+const MAX_ALLOWED_FILES_PRODUCT = 10;
 
 const MultiStepForm = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -36,16 +37,35 @@ const handleWebsitePicsChange = (event) => {
   const eventFilesLength = event.target.files?.length;
   const currentFilesLength = websitePics?.length;
   const totalFiles = eventFilesLength +currentFilesLength
-  if(totalFiles > MAX_ALLOWED_FILES) {
+  if(totalFiles > MAX_ALLOWED_FILES_WEBSITE) {
     Swal.fire({
       icon: "error",
-      title: "Lo sentimos",
-      text: `Solo se pueden cargan un maximo de ${MAX_ALLOWED_FILES}. Por favor, intenta nuevamente`,
+      title: "Lo sentimos...",
+      text: `Solo se pueden cargar un maximo de ${MAX_ALLOWED_FILES_WEBSITE} imágenes. Por favor, intenta nuevamente`,
     });
     return;
   }
   const files = event.target.files; 
   setWebsitePics([...websitePics, ...files]); 
+}; 
+
+const [productPics, setProductPics] = useState([]);
+const handleProductPicsChange = (event) => { 
+  const eventFilesLength = event.target.files?.length;
+  const currentFilesLength = productPics?.length;
+  const totalFiles = eventFilesLength +currentFilesLength
+  if(totalFiles > MAX_ALLOWED_FILES_PRODUCT) {
+    Swal.fire({
+      icon: "error",
+      title: "Lo sentimos...",
+      text: `Solo se pueden cargar un maximo de ${MAX_ALLOWED_FILES_PRODUCT} imágenes. Por favor, intenta nuevamente`,
+      confirmButtonText: "Entendido",
+      confirmButtonColor: "#E91E63",
+    });
+    return;
+  }
+  const files = event.target.files; 
+  setProductPics([...productPics, ...files]); 
 }; 
 
   const [step, setStep] = useState(1);
@@ -175,28 +195,29 @@ const products = [
               </div>
             </div>
           </div>
-          <p className='body-text'>Fotos de tu tienda o artesanias</p> 
-          <ComponentCarousel />
-                    
+          <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
           <div className="container m-0 p-0">
             <div className="row">
-              <div className='col-12 col-md-6 col-lg-4 mt-3'> 
-                {websitePics?.length < MAX_ALLOWED_FILES &&
+              <div className='col-12 col-md-6 mt-3'> 
+                {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE &&
                 <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
                 }
-                {websitePics?.length > 0 && ( 
+                </div>
+              <div className='col-12 col-md-6 mt-3'> 
+
+                {websitePics?.length > 0 && websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && ( 
                 <div>
                   {websitePics.map(pic => 
                     <img key={pic} className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(pic)} alt="Selected file" /> 
                   )}
-                  <ComponentCarousel />
+                  <ComponentCarousel files={websitePics}/>
                 </div>
                 )} 
               </div>
             </div>
           </div>
 
-          <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES}</p> 
+          <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES_WEBSITE}</p> 
         </Form.Group>
       )}
 
@@ -211,10 +232,21 @@ const products = [
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
           <div className="container m-0 p-0">
             <div className="row">
-              <div className="col-12 col-md-8">
                 <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
-                {websitePics ? <img src={websitePics}/> :<FormFile controlId="form-4" multiple={false}/>}
-              </div>
+                  {productPics?.length < MAX_ALLOWED_FILES_PRODUCT &&
+                  <div className="col-12 col-md-4">
+                    <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleProductPicsChange} />
+                  </div>  
+                  }
+                {productPics?.length > 0 && ( 
+                  <div className='row'>
+                    {productPics.map(pic => 
+                    (<div key={pic} className='col-12  col-md-4'>
+                      <img  className='image-uploaded-container product-images-container d-block m-auto' src={URL.createObjectURL(pic)} alt="Selected file" /> 
+                    </div>)
+                    )}
+                  </div>
+                )} 
               <div className="col-12 col-md-4">
                 <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
                 <InputGroup className="mb-3">
@@ -222,7 +254,7 @@ const products = [
                 </InputGroup>
                 <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
                 <InputGroup className="mb-3">
-                  <Form.Control className="border-input-text rounded-5" placeholder='$' aria-label="Default"/>
+                  <Form.Control className="border-input-text rounded-5 mb-md-5" placeholder='$' aria-label="Default"/>
                 </InputGroup>
                 <Button variant="white" className="add-show-product rounded-5 mt-4">Añadir  este articulo</Button>
                 <div className="modal-container">
@@ -237,6 +269,8 @@ const products = [
                   />
                 </div>
               </div>
+              <p className='body-text '>{productPics.length}/{MAX_ALLOWED_FILES_PRODUCT}</p> 
+
             </div>
           </div>
         </Form.Group>
