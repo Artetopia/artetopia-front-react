@@ -8,6 +8,8 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
     
     const handleRateChange = (e) => {
         setRate(e.target.value);
+        console.log('rate', rate)
+
     }
 
     const [show, setShow] = useState(false);
@@ -17,17 +19,17 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
 
     return (
         <>
-       <Button variant="primary" onClick={handleShow}>
+       <Button variant="custom" onClick={handleShow}>
           Launch demo modal
         </Button>
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Body>
-          <div className="col-12 col-lg-4 card-craftsman-container rounded-4 my-3 px-lg-2">
-            <h5 className='website-name-label text-center py-3'>{websiteName}</h5>
-            <img className='website-profilePic rounded-circle my-1 border-2 d-block' src={profilePic} alt={`Foto de perfil de ${websiteName}`}/>
+          <div className="rounded-4 px-lg-2">
+            <h5 className='website-name-label text-center py-2'>{websiteName}</h5>
+            <img className='website-profilePic rounded-circle mb-4 border-2 d-block' src={profilePic} alt={`Foto de perfil de ${websiteName}`}/>
           </div>
-          <div className="container d-flex justify-content-center mt-100">
+          <div className="container d-flex justify-content-center">
             <div className="row">
                 <div className="col-md-6">
                     <div className="card">
@@ -115,9 +117,14 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
                 </div>
             </div>
         </div>
-          </Modal.Body>
+        {rate &&
+        <p className='rate-text d-flex justify-content-center'>
+            Asignar una calificación de {rate} al artesano {websiteName}
+        </p>
+}  
+        </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="custom" onClick={handleClose}>
               Calificar
             </Button>
           </Modal.Footer>
