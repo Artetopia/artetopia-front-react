@@ -19,8 +19,8 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
 
     return (
         <>
-       <Button variant="custom" onClick={handleShow}>
-          Launch demo modal
+       <Button className='custom-button' variant="primary" onClick={handleShow}>
+          Calificar al artesano
         </Button>
   
         <Modal show={show} onHide={handleClose}>
@@ -123,8 +123,8 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
         </p>
 }  
         </Modal.Body>
-          <Modal.Footer>
-            <Button variant="custom" onClick={handleClose}>
+          <Modal.Footer className='d-flex justify-content-center'>
+            <Button className='custom-button' variant="secondary" onClick={handleClose}>
               Calificar
             </Button>
           </Modal.Footer>
