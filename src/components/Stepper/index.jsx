@@ -9,7 +9,7 @@ import StepSevenIcon from '../StepIcons/StepSevenIcon';
 
 const Stepper = ({step}) => {
     return (
-      <div className="mx-2">
+      <div >
         <div className='d-xs-block d-lg-none'>
           {step === 1 && <StepOneIcon/>}
           {step === 2 && <StepTwoIcon/>}
@@ -21,7 +21,7 @@ const Stepper = ({step}) => {
           <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
         </div>
 
-        <div className='d-none d-lg-block m-5'>
+        <div className='d-none d-lg-block my-4'>
           <Container>
             <Row className='m-2'>
               <Col><StepOneIcon/></Col>

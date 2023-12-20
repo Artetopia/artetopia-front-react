@@ -1,9 +1,10 @@
 import { Button, Form, InputGroup } from "react-bootstrap";
 import FormFile from "../../components/FormFile/FormFile";
 import MydModalWithGrid from "../../components/Modal/Modal";
-import { useState } from "react";
+import React, { useState, Fragment  } from "react";
 import Stepper from "../../components/Stepper";
 import Swal from 'sweetalert2';
+import {useForm} from "react-hook-form"
 
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 const CURRENT_PAGE = 4;
@@ -29,6 +30,9 @@ const handleProductPicsChange = (event) => {
   const files = event.target.files; 
   setProductPics([...productPics, ...files]); 
 }; 
+
+const { register, handleSubmit, formState: {errors} } = useForm();  
+
 
 const products = [
 {
@@ -56,16 +60,33 @@ const products = [
 
 }
 ]
+
+const onSubmit = (data) => {
+    console.log('data', data)
+  }
+  
     return (
-    <div>
+    <form onSubmit={handleSubmit(onSubmit)} className='mx-2' id="formStep4">
     <Stepper step={CURRENT_PAGE}/>
 
-    <Form.Group className='mx-2' controlId="formStep4">
-          <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</Form.Label>
+          <label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</label>
           <small className='body-text d-flex'>Nombre del articulo <p className='asterisk'> *</p></small> 
-          <InputGroup className="mb-3">
-            <Form.Control className="border-input-text rounded-5" aria-label="Default"/>
-          </InputGroup>
+          {/* <InputGroup className="mb-3"> */}
+            <input 
+            {...register("productName", { required: true, minLength: 3, maxLength: 10 })}
+            aria-invalid={errors.productName ? "true" : "false"}
+            className="border-input-text rounded-5 my-2" 
+            aria-label="Default"/>
+            {errors.productName?.type === "required" && (
+                <p className='text-danger fs-6'>First name is required</p>
+            )}
+            {errors.productName?.type === "minLength" && (
+                <p className='text-danger fs-6'>Caracteres insuficientes</p>
+            )}
+            {errors.productName?.type === "maxLength" && (
+                <p className='text-danger fs-6'>Excediste el total de caracteres</p>
+            )}
+          {/* </InputGroup> */}
           <small className='body-text d-flex'>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
           <div className="container m-0 p-0">
@@ -87,18 +108,18 @@ const products = [
                 )} 
               <div className="col-12 col-md-4">
                 <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
-                <InputGroup className="mb-3">
+                {/* <InputGroup className="mb-3">
                   <Form.Control className="border-input-text rounded-5" aria-label="Default"/>
-                </InputGroup>
+                </InputGroup> */}
                 <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
-                <InputGroup className="mb-3">
+                {/* <InputGroup className="mb-3">
                   <Form.Control className="border-input-text rounded-5 mb-md-5" placeholder='$' aria-label="Default"/>
-                </InputGroup>
-                <Button variant="white" className="add-show-product rounded-5 mt-4">Añadir  este articulo</Button>
+                </InputGroup> */}
+                <button className="add-show-product rounded-5 mt-4">Añadir  este articulo</button>
                 <div className="modal-container">
-                  <Button variant="white" className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
+                  <button className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
                     Ver mis productos
-                  </Button>
+                  </button>
                   <MydModalWithGrid
                     show={modalShow} 
                     onHide={() => setModalShow(false)} 
@@ -111,7 +132,8 @@ const products = [
 
             </div>
           </div>
-        </Form.Group>
-        </div>
+        <input type="submit" />
+
+        </form>
 )}
 export default Page4;
