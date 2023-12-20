@@ -2,15 +2,16 @@ import "./styles/app.scss";
 //import bgArtesano from './assets/bgArtesano.png'
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
-import MultiStepForm from "./components/Multistep/Multistep";
+import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
 function App() {
   return (
     <>
     <header>
       <HeaderComponent></HeaderComponent>
     </header>
-    <MultiStepForm/>
-
+    {/* <Page3 /> */}
+    <Page4 />
     <section id='hero-section'>
 
     </section>
