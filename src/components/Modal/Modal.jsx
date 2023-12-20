@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import "./modal.scss"
 
 function MydModalWithGrid(props) {
+  console.log("props", Object.keys(props.products))
   return (
     <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
     >
@@ -17,16 +18,16 @@ function MydModalWithGrid(props) {
       </Modal.Header>
       <Modal.Body className="grid-example">
         <Container>
-          {props.products.map(product =>
-              <Row key={product.number} className='d-md-flex flex-md-nowrap mb-5'> 
+          {props.products.map((product, index) =>
+              <Row key={index+1} className='d-md-flex flex-md-nowrap mb-5'> 
                 <Col className='body-text order-md-first' xs={6} md={1}>
-                  #{product.number}
+                  #{index+1} 
                 </Col>
                 <Col className='order-md-last d-flex justify-content-end' xs={6} md={1}>
                   <i className='order-md-6 edit-icons mx-2 fa fa-pencil' />
                   <i className='order-md-7 edit-icons fa fa-trash-o' />
                 </Col>
-                <Col className='body-text order-md-2' xs={12} md={3}>
+                <Col className='body-text order-md-2' xs={12} md={2}>
                   <p>{product.name}</p>
                 </Col>
                 <Col className='body-text order-md-3' xs={12} md={3}>
@@ -35,7 +36,7 @@ function MydModalWithGrid(props) {
                 <Col className='body-text order-md-4' xs={6} md={2}>
                   {product.stock} pz
                 </Col>
-                <Col className='body-text order-md-5' xs={6} md={2}>
+                <Col className='body-text order-md-5' xs={6} md={3}>
                 ${product.price}
                 </Col>
               </Row>
