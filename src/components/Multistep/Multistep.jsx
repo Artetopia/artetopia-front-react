@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import { Form, Button, ProgressBar, Container, Row, Col, Modal } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
-import StepOneIcon from '../StepIcons/StepOneIcon';
-import StepTwoIcon from '../StepIcons/StepTwo';
-import StepThreeIcon from '../StepIcons/StepThreeIcon';
-import StepFourIcon from '../StepIcons/StepFourIcon';
-import StepFiveIcon from '../StepIcons/StepFiveIcon';
-import StepSixIcon from '../StepIcons/StepSixIcon';
-import StepSevenIcon from '../StepIcons/StepSevenIcon';
 import FormFile from '../FormFile/FormFile'
 import "./multistep.scss"
 import ComponentCarousel from '../Carousel';
 import MydModalWithGrid from '../Modal/Modal';
 import Swal from 'sweetalert2';
+import { useForm } from 'react-hook-form';
+import Stepper from "../Stepper"
 
 const MAX_ALLOWED_FILES_WEBSITE = 6;
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 
 const MultiStepForm = () => {
-  const [modalShow, setModalShow] = useState(false);
+const { register, handleSubmit, formState: {errors} } = useForm();  
+
+
+const [modalShow, setModalShow] = useState(false);
   
 const [profilePic, setProfilePic] = useState(null);
 const handleProfilePicChange = (event) => { 
@@ -42,6 +40,8 @@ const handleWebsitePicsChange = (event) => {
       icon: "error",
       title: "Lo sentimos...",
       text: `Solo se pueden cargar un maximo de ${MAX_ALLOWED_FILES_WEBSITE} imágenes. Por favor, intenta nuevamente`,
+      confirmButtonText: "Entendido",
+      confirmButtonColor: "#E91E63",
     });
     return;
   }
@@ -68,7 +68,7 @@ const handleProductPicsChange = (event) => {
   setProductPics([...productPics, ...files]); 
 }; 
 
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(4);
   // const [formData, setFormData] = useState({});
 
   const handleNext = () => {
@@ -84,10 +84,13 @@ const handleProductPicsChange = (event) => {
   //   setFormData({ ...formData, [name]: value });
   // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle form submission
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // handle form submission
+  // };
+  // onSubmit = handleSubmit((data) => {
+  //   console.log(data)
+  // })
 
 const products = [
   {
@@ -115,39 +118,35 @@ const products = [
 
   }
 ]
-
+const onSubmit = (data) => {
+  console.log('data', data)
+}
   return (
-    <div className="mx-3">
-    <Form onSubmit={handleSubmit}>
-      <div className='d-lg-none'>
-        {step === 1 && <StepOneIcon/>}
-        {step === 2 && <StepTwoIcon/>}
-        {step === 3 && <StepThreeIcon/>}
-        {step === 4 && <StepFourIcon/>}
-        {step === 5 && <StepFiveIcon/>} 
-        {step === 6 && <StepSixIcon/>}
-        {step === 7 && <StepSevenIcon/>}
-      </div>
+    <div>
+        {/* <form onSubmit={handleSubmit(() => {
+            console.log("Formulario enviado")
+          })}>
+          <label htmlFor='productName' className='body-text d-flex '>Nombre del articulo <p className='asterisk'> *</p></label> 
+            <input 
+            name='productName'
+            className="border-input-text rounded-5" 
+            type="text" 
+            {...register('productName ', {
+              required: {
+                value: true,
+                message: "Titulo requerido"
+              },
+              minLength: 2,
+              maxLength: 20
+            }
+            )}
+            />
+            {errors?.productName?.type === 'minLength' && <span>El nombre debe tener al menos 2 caracteres</span>}
+          </form> */}
+        
+<Form>
 
-      <div className='d-none d-lg-block m-5'>
-        <Container>
-          <Row className='m-2'>
-            <Col><StepOneIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepTwoIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepThreeIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepFourIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepFiveIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepSixIcon/></Col>
-            <Col><hr className='row-width align-self-center'></hr></Col>
-            <Col><StepSevenIcon/></Col>
-          </Row>
-        </Container>
-      </div>
+    <Stepper step={step}/>
 
       <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
         {step === 1 && (
@@ -224,10 +223,27 @@ const products = [
       {step === 4 && (
         <Form.Group controlId="formStep4">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</Form.Label>
-          <small className='body-text d-flex '>Nombre del articulo <p className='asterisk'> *</p></small> 
-          <InputGroup className="mb-3">
+        
+        <form onSubmit={handleSubmit(onSubmit)}>
+          
+          <input
+            {...register("firstName", { required: true, minLength: 3, maxLength: 10 })}
+            aria-invalid={errors.firstName ? "true" : "false"}
+          />
+          {errors.firstName?.type === "required" && (
+            <p className='text-danger fs-6'>First name is required</p>
+          )}
+          {errors.firstName?.type === "minLength" && (
+            <p className='text-danger fs-6'>Caracteres insuficientes</p>
+          )}
+          {errors.firstName?.type === "maxLength" && (
+            <p className='text-danger fs-6'>Excediste el total de caracteres</p>
+          )}
+          <input type="submit" />
+            </form>
+          {/* <InputGroup className="mb-3">
             <Form.Control className="border-input-text rounded-5" aria-label="Default"/>
-          </InputGroup>
+          </InputGroup> */}
           <small className='body-text d-flex'>Agrega una descripcion del articulo <p className='asterisk'> *</p></small> 
           <textarea className="border-input-text form-control mb-3" placeholder='Agrega una descripcion del articulo' aria-label="With textarea"></textarea>
           <div className="container m-0 p-0">
@@ -307,7 +323,7 @@ const products = [
           </Button>
         )}
         {step < 7 ? (
-          <Button className='handle-buttons next-button mt-2 mx-md-2' variant="custom" onClick={handleNext}>
+          <Button type='submit' className='handle-buttons next-button mt-2 mx-md-2' variant="custom" onClick={handleNext}>
             Siguiente
           </Button>)
         
