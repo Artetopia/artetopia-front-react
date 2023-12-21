@@ -5,7 +5,11 @@
   }
 
 .navbar {
-    background-color: $secondaryColor;  
+    background-color: $secondaryColor;
+    .menuIcon {
+        color: white;
+        font-size: 30px;
+    }
 }
 
 .navbar_icon {

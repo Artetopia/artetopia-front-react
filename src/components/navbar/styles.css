@@ -6,6 +6,10 @@
 .navbar {
   background-color: #2b2e4a;
 }
+.navbar .menuIcon {
+  color: white;
+  font-size: 30px;
+}
 
 .navbar_icon {
   font-size: 32px;

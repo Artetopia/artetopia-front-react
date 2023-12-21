@@ -10,10 +10,14 @@ import {
   NavLink,
   NavbarText,
 } from 'reactstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars
+} from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '../register_navbar_buttons';
 
-const Navbare = () => {
+const Navbare = ({toggleSidebar}) => {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const toggleOffcanxvas = () => {
     setIsOffcanvasOpen(!isOffcanvasOpen);
@@ -24,7 +28,8 @@ const Navbare = () => {
 
   return (
     <ReactstrapNavbar dark expand="md" className="navbar">
-      <NavbarBrand href="/" className="logo"> </NavbarBrand>
+      <NavbarBrand href="/" className="logo"></NavbarBrand>
+      <FontAwesomeIcon icon={faBars} className="menuIcon"></FontAwesomeIcon>
       <NavbarToggler onClick={toggleNavbar}>
         {isOpen ? <span className='navbar_icon'>&times;</span> : <span className='navbar_icon'>&#9776;</span>}
       </NavbarToggler>
