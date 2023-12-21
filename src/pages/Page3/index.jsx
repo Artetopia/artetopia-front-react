@@ -75,7 +75,7 @@ const handleWebsitePicsChange = (event) => {
           <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
           <div className="container m-0 p-0">
             <div className="row ">
-                <ComponentCarousel className='carousel-container m-auto' files={websitePics}/>
+                <ComponentCarousel className='d-flex justify-content-center my-2' files={websitePics}/>
                 {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE &&
                     <FormFile  fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
                 }

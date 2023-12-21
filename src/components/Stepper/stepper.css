@@ -147,6 +147,10 @@
   .subtitle-text {
     font-size: 28px;
   }
+  .carousel-container {
+    width: 50%;
+    height: 200px;
+  }
 }
 @media (min-width: 992px) {
   .progress-bar-text {

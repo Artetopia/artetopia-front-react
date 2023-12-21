@@ -9,8 +9,8 @@ function App() {
     <header>
       <HeaderComponent></HeaderComponent>
     </header>
-    {/* <Page3 /> */}
-    <Page4 /> 
+    <Page3 />
+    {/* <Page4 />  */}
     <section id='hero-section'>
 
     </section>
