@@ -1,4 +1,5 @@
-import "../Multistep/Multistep"
+import "../Stepper/stepper.css";
+
 const StepThreeIcon = () => {
     return (
         

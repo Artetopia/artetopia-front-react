@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Stepper from "../../components/Stepper";
 import Swal from 'sweetalert2';
 import {useForm} from "react-hook-form"
+import "../../components/Stepper/stepper.css";
 
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 const CURRENT_PAGE = 4;

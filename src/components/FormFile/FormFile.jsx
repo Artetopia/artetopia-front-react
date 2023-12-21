@@ -1,5 +1,6 @@
 import { Form } from "react-bootstrap";
-import "../Multistep/Multistep"
+import "../Stepper/stepper.css";
+
 const FormFile = ({fileType, onChange, multiple, controlId}) => {
     return (
         <Form.Group controlId={controlId || 'formFile' } className="form-file-container mb-3">

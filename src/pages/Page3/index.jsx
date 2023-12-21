@@ -4,7 +4,7 @@ import ComponentCarousel from "../../components/Carousel";
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import Stepper from "../../components/Stepper";
-
+import "../../components/Stepper/stepper.css";
 
 const MAX_ALLOWED_FILES_WEBSITE = 6;
 const CURRENT_PAGE = 3;
