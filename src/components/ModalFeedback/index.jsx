@@ -1,7 +1,7 @@
 import { Input} from "reactstrap";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import "./modalFeedback.scss"
+import "./modalFeedback.css"
 import { useState } from "react";
 const ModalFeedback = ({ websiteName, profilePic }) => {
     const [rate, setRate] = useState ();

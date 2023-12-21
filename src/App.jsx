@@ -2,7 +2,6 @@ import "./styles/app.scss";
 //import bgArtesano from './assets/bgArtesano.png'
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
-// import MultiStepForm from "./components/Multistep/Multistep";
 import ModalFeedback from "./components/ModalFeedback"
 function App() {
   const websites = [{ 
