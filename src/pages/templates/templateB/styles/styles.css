@@ -20,6 +20,7 @@
 
 .card_text {
   font-family: "Karla", sans-serif !important;
+  font-size: 15px;
 }
 
 .card_title {
@@ -58,6 +59,14 @@
   color: #ffffff;
   border: 1px solid #e91e63;
   border-radius: 4px;
+  width: 6rem;
+}
+
+.button-primary_car {
+  background-color: #e91e63;
+  color: #ffffff;
+  border: 1px solid #e91e63;
+  border-radius: 4px;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -68,11 +77,21 @@
   font-family: "Karla", sans-serif;
 }
 
+.photo_perfil {
+  min-width: 60px;
+  max-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+}
+
 @media (min-width: 1024px) {
   .saludo_artesano {
     font-size: 4rem;
   }
   .name_artesano {
     font-size: 4rem;
+  }
+  .card_text {
+    font-size: 17px;
   }
 }/*# sourceMappingURL=styles.css.map */

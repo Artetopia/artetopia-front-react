@@ -3,6 +3,7 @@ import "./styles/styles.css"
 import CardsAditionalTB from "../../../components/cards_info_template_b";
 import ButtonAction from "../../../components/buttonAction";
 import CardsProductB from "../../../components/card_product_t_b";
+import GalleryTemplateB from "../../../components/gallery_template_b";
 const TemplateB = () => {
 
   return (
@@ -53,56 +54,21 @@ const TemplateB = () => {
             </div>
           </div>
           <div className="galeria container mt-3">
-            <div class="row h-75">
-              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                <img
-                  src="./images/galery_template_b/g-1.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Boat on Calm Water"
-                />
-
-                <img
-                  src="./images/galery_template_b/g-2.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Wintry Mountain Landscape"
-                />
-              </div>
-
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <img
-                  src="./images/galery_template_b/g-3.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Mountains in the Clouds"
-                />
-
-                <img
-                  src="./images/galery_template_b/g-4.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Boat on Calm Water"
-                />
-              </div>
-
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <img
-                  src="./images/galery_template_b/g-5.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Waves at Sea"
-                />
-
-                <img
-                  src="./images/galery_template_b/g-6.png"
-                  class="w-100 shadow-1-strong rounded mb-4"
-                  alt="Yosemite National Park"
-                />
-              </div>
-            </div>
+            <GalleryTemplateB
+            img1="../images/galery_template_b/g-1.png"
+            img2="../images/galery_template_b/g-2.png"
+            img3="../images/galery_template_b/g-3.png"
+            img4="../images/galery_template_b/g-4.png"
+            img5="../images/galery_template_b/g-5.png"
+            img6="../images/galery_template_b/g-6.png"
+            ></GalleryTemplateB>
           </div>
         </section>
         <section className="products mt-3">
           <div className="container">
             <Row lg="3" md="2" sm="1" xs="1">
               <CardsProductB
-                photoProfile="./images/profile_card_product.png"
+                photoProfile="https://wp.revolucion.news/wp-content/uploads/2019/09/artesano.jpeg"
                 nameCraftsman="Jose Mungüia.."
                 img_product="./images/img_product.png"
                 nameProduct="Cuenco de barro"
