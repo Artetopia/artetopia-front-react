@@ -86,88 +86,87 @@ const onSubmit = (data) => {
           <div className="container m-0 p-0">
             <div className="row">
                 <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
-                  {productPics?.length < MAX_ALLOWED_FILES_PRODUCT &&
-                  <div className="col-12 col-md-4">
+                {productPics?.length < MAX_ALLOWED_FILES_PRODUCT &&
+                <div className="col-12 col-md-6">
                     <FormFile 
                     fileType='image/*' 
                     controlId="form-3" 
                     multiple={true} 
                     onChange={handleProductPicsChange} 
                     />
-                  </div>  
-                  }
-                {productPics?.length > 0 && ( 
-                  <div className='row'>
-                    {productPics.map(pic => 
-                    (<div key={pic} className='col-12  col-md-4'>
-                      <img  className='image-uploaded-container product-images-container d-block m-auto' src={URL.createObjectURL(pic)} alt="Selected file" /> 
-                    </div>)
+                </div>  
+                }
+                <div className="col-12 col-md-6">
+                    <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
+                    <input 
+                    type='number'
+                    className="border-input-text rounded-5 p-2"
+                    {...register("stock", { 
+                        required: true, 
+                        min: 0, 
+                        max: 9999,
+                        pattern: /[0-9]/i
+                    })}
+                    aria-invalid={errors.stock ? "true" : "false"}
+                    aria-label="Default"/>
+                    {errors.stock?.type === "required" && (
+                        <p className='error-message-custom text-danger'>* Campo requerido</p>
                     )}
-                  </div>
-                )} 
-              <div className="col-12 col-md-4">
-                <small className='body-text d-flex'>Cantidad en inventario <p className='asterisk'> *</p></small> 
-                <input 
-                type='number'
-                className="border-input-text rounded-5 p-2"
-                {...register("stock", { 
-                    required: true, 
-                    min: 0, 
-                    max: 9999,
-                    pattern: /[0-9]/i
-                })}
-                aria-invalid={errors.stock ? "true" : "false"}
-                aria-label="Default"/>
-                {errors.stock?.type === "required" && (
-                    <p className='error-message-custom text-danger'>* Campo requerido</p>
-                )}
-                {errors.stock?.type === "min" && (
-                    <p className='error-message-custom text-danger'>La cantidad no es correcta</p>
-                )}
-                {errors.stock?.type === "max" && (
-                    <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
-                )}
-                {errors.stock?.type === "pattern" && (
-                    <p className='error-message-custom text-danger'>Solo se permiten números</p>
-                )}
-                <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
-                <input 
-                type='number'
-                step="0.01"
-                className="border-input-text rounded-5 p-2"
-                placeholder="$ "
-                {...register("price", { 
-                    required: true, 
-                    min: 0, 
-                    max: 100000,
-                    pattern: /[0-9]/i
-                })}
-                aria-invalid={errors.price ? "true" : "false"}
-                aria-label="Default"/>
-                {errors.price?.type === "required" && (
-                    <p className='error-message-custom text-danger'>* Campo requerido</p>
-                )}
-                {errors.price?.type === "min" && (
-                    <p className='error-message-custom text-danger'>La cantidad no es correcta</p>
-                )}
-                {errors.price?.type === "max" && (
-                    <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
-                )}  
-                {errors.stock?.type === "pattern" && (
-                    <p className='error-message-custom text-danger'>Solo se permiten números</p>
-                )}              
-                <button type='submit' className="add-show-product rounded-5 mt-4">Añadir  este articulo</button>
-                <div className="modal-container">
-                  <button className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
-                    Ver mis productos
-                  </button>
-                  <MydModalWithGrid
-                    show={modalShow} 
-                    onHide={() => setModalShow(false)} 
-                    products={products}
-                  />
+                    {errors.stock?.type === "min" && (
+                        <p className='error-message-custom text-danger'>La cantidad no es correcta</p>
+                    )}
+                    {errors.stock?.type === "max" && (
+                        <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
+                    )}
+                    {errors.stock?.type === "pattern" && (
+                        <p className='error-message-custom text-danger'>Solo se permiten números</p>
+                    )}
+                    <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
+                    <input 
+                    type='number'
+                    step="0.01"
+                    className="border-input-text rounded-5 p-2"
+                    placeholder="$ "
+                    {...register("price", { 
+                        required: true, 
+                        min: 0, 
+                        max: 100000,
+                        pattern: /[0-9]/i
+                    })}
+                    aria-invalid={errors.price ? "true" : "false"}
+                    aria-label="Default"/>
+                    {errors.price?.type === "required" && (
+                        <p className='error-message-custom text-danger'>* Campo requerido</p>
+                    )}
+                    {errors.price?.type === "min" && (
+                        <p className='error-message-custom text-danger'>La cantidad no es correcta</p>
+                    )}
+                    {errors.price?.type === "max" && (
+                        <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
+                    )}  
+                    {errors.stock?.type === "pattern" && (
+                        <p className='error-message-custom text-danger'>Solo se permiten números</p>
+                    )}              
+                    <button type='submit' className="add-show-product rounded-5 mt-4">Añadir  este articulo</button>
+                    <div className="modal-container">
+                    <button className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
+                        Ver mis productos
+                    </button>
+                    <MydModalWithGrid
+                        show={modalShow} 
+                        onHide={() => setModalShow(false)} 
+                        products={products}
+                    />
+                    </div>
                 </div>
-              </div>
+                {productPics?.length > 0 && productPics?.length <= MAX_ALLOWED_FILES_PRODUCT && ( 
+                  <section >
+                    {productPics.map(pic => 
+                      <img key={pic} className='col-12 col-md-4 image-uploaded-container product-images-container' src={URL.createObjectURL(pic)} alt="Selected file" /> 
+                    )}
+                  </section>
+                )} 
+              
               <p className='body-text '>{productPics.length}/{MAX_ALLOWED_FILES_PRODUCT}</p> 
             </div>
           </div>

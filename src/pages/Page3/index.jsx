@@ -74,27 +74,23 @@ const handleWebsitePicsChange = (event) => {
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
           <div className="container m-0 p-0">
-            <div className="row">
-              <div className='col-12 col-md-6 mt-3'> 
+            <div className="row ">
+                <ComponentCarousel className='carousel-container m-auto' files={websitePics}/>
                 {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE &&
-                <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
+                    <FormFile  fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
                 }
-                </div>
-              <div className='col-12 col-md-6 mt-3'> 
-
-                {websitePics?.length > 0 && websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && ( 
-                <div>
-                  {websitePics.map(pic => 
-                    <img key={pic} className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(pic)} alt="Selected file" /> 
-                  )}
-                  <ComponentCarousel files={websitePics}/>
+                <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES_WEBSITE}</p> 
+            </div>
+            <div className='container mt-3'> 
+                {websitePics?.length > 0 && websitePics?.length <= MAX_ALLOWED_FILES_WEBSITE && ( 
+                <div className='row'>
+                    {websitePics.map(pic => 
+                        <img key={pic} className='col-12 col-md-4 image-uploaded-container d-flex justify-content-center my-1' src={URL.createObjectURL(pic)} alt="Selected file" /> 
+                    )}
                 </div>
                 )} 
-              </div>
             </div>
-          </div>
-
-          <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES_WEBSITE}</p> 
+        </div>
         </Form.Group>
     </div>  
     )}
