@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 import "./modal.scss"
 
 function MydModalWithGrid(props) {
-  console.log("props", Object.keys(props.products))
   return (
     <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
     >

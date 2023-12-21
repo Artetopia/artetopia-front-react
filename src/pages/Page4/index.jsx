@@ -1,7 +1,6 @@
-import { Button, Form, InputGroup } from "react-bootstrap";
 import FormFile from "../../components/FormFile/FormFile";
 import MydModalWithGrid from "../../components/Modal/Modal";
-import React, { useState, Fragment  } from "react";
+import React, { useState } from "react";
 import Stepper from "../../components/Stepper";
 import Swal from 'sweetalert2';
 import {useForm} from "react-hook-form"
@@ -16,7 +15,7 @@ const [productPics, setProductPics] = useState([]);
 const handleProductPicsChange = (event) => { 
   const eventFilesLength = event.target.files?.length;
   const currentFilesLength = productPics?.length;
-  const totalFiles = eventFilesLength +currentFilesLength
+  const totalFiles = eventFilesLength + currentFilesLength
   if(totalFiles > MAX_ALLOWED_FILES_PRODUCT) {
     Swal.fire({
       icon: "error",
@@ -27,46 +26,14 @@ const handleProductPicsChange = (event) => {
     });
     return;
   }
-  const files = event.target.files; 
-  setProductPics([...productPics, ...files]); 
+
+    const files = event.target.files; 
+
+    setProductPics([...productPics, ...files]);
 }; 
 
 const { register, handleSubmit, formState: {errors} } = useForm();  
-
-const [products, setProducts] = useState ([{
-    number: "1",
-    name: "Calavera pintada a mano",
-    description: "Calavera hecha a mano por artesanos de Leon, Guanajuato. Medidas: 10x20x10 cm. Colores: azul, rojo, rosa, amarillo, azul",
-    stock: "50",
-    price: "99"
-
-},])
-// const products = [
-// {
-//     number: "1",
-//     name: "Calavera pintada a mano",
-//     description: "Calavera hecha a mano por artesanos de Leon, Guanajuato. Medidas: 10x20x10 cm. Colores: azul, rojo, rosa, amarillo, azul",
-//     stock: "50",
-//     price: "99"
-
-// },
-// {
-//     number: "2",
-//     name: "Collar largo artesanal de obsidiana color plata",
-//     description: "Bonito collar color plata con dije de obsidiana, hecho a mano. Largo: 30 cm. Material: acero inoxidable ",
-//     stock: "22",
-//     price: "300"
-
-// },
-// {
-//     number: "3",
-//     name: "Jarron de arcilla handmade",
-//     description: "Gran jarron de arcilla en varios colores. Medidas: 100x20x20 cm",
-//     stock: "82",
-//     price: "950"
-
-// }
-// ]
+const [products, setProducts] = useState ([])
 
 const onSubmit = (data) => {
     setProducts([...products, data])
@@ -79,7 +46,10 @@ const onSubmit = (data) => {
         <label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus productos</label>
         <small className='body-text d-flex'>Nombre del articulo <p className='asterisk'> *</p></small> 
         <input 
-        {...register("name", { required: true, minLength: 2, maxLength: 10 })}
+        {...register("name", { 
+            required: true,
+            minLength: 2, 
+            maxLength: 10 })}
         aria-invalid={errors.name ? "true" : "false"}
         className="border-input-text rounded-5 my-2 p-2" 
         aria-label="Default"/>
@@ -97,7 +67,10 @@ const onSubmit = (data) => {
         className="border-input-text form-control mb-3 p-2" 
         placeholder='Agrega una descripcion del articulo' 
         aria-label="With textarea"
-        {...register("description", { required: true, minLength: 2, maxLength: 200 })}
+        {...register("description", { 
+            required: true, 
+            minLength: 2, 
+            maxLength: 200 })}
         aria-invalid={errors.description ? "true" : "false"}
         >
         </textarea>
@@ -115,7 +88,12 @@ const onSubmit = (data) => {
                 <small className='body-text d-flex'>Fotos del articulo <p className='asterisk'> *</p></small> 
                   {productPics?.length < MAX_ALLOWED_FILES_PRODUCT &&
                   <div className="col-12 col-md-4">
-                    <FormFile fileType='image/*' controlId="form-3" multiple={true} onChange={handleProductPicsChange} />
+                    <FormFile 
+                    fileType='image/*' 
+                    controlId="form-3" 
+                    multiple={true} 
+                    onChange={handleProductPicsChange} 
+                    />
                   </div>  
                   }
                 {productPics?.length > 0 && ( 
@@ -132,7 +110,12 @@ const onSubmit = (data) => {
                 <input 
                 type='number'
                 className="border-input-text rounded-5 p-2"
-                {...register("stock", { required: true, min: 0, max: 10000})}
+                {...register("stock", { 
+                    required: true, 
+                    min: 0, 
+                    max: 9999,
+                    pattern: /[0-9]/i
+                })}
                 aria-invalid={errors.stock ? "true" : "false"}
                 aria-label="Default"/>
                 {errors.stock?.type === "required" && (
@@ -144,13 +127,21 @@ const onSubmit = (data) => {
                 {errors.stock?.type === "max" && (
                     <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
                 )}
+                {errors.stock?.type === "pattern" && (
+                    <p className='error-message-custom text-danger'>Solo se permiten números</p>
+                )}
                 <small className='body-text d-flex '>Precio del articulo <p className='asterisk'> *</p></small> 
                 <input 
                 type='number'
                 step="0.01"
                 className="border-input-text rounded-5 p-2"
                 placeholder="$ "
-                {...register("price", { required: true, min: 0, max: 100000})}
+                {...register("price", { 
+                    required: true, 
+                    min: 0, 
+                    max: 100000,
+                    pattern: /[0-9]/i
+                })}
                 aria-invalid={errors.price ? "true" : "false"}
                 aria-label="Default"/>
                 {errors.price?.type === "required" && (
@@ -161,9 +152,11 @@ const onSubmit = (data) => {
                 )}
                 {errors.price?.type === "max" && (
                     <p className='error-message-custom text-danger'>Excediste la cantidad máxima</p>
-                )}                
+                )}  
+                {errors.stock?.type === "pattern" && (
+                    <p className='error-message-custom text-danger'>Solo se permiten números</p>
+                )}              
                 <button type='submit' className="add-show-product rounded-5 mt-4">Añadir  este articulo</button>
-                
                 <div className="modal-container">
                   <button className="add-show-product mt-2 mb-5 rounded-5" onClick={() => setModalShow(true)}>
                     Ver mis productos
