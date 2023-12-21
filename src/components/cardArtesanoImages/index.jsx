@@ -16,7 +16,7 @@ const CardArtesanoImages = ({ name, description, profileImage, images }) => {
             <img
               src={profileImage}
               alt="profile-image"
-              className="profile h-100"
+              className="profile h-100 w-100"
             />
             <h5 className="card-title m-0 p-0">{name}</h5>
           </div>
