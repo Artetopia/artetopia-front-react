@@ -5,6 +5,9 @@
 
 .navbar {
   background-color: #2b2e4a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar_icon {

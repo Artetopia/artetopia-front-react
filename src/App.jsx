@@ -1,6 +1,7 @@
 import "./styles/app.css";
 import bgArtesano from "./assets/bgArtesano.png";
 import HeaderComponent from "./components/header";
+import Navbare from "./components/navbar"
 import Footer from "./components/footer";
 import ButtonAction from "./components/buttonAction";
 import CardsAbout from "./components/cards_about";
@@ -178,10 +179,13 @@ function App() {
   return (
     <>
       <header>
-        <HeaderComponent></HeaderComponent>
+        <Navbare></Navbare>
       </header>
 
-      <section id="hero-section"></section>
+      <section id="hero-section">
+      <HeaderComponent></HeaderComponent>
+
+      </section>
 
       <section id="about" className="mb-4">
         <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
