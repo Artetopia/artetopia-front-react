@@ -186,6 +186,7 @@ function App() {
       <section id="hero-section">
       <HeaderComponent></HeaderComponent>
 
+
     </section>
     <section id='about' className="mb-4">
       <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
