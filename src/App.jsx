@@ -8,7 +8,8 @@ import CardsAbout from "./components/cards_about";
 import { Row } from "reactstrap";
 import CardArtesanoImages from "./components/cardArtesanoImages";
 import { useEffect, useState } from "react";
-import ClientDeliveries from "./pages/client_deliveries";
+import ClientProfile from "./pages/client-profile";
+
 
 function App() {
     const showMore = () => {
@@ -180,8 +181,8 @@ function App() {
   return (
     <>
 
-      <ClientDeliveries></ClientDeliveries>
-
+      
+      <ClientProfile></ClientProfile>
       {/* <header>
         <Navbare></Navbare>
       </header>
