@@ -32,7 +32,7 @@ const ModalFeedback = ({ websiteName, profilePic }) => {
           <div className="container d-flex justify-content-center">
             <div className="row">
                 <div className="col-md-6">
-                    <div className="card">
+                    <div className="card_feed">
                         <div className="card-body text-center"> 
                             <fieldset className="rating">
                                 <Input 
