@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.principal-text { 
+    font-family: $fontMontserrat !important;
+    font-size: 18px !important;
+    color: $primaryColor !important;
+}
+
+.edit-icons {
+    color: $primaryColor;
+}
+
+.body-text {
+    font-family: $fontkarla;
+    font-size: 16px;
+}
+
+.close-modal-button {
+    width: 100%;
+    border-color: $primaryColor !important;
+    color: $primaryColor !important;
+}
+
+@media (min-width: 768px) {
+    .close-modal-button {
+        width: 25%;
+    }
+}

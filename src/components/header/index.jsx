@@ -11,9 +11,9 @@ function HeaderComponent() {
     return (
         <div>
             {/* Navbar */}
-            <Navbare></Navbare>
+            
             {/* Hero Section */}
-            <div className='hero_section_desktop'>
+            <div className='hero_section_desktop' id='nosotros'>
                 <section className='hero_section'>
                     <div className='top_description'>
                         <img src={topDescription} alt='checkmark icon' />

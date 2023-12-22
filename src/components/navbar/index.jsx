@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.css'
+import './styles.css';
 import {
   Collapse,
-  Navbar as ReactstrapNavbar, // Rename the Navbar component
+  Navbar as ReactstrapNavbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
@@ -14,16 +14,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '../register_navbar_buttons';
 
 const Navbare = () => {
-  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
-  const toggleOffcanxvas = () => {
-    setIsOffcanvasOpen(!isOffcanvasOpen);
-  };
-
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleNavbar = () => setIsOpen(!isOpen);
 
+  const handleNavLinkClick = (sectionId) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+      toggleNavbar(); // Close the navbar after clicking a link (optional)
+    }
+  };
+
   return (
-    <ReactstrapNavbar dark expand="md" className="navbar">
+    <ReactstrapNavbar dark expand="md" className="navbar" id='inicio'>
       <NavbarBrand href="/" className="logo"> </NavbarBrand>
       <NavbarToggler onClick={toggleNavbar}>
         {isOpen ? <span className='navbar_icon'>&times;</span> : <span className='navbar_icon'>&#9776;</span>}
@@ -32,15 +36,15 @@ const Navbare = () => {
         <Nav className="me-auto" navbar>
           <div className='desktop_menu'>
             <NavItem>
-              <NavLink href="/components/" className="text-light">Inicio</NavLink>
+              <NavLink onClick={() => handleNavLinkClick('inicio')} className="text-light">Inicio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap" className="text-light">
+              <NavLink onClick={() => handleNavLinkClick('nosotros')} className="text-light">
                 Nosotros
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap" className="text-light">
+              <NavLink onClick={() => handleNavLinkClick('artesanos')} className="text-light">
                 Artesanos
               </NavLink>
             </NavItem>
@@ -53,6 +57,6 @@ const Navbare = () => {
       </Collapse>
     </ReactstrapNavbar>
   );
-}
+};
 
 export default Navbare;

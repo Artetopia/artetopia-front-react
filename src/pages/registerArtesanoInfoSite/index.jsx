@@ -10,9 +10,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Select from "react-select";
 import { useState } from "react";
+import Stepper from "../../components/Stepper";
 const RegisterArtesanoInfoSite = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [errorCategories, setErrorCategories] = useState(false);
+
+  const CURRENT_PAGE = 2;
 
   const checkSelectedOptions = () => {
     console.log(selectedOptions);
@@ -60,7 +63,7 @@ const RegisterArtesanoInfoSite = () => {
     <>
       <div className="container infoSite-container">
         <div className="row">
-          <p>Aquí va el stepper</p>
+          <Stepper step={CURRENT_PAGE}></Stepper>
         </div>
         <div className="row text-center">
           <h3 className="infoSite-subHeading">Información de tu sitio</h3>
