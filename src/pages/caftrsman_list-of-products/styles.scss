@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Montserrat:wght@700&display=swap');
+
+// Main regrangle shape
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e91e63;
+    width: 98%;
+    border-radius: 10px;
+}
+
+
+// Tittle css
+.tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+#tittle-btn {
+    font-size: 10px;
+    background-color: #e91e63;
+    border: none;
+
+}
+
+.my_products {
+    font-size: 16px;
+    margin: 10px;
+}
+
+
+// Option BTN 
+
+
+
+#custom_btn {
+    width: 95%;
+    height: 40px;
+    text-align: left;
+    background-color: white;
+    border: 2px solid #2b2e4a;
+    color: #2b2e4a;
+    border-radius: 23px;
+    margin: 10px;
+    font-family: "Karla", sans-serif;
+}
+
+
+// Modal
+
+.image {
+    width: 100%;
+    background-color: #2b2e4a;
+}
+
+.modal-tittle {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: #2b2e4a;
+    color: white;
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: right;
+    background-color: #2b2e4a;
+    color: white;
+}
+
+
+
+.body {
+    background-color: #2b2e4a;
+    color: white;
+}
