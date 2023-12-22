@@ -1,5 +1,5 @@
 import { Row, Col } from "reactstrap";
-import FormFile from "../../components/FormFile/FormFile";
+import FormFile from "../../../components/FormFile/FormFile";
 import "./styles/styles.css"
 import React, { useState } from "react";
 import { ErrorMessage } from "@hookform/error-message";
