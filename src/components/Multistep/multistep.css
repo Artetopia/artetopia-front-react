@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.bg-custom {
+  border-end-end-radius: 10px;
+  border-start-end-radius: 10px;
+  background-color: #e91e63 !important;
+}
+
+.btn-custom {
+  background-color: #e91e63 !important;
+  color: #ffffff !important;
+}
+
+.body-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.progress-bar-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  display: ruby-base;
+}
+
+.subtitle-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  color: #e91e63;
+}
+
+.asterisk {
+  color: #e91e63;
+}
+
+.file-uploader-container {
+  height: 350px;
+  border-color: #e91e63 !important;
+  border-style: dashed !important;
+  border-width: 1px;
+  border-radius: 20px;
+}
+
+.upload-file-text {
+  color: #e91e63;
+}
+
+.border-input-text {
+  border-width: 2px;
+  border-color: #2b2e4a !important;
+}
+
+.add-product {
+  width: 100%;
+  border-width: 2px;
+  border-color: #e91e63 !important;
+}
+
+.circle-step {
+  width: 50px;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e91e63 !important;
+}
+
+.border-progress-bar {
+  border-style: solid;
+  border-color: #e91e63 !important;
+  background-color: #F2F2F2 !important;
+}
+
+.stepper-container {
+  width: 5% !important;
+}
+
+.image-icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.progress-icon-svg {
+  width: 22px;
+  height: 20px;
+}
+
+.circle-step {
+  width: 35px;
+  height: 35px;
+}
+
+.input-description {
+  height: 90px;
+}
+
+.file-uploader-container {
+  height: 194px;
+}
+
+.row-width {
+  border-style: dashed;
+  border-color: #2b2e4a;
+}
+
+.back-button {
+  color: #e91e63;
+  width: 100%;
+  border-width: 2px;
+  border-color: #e91e63 !important;
+}
+
+.next-button {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .progress-bar-text {
+    margin-top: 10px;
+    display: flex !important;
+  }
+}/*# sourceMappingURL=multistep.css.map */
