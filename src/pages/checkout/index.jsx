@@ -7,10 +7,11 @@ import {useForm} from 'react-hook-form';
 
 const Checkout = () => {
   const [expirationDate, setExpirationDate] = useState("");
-
+  const [errorsDateExpiration, setErrorsDateExpiration] = useState([]);
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
   // const [productsCart, setProductsCart] = useState ([
@@ -32,28 +33,41 @@ const Checkout = () => {
   //     }
   //   ]);
 
-  const formatExpirationDate = (value) => {
-    const formattedValue = value.replace(/\D/g, "").slice(0, 4);
+  const makeOrder = (data) => {
+    console.log(data);
+  }
 
-    if (formattedValue.length >= 2) {
-      console.log(
-        `${formattedValue.slice(0, 2)}/${formattedValue.slice(2, 4)}`
-      );
-      return `${formattedValue.slice(0, 2)}/${formattedValue.slice(2, 4)}`;
+  const formatExpirationDate = (value) => {
+    const numericValue = value.replace(/\D/g, '');
+
+    if (numericValue.length >= 2) {
+      const month = numericValue.slice(0, 2);
+      const year = numericValue.slice(2, 4);
+      return `${month}/${year}`;
     }
+
+    return numericValue;
   };
 
   const handleInputChange = (e) => {
-    const value = e.target.value;
-    setExpirationDate(formatExpirationDate(value));
+    // Your existing input change logic, if any
+
+    // Format the expirationDate to MM/YY
+    const rawValue = e.target.value;
+    const formattedValue = formatExpirationDate(rawValue);
+
+    // Set the formatted value back to the input
+    e.target.value = formattedValue;
   };
+
+
   return (
     <>
       <div className="container mt-3 checkout-container">
         <div className="row">
           <div className="col-lg-6 p-4">
             <h3 className="font-weight-bold">Dirección de envío</h3>
-            <form onSubmit={handleSubmit((data) => console.log(data))}>
+            <form onSubmit={handleSubmit((data) => makeOrder(data))}>
               <div className="form-group mb-2">
                 <label htmlFor="calle">calle</label>
                 <input
@@ -94,9 +108,14 @@ const Checkout = () => {
                       type="text"
                       className="form-control primary_input shadow-none"
                       name="numInt"
-                      id="NumInt"
-                      {...register("numInt")}
+                      id="numInt"
+                      {...register("numInt", {
+                        required: {value: false}
+                      })}
                     />
+                    {errors.numInt && (
+                      <p className="text-danger m-0">{errors.numInt.message}</p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -107,31 +126,45 @@ const Checkout = () => {
                     <input
                       type="text"
                       className="form-control primary_input shadow-none"
-                      name="codigoPostal"
-                      id="codigoPostal"
+                      name="zipCode"
+                      id="zipCode"
+                      {...register("zipCode", {
+                        required: {value: true, message: "El campo es requerido"},
+                        pattern: {value: /^\d{5}$/, message: "Código postal invalido"}
+                      })}
                     />
-                    <p className="text-danger m-0">Error</p>
+                    {errors.zipCode &&(
+                       <p className="text-danger m-0">{errors.zipCode.message}</p>
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group mb-2">
-                    <label htmlFor="calle">Num ext</label>
+                    <label htmlFor="calle">Ciudad</label>
                     <input
                       type="text"
                       className="form-control primary_input shadow-none"
-                      name="Num ext"
-                      id="Num ext"
+                      name="city"
+                      id="city"
+                      {...register("city", {
+                        required: {value: true, message: "El campo es requerido"}
+                      })}
                     />
-                    <p className="text-danger m-0">Error</p>
+                    {errors.city && (
+                      <p className="text-danger m-0">{errors.city.message}</p>
+                    )}
                   </div>
                 </div>
               </div>
               <div className="form-group mb-2">
                 <label htmlFor="calle">Estado</label>
                 <select
-                  name=""
-                  id=""
+                  name="state"
+                  id="state"
                   className="form-select primary_input shadow-none"
+                  {...register("state", {
+                    required: {value: true, message: "El campo es requerido"}
+                  })}
                 >
                   <option value="">Selecciona un estado</option>
                   <option value="">Selecciona una opción</option>
@@ -173,7 +206,9 @@ const Checkout = () => {
                   <option value="Yucatán">Yucatán</option>
                   <option value="Zacatecas">Zacatecas</option>
                 </select>
-                <p className="text-danger m-0">Error</p>
+                {errors.state && (
+                  <p className="text-danger m-0">{errors.state.message}</p>
+                )}
               </div>
               <h3 className="font-weight-bold">Pago</h3>
               <div className="row">
@@ -183,20 +218,31 @@ const Checkout = () => {
                     <input
                       type="text"
                       className="form-control primary_input shadow-none"
-                      name="numtarjeta"
-                      id="numTarjeta"
+                      name="cardNumber"
+                      id="cardNumber"
+                      {...register("cardNumber", {
+                        required: {value: true, message: "El campo es requerido"},
+                        pattern: {value: /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13})$/, message: "El número de tarjeta es invalido"}
+                      })}
                     />
-                    <p className="text-danger m-0">Error</p>
+                    {errors.cardNumber && (
+                      <p className="text-danger m-0">{errors.cardNumber.message}</p>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="">Nombre de titular</label>
                     <input
                       type="text"
                       className="form-control primary_input shadow-none"
-                      name="nombre"
-                      id="nombre"
+                      name="name"
+                      id="name"
+                      {...register("cardName", {
+                        required: {value: true, message: "El campo es requerido"}
+                      })}
                     />
-                    <p className="text-danger m-0">Error</p>
+                    {errors.cardName && (
+                      <p className="text-danger m-0">{errors.cardName.message}</p>
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -207,10 +253,21 @@ const Checkout = () => {
                     name="expirationDate"
                     id="expirationDate"
                     placeholder="MM/YY"
-                    value={expirationDate}
+                    // value={expirationDate}
+                    // onChange={handleInputChange}
+                    // {...register("expirationDate")}
+                    {...register('expirationDate', {
+                      required: 'Expiration Date is required',
+                      pattern: {
+                        value: /^(0[1-9]|1[0-2])\/\d{2}$/,
+                        message: 'Formato invalido. Utilice el formato mm/yy',
+                      },
+                    })}
                     onChange={handleInputChange}
                   />
-                  <p className="text-danger m-0">Error</p>
+                  {errors.expirationDate && (
+                     <p className="text-danger m-0">{errors.expirationDate.message}</p>
+                  )}
                 </div>
                 <div className="col-lg-6">
                   <label htmlFor="">CVC</label>
@@ -219,8 +276,15 @@ const Checkout = () => {
                     className="form-control primary_input shadow-none"
                     name="cvc"
                     id="cvc"
+                    {...register("cvc", {
+                      required: {value: true, message: "El campo es requerido"},
+                      minLength: {value: 3, message: "CVC invalido"},
+                      maxLength: {value: 4, message: "CVC invalido"}
+                    })}
                   />
-                  <p className="text-danger m-0">Error</p>
+                  {errors.cvc && (
+                    <p className="text-danger m-0">{errors.cvc.message}</p>
+                  )}
                 </div>
               </div>
               <ButtonAction
