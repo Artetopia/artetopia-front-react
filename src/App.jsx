@@ -196,13 +196,11 @@ function App() {
               title="Autenticidad cultural"
               text="Comprar en un marketplace de artesanos mexicanos te brinda acceso a productos auténticos y representativos de la cultura mexicana."
             />
-
-            <CardsAbout
+             <CardsAbout
               background_img="card_artetopia2"
               title="Apoyo a comunidades locales"
               text="Tu compra contribuye al sustento de pequeñas comunidades y familias de artesanos, ayudando a preservar tradiciones y apoyar la economía local."
             />
-
             <CardsAbout
               background_img="card_artetopia3"
               title="Calidad y exclusividad"
