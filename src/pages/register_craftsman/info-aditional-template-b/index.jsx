@@ -1,12 +1,34 @@
-import {Row, Col } from "reactstrap";
-import FormFileA from "../../../components/FormFileAditional/FormFile";
+import { Row, Col } from "reactstrap";
+import FormFile from "../../components/FormFile/FormFile";
 import "./styles/styles.css"
-import React from "react";
+import React, { useState } from "react";
 import { ErrorMessage } from "@hookform/error-message";
 import { useForm } from "react-hook-form";
+
 const AditionalTemplateB = () => {
   const { register, formState: { errors }, handleSubmit } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => console.log(data);
+  const [profilePic, setProfilePic] = useState(null);
+  const [imagesecondary, setImagesecondary] = useState(null);
+  const [imagetree, setImagetree] = useState(null);
+  const [imagefor, setImagefor] = useState(null);
+  const handleImageOne = (event) => {
+    const file2 = event.target.files[0];
+    setImagesecondary(file2)
+  }
+  const handleImageTree = (event) => {
+    const file3 = event.target.files[0];
+    setImagetree(file3)
+  }
+  const handleImageFor = (event) => {
+    const file4 = event.target.files[0];
+    setImagefor(file4)
+  }
+
+  const handleProfilePicChange = (event) => {
+    const file = event.target.files[0];
+    setProfilePic(file);
+  };
   return (
 
     <div className="container">
@@ -16,7 +38,13 @@ const AditionalTemplateB = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col className=" col-12 col-lg-7">
-            <FormFileA></FormFileA>
+            <div className='formfile-uploader-container'>
+              {profilePic == null ?
+                <FormFile fileType='video/*' controlId="form-1" onChange={handleProfilePicChange} />
+                : (
+                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" />
+                )}
+            </div>
             <p className="text_f fw-semibold">Maximo 30 segundos o 30 MB</p>
           </Col>
           <Col className="pt-lg-5 mt-lg-5">
@@ -82,7 +110,13 @@ const AditionalTemplateB = () => {
               }}
             />
             <label htmlFor="">Imagen</label>
-            <FormFileA></FormFileA>
+            <div className='formfile-uploader-container'>
+              {imagesecondary == null ?
+                <FormFile fileType='image/*' controlId="form-2" onChange={handleImageOne} />
+                : (
+                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(imagesecondary)} alt="Selected file" />
+                )}
+            </div>
           </Col>
           <Col className="grid gap-3">
             <label htmlFor="">Titulo</label>
@@ -130,7 +164,13 @@ const AditionalTemplateB = () => {
               }}
             />
             <label htmlFor="">Imagen</label>
-            <FormFileA></FormFileA>
+            <div className='formfile-uploader-container'>
+              {imagetree == null ?
+                <FormFile fileType='image/*' controlId="form-3" onChange={handleImageTree} />
+                : (
+                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(imagetree)} alt="Selected file" />
+                )}
+            </div>
           </Col>
           <Col className="grid gap-3">
             <label htmlFor="">Titulo</label>
@@ -178,7 +218,13 @@ const AditionalTemplateB = () => {
               }}
             />
             <label htmlFor="">Imagen</label>
-            <FormFileA></FormFileA>
+            <div className='formfile-uploader-container'>
+              {imagefor == null ?
+                <FormFile fileType='image/*' controlId="form-4" onChange={handleImageFor} />
+                : (
+                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(imagefor)} alt="Selected file" />
+                )}
+            </div>
           </Col>
         </Row>
         <input type="submit" />
