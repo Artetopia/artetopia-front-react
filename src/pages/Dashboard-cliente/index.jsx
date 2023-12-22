@@ -1,6 +1,6 @@
-import CardCraftsman from "../components/CardCraftsman";
-import Searchbar from "../components/Searchbar";
-import "./dashboardClient.scss"
+import CardCraftsman from "../../components/CardCraftsman";
+import Searchbar from "../../components//Searchbar";
+import "./dashboardClient.css"
 
 const DashboardClient = () => {
     const categories = ['Joyería', 'Textil', 'Cerámica', 'Ropa', 'Zapatos', 'Decoración', 'Accesorios']
