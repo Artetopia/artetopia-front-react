@@ -30,7 +30,7 @@ const order = {
         ],
         dateProcessing: "2023-11-10T10:02:40.441+00:00",
         dateShipping: "2023-11-19T12:31:42.441+00:00",
-        dateDelivered: "2023-11-30T08:40:50.441+00:00",
+        // dateDelivered: "2023-11-30T08:40:50.441+00:00",
 
     }
 const {number, clientName, date, adress, products, dateProcessing, dateShipping, dateDelivered} = order;
@@ -83,7 +83,7 @@ const [shippingPic, setShipping] = useState(null);
                     {shippingPic  == null ?
                         <FormFile fileType='image/*' controlId="form-1" onChange={handleShippingPicChange} />
                         : ( 
-                        <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(shippingPic)} alt="Selected file" /> 
+                        <img className='image-uploaded-container d-block m-auto justify-content-center w-100' src={URL.createObjectURL(shippingPic)} alt="Selected file" /> 
                     )}
                 </div>
                 </Modal.Body>
@@ -141,15 +141,15 @@ const [shippingPic, setShipping] = useState(null);
                                                 </tr>
                                                 <tr className="accordion-custom">
                                                     <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Procesando pedido</th>
-                                                    <td className=" accordion-custom list-text text-center align-middle">{getDate(dateProcessing)}</td>
+                                                    {dateProcessing && <td className=" accordion-custom list-text text-center align-middle">{getDate(dateProcessing)}</td>}
                                                  </tr>
                                                  <tr>
                                                     <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Pedido entregando a paquetería</th>
-                                                    <td className="accordion-custom list-text text-center align-middle">{getDate(dateShipping)}</td>
+                                                    {dateShipping && <td className="accordion-custom list-text text-center align-middle">{getDate(dateShipping)}</td>}
                                                  </tr>
                                                  <tr>
                                                     <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Pedido entregado</th>
-                                                    <td className="accordion-custom list-text text-center align-middle">{getDate(dateDelivered)}</td>
+                                                    {dateDelivered && <td className="accordion-custom list-text text-center align-middle">{getDate(dateDelivered)}</td>}
                                                  </tr>
                                             </tbody>
                                         </table>

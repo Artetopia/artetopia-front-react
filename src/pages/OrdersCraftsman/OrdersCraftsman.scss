@@ -48,3 +48,9 @@
 .background-custom {
     background-color: $primaryColor;
 }
+
+@media (min-width: 768px) { 
+    .principal-text-orders {
+        font-size: 28px;
+    }
+ }

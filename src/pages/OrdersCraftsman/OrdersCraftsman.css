@@ -46,4 +46,10 @@
 
 .background-custom {
   background-color: #e91e63;
+}
+
+@media (min-width: 768px) {
+  .principal-text-orders {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=OrdersCraftsman.css.map */

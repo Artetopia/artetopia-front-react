@@ -79,4 +79,13 @@
   border-color: #e91e63;
   background-color: #e91e63 !important;
   color: white !important;
+}
+
+@media (min-width: 768px) {
+  .title-text-custom {
+    font-size: 28px;
+  }
+  .body-text-custom {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=OrderDetail.css.map */

@@ -81,3 +81,13 @@
     background-color: $primaryColor !important;
     color: white !important ;   
 }
+
+@media (min-width: 768px) { 
+    .title-text-custom {
+        font-size: 28px;
+    }
+    .body-text-custom {
+        font-size: 28px;
+    }
+
+ }
