@@ -10,7 +10,7 @@ import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import ModalFeedback from "./components/ModalFeedback";
-
+import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
   const websites = [{ 

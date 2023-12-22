@@ -70,7 +70,7 @@
   font-weight: 300;
   border-radius: 6px;
   margin: 10px;
-  border: hsl(234deg, 26%, 23%) solid 0px;
+  border: hsl(234, 26%, 23%) solid 0px;
   margin-top: 60px;
   letter-spacing: 0px;
   transition: all 0.5s;
