@@ -2,11 +2,17 @@ import "./styles/app.scss";
 //import bgArtesano from './assets/bgArtesano.png'
 import HeaderComponent from "./components/header";
 import Footer from './components/footer';
+import ImageGallery from "./pages/product-carousel/ImageGallery";
+
+
 function App() {
   return (
     <>
+    
+    <ImageGallery></ImageGallery>
+
     <header>
-      <HeaderComponent></HeaderComponent>
+      {/* <HeaderComponent></HeaderComponent> */}
     </header>
 
     <section id='hero-section'>
