@@ -35,6 +35,7 @@
 
 .card_about {
   height: 30rem !important;
+  min-height: -webkit-fit-content !important;
   min-height: -moz-fit-content !important;
   min-height: fit-content !important;
 }

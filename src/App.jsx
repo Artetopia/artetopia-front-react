@@ -8,6 +8,8 @@ import CardsAbout from "./components/cards_about";
 import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
+import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
 
 function App() {
     const showMore = () => {
@@ -178,15 +180,14 @@ function App() {
 
   return (
     <>
-      <header>
-        <Navbare></Navbare>
-      </header>
+    <header>
+      <Navbare></Navbare>
+    </header>
 
-      <section id="hero-section">
+    <section id='hero-section'>
       <HeaderComponent></HeaderComponent>
-
     </section>
-
+    <Page4/>
     <section id='about' className="mb-4">
       <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
       <div className="container">
