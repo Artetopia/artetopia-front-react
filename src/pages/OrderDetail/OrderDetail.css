@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.title-text-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.body-text-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.list-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.status-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: white !important;
+  background-color: #e91e63 !important;
+  border-style: none;
+}
+
+.buttons-custom {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  border-color: #e91e63;
+  height: 48px;
+  border-width: 1px;
+}/*# sourceMappingURL=OrderDetail.css.map */

@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.principal-text-orders {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.buttons-custom {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  border-color: #e91e63;
+  height: 48px;
+  border-width: 1px;
+}
+
+.pending-orders-button {
+  color: white;
+  background-color: #e91e63;
+}
+
+.principal-buttons-custom {
+  width: 250px;
+}
+
+.border-color-buttons {
+  color: #e91e63;
+  background-color: white;
+}
+
+.status-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: white !important;
+  background-color: #e91e63 !important;
+  border-style: none;
+}
+
+.show-buttons {
+  width: 155px;
+  height: 50px;
+}
+
+.list-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.background-custom {
+  background-color: #e91e63;
+}/*# sourceMappingURL=OrdersCraftsman.css.map */

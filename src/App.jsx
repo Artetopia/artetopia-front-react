@@ -9,6 +9,7 @@ import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
+import OrderDetail from "./pages/OrderDetail";
 
 function App() {
     const showMore = () => {
@@ -184,6 +185,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
+    <OrderDetail/>   
       <HeaderComponent></HeaderComponent>
     </section>
     

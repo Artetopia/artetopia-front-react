@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.title-text-custom {
+    font-family: $fontMontserrat;
+    font-size: 24px;
+}
+
+.body-text-custom {
+    font-family: $fontMontserrat;
+    font-size: 18px;
+}
+
+.list-text {
+    font-family: $fontMontserrat;
+    font-size: 14px;
+}
+
+.status-button {
+    font-family: $fontMontserrat;
+    font-size: 12px;
+    color: white !important;
+    background-color: $primaryColor !important;
+    border-style: none;
+}
+
+.buttons-custom {
+    font-family: $fontkarla;
+    font-size: 16px;
+    border-color: $primaryColor;
+    height: 48px;
+    border-width: 1px;
+}
