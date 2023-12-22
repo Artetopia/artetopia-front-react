@@ -8,6 +8,7 @@ import CardsAbout from "./components/cards_about";
 import { Row } from "reactstrap";
 import CardArtesanoImages from "./components/cardArtesanoImages";
 import { useEffect, useState } from "react";
+import ClientDeliveries from "./pages/client_deliveries";
 
 function App() {
     const showMore = () => {
@@ -178,7 +179,10 @@ function App() {
 
   return (
     <>
-      <header>
+
+      <ClientDeliveries></ClientDeliveries>
+
+      {/* <header>
         <Navbare></Navbare>
       </header>
 
@@ -282,7 +286,7 @@ function App() {
 
       <footer>
         <Footer></Footer>
-      </footer>
+      </footer> */}
     </>
   );
 }

@@ -1,0 +1,34 @@
+.card {
+  width: 350px;
+  height: 184px;
+  background-color: #fff9f9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Karla", sans-serif;
+  margin: 10px;
+}
+
+.cardImage {
+  width: 115px;
+  height: 112px;
+}
+
+.btn {
+  background-color: #E91E63;
+  width: 151px;
+  height: 41px;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.main-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=styles.css.map */
