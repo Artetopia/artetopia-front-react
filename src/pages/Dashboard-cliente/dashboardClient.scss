@@ -1,0 +1,53 @@
+@import "../styles/variables";
+
+.title-head {
+    color: $secondaryColor;
+}
+ 
+.principal-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $fontMontserrat;
+}
+
+.subtitle-text {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: $fontkarla;
+}
+
+.filter-buttons {
+    width: 90px;
+    font-family: $fontkarla;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $primaryColor;
+    color: $textColorWhite;
+    border: solid;
+}
+
+.horizontal-row-container {
+    color: $secondaryColor !important;
+}
+
+.top-categories-container {
+    width: 80%;
+
+}
+
+
+
+@media (min-width: 768px) {
+    .principal-title {
+        font-size: 55px;
+    }
+    .subtitle-text {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) { 
+    .subtitle-text {
+        font-size: 28px;
+    }
+ }

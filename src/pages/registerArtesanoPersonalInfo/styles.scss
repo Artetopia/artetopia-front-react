@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+.personalInfo-container {
+  .personalInfo-heading {
+    font-weight: bold;
+    font-family: $fontMontserrat;
+    .personalInfo-heading__primary {
+      color: $primaryColor;
+      font-family: $fontMontserrat;
+    }
+  }
+  .personalInfo-subHeading {
+    color: $primaryColor;
+    font-family: $fontMontserrat;
+  }
+  .input_primary {
+    border: 1px solid $secondaryColor !important;
+    max-width: 100%;
+    border-radius: 30px !important;
+  }
+}
