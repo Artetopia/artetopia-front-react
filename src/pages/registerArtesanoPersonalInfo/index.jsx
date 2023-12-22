@@ -1,8 +1,9 @@
 import "./styles.css";
 import ButtonAction from "../../components/buttonAction";
 import {useForm} from 'react-hook-form';
+import Stepper from "../../components/Stepper";
 const RegisterArtesanoPersonalInfo = () => {
-
+  const CURRENT_PAGE = 1;
   const {
     register,
     handleSubmit,
@@ -13,7 +14,7 @@ const RegisterArtesanoPersonalInfo = () => {
     <>
       <div className="container personalInfo-container">
         <div className="row">
-          <p>Aquí va el stepper</p>
+          <Stepper step={CURRENT_PAGE}/>
         </div>
         <div className="row text-center">
           <h1 className="personalInfo-heading">
