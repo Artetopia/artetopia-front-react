@@ -9,7 +9,6 @@ import CardArtesanoImages from "./components/cardArtesanoImages";
 
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
-import ShoppingCar from "./pages/shopping_car";
 
 function App() {
     const showMore = () => {
@@ -187,7 +186,6 @@ function App() {
       <section id="hero-section">
       <HeaderComponent></HeaderComponent>
 
-      <ShoppingCar></ShoppingCar>
 
     </section>
     <section id='about' className="mb-4">
