@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+.infoSite-container {
+  .infoSite-heading {
+    font-weight: bold;
+    font-family: $fontMontserrat;
+    .infoSite-heading__primary {
+      color: $primaryColor;
+      font-family: $fontMontserrat;
+    }
+  }
+  .infoSite-subHeading {
+    color: $primaryColor;
+    font-family: $fontMontserrat;
+  }
+  .input_primary {
+    border: 1px solid $secondaryColor !important;
+    max-width: 100%;
+    border-radius: 30px !important;
+  }
+  .input-primary__border {
+    border: none;
+    border-radius: 50px;
+  }
+  .form-check-input__primary {
+    border: 1px solid $primaryColor;
+    &:checked {
+      background-color: $primaryColor !important;
+      border-color: $primaryColor !important;
+    }
+  }
+  input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: 0;
+  }
+}
