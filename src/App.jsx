@@ -8,6 +8,7 @@ import CardsAbout from "./components/cards_about";
 import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
+import SelectTemplate from "./pages/register_craftsman/select_templates";
 
 function App() {
     const showMore = () => {
@@ -276,7 +277,7 @@ function App() {
           </div>
         </div>
       </section>
-
+            
       <footer>
         <Footer></Footer>
       </footer>
