@@ -50,18 +50,18 @@
 
 .card_artetopia1 {
   text-align: center;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/artetopia_1.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_1.png");
   background-size: cover;
 }
 
 .card_artetopia2 {
   text-align: center;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/artetopia_2.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_2.png");
   background-size: cover;
 }
 
 .card_artetopia3 {
   text-align: center;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("../images/artetopia_3.png");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_3.png");
   background-size: cover;
 }/*# sourceMappingURL=app.css.map */

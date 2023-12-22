@@ -42,7 +42,7 @@ const ShoppingCar = () => {
                         ></ProductCard>
                     </div>
                     <div className='col-12 col-lg-4 text-center'>
-                        <button className="btn btn-outline-secondary w-100 p-3 mb-3 shadow">Seguir comprando </button>
+                        <button className="btn btn-outline-secondary w-100 p-3 mb-3 shadow mt-3 mt-lg-0">Seguir comprando </button>
                         <div className="container_checkout p-3 rounded">
                             <div className="d-flex justify-content-between">
                                 <small>En total # artesanos</small>
