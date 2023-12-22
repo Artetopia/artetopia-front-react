@@ -8,6 +8,8 @@ import CardsAbout from "./components/cards_about";
 import { Row } from "reactstrap";
 import CardArtesanoImages from "./components/cardArtesanoImages";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Checkout from "./pages/checkout";
 
 function App() {
     const showMore = () => {
@@ -182,7 +184,11 @@ function App() {
         <Navbare></Navbare>
       </header>
 
-      <section id="hero-section">
+      <Routes>
+        <Route path="/checkout" element={<Checkout/>}></Route>
+      </Routes>
+
+      {/* <section id="hero-section">
       <HeaderComponent></HeaderComponent>
 
       </section>
@@ -278,7 +284,7 @@ function App() {
             ></ButtonAction>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer>
         <Footer></Footer>
