@@ -2,6 +2,7 @@ import "./OrderDetail.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
+import FormFile from "../../components/FormFile";
 
 function OrderDetail() {
 
@@ -46,6 +47,12 @@ const getTotalPrice = ((pieces, price) => {
     return totalPrice;
 })
 
+const [shippingPic, setShipping] = useState(null);
+    const handleShippingPicChange = (event) => { 
+    const file = event.target.files[0]; 
+    setShipping(file); 
+};
+
     return (
         <div className='container'>
             <h2 className='title-text-custom fw-bold mt-4'>Pedido #{number}</h2>
@@ -58,17 +65,36 @@ const getTotalPrice = ((pieces, price) => {
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
                 <div className="rounded-4 px-lg-2">
-                    <p>Hola</p>
+                    <h2 className='subtitle-custom'>Seguimiento</h2>
+                    <p className='body-text-container my-1'>Número de seguimiento</p>
+                    <input className='imput-custom rounded-5 px-3 w-100' placeholder='Número de seguimiento' type='text'/>
+                    <p className='body-text-container my-1'>Paquetería</p>
+                    <select className="form-select imput-custom selected-shipping rounded-5" aria-label="Default select example">
+                        <option className='body-text-container' selected>Selecciona una paquetería</option>
+                        <option className='body-text-container' value="1">DHL</option>
+                        <option className='body-text-container' value="2">Redpack</option>
+                        <option className='body-text-container' value="3">Estafeta</option>
+                        <option className='body-text-container' value="4">FedEx</option>
+                        <option className='body-text-container' value="5">UPS</option>
+                        <option className='body-text-container' value="6">Correos de México</option>
+                        <option className='body-text-container' value="7">...Otro</option>
+                    </select>
+                    <p className='body-text-container my-1'>Foto de confirmación de envío</p>
+                    {shippingPic  == null ?
+                        <FormFile fileType='image/*' controlId="form-1" onChange={handleShippingPicChange} />
+                        : ( 
+                        <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(shippingPic)} alt="Selected file" /> 
+                    )}
                 </div>
                 </Modal.Body>
                 <Modal.Footer className='d-flex justify-content-center'>
-                    <Button className='custom-button' variant="secondary" onClick={handleClose}>
+                    <Button className='close-modal-custom px-4' variant="secondary" onClick={handleClose}>
                     Cerrar
                     </Button>
                 </Modal.Footer>
             </Modal>
             <div className="d-flex justify-content-center justify-content-md-between my-3">
-                <ul className="list-group list-group-horizontal position-relative overflow-auto">
+                <ul className="list-group list-group-horizontal position-relative overflow-auto w-100">
                     <table className="table">
                         <thead>
                             <tr>
@@ -82,21 +108,31 @@ const getTotalPrice = ((pieces, price) => {
                             <tr>
                                 <th scope="row" className="list-text fw-normal text-center align-middle">{products[0].name}</th>
                                 <td className="list-text text-center align-middle">{products[0].pieces}</td>
-                                <td className="list-text text-center align-middle">{products[0].price}</td>
-                                <td className="list-text text-center align-middle">{getTotalPrice(products[0].pieces, products[0].price)}</td>
+                                <td className="list-text text-center align-middle">${products[0].price}</td>
+                                <td className="list-text text-center align-middle">${getTotalPrice(products[0].pieces, products[0].price)}</td>
                             </tr>
                             <tr>
                                 <th scope="row" className="list-text fw-normal text-center align-middle">{products[1].name}</th>
                                 <td className="list-text text-center align-middle">{products[1].pieces}</td>
-                                <td className="list-text text-center align-middle">{products[1].price}</td>
-                                <td className="list-text text-center align-middle">{getTotalPrice(products[1].pieces, products[1].price)}</td>
+                                <td className="list-text text-center align-middle">${products[1].price}</td>
+                                <td className="list-text text-center align-middle">${getTotalPrice(products[1].pieces, products[1].price)}</td>
                             </tr>
                             
                         </tbody>
                     </table>
                 </ul>
-            
             </div>
+            <p className="d-inline-flex gap-1">
+            
+            <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Button with data-bs-target
+            </button>
+            </p>
+            <div className="collapse" id="collapseExample">
+            <div className="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            </div>
+</div>
         
         </div>
 

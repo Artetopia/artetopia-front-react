@@ -44,4 +44,31 @@
 
 .custom-button:focus {
   background-color: #e91e63 !important;
+}
+
+.subtitle-custom {
+  color: #e91e63;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.body-text-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.imput-custom {
+  border-color: #2b2e4a;
+  border-width: 1px;
+}
+
+.selected-shipping {
+  color: rgb(133, 126, 126) !important;
+}
+
+.close-modal-custom {
+  border-width: 1px;
+  border-color: #e91e63;
+  background-color: white;
+  color: #e91e63;
 }/*# sourceMappingURL=OrderDetail.css.map */
