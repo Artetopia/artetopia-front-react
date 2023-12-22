@@ -6,7 +6,6 @@ import Footer from "./components/footer";
 import ButtonAction from "./components/buttonAction";
 import CardsAbout from "./components/cards_about";
 import CardArtesanoImages from "./components/cardArtesanoImages";
-
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 
@@ -186,8 +185,8 @@ function App() {
       <section id="hero-section">
       <HeaderComponent></HeaderComponent>
 
-
     </section>
+
     <section id='about' className="mb-4">
       <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
       <div className="container">
