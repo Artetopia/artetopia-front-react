@@ -33,36 +33,6 @@
   border-radius: 30px !important;
 }
 
-.artesano-card .card-img-block {
-  float: left;
-  width: 100%;
-  overflow: hidden;
-}
-.artesano-card .card-body .profile-container {
-  top: -22px;
-  left: 0;
-  gap: 1rem;
-  padding: 0px 1rem;
-}
-.artesano-card .card-body .profile-container .profile {
-  border-radius: 50%;
-  max-width: 75px;
-  border: 3px solid rgb(255, 255, 255);
-}
-.artesano-card .card-body .profile-container h5 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  color: #2b2e4a;
-  flex-grow: 1;
-}
-.artesano-card .card-body.padding-top__65 {
-  padding-top: 65px;
-}
-.artesano-card .card-text {
-  font-weight: 300;
-  font-size: 15px;
-}
-
 .card_about {
   height: 30rem !important;
   min-height: -webkit-fit-content !important;
