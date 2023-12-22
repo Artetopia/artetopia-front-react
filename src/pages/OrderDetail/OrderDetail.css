@@ -71,4 +71,12 @@
   border-color: #e91e63;
   background-color: white;
   color: #e91e63;
+}
+
+.accordion-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border-color: #e91e63;
+  background-color: #e91e63 !important;
+  color: white !important;
 }/*# sourceMappingURL=OrderDetail.css.map */

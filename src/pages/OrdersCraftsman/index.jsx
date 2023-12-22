@@ -13,7 +13,7 @@ function OrdersCraftsman() {
                 </div>
             </div>
             <div className="d-flex justify-content-center my-3">
-                <ul className="list-group list-group-horizontal position-relative overflow-auto">
+                <ul className="list-group list-group-horizontal position-relative overflow-auto w-100">
                     <table className="table">
                         <thead>
                             <tr>

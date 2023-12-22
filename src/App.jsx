@@ -10,6 +10,7 @@ import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import OrderDetail from "./pages/OrderDetail";
+import OrdersCraftsman from "./pages/OrdersCraftsman"
 
 function App() {
     const showMore = () => {
@@ -185,6 +186,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
+    <OrdersCraftsman/>
     <OrderDetail/>   
       <HeaderComponent></HeaderComponent>
     </section>

@@ -122,19 +122,47 @@ const [shippingPic, setShipping] = useState(null);
                     </table>
                 </ul>
             </div>
-            <p className="d-inline-flex gap-1">
-            
-            <button className="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Button with data-bs-target
-            </button>
-            </p>
-            <div className="collapse" id="collapseExample">
-            <div className="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <div className="accordion" id="accordionExample">
+                    <div className="accordion-item accordion-custom">
+                        <h2 className="accordion-header">
+                        <button className="accordion-button accordion-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Pedido #{number}
+                        </button>
+                        </h2>
+                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                            <div className="d-flex justify-content-center justify-content-md-between my-3">
+                                    <ul className="list-group list-group-horizontal position-relative overflow-auto w-100">
+                                        <table className="table">
+                                            <tbody>
+                                                <tr className="accordion-custom">
+                                                    <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Pedido creado</th>
+                                                    <td className="accordion-custom list-text text-center align-middle">{getDate(date)}</td>
+                                                </tr>
+                                                <tr className="accordion-custom">
+                                                    <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Procesando pedido</th>
+                                                    <td className=" accordion-custom list-text text-center align-middle">{getDate(dateProcessing)}</td>
+                                                 </tr>
+                                                 <tr>
+                                                    <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Pedido entregando a paquetería</th>
+                                                    <td className="accordion-custom list-text text-center align-middle">{getDate(dateShipping)}</td>
+                                                 </tr>
+                                                 <tr>
+                                                    <th scope="row" className="accordion-custom list-text text-start fw-normal align-middle">Pedido entregado</th>
+                                                    <td className="accordion-custom list-text text-center align-middle">{getDate(dateDelivered)}</td>
+                                                 </tr>
+                                            </tbody>
+                                        </table>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-</div>
+            
         
-        </div>
 
     ) }
 export default OrderDetail;

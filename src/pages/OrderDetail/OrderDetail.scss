@@ -73,3 +73,11 @@
     background-color: white;
     color: $primaryColor;
 }
+
+.accordion-custom {
+    font-family: $fontMontserrat;
+    font-size: 16px;
+    border-color: $primaryColor;
+    background-color: $primaryColor !important;
+    color: white !important ;   
+}
