@@ -1,14 +1,14 @@
 import "../Stepper/stepper.css";
 
 const StepOneIcon = () => {
-    return (
-        
-        <div className='circle-step rounded-circle ms-1 mb-4'>
-            <i className='fa fa-user-o image-icon-svg d-flex justify-content-center align-items-center m-1'/>
-            <p className='progress-bar-text'>Información personal</p>
-        </div>
-        
-    )
-}
+  return (
+    <>
+      <div className="circle-step rounded-circle">
+        <i className="fa fa-user-o image-icon-svg d-flex justify-content-center align-items-center m-1" />
+      </div>
+      <small className='progress-bar-text'>Información personal</small>
+    </>
+  );
+};
 
 export default StepOneIcon;

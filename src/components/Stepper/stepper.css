@@ -18,7 +18,7 @@
 .progress-bar-text {
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
-  display: ruby-base;
+  display: grid;
 }
 
 .subtitle-text {
