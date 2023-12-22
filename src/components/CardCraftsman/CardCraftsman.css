@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.content-craftsman-container {
+  background-color: #2b2e4a;
+}
+
+.card-craftsman-container {
+  background-color: white;
+  width: 90%;
+}
+
+.website-name-label {
+  color: #e91e63;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  height: 100px;
+}
+
+.website-profilePic {
+  width: 140px;
+  height: 134px;
+  border-color: #e91e63;
+  border-style: solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-warning {
+  color: yellow;
+}
+
+.categories-button-container {
+  width: 90px;
+  background-color: #FFDAE1;
+  color: #e91e63;
+  border-style: solid;
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .website-profilePic {
+    width: 205px;
+    height: 195px;
+  }
+}
+@media (min-width: 992px) {
+  .website-profilePic {
+    width: 165px;
+    height: 160px;
+  }
+  .card-craftsman-container {
+    width: 30% !important;
+  }
+}/*# sourceMappingURL=CardCraftsman.css.map */
