@@ -9,6 +9,7 @@ import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
+import Payments from "./pages/Payments";
 
 function App() {
     const showMore = () => {
@@ -209,6 +210,8 @@ function App() {
           </Row>
         </div>
       </section>
+
+      <Payments></Payments>
 
       <section id="artesanos">
         <div className="container">
