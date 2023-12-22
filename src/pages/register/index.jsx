@@ -1,4 +1,4 @@
-import "./styles.scss";
+import "./styles.css";
 import ButtonAction from "../../components/buttonAction";
 import ValidationCircle from "../../components/ValidationCircle";
 import loginImage from "/images/login-image.png"
