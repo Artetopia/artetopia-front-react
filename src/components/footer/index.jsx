@@ -199,7 +199,7 @@ const Footer = () => {
                 <small className='copyright-text  d-flex flex-wrap justify-content-center'>
                     {' '}
                     Copyright de equipo{' '}
-                    <p className='name-artetopia'> Artetopia </p> | Todos los
+                    <span className='name-artetopia m-0'> Artetopia </span> | Todos los
                     derechos reservados
                 </small>
             </div>
