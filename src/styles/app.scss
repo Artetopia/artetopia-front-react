@@ -47,42 +47,6 @@ $fontkarla: "Karla", sans-serif;
   border-radius: 30px !important;
 }
 
-.artesano-card {
-  .card-img-block {
-    float: left;
-    width: 100%;
-    overflow: hidden;
-  }
-  .card-body {
-    .profile-container {
-      top: -22px;
-      left: 0;
-      gap: 1rem;
-      padding: 0px 1rem;
-      .profile {
-        border-radius: 50%;
-        max-width: 75px;
-        border: 3px solid rgba(255, 255, 255, 1);
-      }
-      h5
-      {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        color: $secondaryColor;
-        flex-grow: 1;
-      }
-    }
-    &.padding-top__65 {
-      padding-top: 65px;
-    }
-  }
-
-  .card-text {
-    font-weight: 300;
-    font-size: 15px;
-  }
-}
-
 .card_about {
  height:30rem !important;
  min-height: fit-content !important;
@@ -99,20 +63,20 @@ $fontkarla: "Karla", sans-serif;
 .card_artetopia1 {
   text-align: center;
   background-image: $gradientCard,
-    url("../images/artetopia_1.png");
+    url("/images/artetopia_1.png");
   background-size: cover;
 }
 
 .card_artetopia2 {
   text-align: center;
   background-image: $gradientCard,
-    url("../images/artetopia_2.png");
+    url("/images/artetopia_2.png");
   background-size: cover;
 }
 
 .card_artetopia3 {
   text-align: center;
   background-image: $gradientCard,
-    url("../images/artetopia_3.png");
+    url("/images/artetopia_3.png");
   background-size: cover;
 }

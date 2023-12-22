@@ -1,0 +1,17 @@
+.gallery img{
+    width: 100%;
+    height: fit-content;
+}
+
+@media (min-width: 1024px) {
+    .imgx{
+        height: 350px !important;
+    }
+    
+    #imgy{
+        height: 500px;
+    }
+    #imgy1{
+        height: 200px;
+    }
+}

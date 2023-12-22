@@ -1,0 +1,34 @@
+@import "../../styles/variables";
+
+.card-secondary {
+    background-color: $secondaryColor !important;
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card-title {
+        font-family: $fontMontserrat;
+    }
+    .button-primary {
+        width: auto;
+        background-color: $primaryColor;
+        &:hover {
+            color: white;
+        }
+        .cart-icon {
+            font-size: 16px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    .card-footer {
+        border-top: 5px solid $primaryColor;
+        .profile-image {
+            border-radius: 50%;
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+}
