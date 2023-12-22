@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+* {
+  font-family: "Karla", sans-serif;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.step-7_payments_button {
+  border: 1px solid #e91e63;
+  background-color: white;
+  width: 320px;
+  height: 34px;
+  border-radius: 20px;
+  margin: 19px;
+}
+
+.step-7_payments_button_tablet {
+  display: none;
+}
+
+.tutorial-link {
+  margin-bottom: 19px;
+}
+
+span {
+  text-decoration: underline;
+  color: #e91e63;
+  transition: all 1s;
+}
+
+span:hover {
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  font-size: 17px;
+}
+
+.contentFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop_Image {
+  display: none;
+}
+
+.left_desktop {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 744px) {
+  /* For tablets: */
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .step-7_payments_button {
+    display: none;
+  }
+  .step-7_payments_button_tablet {
+    display: block;
+    border: 1px solid #e91e63;
+    color: #e91e63;
+    background-color: white;
+    width: 150px;
+    height: 42px;
+    border-radius: 20px;
+    margin: 19px;
+    margin-bottom: 0px;
+    margin-bottom: 20px;
+  }
+  .reg_step-7_image {
+    width: 497px;
+    height: 334px;
+    margin-bottom: 36px;
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  /* For desktop: */
+  .subtittle {
+    text-align: left;
+    font-size: 16px;
+    width: 1290px;
+    margin-bottom: 40px;
+  }
+  .reg_step-7_image {
+    display: none;
+  }
+  .desktop_Image {
+    display: block;
+    width: 827px;
+    height: 559px;
+  }
+  .desktop_flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .left_desktop {
+    align-items: flex-start;
+  }
+}/*# sourceMappingURL=styles.css.map */

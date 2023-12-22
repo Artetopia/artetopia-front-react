@@ -1,5 +1,5 @@
 import "./styles/app.css";
-import bgArtesano from './assets/bgArtesano.png'
+import bgArtesano from '/assets/bgArtesano.png';
 import HeaderComponent from "./components/header";
 import Navbare from "./components/navbar"
 import Footer from "./components/footer";
@@ -9,6 +9,7 @@ import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
+
 
 function App() {
     const showMore = () => {
@@ -183,10 +184,11 @@ function App() {
       <Navbare></Navbare>
     </header>
 
+    
+
     <section id='hero-section'>
       <HeaderComponent></HeaderComponent>
     </section>
-    
     <section id='about' className="mb-4">
       <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
       <div className="container">
