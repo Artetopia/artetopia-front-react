@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+.content-craftsman-container {
+    background-color: $secondaryColor;
+}
+
+.card-craftsman-container {
+    background-color: white;
+    width: 90%;
+}
+
+.website-name-label {
+    color: $primaryColor;
+    font-family: $fontMontserrat;
+    font-weight: 500;
+    font-size: 28px;
+    height: 100px;
+}
+
+.website-profilePic {
+    width: 140px;
+    height: 134px;
+    border-color: $primaryColor;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-warning {
+    color: yellow;
+}
+
+.categories-button-container {
+    width: 90px;
+    background-color: #FFDAE1;
+    color: $primaryColor;
+    border-style: solid;
+    font-family: $fontkarla;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) { 
+    .website-profilePic {
+        width: 205px;
+        height: 195px;
+    }
+}
+
+@media (min-width: 992px) { 
+    .website-profilePic {
+        width: 165px;
+        height: 160px;
+    }
+    .card-craftsman-container {
+        width: 30% !important;
+    }
+}
