@@ -1,12 +1,15 @@
 import "./styles/app.css";
-import bgArtesano from "./assets/bgArtesano.png";
+import bgArtesano from '/assets/bgArtesano.png';
 import HeaderComponent from "./components/header";
+import Navbare from "./components/navbar"
 import Footer from "./components/footer";
 import ButtonAction from "./components/buttonAction";
 import CardsAbout from "./components/cards_about";
-import { Row } from "reactstrap";
 import CardArtesanoImages from "./components/cardArtesanoImages";
+import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
+import SelectTemplate from "./pages/register_craftsman/select_templates";
+
 
 function App() {
     const showMore = () => {
@@ -177,28 +180,29 @@ function App() {
 
   return (
     <>
-      <header>
-        <HeaderComponent></HeaderComponent>
-      </header>
+    <header>
+      <Navbare></Navbare>
+    </header>
 
-      <section id="hero-section"></section>
+    
 
-      <section id="about" className="mb-4">
-        <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
-        <div className="container">
-          <Row lg="3" md="1" sm="1" xs="1" className="text-center">
+    <section id='hero-section'>
+      <HeaderComponent></HeaderComponent>
+    </section>
+    <section id='about' className="mb-4">
+      <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
+      <div className="container">
+        <Row lg="3" md="1" sm="1" xs="1" className="text-center">
             <CardsAbout
               background_img="card_artetopia1"
               title="Autenticidad cultural"
               text="Comprar en un marketplace de artesanos mexicanos te brinda acceso a productos auténticos y representativos de la cultura mexicana."
             />
-
-            <CardsAbout
+             <CardsAbout
               background_img="card_artetopia2"
               title="Apoyo a comunidades locales"
               text="Tu compra contribuye al sustento de pequeñas comunidades y familias de artesanos, ayudando a preservar tradiciones y apoyar la economía local."
             />
-
             <CardsAbout
               background_img="card_artetopia3"
               title="Calidad y exclusividad"
@@ -275,7 +279,7 @@ function App() {
           </div>
         </div>
       </section>
-
+            
       <footer>
         <Footer></Footer>
       </footer>

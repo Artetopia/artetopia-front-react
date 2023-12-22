@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './styles.css'
+import './styles.css';
 import {
   Collapse,
-  Navbar as ReactstrapNavbar, // Rename the Navbar component
+  Navbar as ReactstrapNavbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
@@ -24,7 +24,16 @@ const Navbare = ({toggleSidebar}) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleNavbar = () => setIsOpen(!isOpen);
+
+  const handleNavLinkClick = (sectionId) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+      toggleNavbar(); // Close the navbar after clicking a link (optional)
+    }
+  };
 
   return (
     <ReactstrapNavbar dark expand="md" className="navbar">
@@ -37,15 +46,15 @@ const Navbare = ({toggleSidebar}) => {
         <Nav className="me-auto" navbar>
           <div className='desktop_menu'>
             <NavItem>
-              <NavLink href="/components/" className="text-light">Inicio</NavLink>
+              <NavLink onClick={() => handleNavLinkClick('inicio')} className="text-light">Inicio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap" className="text-light">
+              <NavLink onClick={() => handleNavLinkClick('nosotros')} className="text-light">
                 Nosotros
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap" className="text-light">
+              <NavLink onClick={() => handleNavLinkClick('artesanos')} className="text-light">
                 Artesanos
               </NavLink>
             </NavItem>
@@ -58,6 +67,6 @@ const Navbare = ({toggleSidebar}) => {
       </Collapse>
     </ReactstrapNavbar>
   );
-}
+};
 
 export default Navbare;

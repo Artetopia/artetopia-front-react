@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.guide-container {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.images-delivery-container {
+    width: 76px;
+    height: 76px;
+}
+
+.status-text-container {
+    font-family: $fontkarla;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.provider-button {
+    font-weight: 500;
+    font-size: 14px;
+    font-family: $fontkarla;
+    background-color: $primaryColor;
+    color: white;
+    border: none;
+}
+
+@media (min-width: 768px) { 
+    .guide-container {
+        font-size: 24px;
+    }
+    .images-delivery-container {
+        width: 130px;
+        height: 130px;
+    }
+    .status-text-container {
+        font-size: 28px;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .guide-container {
+        font-size: 28px;
+    }
+    .images-delivery-container {
+        width: 255px;
+        height: 270px;
+    }
+    .status-text-container {
+        font-size: 28px;
+    }
+}

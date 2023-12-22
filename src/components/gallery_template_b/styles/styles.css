@@ -1,0 +1,18 @@
+.gallery img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .imgx {
+    height: 350px !important;
+  }
+  #imgy {
+    height: 500px;
+  }
+  #imgy1 {
+    height: 200px;
+  }
+}/*# sourceMappingURL=styles.css.map */
