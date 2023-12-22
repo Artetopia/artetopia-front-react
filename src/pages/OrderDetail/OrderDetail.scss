@@ -30,3 +30,19 @@
     height: 48px;
     border-width: 1px;
 }
+
+.custom-button {
+    font-family: $fontkarla;
+    font-size: 16px;
+    color: white;
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+}
+
+.custom-button:hover {
+    background-color: $primaryColor !important;
+}
+
+.custom-button:focus {
+    background-color: $primaryColor !important;
+}

@@ -1,6 +1,15 @@
 import "./OrderDetail.css";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from "react";
 
 function OrderDetail() {
+
+const [show, setShow] = useState(false);
+
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+
 const order = {
         number: "1234",
         clientName: "Jhon Doe",
@@ -43,6 +52,21 @@ const getTotalPrice = ((pieces, price) => {
             <p className='body-text-custom fw-medium m-0'>Nombre del cliente: {clientName}</p>
             <p className='body-text-custom fw-medium m-0'>Fecha del pedido: {getDate(date)}</p>
             <p className='body-text-custom fw-medium m-0'>Dirección de envío: {adress}</p>
+            <Button className='custom-button fw-medium my-3' variant="primary" onClick={handleShow}>
+                Confirmar entrega a paqueteria
+            </Button>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Body>
+                <div className="rounded-4 px-lg-2">
+                    <p>Hola</p>
+                </div>
+                </Modal.Body>
+                <Modal.Footer className='d-flex justify-content-center'>
+                    <Button className='custom-button' variant="secondary" onClick={handleClose}>
+                    Cerrar
+                    </Button>
+                </Modal.Footer>
+            </Modal>
             <div className="d-flex justify-content-center justify-content-md-between my-3">
                 <ul className="list-group list-group-horizontal position-relative overflow-auto">
                     <table className="table">
@@ -75,6 +99,6 @@ const getTotalPrice = ((pieces, price) => {
             </div>
         
         </div>
-)}
 
+    ) }
 export default OrderDetail;

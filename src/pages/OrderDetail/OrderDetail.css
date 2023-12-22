@@ -28,4 +28,20 @@
   border-color: #e91e63;
   height: 48px;
   border-width: 1px;
+}
+
+.custom-button {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: white;
+  border-color: #e91e63;
+  background-color: #e91e63;
+}
+
+.custom-button:hover {
+  background-color: #e91e63 !important;
+}
+
+.custom-button:focus {
+  background-color: #e91e63 !important;
 }/*# sourceMappingURL=OrderDetail.css.map */
