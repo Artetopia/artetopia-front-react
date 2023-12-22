@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.button_upload {
+  height: 10rem;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px #E91E63 dashed;
+}
+
+.input_descroption {
+  height: 10rem;
+}
+
+.text_f {
+  font-size: 12px;
+}
+
+.alert {
+  color: #E91E63 !important;
+}
+
+.alert::before {
+  content: "⚠ " !important;
+}/*# sourceMappingURL=styles.css.map */

@@ -19,7 +19,7 @@ const Step_8 = () => {
       </p>
 
       <div>
-      <Button color="primary" size="sm" style={{ backgroundColor: "#e91e63", outline: "none" }}>
+      <Button color="primary" style={{ backgroundColor: "#e91e63", outline: "none" }}>
           Regresar a Artetopia
         </Button>
       </div>
