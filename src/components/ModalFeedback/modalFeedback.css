@@ -48,7 +48,7 @@ body {
   color: #FFED85;
 }
 
-.card {
+.card_feed {
   position: relative;
   display: flex;
   width: 350px;
