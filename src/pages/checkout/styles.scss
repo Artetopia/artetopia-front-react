@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+.checkout-container {
+    .checkoutBorder__primary {
+       border: 1px solid $primaryColor;
+       border-radius: 5px;
+    }
+    .primary_input {
+        border: 1px solid $secondaryColor;
+        border-radius: 50px;
+    }
+    .artesanoContainer-products {
+        .productImage {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+        .productName {
+            font-size: 20px;
+        }
+        .icon {
+            font-size: 20px;
+        }
+        .controls {
+            .inputControls {
+                max-width: 40px;
+            }
+        }
+    }
+}
