@@ -4,7 +4,8 @@ import "./styles/styles.css"
 import React, { useState } from "react";
 import { ErrorMessage } from "@hookform/error-message";
 import { useForm } from "react-hook-form";
-
+import Stepper from "../../../components/Stepper";
+import ButtonAction from "../../../components/buttonAction";
 const AditionalTemplateB = () => {
   const { register, formState: { errors }, handleSubmit } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => console.log(data);
@@ -32,13 +33,15 @@ const AditionalTemplateB = () => {
   return (
 
     <div className="container">
+      <Stepper step="6"></Stepper>
       <h2 className="text-center">Agrega mas fotos sobre   tu sitio </h2>
       <p className="text-center">Queremos que nuestros usuarios conozcan mas sobre ti, llena la siguiente informacion para que te conozcan:</p>
       <p className="fw-semibold">Sube un video a tu sitio</p>
+      <div className="container">
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col className=" col-12 col-lg-7">
-            <div className='formfile-uploader-container'>
+            <div className='formfile-uploader-container '>
               {profilePic == null ?
                 <FormFile fileType='video/*' controlId="form-1" onChange={handleProfilePicChange} />
                 : (
@@ -227,8 +230,16 @@ const AditionalTemplateB = () => {
             </div>
           </Col>
         </Row>
-        <input type="submit" />
       </form>
+      </div>
+      <div className="container text-center">
+        <ButtonAction
+          buttonClass="button-secondary m-3"
+          text="Atras" type="submit"></ButtonAction>
+        <ButtonAction
+          buttonClass="button-primary m-3"
+          text="Siguiente"></ButtonAction>
+      </div>
     </div>
 
   )
