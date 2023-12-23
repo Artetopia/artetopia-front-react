@@ -20,7 +20,8 @@ const ImageGallery = () => {
   return (
 
     <>
-    <section className='username'>
+    <div className="container">
+          <section className='username'>
         <img src={Imagen6} alt="user_image" className='user_image' />
         <h1 className='username_tittle'>Jose Mungüia</h1>
     </section>
@@ -66,6 +67,7 @@ const ImageGallery = () => {
     </div>
 
     </section>
+    </div>
     </div>
 
     </>

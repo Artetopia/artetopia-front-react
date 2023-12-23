@@ -65,8 +65,9 @@
 
 
 .main-image {
-    width: 310px;
+    width: 100%;
     height: 243px;
+    object-fit: contain;
 }
 
 .price {
@@ -209,6 +210,7 @@
     .main-image {
         width: 887px;
         height: 515px;
+        object-fit: contain;
     }
     .call-to-action {
         margin: 40px;
