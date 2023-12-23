@@ -1,7 +1,7 @@
 import "./styles/app.css";
-import bgArtesano from '/assets/bgArtesano.png';
+import bgArtesano from "/assets/bgArtesano.png";
 import HeaderComponent from "./components/header";
-import Navbare from "./components/navbar"
+import Navbare from "./components/navbar";
 import Footer from "./components/footer";
 import ButtonAction from "./components/buttonAction";
 import CardsAbout from "./components/cards_about";
@@ -11,31 +11,34 @@ import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import ModalFeedback from "./components/ModalFeedback";
 
-
 function App() {
-  const websites = [{ 
-    name: 'ARTE | SANO',
-    profilePic: 'https://img.freepik.com/foto-gratis/florero-pintura-hombre-vista-frontal_23-2149644938.jpg?w=740&t=st=1702256764~exp=1702257364~hmac=04e5c3574d858e57c9a80d7af4d76e807685950d856b190ae64ff59f8f2ac88c',
-  },
-  { 
-    name: 'ARTESANOS LEON',
-    profilePic: 'https://img.freepik.com/foto-gratis/sastre-creativo-trabajando-taller_23-2148970726.jpg?w=740&t=st=1702279290~exp=1702279890~hmac=234009d0e7d4fe552e54f27a6d2efaa680f75e4b09addae1436d0d7959a078a9',
-  },
-  { 
-    name: 'FLOR DE CANELA',
-    profilePic: 'https://img.freepik.com/foto-gratis/bodegon-herramientas-ceramica-alfareria_23-2150197287.jpg?w=360&t=st=1702434457~exp=1702435057~hmac=a87e51552a2df4bd5ea943d5d2b2c87cdae059fe60fbe12bef97830145f45490',
-  }
-]
-    const showMore = () => {
-        if(numberOfItemsArtesano + 3 <= artesanos.length) {
-            setNumberOfItemsArtesano(numberOfItemsArtesano + 3);
-        } else {
-            setNumberOfItemsArtesano(artesanos.length);
-        }
-      }
+  const websites = [
+    {
+      name: "ARTE | SANO",
+      profilePic:
+        "https://img.freepik.com/foto-gratis/florero-pintura-hombre-vista-frontal_23-2149644938.jpg?w=740&t=st=1702256764~exp=1702257364~hmac=04e5c3574d858e57c9a80d7af4d76e807685950d856b190ae64ff59f8f2ac88c",
+    },
+    {
+      name: "ARTESANOS LEON",
+      profilePic:
+        "https://img.freepik.com/foto-gratis/sastre-creativo-trabajando-taller_23-2148970726.jpg?w=740&t=st=1702279290~exp=1702279890~hmac=234009d0e7d4fe552e54f27a6d2efaa680f75e4b09addae1436d0d7959a078a9",
+    },
+    {
+      name: "FLOR DE CANELA",
+      profilePic:
+        "https://img.freepik.com/foto-gratis/bodegon-herramientas-ceramica-alfareria_23-2150197287.jpg?w=360&t=st=1702434457~exp=1702435057~hmac=a87e51552a2df4bd5ea943d5d2b2c87cdae059fe60fbe12bef97830145f45490",
+    },
+  ];
+  const showMore = () => {
+    if (numberOfItemsArtesano + 3 <= artesanos.length) {
+      setNumberOfItemsArtesano(numberOfItemsArtesano + 3);
+    } else {
+      setNumberOfItemsArtesano(artesanos.length);
+    }
+  };
   const [artesanos, setArtesanos] = useState([
     {
-    id: 1,
+      id: 1,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -48,7 +51,7 @@ function App() {
       ],
     },
     {
-        id: 2,
+      id: 2,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -61,7 +64,7 @@ function App() {
       ],
     },
     {
-        id: 3,
+      id: 3,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -74,7 +77,7 @@ function App() {
       ],
     },
     {
-        id: 4,
+      id: 4,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -87,7 +90,7 @@ function App() {
       ],
     },
     {
-        id: 5,
+      id: 5,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -100,7 +103,7 @@ function App() {
       ],
     },
     {
-        id: 6,
+      id: 6,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -113,19 +116,7 @@ function App() {
       ],
     },
     {
-        id: 7,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {id: 8,
+      id: 7,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -138,7 +129,7 @@ function App() {
       ],
     },
     {
-        id: 9,
+      id: 8,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -151,7 +142,7 @@ function App() {
       ],
     },
     {
-        id: 10,
+      id: 9,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -164,7 +155,7 @@ function App() {
       ],
     },
     {
-        id: 11,
+      id: 10,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -177,7 +168,20 @@ function App() {
       ],
     },
     {
-        id: 12,
+      id: 11,
+      name: "Landon Hunt",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
+      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
+      images: [
+        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
+        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
+        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
+        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
+      ],
+    },
+    {
+      id: 12,
       name: "Landon Hunt",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
@@ -194,27 +198,27 @@ function App() {
 
   return (
     <>
-    <header>
-      <Navbare></Navbare>
-    </header>
-    {/* <MultiStepForm/> */}
-    <ModalFeedback
-      websiteName = {websites[0].name}
-      profilePic = {websites[0].profilePic}
-    />
-    <section id='hero-section'>
-      <HeaderComponent></HeaderComponent>
-    </section>
-    <section id='about' className="mb-4">
-      <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
-      <div className="container">
-        <Row lg="3" md="1" sm="1" xs="1" className="text-center">
+      <header>
+        <Navbare></Navbare>
+      </header>
+      {/* <MultiStepForm/> */}
+      <ModalFeedback
+        websiteName={websites[0].name}
+        profilePic={websites[0].profilePic}
+      />
+      <section id="hero-section">
+        <HeaderComponent></HeaderComponent>
+      </section>
+      <section id="about" className="mb-4">
+        <h2 className="text-center heading_primary">¿Por qué Artetopia?</h2>
+        <div className="container">
+          <Row lg="3" md="1" sm="1" xs="1" className="text-center">
             <CardsAbout
               background_img="card_artetopia1"
               title="Autenticidad cultural"
               text="Comprar en un marketplace de artesanos mexicanos te brinda acceso a productos auténticos y representativos de la cultura mexicana."
             />
-             <CardsAbout
+            <CardsAbout
               background_img="card_artetopia2"
               title="Apoyo a comunidades locales"
               text="Tu compra contribuye al sustento de pequeñas comunidades y familias de artesanos, ayudando a preservar tradiciones y apoyar la economía local."
@@ -253,7 +257,10 @@ function App() {
             {artesanos.slice(0, numberOfItemsArtesano).map((artesano) => {
               return (
                 <>
-                  <div key={artesano.id} className=" col-12 col-md-6 col-lg-4 mb-4">
+                  <div
+                    key={artesano.id}
+                    className=" col-12 col-md-6 col-lg-4 mb-4"
+                  >
                     <CardArtesanoImages
                       name={artesano.name}
                       description={artesano.description}
@@ -295,7 +302,7 @@ function App() {
           </div>
         </div>
       </section>
-            
+
       <footer>
         <Footer></Footer>
       </footer>
