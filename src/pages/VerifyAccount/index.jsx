@@ -1,4 +1,4 @@
-import ButtonAction from "./components/buttonAction";
+import ButtonAction from "../../components/buttonAction";
 import "../VerifyAccount/styles.css";
 
 const VerifyAccount = () => {

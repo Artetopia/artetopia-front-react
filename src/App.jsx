@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import ModalFeedback from "./components/ModalFeedback";
 
+
 function App() {
   const websites = [
     {
