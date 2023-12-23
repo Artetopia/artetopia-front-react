@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat:wght@700&display=swap');
+
+// font-family: 'Karla', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+.tittle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #e91e63;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+.paragraph {
+    text-align: center;
+    margin: 0px 55px 27px 55px;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.paragraph_confirmation {
+    text-align: left;
+    margin: 20px;
+}
+
+// The spans in the paragraphs
+
+.paragraph_bold {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.paragraph_pink {
+    text-decoration: none;
+    color: #e91e63;
+}
+
+
+// Media querries 
+
+
+
+
+
+  @media only screen and (min-width: 768px) {
+    /* For tablet: */
+    .image_final-step {
+        width: 568px;
+        height: 535px;
+       }
+  }
+
+

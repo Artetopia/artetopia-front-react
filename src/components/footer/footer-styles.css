@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-divider {
+  color: #e91e63;
+  margin-bottom: 30px;
+}
+
+.about-artetopia .artetopia {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-artetopia .logo-artetopia-footer {
+  width: 95px;
+  height: 70px;
+}
+
+.about-artetopia p {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  color: #9F9F9F;
+  margin-bottom: 0px;
+}
+
+.sections-footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+}
+
+.link-footer {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.contact-container {
+  height: 81px;
+  background-color: #FDCCDD;
+  margin-bottom: 47px;
+  padding-top: 16px;
+  padding-left: 18px;
+}
+
+.contact-section .email-container {
+  height: 42px;
+  width: 46px;
+  background-color: #e91e63;
+}
+
+.contact-section .phone-container {
+  height: 42px;
+  width: 46px;
+  background-color: #e91e63;
+}
+
+.phone-vector {
+  position: relative;
+  right: 3px;
+  top: 3px;
+}
+
+.direct-info-contact {
+  color: #e91e63;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+}
+
+.more-info-button {
+  height: 50px;
+}
+
+.more-info-container .more-info-text {
+  font-family: "Karla", sans-serif;
+  box-sizing: content-box;
+}
+
+.more-info-container {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.name-artetopia {
+  color: #e91e63;
+  padding-inline: 10px;
+}
+
+.copyright-text {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+}
+
+.contact-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.more-info-text .btn-label {
+  font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  .more-info-text {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 992px) {
+  .contact-container-text {
+    font-size: 10px !important;
+  }
+}/*# sourceMappingURL=footer-styles.css.map */

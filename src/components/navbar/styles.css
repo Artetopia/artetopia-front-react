@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.navbar.open {
+  height: 50px; /* Adjust the height as needed */
+}
+
+.navbar {
+  background-color: #2b2e4a;
+}
+.navbar .menuIcon {
+  color: white;
+  font-size: 30px;
+}
+.navbar .profileImg {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .cart-container {
+  cursor: pointer;
+}
+.navbar .cart-container .cart-icon {
+  font-size: 20px;
+  color: #fff;
+}
+.navbar .cart-container .item-count {
+  top: 7px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #e91e63;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.navbar .dropdown .dropdown-menu {
+  background-color: #2b2e4a;
+}
+.navbar .dropdown .dropdown-menu .dropdown-item {
+  color: #fff !important;
+  padding: 5px;
+  font-size: 15px;
+}
+.navbar .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #e91e63 !important;
+  border-radius: 50px;
+}
+.navbar .dropdown .dropdown-menu .dropdown-divider {
+  border: 1px solid #e91e63;
+}
+.navbar .dropdown .dropdown-menu.show {
+  left: -70px;
+  top: 69px;
+  width: 200px;
+}
+.navbar .font-size-small {
+  font-size: 14px;
+}
+
+.navbar_icon {
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.me-auto {
+  font-family: "Karla", sans-serif;
+}
+
+.navbar-nav {
+  text-align: center;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 744px) {
+  .desktop_menu {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=styles.css.map */
