@@ -1,8 +1,11 @@
 import "../../../styles/app.css"
+import "./styles/styles.css"
 import ButtonAction from "../../../components/buttonAction";
+import Stepper from "../../../components/Stepper";
 const SelectTemplate = () => {
     return (
         <div className="container">
+            <Stepper step="5"></Stepper>
             <h2 className="heading_primary text-center mb-3">Selecciona una plantilla</h2>
             <div className="row">
                 <div className="col-12 col-lg-6">
@@ -26,37 +29,62 @@ const SelectTemplate = () => {
                     </div>
                 </div>
             </div>
-            <div className="row my-3">
+            <div className=" container row my-3">
                 <h3>Selecciona la paleta de colores que quieres agregar</h3>
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-lg-4 mb-3">
                     <div class="form-check">
                         <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3" checked />
                         <br />
-                        <img src="/images/color1.png" alt="" className="w-100 shadow rounded" />
+                        <div className="prymaricolor1">
+
+                        </div>
+                        <div className="secondarycolor1">
+
+                        </div>
+                        <div className="thirdcolor1">
+
+                        </div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-4">
+                <div className="col-12 col-lg-4 mb-3">
                     <div class="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3" checked />
+                        <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3" />
                         <br />
-                        <img src="/images/color2.png" alt="" className="w-100 shadow rounded" />
+                        <div className="prymaricolor2">
+
+                        </div>
+                        <div className="secondarycolor2">
+
+                        </div>
+                        <div className="thirdcolor2">
+
+                        </div>
                     </div>
                 </div>
-                <div className="col-12 col-lg-4">
-                    <div class="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3" checked />
-                        <br />
-                        <img src="/images/color3.png" alt="" className="w-100 shadow rounded" />
+            
+            <div className="col-12 col-lg-4 mb-3">
+                <div class="form-check">
+                    <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault3" />
+                    <br />
+                    <div className="prymaricolor3">
+
+                    </div>
+                    <div className="secondarycolor3">
+
+                    </div>
+                    <div className="thirdcolor3">
+
                     </div>
                 </div>
             </div>
+            </div>
             <div className="container text-center">
-            <ButtonAction
-            buttonClass="button-secondary m-3"
-            text="Atras"></ButtonAction>
-            <ButtonAction
-            buttonClass="button-primary m-3"
-            text="Siguiente"></ButtonAction>
+                <ButtonAction
+                    buttonClass="button-secondary m-3"
+                    text="Atras"></ButtonAction>
+                <ButtonAction
+                    buttonClass="button-primary m-3"
+                    text="Siguiente"></ButtonAction>
             </div>
         </div>
 

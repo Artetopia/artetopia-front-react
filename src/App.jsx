@@ -295,7 +295,7 @@ function App() {
           </div>
         </div>
       </section>
-            
+            <SelectTemplate></SelectTemplate>
       <footer>
         <Footer></Footer>
       </footer>
