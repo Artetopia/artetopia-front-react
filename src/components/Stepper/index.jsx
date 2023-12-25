@@ -24,7 +24,7 @@ const Stepper = ({step}) => {
         <div className='d-none d-lg-block my-4'>
           <Container>
             <Row className='m-2'>
-              <Col ><StepOneIcon step={step} className='d-flex justify-content-center'/></Col>
+              <Col><StepOneIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
               <Col><StepTwoIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
