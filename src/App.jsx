@@ -11,7 +11,7 @@ function App() {
         <Navbare></Navbare>
       </header>
 
-      <section className="p-4">
+      <section className="p-4 px-md-5 m-md-5">
         <div className="d-flex justify-content-center">
           <img
             className="img-size"
@@ -19,10 +19,12 @@ function App() {
             alt="Profile Picture"
           />
         </div>
-        <ButtonAction
-          buttonClass="button-primary font-size-small mt-3"
-          text="Cambiar foto perfil"
-        ></ButtonAction>
+        <div className="d-flex justify-content-md-center">
+          <ButtonAction
+            buttonClass="button-primary font-size-small mt-4"
+            text="Cambiar foto perfil"
+          ></ButtonAction>
+        </div>
         <div className="mt-2">
           <label htmlFor="name">Nombre</label>
           <input
@@ -100,17 +102,21 @@ function App() {
             <option value="Zacatecas">Zacatecas</option>
           </select>
         </div>
-        <ButtonAction
-          buttonClass="button-primary font-size-small mt-3"
-          text="Editar datos personales"
-        ></ButtonAction>
+        <div className="d-flex justify-content-md-end">
+          <ButtonAction
+            buttonClass="button-primary font-size-small mt-3"
+            text="Editar datos personales"
+          ></ButtonAction>
+        </div>
         <div>
           <h4 className="mb-0 mt-3">Sobre tu sitio</h4>
           <p>Foto de portada</p>
-          <ButtonAction
-            buttonClass="button-primary font-size-small mt-3"
-            text="Cambiar foto portada"
-          ></ButtonAction>
+          <div className="d-flex justify-content-md-end">
+            <ButtonAction
+              buttonClass="button-primary font-size-small mt-3"
+              text="Cambiar foto portada"
+            ></ButtonAction>
+          </div>
         </div>
         <div className="mt-3">
           <label htmlFor="storeName">Nombre de tu tienda</label>
@@ -186,10 +192,12 @@ function App() {
             />
           </div>
         </div>
-        <ButtonAction
-          buttonClass="button-primary font-size-small mt-3"
-          text="Editar"
-        ></ButtonAction>
+        <div className="d-flex justify-content-md-end">
+          <ButtonAction
+            buttonClass="button-primary font-size-small mt-3"
+            text="Editar"
+          ></ButtonAction>
+        </div>
       </section>
       <footer>
         <Footer></Footer>
