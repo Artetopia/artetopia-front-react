@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import OrderDetail from "./pages/OrderDetail";
 import OrdersCraftsman from "./pages/OrdersCraftsman"
-import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
 
 function App() {
     const showMore = () => {
@@ -187,7 +187,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
-<Page3/>
+<Page4/>
       <HeaderComponent></HeaderComponent>
     </section>
     

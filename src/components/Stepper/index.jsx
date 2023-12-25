@@ -10,21 +10,21 @@ import StepSevenIcon from '../StepIcons/StepSevenIcon';
 const Stepper = ({step}) => {
     return (
       <div >
-        <div className='d-xs-block d-lg-none'>
-          {step === 1 && <StepOneIcon/>}
-          {step === 2 && <StepTwoIcon/>}
-          {step === 3 && <StepThreeIcon/>}
-          {step === 4 && <StepFourIcon/>}
-          {step === 5 && <StepFiveIcon/>} 
-          {step === 6 && <StepSixIcon/>}
-          {step === 7 && <StepSevenIcon/>}
-          <ProgressBar className='border-progress-bar d-lg-none rounded-5' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
+        <div className='d-xs-block d-lg-none my-3'>
+          {step === 1 && <StepOneIcon step={step}/>}
+          {step === 2 && <StepTwoIcon step={step}/>}
+          {step === 3 && <StepThreeIcon step={step}/>}
+          {step === 4 && <StepFourIcon step={step}/>}
+          {step === 5 && <StepFiveIcon step={step}/>} 
+          {step === 6 && <StepSixIcon step={step}/>}
+          {step === 7 && <StepSevenIcon step={step}/>}
+          <ProgressBar className='border-progress-bar d-lg-none rounded-5 my-2' label={`${step}/7`} variant="custom" now={(step / 7) * 100} />
         </div>
 
         <div className='d-none d-lg-block my-4'>
           <Container>
             <Row className='m-2'>
-              <Col><StepOneIcon step={step}/></Col>
+              <Col ><StepOneIcon step={step} className='d-flex justify-content-center'/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
               <Col><StepTwoIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
