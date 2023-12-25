@@ -11,7 +11,16 @@ import {
   NavbarText,
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCartShopping, faUser, faFile, faCreditCard, faListCheck, faArrowRightFromBracket, faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCartShopping,
+  faUser,
+  faFile,
+  faCreditCard,
+  faListCheck,
+  faArrowRightFromBracket,
+  faHome,
+} from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "../register_navbar_buttons";
 import ButtonAction from "../buttonAction";
@@ -24,7 +33,7 @@ const Navbare = ({ toggleSidebar }) => {
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
-  }
+  };
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
@@ -91,13 +100,16 @@ const Navbare = ({ toggleSidebar }) => {
           aria-expanded={dropdownOpen}
           onClick={toggleDropdown}
         />
-        <div className={`dropdown-menu p-2 ${dropdownOpen ? 'show' : ''}`}>
+        <div className={`dropdown-menu p-2 ${dropdownOpen ? "show" : ""}`}>
           <a className="dropdown-item" href="#">
             <FontAwesomeIcon icon={faUser} className="mx-2"></FontAwesomeIcon>
             Mi perfil
           </a>
           <a className="dropdown-item" href="#">
-            <FontAwesomeIcon icon={faListCheck} className="mx-2"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faListCheck}
+              className="mx-2"
+            ></FontAwesomeIcon>
             Mi pedidos
           </a>
           <a className="dropdown-item" href="#">
@@ -105,30 +117,39 @@ const Navbare = ({ toggleSidebar }) => {
             Plantilla
           </a>
           <a className="dropdown-item" href="#">
-            <FontAwesomeIcon icon={faCreditCard} className="mx-2"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faCreditCard}
+              className="mx-2"
+            ></FontAwesomeIcon>
             Pagos
           </a>
           <div className="dropdown-divider"></div>
-          <ButtonAction buttonClass="button-secondary font-size-small" text="Conviértete en artesano"></ButtonAction>
+          <ButtonAction
+            buttonClass="button-secondary font-size-small"
+            text="Conviértete en artesano"
+          ></ButtonAction>
           <div className="dropdown-divider"></div>
           <div className="admin">
             <p className="font-weight-bold dropdown-item m-0">Administrador</p>
             <a className="dropdown-item" href="#">
-            <FontAwesomeIcon icon={faHome} className="mx-2"></FontAwesomeIcon>
-            Inicio
-          </a>
+              <FontAwesomeIcon icon={faHome} className="mx-2"></FontAwesomeIcon>
+              Inicio
+            </a>
           </div>
           <div className="dropdown-divider"></div>
           <div className="artesano">
             <p className="font-weight-bold dropdown-item m-0">Artesano</p>
             <a className="dropdown-item" href="#">
-            <FontAwesomeIcon icon={faHome} className="mx-2"></FontAwesomeIcon>
-            Inicio
-          </a>
+              <FontAwesomeIcon icon={faHome} className="mx-2"></FontAwesomeIcon>
+              Inicio
+            </a>
           </div>
           <div className="dropdown-divider"></div>
           <a className="dropdown-item" href="#">
-            <FontAwesomeIcon icon={faArrowRightFromBracket} className="mx-2"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faArrowRightFromBracket}
+              className="mx-2"
+            ></FontAwesomeIcon>
             Cerrar sesión
           </a>
           {/* <a className="dropdown-item">
