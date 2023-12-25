@@ -70,7 +70,14 @@
   height: 50px;
   border-width: 1px;
   border-style: solid;
-  border-color: #e91e63 !important;
+}
+
+.inactive-icon {
+  border-color: #2b2e4a !important;
+}
+
+.active-icon {
+  color: #e91e63 !important;
 }
 
 .border-progress-bar {
@@ -86,7 +93,7 @@
 .image-icon-svg {
   width: 24px;
   height: 24px;
-  color: #e91e63;
+  color: #2b2e4a;
 }
 
 .progress-icon-svg {

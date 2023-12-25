@@ -24,19 +24,19 @@ const Stepper = ({step}) => {
         <div className='d-none d-lg-block my-4'>
           <Container>
             <Row className='m-2'>
-              <Col><StepOneIcon/></Col>
+              <Col><StepOneIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepTwoIcon/></Col>
+              <Col><StepTwoIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepThreeIcon/></Col>
+              <Col><StepThreeIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepFourIcon/></Col>
+              <Col><StepFourIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepFiveIcon/></Col>
+              <Col><StepFiveIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepSixIcon/></Col>
+              <Col><StepSixIcon step={step}/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
-              <Col><StepSevenIcon/></Col>
+              <Col><StepSevenIcon step={step}/></Col>
             </Row>
           </Container>
         </div>
