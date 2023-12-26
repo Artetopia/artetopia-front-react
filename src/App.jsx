@@ -19,7 +19,7 @@ function App() {
             alt="Profile Picture"
           />
         </div>
-        <div className="d-flex justify-content-md-center">
+        <div className="d-flex justify-content-center">
           <ButtonAction
             buttonClass="button-primary font-size-small mt-4"
             text="Cambiar foto perfil"
@@ -138,40 +138,42 @@ function App() {
             id="description"
           />
         </div>
-        <div className="mt-2">
-          <div>
-            <h6 className="mt-3 mb-1">Redes sociales</h6>
-            <label htmlFor="facebook">Facebook</label>
-            <input
-              type="text"
-              className="form-control primary_input shadow-none"
-              name="facebook"
-              id="facebook"
-              placeholder="@"
-            />
-            <label className="mt-2" htmlFor="instagram">
-              Instagram
-            </label>
-            <input
-              type="text"
-              className="form-control primary_input shadow-none"
-              name="instagram"
-              id="instagram"
-              placeholder="@"
-            />
-            <label className="mt-2" htmlFor="tiktok">
-              TikTok
-            </label>
-            <input
-              type="text"
-              className="form-control primary_input shadow-none"
-              name="tiktok"
-              id="tiktok"
-              placeholder="@"
-            />
+        <div className="d-lg-flex">
+          <div className="mt-2 col-lg-6">
+            <div className="mr-lg-5">
+              <h6 className="mt-3 mb-1">Redes sociales</h6>
+              <label htmlFor="facebook">Facebook</label>
+              <input
+                type="text"
+                className="form-control primary_input shadow-none"
+                name="facebook"
+                id="facebook"
+                placeholder="@"
+              />
+              <label className="mt-2" htmlFor="instagram">
+                Instagram
+              </label>
+              <input
+                type="text"
+                className="form-control primary_input shadow-none"
+                name="instagram"
+                id="instagram"
+                placeholder="@"
+              />
+              <label className="mt-2" htmlFor="tiktok">
+                TikTok
+              </label>
+              <input
+                type="text"
+                className="form-control primary_input shadow-none"
+                name="tiktok"
+                id="tiktok"
+                placeholder="@"
+              />
+            </div>
           </div>
-          <div>
-            <label className="mt-3" htmlFor="city">
+          <div className="col-lg-6 mt-3">
+            <label className="mt-4" htmlFor="city">
               Selecciona la categoría
             </label>
             <select
@@ -184,9 +186,9 @@ function App() {
               <option value="Joyería">Joyería</option>
               <option value="Tejidos">Tejidos</option>
             </select>
-            <input
+            <textarea
               type="text"
-              className="form-control primary_input shadow-none mt-2"
+              className="form-control primary_input shadow-none mt-3 categories-selected"
               name="categories"
               id="categories"
             />

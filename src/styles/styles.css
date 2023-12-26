@@ -5,6 +5,11 @@
   margin-right: 10px;
 }
 
+.primary_input {
+  border: 1px solid #2b2e4a!important;
+  border-radius: 50px!important;
+}
+
 .font-dropdown {
   font-family: "Montserrat", sans-serif;
   font-size: 14px!important;
@@ -14,4 +19,8 @@
   height: 25%;
   width: 25%;
   border-radius: 50%;
+}
+
+.categories-selected {
+  height: 125px;
 }
