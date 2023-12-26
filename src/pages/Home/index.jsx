@@ -1,13 +1,11 @@
 
 import "./styles.css";
-import bgArtesano from "/assets/bgArtesano.png";
 import HeaderComponent from "../../components/header";
 import ButtonAction from "../../components/buttonAction";
 import CardsAbout from "../../components/cards_about";
 import CardArtesanoImages from "../../components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
-import SelectTemplate from "../../pages/register_craftsman/select_templates";
 import ModalFeedback from "../../components/ModalFeedback";
 const Home = () => {
     const websites = [
@@ -291,6 +289,7 @@ const Home = () => {
             <ButtonAction
               buttonClass="button-primary"
               text="Registrate"
+              action="/register"
             ></ButtonAction>
           </div>
         </div>
