@@ -27,12 +27,6 @@
   max-width: 75%;
 }
 
-.input_primary {
-  border: 1px solid #2b2e4a !important;
-  max-width: 500px;
-  border-radius: 30px !important;
-}
-
 .card_about {
   height: 30rem !important;
   min-height: -moz-fit-content !important;

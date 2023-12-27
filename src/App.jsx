@@ -1,17 +1,26 @@
 import "./styles/app.css";
-import "./styles/styles.css";
 import Navbare from "./components/navbar";
 import Footer from "./components/footer";
+
+import "./styles/styles.css";
 import ButtonAction from "./components/buttonAction";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import Checkout from "./pages/checkout";
+import RegisterArtesanoInfoSite from "./pages/registerArtesanoInfoSite";
 
 function App() {
+  const [craftsman, setCraftsman] = useState({});
   return (
     <>
       <header>
         <Navbare></Navbare>
       </header>
 
-      <section className="p-4 px-md-5 m-md-5">
+      <RegisterArtesanoInfoSite />
+
+      <form className="p-4 px-md-5 m-md-5">
         <div className="d-flex justify-content-center">
           <img
             className="img-size"
@@ -200,7 +209,7 @@ function App() {
             text="Editar"
           ></ButtonAction>
         </div>
-      </section>
+      </form>
       <footer>
         <Footer></Footer>
       </footer>
