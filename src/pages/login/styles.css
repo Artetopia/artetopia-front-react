@@ -29,12 +29,6 @@
   max-width: 75%;
 }
 
-.input_primary {
-  border: 1px solid #2b2e4a !important;
-  max-width: 500px;
-  border-radius: 30px !important;
-}
-
 .card_about {
   height: 30rem !important;
   min-height: -moz-fit-content !important;
@@ -92,14 +86,14 @@
   font-size: 18px;
 }
 
-span {
+.login__link {
   color: #E91E63;
   text-decoration: underline;
   transition: all 0.5s;
   cursor: pointer;
 }
 
-span:hover {
+.login__link:hover {
   color: #2b2e4a;
 }
 

@@ -17,4 +17,37 @@
   border: 1px solid #2b2e4a !important;
   max-width: 500px;
   border-radius: 30px !important;
+}
+
+.card_about {
+  height: 30rem !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
+}
+
+.card_text {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+}
+
+.card_title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card_artetopia1 {
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_1.png");
+  background-size: cover;
+}
+
+.card_artetopia2 {
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_2.png");
+  background-size: cover;
+}
+
+.card_artetopia3 {
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(44, 47, 75) 55%, rgb(44, 47, 75) 82%, #2b2e4a 100%), url("/images/artetopia_3.png");
+  background-size: cover;
 }/*# sourceMappingURL=styles.css.map */

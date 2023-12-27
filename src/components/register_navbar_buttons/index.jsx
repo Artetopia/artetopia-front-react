@@ -7,6 +7,7 @@ const Button = () => {
       <ButtonAction
         buttonClass="button-primary"
         text="Iniciar sesión"
+        action="/login"
       ></ButtonAction>
     </div>
   );
