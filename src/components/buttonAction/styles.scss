@@ -8,6 +8,11 @@
     width: 100%;
     min-width: 150px;
     max-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        color: $textColorWhite;
+    }
   }
   
   .button-secondary {
@@ -19,4 +24,9 @@
       width: 100%;
       min-width: 150px;
       max-width: 300px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        color: $primaryColor;
+    }
   }

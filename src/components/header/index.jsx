@@ -6,6 +6,7 @@ import imagePlayButtton from '../../../public/assets/play-button.svg';
 import topDescription from '../../../public/assets/top_descripcion.svg';
 import Navbare from '../../components/navbar';
 import AnimationButton from '../../components/animation_button';
+import ButtonAction from '../buttonAction';
 
 function HeaderComponent() {
     return (
@@ -32,7 +33,7 @@ function HeaderComponent() {
                         artesanos de México.
                     </p>
                     <div className='hero_flex_button_icon'>
-                        <AnimationButton></AnimationButton>
+                        <ButtonAction buttonClass="button-primary" text="Registrarse" action="./register"></ButtonAction>
                         <div className='desktop_video'>
                             <img
                                 src={imagePlayButtton}

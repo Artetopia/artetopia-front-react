@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 const ButtonAction = ({ buttonClass, text, action }) => {
     return (
         <>
-            <button className={buttonClass} onClick={action}>{text}</button>
+            <Link className={buttonClass} to={action}>{text}</Link>
         </>
     );
 };

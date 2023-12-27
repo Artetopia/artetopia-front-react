@@ -22,7 +22,7 @@ const Stepper = ({step}) => {
         </div>
 
         <div className='d-none d-lg-block my-4'>
-          <Container>
+          <Container className="container_stepper">
             <Row className='m-2'>
               <Col><StepOneIcon/></Col>
               <Col><hr className='row-width align-self-center'></hr></Col>
