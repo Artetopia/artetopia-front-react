@@ -93,14 +93,14 @@
   font-size: 18px;
 }
 
-span {
+.login__link {
   color: #E91E63;
   text-decoration: underline;
   transition: all 0.5s;
   cursor: pointer;
 }
 
-span:hover {
+.login__link:hover {
   color: #2b2e4a;
 }
 
