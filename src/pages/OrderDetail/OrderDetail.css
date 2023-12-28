@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.title-text-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.body-text-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.list-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.status-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: white !important;
+  background-color: #e91e63 !important;
+  border-style: none;
+}
+
+.buttons-custom {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  border-color: #e91e63;
+  height: 48px;
+  border-width: 1px;
+}
+
+.custom-button {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: white;
+  border-color: #e91e63;
+  background-color: #e91e63;
+}
+
+.custom-button:hover {
+  background-color: #e91e63 !important;
+  color: white;
+}
+
+.custom-button:focus {
+  background-color: #e91e63 !important;
+}
+
+.subtitle-custom {
+  color: #e91e63;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.body-text-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.imput-custom {
+  border-color: #2b2e4a;
+  border-width: 1px;
+  border-radius: 30px;
+}
+
+.selected-shipping {
+  color: rgb(133, 126, 126) !important;
+}
+
+.close-modal-custom {
+  border-width: 1px;
+  border-color: #e91e63;
+  background-color: white;
+  color: #e91e63;
+}
+.close-modal-custom:hover {
+  border-width: 1px;
+  border-color: #e91e63;
+  background-color: white;
+  color: #e91e63;
+}
+
+.save-modal-custom {
+  border-width: 1px;
+  border-color: #e91e63;
+  background-color: #e91e63;
+  color: white;
+}
+.save-modal-custom:hover {
+  border-width: 1px;
+  border-color: #e91e63;
+  background-color: #e91e63;
+  color: white;
+}
+
+.accordion-custom {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border-color: #e91e63;
+  background-color: #e91e63 !important;
+  color: white !important;
+}
+.accordion-custom .accordion-button {
+  background-color: #e91e63;
+  color: white;
+  box-shadow: none;
+}
+.accordion-custom .accordion-button:not(.collapsed) {
+  background-color: #e91e63;
+  color: white;
+  box-shadow: none;
+}
+.accordion-custom .accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-custom .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+@media (min-width: 768px) {
+  .title-text-custom {
+    font-size: 28px;
+  }
+  .body-text-custom {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=OrderDetail.css.map */

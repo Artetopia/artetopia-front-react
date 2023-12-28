@@ -25,6 +25,8 @@ import ShoppingCar from "./pages/shopping_car";
 import TemplateB from "./pages/templates/templateB";
 import VerifyAccount from "./pages/VerifyAccount";
 import Checkout from "./pages/checkout";
+import OrdersCraftsman from "./pages/OrdersCraftsman";
+import OrderDetail from "./pages/OrderDetail";
 
 
 function App() {
@@ -49,8 +51,8 @@ function App() {
         <Route path="/craftman/payments" element={<Payments/>}></Route>
         {/* Route dashobard artesano perfil */}
         {/* Route dashboard artesano plantilla */}
-        {/* Route dashboard artesano mis pedidos */}
-        {/* Route dashboard artesano mis pedidos detalle */}
+        <Route path="/craftman/orders" element={<OrdersCraftsman/>}></Route>
+        <Route path="/craftman/orderDetail" element={<OrderDetail/>}></Route>
         <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
         <Route path="/register/siteInfo" element={<RegisterArtesanoInfoSite/>}></Route>
         <Route path="/register/photos" element={<Page3/>}></Route>
