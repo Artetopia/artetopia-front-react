@@ -25,7 +25,7 @@ import ShoppingCar from "./pages/shopping_car";
 import TemplateB from "./pages/templates/templateB";
 import VerifyAccount from "./pages/VerifyAccount";
 import Checkout from "./pages/checkout";
-
+import CraftsmanProfile from "./pages/CraftsmanProfile";
 
 function App() {
   return (
@@ -34,31 +34,47 @@ function App() {
         <Navbare></Navbare>
       </header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
-        <Route path="/login" element={<LoginForm/>}></Route>
-        <Route path="/verify" element={<VerifyAccount/>}></Route>
-        <Route path="/craftmans" element={<DashboardClient/>}></Route>
-        <Route path="/craftmanA" element={<PlantillaA/>}></Route>
-        <Route path="/craftmanB" element={<TemplateB/>}></Route>
-        <Route path="/productDetail" element={<ImageGallery/>}></Route>
-        <Route path="/cart" element={<ShoppingCar/>}></Route>
-        <Route path="/checkout" element={<Checkout/>}></Route>
-        <Route path="/delivery" element={<DeliveryStatus guideNumber={1234} status="delivered"/>}></Route>
-        <Route path="/craftman/products" element={<ModalButtons/>}></Route>
-        <Route path="/craftman/payments" element={<Payments/>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<LoginForm />}></Route>
+        <Route path="/verify" element={<VerifyAccount />}></Route>
+        <Route path="/craftmans" element={<DashboardClient />}></Route>
+        <Route path="/craftmanA" element={<PlantillaA />}></Route>
+        <Route path="/craftmanB" element={<TemplateB />}></Route>
+        <Route path="/productDetail" element={<ImageGallery />}></Route>
+        <Route path="/cart" element={<ShoppingCar />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
+        <Route
+          path="/delivery"
+          element={<DeliveryStatus guideNumber={1234} status="delivered" />}
+        ></Route>
+        <Route path="/craftman/products" element={<ModalButtons />}></Route>
+        <Route path="/craftman/payments" element={<Payments />}></Route>
+        <Route path="/craftman/profile" element={<CraftsmanProfile />}></Route>
         {/* Route dashobard artesano perfil */}
         {/* Route dashboard artesano plantilla */}
         {/* Route dashboard artesano mis pedidos */}
         {/* Route dashboard artesano mis pedidos detalle */}
-        <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
-        <Route path="/register/siteInfo" element={<RegisterArtesanoInfoSite/>}></Route>
-        <Route path="/register/photos" element={<Page3/>}></Route>
-        <Route path="/register/products" element={<Page4/>}></Route>
-        <Route path="/register/selectTemplate" element={<SelectTemplate/>}></Route>
-        <Route path="/register/infoTemplate" element={<AditionalTemplateB/>}></Route>
-        <Route path="/register/payment" element={<Step_7/>}></Route>
-        <Route path="/register/complete" element={<Step_8/>}></Route>
+        <Route
+          path="/register/personalInfo"
+          element={<RegisterArtesanoPersonalInfo />}
+        ></Route>
+        <Route
+          path="/register/siteInfo"
+          element={<RegisterArtesanoInfoSite />}
+        ></Route>
+        <Route path="/register/photos" element={<Page3 />}></Route>
+        <Route path="/register/products" element={<Page4 />}></Route>
+        <Route
+          path="/register/selectTemplate"
+          element={<SelectTemplate />}
+        ></Route>
+        <Route
+          path="/register/infoTemplate"
+          element={<AditionalTemplateB />}
+        ></Route>
+        <Route path="/register/payment" element={<Step_7 />}></Route>
+        <Route path="/register/complete" element={<Step_8 />}></Route>
       </Routes>
       <footer>
         <Footer></Footer>
