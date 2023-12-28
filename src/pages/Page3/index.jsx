@@ -1,5 +1,5 @@
 import { Form } from "react-bootstrap";
-import FormFile from "../../components/FormFile/FormFile";
+import FormFile from "../../components/FormFile";
 import ComponentCarousel from "../../components/Carousel";
 import { useState } from "react";
 import Swal from 'sweetalert2';

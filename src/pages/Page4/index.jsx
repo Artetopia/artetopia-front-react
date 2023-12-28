@@ -1,4 +1,4 @@
-import FormFile from "../../components/FormFile/FormFile";
+import FormFile from "../../components/FormFile";
 import MydModalWithGrid from "../../components/Modal/Modal";
 import React, { useState } from "react";
 import Stepper from "../../components/Stepper";
