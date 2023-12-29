@@ -3,7 +3,7 @@ import './styles.css';
 const ButtonAction = ({ buttonClass, text, action }) => {
     return (
         <>
-            <Link className={buttonClass} to={action}>{text}</Link>
+        {action ? <Link className={buttonClass} to={action}>{text}</Link> : <button type='submit' className={buttonClass}>{text}</button>}
         </>
     );
 };

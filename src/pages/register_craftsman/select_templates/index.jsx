@@ -5,13 +5,13 @@ import Stepper from "../../../components/Stepper";
 const SelectTemplate = () => {
     return (
         <div className="container">
-            <Stepper step="5"></Stepper>
+            <Stepper step={5}></Stepper>
             <h2 className="heading_primary text-center mb-3">Selecciona una plantilla</h2>
             <div className="row">
                 <div className="col-12 col-lg-6">
-                    <div class="form-check">
+                    <div className="form-check">
                         <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
-                        <label className="form-check-label" for="flexRadioDefault2">
+                        <label className="form-check-label" htmlFor="flexRadioDefault2">
                             Plantilla A
                         </label>
                         <br />
@@ -21,7 +21,7 @@ const SelectTemplate = () => {
                 <div className="col-12 col-lg-6">
                     <div class="form-check">
                         <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
-                        <label className="form-check-label" for="flexRadioDefault2">
+                        <label className="form-check-label" htmlFor="flexRadioDefault2">
                             Plantilla B
                         </label>
                         <br />

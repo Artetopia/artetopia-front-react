@@ -1,5 +1,5 @@
 import { Row, Col } from "reactstrap";
-import FormFile from "../../../components/FormFile/FormFile";
+import FormFile from "../../../components/FormFile";
 import "./styles/styles.css"
 import React, { useState } from "react";
 import { ErrorMessage } from "@hookform/error-message";
@@ -33,7 +33,7 @@ const AditionalTemplateB = () => {
   return (
 
     <div className="container">
-      <Stepper step="6"></Stepper>
+      <Stepper step={6}></Stepper>
       <h2 className="text-center">Agrega mas fotos sobre   tu sitio </h2>
       <p className="text-center">Queremos que nuestros usuarios conozcan mas sobre ti, llena la siguiente informacion para que te conozcan:</p>
       <p className="fw-semibold">Sube un video a tu sitio</p>

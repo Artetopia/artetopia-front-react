@@ -62,7 +62,7 @@ const RegisterArtesanoInfoSite = () => {
   return (
     <>
       <div className="container infoSite-container">
-        <div className="row">
+        <div className="row mt-3">
           <Stepper step={CURRENT_PAGE}></Stepper>
         </div>
         <div className="row text-center">

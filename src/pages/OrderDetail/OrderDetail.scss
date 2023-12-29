@@ -1,0 +1,130 @@
+@import "../../styles/variables";
+
+.title-text-custom {
+    font-family: $fontMontserrat;
+    font-size: 24px;
+}
+
+.body-text-custom {
+    font-family: $fontMontserrat;
+    font-size: 18px;
+}
+
+.list-text {
+    font-family: $fontMontserrat;
+    font-size: 14px;
+}
+
+.status-button {
+    font-family: $fontMontserrat;
+    font-size: 12px;
+    color: white !important;
+    background-color: $primaryColor !important;
+    border-style: none;
+}
+
+.buttons-custom {
+    font-family: $fontkarla;
+    font-size: 16px;
+    border-color: $primaryColor;
+    height: 48px;
+    border-width: 1px;
+}
+
+.custom-button {
+    font-family: $fontkarla;
+    font-size: 16px;
+    color: white;
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+}
+
+.custom-button:hover {
+    background-color: $primaryColor !important;
+    color: white;
+}
+
+.custom-button:focus {
+    background-color: $primaryColor !important;
+}
+
+.subtitle-custom {
+    color: $primaryColor;
+    font-family: $fontMontserrat;
+    font-size: 18px;
+}
+
+.body-text-container {
+    font-family: $fontMontserrat;
+    font-size: 16px;
+}
+
+.imput-custom {
+    border-color: $secondaryColor;
+    border-width: 1px;
+    border-radius: 30px;
+}
+
+.selected-shipping {
+    color: rgb(133, 126, 126) !important;
+}
+
+.close-modal-custom {
+    border-width: 1px;
+    border-color: $primaryColor;
+    background-color: white;
+    color: $primaryColor;
+    &:hover {
+        border-width: 1px;
+        border-color: $primaryColor;
+        background-color: white;
+        color: $primaryColor;
+    }
+}
+
+.save-modal-custom {
+    border-width: 1px;
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+    color: white;
+    &:hover {
+        border-width: 1px;
+        border-color: $primaryColor;
+        background-color: $primaryColor;
+        color: white;
+    }
+}
+
+.accordion-custom {
+    font-family: $fontMontserrat;
+    font-size: 16px;
+    border-color: $primaryColor;
+    background-color: $primaryColor !important;
+    color: white !important ;   
+    .accordion-button {
+        background-color: $primaryColor;
+        color: white;
+        box-shadow: none;
+        &:not(.collapsed) {
+            background-color: $primaryColor;
+            color: white;
+            box-shadow: none;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+    }
+}
+
+@media (min-width: 768px) { 
+    .title-text-custom {
+        font-size: 28px;
+    }
+    .body-text-custom {
+        font-size: 28px;
+    }
+
+ }
