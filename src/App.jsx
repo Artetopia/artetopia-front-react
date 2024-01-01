@@ -9,6 +9,9 @@ import CardArtesanoImages from "./components/cardArtesanoImages";
 import { Row } from "reactstrap";
 import { useEffect, useState } from "react";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
+import Artesano from "./pages/Artesano";
+import { Route, Routes } from "react-router-dom";
+import Payments from "./pages/Payments";
 
 
 function App() {
@@ -178,15 +181,23 @@ function App() {
   ]);
   const [numberOfItemsArtesano, setNumberOfItemsArtesano] = useState(6);
 
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <>
     <header>
-      <Navbare></Navbare>
+      <Navbare onToggleSidebar={toggleSidebar}></Navbare>
     </header>
 
-    
+    <Routes>
+      <Route path="/artesano/*" element={<Artesano isSidebarOpen={isSidebarOpen} />}></Route>
+    </Routes>
 
-    <section id='hero-section'>
+    {/* <section id='hero-section'>
       <HeaderComponent></HeaderComponent>
     </section>
     <section id='about' className="mb-4">
@@ -278,7 +289,7 @@ function App() {
             ></ButtonAction>
           </div>
         </div>
-      </section>
+      </section> */}
             
       <footer>
         <Footer></Footer>

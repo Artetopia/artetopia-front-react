@@ -17,7 +17,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '../register_navbar_buttons';
 
-const Navbare = ({toggleSidebar}) => {
+const Navbare = ({onToggleSidebar}) => {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const toggleOffcanxvas = () => {
     setIsOffcanvasOpen(!isOffcanvasOpen);
@@ -38,7 +38,7 @@ const Navbare = ({toggleSidebar}) => {
   return (
     <ReactstrapNavbar dark expand="md" className="navbar">
       <NavbarBrand href="/" className="logo"></NavbarBrand>
-      <FontAwesomeIcon icon={faBars} className="menuIcon"></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faBars} className="menuIcon" onClick={onToggleSidebar}></FontAwesomeIcon>
       <NavbarToggler onClick={toggleNavbar}>
         {isOpen ? <span className='navbar_icon'>&times;</span> : <span className='navbar_icon'>&#9776;</span>}
       </NavbarToggler>
