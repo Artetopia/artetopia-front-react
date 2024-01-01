@@ -86,7 +86,7 @@ const Page4 = () => {
               Agrega una descripcion del articulo <p className="asterisk"> *</p>
             </small>
             <textarea
-              className="border-input-text form-control mb-3 p-2"
+              className="border-input-text form-control p-2"
               placeholder="Agrega una descripcion del articulo"
               aria-label="With textarea"
               {...register("description", {
@@ -192,7 +192,7 @@ const Page4 = () => {
 
           <div className="container">
             <div className="row">
-                <div className="col-4">
+                <div className="col-md-6 col-lg-4">
                     {productPics?.length < MAX_ALLOWED_FILES_PRODUCT && (
                         <FormFile
                         fileType="image/*"
@@ -204,10 +204,10 @@ const Page4 = () => {
                 </div>
 
                 {productPics.map((pic) => (
-                    <div className="col-4 d-flex justify-content-center">
+                    <div className="col-md-6 col-lg-4 d-flex justify-content-center ">
                         <img
                             key={pic}
-                            className="image-uploaded-container product-images-container"
+                            className="image-uploaded-container "
                             src={URL.createObjectURL(pic)}
                             alt="Selected file"
                         />
@@ -217,12 +217,12 @@ const Page4 = () => {
           </div>
         </div>
       </div>
-      <div className="modal-container">
-        <button type="submit" className="add-show-product rounded-5 mt-4">
+      <div className="modal-container d-flex justify-content-center mt-4">
+        <button type="submit" className="add-show-product rounded-5 me-md-1">
           Añadir este articulo
         </button>
         <button
-          className="add-show-product mt-2 mb-5 rounded-5"
+          className="add-show-product mb-5 rounded-5 ms-md-1"
           onClick={() => setModalShow(true)}
         >
           Ver mis productos
