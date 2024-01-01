@@ -87,12 +87,12 @@
     background-color: $primaryColor !important;
     color: #fff;
     border-radius: 50px;
-    padding: 10px;
 }
 
 .navLink.active {
     background-color: $primaryColor !important;
     border-radius: 50px;
+    color: #fff;
 }
 
 @media only screen and (max-width: 500px) {

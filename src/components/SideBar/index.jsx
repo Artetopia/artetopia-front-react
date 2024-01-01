@@ -14,7 +14,7 @@ import {
 import "./styles.css";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const SideBar = ({ isOpen, toggle, userRole }) => {
   const itemsMenu = [
     {
@@ -24,6 +24,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faUser,
       id: 1,
       role: "Artesano",
+      url: "profile"
     },
     {
       name: "Mis productos",
@@ -32,6 +33,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faShop,
       id: 2,
       role: "Artesano",
+      url: "products"
     },
     {
       name: "Mis pedidos",
@@ -40,6 +42,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faListCheck,
       id: 3,
       role: "Artesano",
+      url: "orders"
     },
     {
       name: "Plantilla",
@@ -48,6 +51,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faFile,
       id: 4,
       role: "Artesano",
+      url: "template"
     },
     {
       name: "Pagos",
@@ -56,6 +60,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faCreditCard,
       id: 5,
       role: "Artesano",
+      url: "payments"
     },
     {
       name: "Artesanos pendientes",
@@ -64,6 +69,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faUserPlus,
       id: 6,
       role: "Admin",
+      url: "pendingCraftmans"
     },
     {
       name: "Artesanos",
@@ -72,6 +78,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faUser,
       id: 7,
       role: "Admin",
+      url: "craftmans"
     },
     {
       name: "Pedidos",
@@ -80,6 +87,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faListCheck,
       id: 8,
       role: "Admin",
+      url: "orders"
     },
     {
       name: "Usuarios",
@@ -88,8 +96,13 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
       icon: faCircleUser,
       id: 9,
       role: "Admin",
+      url: "users"
     },
   ];
+  const location = useLocation();
+  const {pathname} = location;
+  console.log(pathname);
+
   const [itemsMenuFilter, setItemsMenuFilter] = useState([]);
 
   useEffect(() => {
@@ -121,7 +134,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
             {itemsMenuFilter.map((data) => {
               return (
                 <>
-                  <NavItem className="navLink my-1 p-2">
+                  <NavItem className={`navLink my-1 p-2 ${pathname.includes(data.url) ? "active" : ""}`}>
                     <Link to={data.goesTo}>
                       <FontAwesomeIcon icon={data.icon} className="mr-2" />
                       {data.name}
