@@ -223,7 +223,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="artesanos">
+      <section id="artesanos" className="section__artesano">
         <div className="container">
           <div className="row">
             <h2 className="text-center heading_primary">Nuestros artesanos</h2>
