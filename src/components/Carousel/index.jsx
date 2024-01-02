@@ -41,11 +41,8 @@ function ComponentCarousel( { files=[], ...rest }) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} className='carousel-container d-flex justify-content-center'/>
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <img src={item.src} alt={item.altText} className='carousel-container d-flex justify-content-end'/>
+        
       </CarouselItem>
     );
   });

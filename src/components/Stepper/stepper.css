@@ -41,7 +41,7 @@
 }
 
 .image-uploaded-container {
-  height: 300px;
+  height: 350px;
 }
 
 .upload-file-text {
@@ -139,6 +139,25 @@
   font-size: 10px;
 }
 
+.carousel-indicators button {
+  border: none;
+  background-color: #968ebe !important;
+}
+
+.carousel-indicators .active {
+  background-color: #e91e63 !important;
+}
+
+.carousel-control-next-icon {
+  background-color: #e91e63 !important;
+  border-radius: 5px;
+}
+
+.carousel-control-prev-icon {
+  background-color: #e91e63 !important;
+  border-radius: 5px;
+}
+
 @media (min-width: 768px) {
   .file-uploader-container {
     height: 300px;
@@ -155,9 +174,6 @@
   }
   .carousel-container {
     height: 200px;
-  }
-  .add-show-product {
-    width: 25%;
   }
 }
 @media (min-width: 992px) {

@@ -140,7 +140,26 @@
 .error-message-custom {
     font-size: 10px;
 }
-  
+
+.carousel-indicators button {
+    border: none;
+    background-color: #968ebe !important;
+}
+
+.carousel-indicators .active {
+    background-color: $primaryColor !important;
+}
+
+.carousel-control-next-icon {
+    background-color: $primaryColor !important;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon { 
+    background-color: $primaryColor !important;
+    border-radius: 5px;
+}
+
 @media (min-width: 768px) {
     .file-uploader-container {
         height: 300px;

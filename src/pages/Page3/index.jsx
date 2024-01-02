@@ -10,11 +10,10 @@ const MAX_ALLOWED_FILES_WEBSITE = 6;
 const CURRENT_PAGE = 3;
 
 const Page3 = () => {
-    
-    const [profilePic, setProfilePic] = useState(null);
-    const handleProfilePicChange = (event) => { 
-    const file = event.target.files[0]; 
-    setProfilePic(file); 
+  const [profilePic, setProfilePic] = useState(null);
+  const handleProfilePicChange = (event) => { 
+  const file = event.target.files[0]; 
+  setProfilePic(file); 
 }; 
 
 const [banner, setBanner] = useState(null);
@@ -74,14 +73,8 @@ const handleWebsitePicsChange = (event) => {
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
           <div className="container m-0 p-0">
-            <div className="row ">
-                <ComponentCarousel className='d-flex justify-content-center my-2' files={websitePics}/>
-                {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE &&
-                    <FormFile  fileType='image/*' controlId="form-3" multiple={true} onChange={handleWebsitePicsChange} />
-                }
-                <p className='body-text '>{websitePics.length}/{MAX_ALLOWED_FILES_WEBSITE}</p> 
-            </div>
-            <div className='container mt-3'> 
+
+            {/* <div className='container mt-3'> 
                 {websitePics?.length > 0 && websitePics?.length <= MAX_ALLOWED_FILES_WEBSITE && ( 
                 <div className='row'>
                     {websitePics.map(pic => 
@@ -89,7 +82,35 @@ const handleWebsitePicsChange = (event) => {
                     )}
                 </div>
                 )} 
+            </div> */}
+            <div className="container">
+            <div className="row">
+              <div className="col-md-6 col-lg-8">
+                <ComponentCarousel className='d-flex justify-content-center my-2' files={websitePics}/>
+              </div>
+              <div className="col-md-6 col-lg-4 p-0">
+                  {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && (
+                      <FormFile
+                      fileType="image/*"
+                      controlId="form-3"
+                      multiple={true}
+                      onChange={handleWebsitePicsChange}
+                      />
+                  )}
+              </div>
+                    
+              {websitePics.map((pic) => (
+                  <div className="col-md-6 col-lg-4 d-flex justify-content-center ">
+                      <img
+                          key={pic}
+                          className="image-uploaded-container "
+                          src={URL.createObjectURL(pic)}
+                          alt="Selected file"
+                      />
+                  </div>
+              ))}
             </div>
+          </div>
         </div>
         </Form.Group>
     </div>  
