@@ -42,7 +42,11 @@
 }
 
 .image-uploaded-container {
-    height: 350px;
+    height: 200px;
+}
+
+.carousel-container {
+    height: 300px !important;
 }
 
 .upload-file-text   {
@@ -158,6 +162,10 @@
 .carousel-control-prev-icon { 
     background-color: $primaryColor !important;
     border-radius: 5px;
+}
+
+.carousel-inner {
+    
 }
 
 @media (min-width: 768px) {

@@ -42,7 +42,7 @@ const handleWebsitePicsChange = (event) => {
 }; 
 
     return (
-    <div>
+    <div className='container'>
         <Stepper step={CURRENT_PAGE}/>
 
         <Form.Group className='mx-2' controlId="formStep3">
@@ -85,22 +85,25 @@ const handleWebsitePicsChange = (event) => {
             </div> */}
             <div className="container">
             <div className="row">
-              <div className="col-md-6 col-lg-8">
-                <ComponentCarousel className='d-flex justify-content-center my-2' files={websitePics}/>
-              </div>
+              {websitePics?.length > 0 && 
+                <div className="col-md-6 col-lg-8 d-flex justify-content-center ">
+                  <ComponentCarousel 
+                  files={websitePics}/> 
+                </div>
+              }
               <div className="col-md-6 col-lg-4 p-0">
-                  {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && (
-                      <FormFile
-                      fileType="image/*"
-                      controlId="form-3"
-                      multiple={true}
-                      onChange={handleWebsitePicsChange}
-                      />
-                  )}
+                {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && (
+                    <FormFile
+                    fileType="image/*"
+                    controlId="form-3"
+                    multiple={true}
+                    onChange={handleWebsitePicsChange}
+                    />
+                )}
               </div>
                     
               {websitePics.map((pic) => (
-                  <div className="col-md-6 col-lg-4 d-flex justify-content-center ">
+                  <div className="col-md-4 col-lg-3 d-flex justify-content-center ">
                       <img
                           key={pic}
                           className="image-uploaded-container "

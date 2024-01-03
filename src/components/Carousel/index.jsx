@@ -4,7 +4,6 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
 } from 'reactstrap';
 
 function ComponentCarousel( { files=[], ...rest }) {
@@ -41,7 +40,7 @@ function ComponentCarousel( { files=[], ...rest }) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} className='carousel-container d-flex justify-content-end'/>
+        <img src={item.src} alt={item.altText} className='carousel-container px-4'/>
         
       </CarouselItem>
     );

@@ -41,7 +41,11 @@
 }
 
 .image-uploaded-container {
-  height: 350px;
+  height: 200px;
+}
+
+.carousel-container {
+  height: 300px !important;
 }
 
 .upload-file-text {
