@@ -1,28 +1,41 @@
 @import "../../styles/variables";
-.social-media-container {
-  .social-primary {
-    background-color: $primaryColor;
-    padding: 10px;
-    border-radius: 100%;
+.templateA-container {
+  .templateA-image {
+    height: 600px;
+    object-fit: cover;
   }
-}
-.profileImg-Container {
-  bottom: 40px;
-  right: 20px;
-  .profileImg-sizeContainer {
-    width: 100%;
-    height: auto;
-    max-width: 450px;
-    max-height: 450px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    border: 15px solid white;
+  .social-media-container {
+    .social-primary {
+      background-color: $primaryColor;
+      padding: 10px;
+      border-radius: 100%;
+    }
+  }
+  .profileImg-Container {
+    bottom: 40px;
+    right: 20px;
+    .profileImg-sizeContainer {
+      width: 100%;
+      height: auto;
+      max-width: 450px;
+      max-height: 450px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      border: 15px solid white;
+    }
+  }
+  
+  .categories-container {
+    .button-primary {
+      background-color: $primaryColor;
+      width: auto;
+    }
   }
 }
 
-.categories-container {
-  .button-primary {
-    background-color: $primaryColor;
-    width: auto;
+@media (min-width: 992px) {
+  .templateA-description {
+    padding: 0px 30px;
+    font-size: 18px;
   }
 }

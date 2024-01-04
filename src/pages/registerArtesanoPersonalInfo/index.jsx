@@ -128,6 +128,7 @@ const RegisterArtesanoPersonalInfo = () => {
             <ButtonAction
               buttonClass="button-primary"
               text="Siguiente"
+              type="submit"
             ></ButtonAction>
           </div>
         </form>
