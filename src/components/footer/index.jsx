@@ -36,7 +36,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className='col-lg-2 mt-3 ms-lg-4 menu-section'>
+                    <div className='col-lg-2 ms-lg-4 menu-section'>
                         <p className='sections-footer fw-bolder'>Menu</p>
                         <a
                             href='http://www.kodemia.com'

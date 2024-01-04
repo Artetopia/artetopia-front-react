@@ -6,6 +6,11 @@
     font-size: 18px;
 }
 
+.guide-container a {
+    color: $secondaryColor;
+    text-decoration: none;
+}
+
 .images-delivery-container {
     width: 76px;
     height: 76px;
@@ -26,6 +31,15 @@
     border: none;
 }
 
+.status-text-custom {
+    font-size: 12px;
+}
+
+.actual-status-custom {
+    color: $primaryColor;
+    font-weight: bold;
+}
+
 @media (min-width: 768px) { 
     .guide-container {
         font-size: 24px;
@@ -36,6 +50,12 @@
     }
     .status-text-container {
         font-size: 28px;
+    }
+    .status-text-custom {
+    font-size: 18px;
+    }
+    .status-text-container {
+        font-size: 18px;
     }
 }
 

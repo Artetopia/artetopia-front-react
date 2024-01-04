@@ -12,6 +12,8 @@ import SelectTemplate from "./pages/register_craftsman/select_templates";
 import OrderDetail from "./pages/OrderDetail";
 import OrdersCraftsman from "./pages/OrdersCraftsman"
 import Page3 from "./pages/Page3";
+import DeliveryStatus from "./pages/DeliveryStatus"
+import DashboardClient from "./pages/Dashboard-cliente"
 
 function App() {
     const showMore = () => {
@@ -187,8 +189,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
-<Page3/>
-{/* <Page4/> */}
+    <DashboardClient/>
       <HeaderComponent></HeaderComponent>
     </section>
     

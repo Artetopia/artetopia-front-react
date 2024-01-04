@@ -35,7 +35,7 @@ const DashboardClient = () => {
                         <div className='col d-flex justify-content-between align-items-center'>
                             {categories.map(category => (
                                 <div key={category}>
-                                    <button className='categories-button-container text-center rounded-1 my-1 me-1'>{category}</button>
+                                    <button className='categories-button-container text-center rounded-1 px-2 py-1 my-1 me-1'>{category}</button>
                                 </div>
                             ))}
                             <Searchbar  />
@@ -46,20 +46,20 @@ const DashboardClient = () => {
             </div>
         </div>
         <div className="title-head text-center">
-            <h3 className='principal-title d-flex justify-content-center'>Las mejores artesanías de México</h3>
+            <h3 className='principal-title d-flex justify-content-center mt-2'>Las mejores artesanías de México</h3>
             <p className='subtitle-text d-flex justify-content-center'>+1000 artesanos de todas las partes de México</p>
         </div>
         <div className="d-flex justify-content-evenly justify-content-md-center my-lg-5">
-            <button className='filter-buttons rounded-3 mx-md-4'>Todos</button>
-            <button className='filter-buttons rounded-3 mx-md-4'>Tendencia</button>
-            <button className='filter-buttons rounded-3 mx-md-4'>Recientes</button>
+            <button className='filter-buttons rounded-3 px-3 py-1 mx-md-4'>Todos</button>
+            <button className='filter-buttons rounded-3 px-3 py-1 mx-md-4'>Tendencia</button>
+            <button className='filter-buttons rounded-3 px-3 py-1 mx-md-4'>Recientes</button>
         </div>
         <div className="d-flex justify-content-center d-lg-none">
             <Searchbar />
         </div>
         <div className="content-craftsman-container d-flex justify-content-center py-3 px-3 px-lg-1">
             <div className="container px-1 mx-4">
-                <div className="row d-flex justify-content-lg-between">
+                <div className="row d-flex justify-content-center justify-content-lg-between">
                     <CardCraftsman
                     websiteName={websites[0].name}
                     profilePic={websites[0].profilePic}
