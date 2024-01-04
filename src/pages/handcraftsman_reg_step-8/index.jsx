@@ -1,7 +1,7 @@
 import "./styles.css"
 import React from 'react';
 import { Button } from 'reactstrap';
-import Step8image from "../../../public/assets/reg_step-8.svg"
+import Step8image from "/assets/reg_step-8.svg"
 
 
 const Step_8 = () => {

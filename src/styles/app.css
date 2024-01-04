@@ -13,16 +13,6 @@
   background-color: #2b2e4a;
 }
 
-.button-primary {
-  background-color: #e91e63;
-  color: #ffffff;
-  border: 1px solid #e91e63;
-  padding: 8px 10px;
-  border-radius: 4px;
-  width: 300px;
-  max-width: 100%;
-}
-
 #call-to-action .max__width {
   max-width: 75%;
 }

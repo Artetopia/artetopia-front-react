@@ -1,6 +1,10 @@
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardHeader,CardBody,CardText, CardTitle,Col} from "reactstrap";
-import ButtonActionCart from "../buttonCart";
+import ButtonAction from "../buttonAction";
 const CardsProductB = ({ photoProfile, nameCraftsman, img_product, nameProduct, desProduct, price }) => {
+    const addToCart = (product) => {
+        console.log("product", product);
+    }
     return (
         <>
             <Col className='d-flex justify-content-center pt-3'>
@@ -26,7 +30,7 @@ const CardsProductB = ({ photoProfile, nameCraftsman, img_product, nameProduct, 
                             {desProduct}
                         </CardText>
                         <div className="d-flex align-items-center justify-content-between">
-                            <ButtonActionCart buttonClass="button-primary_car" text="Comprar"></ButtonActionCart>
+                            <ButtonAction text="Comprar" buttonClass="button-primary" type="button" icon={faCartShopping} action={() => addToCart(nameProduct)}></ButtonAction>
                             <h5 className="fw-bold mx-2">{price}</h5>
                         </div>
                     </CardBody>

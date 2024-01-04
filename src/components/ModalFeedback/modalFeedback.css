@@ -71,24 +71,6 @@ h4 {
   margin-top: 18px;
 }
 
-.btn:focus {
-  outline: none;
-}
-
-.btn {
-  border-radius: 22px;
-  text-transform: capitalize;
-  font-size: 13px;
-  padding: 8px 19px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #D50000;
-}
-
-.btn:hover {
-  background-color: #D32F2F !important;
-}
-
 .website-name-label {
   color: #e91e63;
   font-family: "Montserrat", sans-serif;
