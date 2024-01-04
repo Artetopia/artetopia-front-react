@@ -166,7 +166,7 @@ const CraftsmanProfile = () => {
                   <h6 className="mt-3 mb-1">Redes sociales</h6>
                   <div className="d-lg-flex">
                     <div className="mt-2 col-lg-6">
-                      <div className="mr-lg-5">
+                      <div className="form-group">
                         <label htmlFor="facebook">Facebook</label>
                         <input
                           type="text"
@@ -175,6 +175,8 @@ const CraftsmanProfile = () => {
                           id="facebook"
                           placeholder="@"
                         />
+                      </div>
+                      <div className="form-group">
                         <label className="mt-2" htmlFor="instagram">
                           Instagram
                         </label>
@@ -188,7 +190,7 @@ const CraftsmanProfile = () => {
                       </div>
                     </div>
                     <div className="mt-2 col-lg-6">
-                      <div className="mb-1 mr-lg-5">
+                      <div className="mb-1 form-group">
                         <label htmlFor="twitter">Twitter</label>
                         <input
                           type="text"
@@ -197,6 +199,8 @@ const CraftsmanProfile = () => {
                           id="twitter"
                           placeholder="@"
                         />
+                      </div>
+                      <div className="form-group">
                         <label className="mt-2" htmlFor="tiktok">
                           TikTok
                         </label>
