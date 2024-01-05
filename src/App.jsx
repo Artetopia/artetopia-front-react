@@ -31,6 +31,7 @@ function App() {
   }
 ]
     const showMore = () => {
+
         if(numberOfItemsArtesano + 3 <= artesanos.length) {
             setNumberOfItemsArtesano(numberOfItemsArtesano + 3);
         } else {
@@ -203,10 +204,10 @@ function App() {
     </header>
 
     <section id='hero-section'>
-<ModalFeedback
-websiteName = {websites[0].name}
-profilePic = {websites[0].profilePic}
-/>
+    <ModalFeedback
+      websiteName = {websites[0].name}
+      profilePic = {websites[0].profilePic}
+    />
         <HeaderComponent></HeaderComponent>
     </section>
     
