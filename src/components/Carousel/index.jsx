@@ -40,7 +40,7 @@ function ComponentCarousel( { files=[], ...rest }) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} className='carousel-container px-4'/>
+        <img src={item.src} alt={item.altText} className='carousel-container '/>
         
       </CarouselItem>
     );

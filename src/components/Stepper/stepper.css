@@ -162,6 +162,10 @@
   border-radius: 5px;
 }
 
+.close-icon-custom {
+  color: #e91e63;
+}
+
 @media (min-width: 768px) {
   .file-uploader-container {
     height: 300px;

@@ -16,11 +16,19 @@ const Page3 = () => {
   setProfilePic(file); 
 }; 
 
+const handleDeleteProfilePic = () => {
+  setProfilePic(null);
+}
+
 const [banner, setBanner] = useState(null);
 const handleBannerChange = (event) => { 
   const file = event.target.files[0]; 
   setBanner(file); 
 }; 
+
+const handleDeleteBanner = () => {
+  setBanner(null);
+}
 
 const [websitePics, setWebsitePics] = useState([]);
 const handleWebsitePicsChange = (event) => { 
@@ -55,7 +63,10 @@ const handleWebsitePicsChange = (event) => {
                   {profilePic  == null ?
                   <FormFile fileType='image/*' controlId="form-1" onChange={handleProfilePicChange} />
                   : ( 
-                  <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
+                  <div className='d-inline-block position-relative '> 
+                    <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
+                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={handleDeleteProfilePic}></i>
+                  </div>
                   )} 
                 </div>
               </div>
@@ -65,7 +76,10 @@ const handleWebsitePicsChange = (event) => {
                   {banner  == null ?
                   <FormFile fileType='image/*' controlId="form-2" onChange={handleBannerChange} />
                   : ( 
-                  <img className='image-uploaded-container d-block m-auto' src={URL.createObjectURL(banner)} alt="Selected file" /> 
+                  <div className='d-inline-block position-relative '> 
+                    <img className='image-uploaded-container d-block m-auto d-inline-block position-relative' src={URL.createObjectURL(banner)} alt="Selected file" /> 
+                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={handleDeleteBanner}></i>
+                  </div>
                   )} 
                 </div>
               </div>
@@ -73,20 +87,10 @@ const handleWebsitePicsChange = (event) => {
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
           <div className="container m-0 p-0">
-
-            {/* <div className='container mt-3'> 
-                {websitePics?.length > 0 && websitePics?.length <= MAX_ALLOWED_FILES_WEBSITE && ( 
-                <div className='row'>
-                    {websitePics.map(pic => 
-                        <img key={pic} className='col-12 col-md-4 image-uploaded-container d-flex justify-content-center my-1' src={URL.createObjectURL(pic)} alt="Selected file" /> 
-                    )}
-                </div>
-                )} 
-            </div> */}
             <div className="container">
             <div className="row">
               {websitePics?.length > 0 && 
-                <div className="col-md-6 col-lg-8 d-flex justify-content-center ">
+                <div className="col-md-6 col-lg-8 d-flex justify-content-center justify-content-lg-start mb-3">
                   <ComponentCarousel 
                   files={websitePics}/> 
                 </div>
@@ -103,13 +107,14 @@ const handleWebsitePicsChange = (event) => {
               </div>
                     
               {websitePics.map((pic) => (
-                  <div className="col-md-4 col-lg-3 d-flex justify-content-center ">
+                  <div key={pic} className="col-md-4 col-lg-3 d-flex justify-content-center d-inline-block position-relative">
                       <img
                           key={pic}
                           className="image-uploaded-container "
                           src={URL.createObjectURL(pic)}
                           alt="Selected file"
                       />
+                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={handleDeleteBanner}></i>
                   </div>
               ))}
             </div>

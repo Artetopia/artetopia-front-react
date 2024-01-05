@@ -191,10 +191,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
-<DeliveryStatus
-guideNumber='132454654MX'
-status='delivered'
-/>
+<Page3/>
         <HeaderComponent></HeaderComponent>
     </section>
     
