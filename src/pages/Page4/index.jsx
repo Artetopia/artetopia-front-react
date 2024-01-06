@@ -27,17 +27,20 @@ const Page4 = () => {
       });
       return;
     }
-
     const files = event.target.files;
-
     setProductPics([...productPics, ...files]);
   };
+  const handleDeleteSelectedFile = (pic) => {
+    const newArray = productPics.filter(productPic => !productPic.name.includes(pic.name))
+    setProductPics([...newArray])
+  }
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const [products, setProducts] = useState([]);
 
   const onSubmit = (data) => {
@@ -45,6 +48,7 @@ const Page4 = () => {
   };
 
   return (
+    <div>
     <form onSubmit={handleSubmit(onSubmit)} className="mx-2" id="formStep4">
       <Stepper step={CURRENT_PAGE} />
 
@@ -204,36 +208,41 @@ const Page4 = () => {
                 </div>
 
                 {productPics.map((pic) => (
-                    <div className="col-md-6 col-lg-4 d-flex justify-content-center ">
+                    <div key={`${pic} ${pic.lastModified}`} className="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center d-inline-block position-relative">
                         <img
                             key={pic}
                             className="image-uploaded-container "
                             src={URL.createObjectURL(pic)}
                             alt="Selected file"
                         />
+                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={() => handleDeleteSelectedFile(pic)}></i>
                     </div>
                 ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="modal-container d-flex justify-content-center mt-4">
-        <button type="submit" className="add-show-product rounded-5 me-md-1">
+      <div className="modal-container d-md-flex justify-content-center mt-4">
+        <button type="submit" className="add-show-product rounded-5 mb-2 me-md-1">
           Añadir este articulo
         </button>
-        <button
-          className="add-show-product mb-5 rounded-5 ms-md-1"
-          onClick={() => setModalShow(true)}
-        >
-          Ver mis productos
-        </button>
-        <MydModalWithGrid
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-          products={products}
-        />
       </div>
     </form>
+    <div className="modal-container d-md-flex justify-content-center">
+
+     <button
+     className="add-show-product mb-5 rounded-5 mx-md-2"
+     onClick={() => setModalShow(true)}>
+     Ver mis productos
+   </button>
+   <MydModalWithGrid
+     show={modalShow}
+     onHide={() => setModalShow(false)}
+     products={products}
+   />
+   </div>
+   </div>
   );
+  
 };
 export default Page4;

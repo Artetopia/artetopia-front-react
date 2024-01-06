@@ -49,6 +49,11 @@ const handleWebsitePicsChange = (event) => {
   setWebsitePics([...websitePics, ...files]); 
 }; 
 
+const handleDeleteSelectedFile = (pic) => {
+  const newArray = websitePics.filter(websitePic => !websitePic.name.includes(pic.name))
+  setWebsitePics([...newArray])
+}
+
     return (
     <div className='container'>
         <Stepper step={CURRENT_PAGE}/>
@@ -107,14 +112,14 @@ const handleWebsitePicsChange = (event) => {
               </div>
                     
               {websitePics.map((pic) => (
-                  <div key={pic} className="col-md-4 col-lg-3 d-flex justify-content-center d-inline-block position-relative">
+                  <div key={`${pic} ${pic.lastModified}`} className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center d-inline-block position-relative">
                       <img
                           key={pic}
                           className="image-uploaded-container "
                           src={URL.createObjectURL(pic)}
                           alt="Selected file"
                       />
-                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={handleDeleteBanner}></i>
+                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={() => handleDeleteSelectedFile(pic)}></i>
                   </div>
               ))}
             </div>
