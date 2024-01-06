@@ -8,6 +8,8 @@ import "./modal.scss"
 
 function MydModalWithGrid(props) {
   console.log(props.products)
+  // props.products[0].name = ['hola']
+  
   return (
     <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
     >
@@ -25,7 +27,7 @@ function MydModalWithGrid(props) {
                 </Col>
                 <Col className='order-md-last d-flex justify-content-end' xs={6} md={1}>
                   <i className='order-md-6 edit-icons mx-2 fa fa-pencil' />
-                  <i className='order-md-7 edit-icons fa fa-trash-o' />
+                  <i className='order-md-7 edit-icons fa fa-trash-o'/>
                 </Col>
                 <Col className='body-text order-md-2' xs={12} md={2}>
                   <p>{product.name}</p>

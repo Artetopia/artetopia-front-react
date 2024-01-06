@@ -9,7 +9,7 @@ import "../../components/Stepper/stepper.css";
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 const CURRENT_PAGE = 4;
 
-const Page4 = () => {
+const Page4 = () => { 
   const [modalShow, setModalShow] = useState(false);
 
   const [productPics, setProductPics] = useState([]);
@@ -222,25 +222,24 @@ const Page4 = () => {
           </div>
         </div>
       </div>
-      <div className="modal-container d-md-flex justify-content-center mt-4">
-        <button type="submit" className="add-show-product rounded-5 mb-2 me-md-1">
+      <div className="d-flex d-md-inline justify-content-center mt-4">
+        <button type="submit" className="add-show-product rounded-5 mb-2">
           Añadir este articulo
         </button>
       </div>
     </form>
-    <div className="modal-container d-md-flex justify-content-center">
-
-     <button
-     className="add-show-product mb-5 rounded-5 mx-md-2"
-     onClick={() => setModalShow(true)}>
-     Ver mis productos
-   </button>
-   <MydModalWithGrid
-     show={modalShow}
-     onHide={() => setModalShow(false)}
-     products={products}
-   />
-   </div>
+    <div className="modal-container d-flex justify-content-center mx-2">
+      <button
+        className="add-show-product mb-5 rounded-5"
+        onClick={() => setModalShow(true)}>
+        Ver mis productos
+      </button>
+      <MydModalWithGrid
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        products={products}
+      />
+    </div>
    </div>
   );
   
