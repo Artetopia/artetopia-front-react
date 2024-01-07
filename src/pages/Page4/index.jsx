@@ -42,10 +42,21 @@ const Page4 = () => {
   } = useForm();
 
   const [products, setProducts] = useState([]);
-
+  
   const onSubmit = (data) => {
-    setProducts([...products, data]);
+    const date = new Date();
+    const newProduct = {...data, id: date.getTime()}
+    setProducts([...products, newProduct]);
   };
+
+  const onHideModal = () => setModalShow(false);
+  const onEditProduct = (e) => {
+    console.log("editando", e)
+  }
+  const onDeleteProduct = (selectedProduct) => {
+    const newProducts = products.filter(product => product?.id !== selectedProduct?.id);
+    setProducts(newProducts);
+  }
 
   return (
     <div>
@@ -198,12 +209,22 @@ const Page4 = () => {
             <div className="row">
                 <div className="col-md-6 col-lg-4">
                     {productPics?.length < MAX_ALLOWED_FILES_PRODUCT && (
+                      <>
                         <FormFile
+                        {...register("productImage", {
+                          required: true,
+                        })}
                         fileType="image/*"
                         controlId="form-3"
                         multiple={true}
                         onChange={handleProductPicsChange}
                         />
+                        {errors.productImage?.type === "required" && (
+                          <p className="error-message-custom text-danger">
+                            * Campo requerido
+                          </p>
+                        )}
+                        </>
                     )}
                 </div>
 
@@ -236,8 +257,10 @@ const Page4 = () => {
       </button>
       <MydModalWithGrid
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onHide={onHideModal}
         products={products}
+        onEditProduct={onEditProduct}
+        onDeleteProduct={onDeleteProduct}
       />
     </div>
    </div>

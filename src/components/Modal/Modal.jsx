@@ -8,8 +8,7 @@ import "./modal.scss"
 
 function MydModalWithGrid(props) {
   console.log(props.products)
-  // props.products[0].name = ['hola']
-  
+
   return (
     <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
     >
@@ -21,13 +20,13 @@ function MydModalWithGrid(props) {
       <Modal.Body className="grid-example">
         <Container>
           {props.products.map((product, index) =>
-              <Row key={index+1} className='d-md-flex flex-md-nowrap mb-5'> 
+              <Row key={product.id} className='d-md-flex flex-md-nowrap mb-5'> 
                 <Col className='body-text order-md-first' xs={6} md={1}>
                   #{index+1} 
                 </Col>
                 <Col className='order-md-last d-flex justify-content-end' xs={6} md={1}>
-                  <i className='order-md-6 edit-icons mx-2 fa fa-pencil' />
-                  <i className='order-md-7 edit-icons fa fa-trash-o'/>
+                  <i className='order-md-6 edit-icons mx-2 fa fa-pencil' onClick={() => props.onEditProduct(product)} />
+                  <i className='order-md-7 edit-icons fa fa-trash-o'onClick={() => props.onDeleteProduct(product)} />
                 </Col>
                 <Col className='body-text order-md-2' xs={12} md={2}>
                   <p>{product.name}</p>

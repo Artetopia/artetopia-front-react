@@ -42,6 +42,16 @@
 
 .image-uploaded-container {
   height: 200px;
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.image-carousel-container {
+  height: 300px;
+  width: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .carousel-container {
@@ -170,9 +180,6 @@
   .file-uploader-container {
     height: 300px;
   }
-  .image-uploaded-container {
-    height: 300px;
-  }
   .formfile-uploader-container {
     width: 60%;
   }
@@ -186,15 +193,15 @@
   .carousel-container {
     height: 200px;
   }
+  .add-show-product {
+    width: 200px;
+  }
 }
 @media (min-width: 992px) {
   .progress-bar-text {
     margin-top: 10px;
   }
   .file-uploader-container {
-    height: 350px;
-  }
-  .image-uploaded-container {
     height: 350px;
   }
   .formfile-uploader-container {
