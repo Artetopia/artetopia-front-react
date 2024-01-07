@@ -71,6 +71,7 @@
 .add-show-product {
   font-family: "Karla", sans-serif !important;
   font-size: 16px !important;
+  color: #e91e63;
   width: 100%;
   background-color: white;
   border: solid;
@@ -133,11 +134,6 @@
   border-color: #2b2e4a;
 }
 
-.back-button {
-  border-color: #e91e63 !important;
-  color: #e91e63 !important;
-}
-
 .handle-buttons {
   width: 100%;
   font-family: "Karla", sans-serif !important;
@@ -145,7 +141,7 @@
   font-weight: 500 !important;
 }
 
-.container {
+.form-container {
   max-width: 100% !important;
 }
 
@@ -176,6 +172,14 @@
   color: #e91e63;
 }
 
+.back-button-custom {
+  background-color: white;
+  border: none;
+  border-bottom: solid 1px #e91e63;
+  border-radius: 0px;
+  color: #e91e63;
+}
+
 @media (min-width: 768px) {
   .file-uploader-container {
     height: 300px;
@@ -195,6 +199,10 @@
   }
   .add-show-product {
     width: 200px;
+  }
+  .back-button-custom {
+    width: 200px;
+    border-radius: 2px;
   }
 }
 @media (min-width: 992px) {

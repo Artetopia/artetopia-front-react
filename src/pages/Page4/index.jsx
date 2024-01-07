@@ -263,6 +263,16 @@ const Page4 = () => {
         onDeleteProduct={onDeleteProduct}
       />
     </div>
+    <div className="d-flex  justify-content-center mt-4">
+          <button type="submit" className="add-show-product rounded-5 mb-1">
+            Siguiente 
+          </button>
+        </div>
+    <div className="d-flex  justify-content-center mx-2">
+          <button className="back-button-custom m-auto">
+            Atras
+          </button>
+        </div>
    </div>
   );
   

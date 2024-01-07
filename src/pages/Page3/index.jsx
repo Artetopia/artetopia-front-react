@@ -74,7 +74,7 @@ const {
 
         <form onSubmit={handleSubmit(onSubmit)}  className='mx-2' id="formStep3">
           <Form.Label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</Form.Label>
-          <div className="container m-0 p-0">
+          <div className="form-container m-0 p-0">
             <div className="row">
               <div className="col-12 col-lg-5">
                 <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
@@ -133,8 +133,8 @@ const {
             </div>
           </div>
           <p className='body-text'>Fotos de tu tienda o artesanias</p>                     
-          <div className="container m-0 p-0">
-            <div className="container">
+          <div className="form-container m-0 p-0">
+            <div className="form-container">
             <div className="row">
               {websitePics?.length > 0 && 
                 <div className="col-md-6 col-lg-8 d-flex justify-content-center justify-content-lg-start mb-3">
@@ -171,7 +171,7 @@ const {
             </div>
           </div>
         </div>
-        <div className="d-flex d-md-inline justify-content-center mt-4">
+        <div className="d-flex  justify-content-center mt-4">
           <button type="submit" className="add-show-product rounded-5 mb-1">
             Siguiente 
           </button>
@@ -183,8 +183,8 @@ const {
             ></ButtonAction> */}
           {/* </div> */}
         </form>
-        <div className="d-flex d-md-inline justify-content-center mx-2">
-          <button className="add-show-product rounded-5 m-auto">
+        <div className="d-flex  justify-content-center mx-2">
+          <button className="back-button-custom m-auto">
             Atras
           </button>
         </div>
