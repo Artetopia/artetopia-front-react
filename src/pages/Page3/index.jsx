@@ -57,7 +57,7 @@ const handleDeleteSelectedFile = (pic) => {
 }
 
 const onSubmit = (data) => {
-  (profilePic || banner || websitePics) >= MIN_ALLOWED_FILES_WEBSITE  ?
+  profilePic && banner &&( websitePics.length >= MIN_ALLOWED_FILES_WEBSITE)  ?
   data = [profilePic, banner, websitePics] :
     Swal.fire({
       icon: "error",
