@@ -192,7 +192,7 @@ function App() {
     </header>
 
     <section id='hero-section'>
-<Page4/>
+<Page3/>
         <HeaderComponent></HeaderComponent>
     </section>
     

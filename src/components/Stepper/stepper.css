@@ -175,11 +175,24 @@
 .back-button-custom {
   background-color: white;
   border: none;
-  border-bottom: solid 1px #e91e63;
-  border-radius: 0px;
   color: #e91e63;
+  text-decoration: underline !important;
 }
 
+.progress, .progress-stacked {
+  height: 23px !important;
+}
+
+@media (max-width: 575.98px) {
+  .modal-container {
+    padding-right: 20px;
+    padding-left: 21px;
+  }
+  .controllers-buttons-custom {
+    padding-right: 20px !important;
+    padding-left: 16px !important;
+  }
+}
 @media (min-width: 768px) {
   .file-uploader-container {
     height: 300px;
@@ -201,7 +214,7 @@
     width: 200px;
   }
   .back-button-custom {
-    width: 200px;
+    width: 200px !important;
     border-radius: 2px;
   }
 }

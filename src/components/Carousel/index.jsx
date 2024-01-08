@@ -7,7 +7,6 @@ import {
 } from 'reactstrap';
 
 function ComponentCarousel( { files=[], ...rest }) {
-  console.log(files)
   const items = files?.map(file => ({
     src: URL.createObjectURL(file),
     name: file?.name

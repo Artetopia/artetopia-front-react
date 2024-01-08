@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import "../../components/Stepper/stepper.css";
 
+const MIN_ALLOWED_FILES_PRODUCT = 1;
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 const CURRENT_PAGE = 4;
 
@@ -44,9 +45,19 @@ const Page4 = () => {
   const [products, setProducts] = useState([]);
   
   const onSubmit = (data) => {
+    data.productImage = [...productPics]   
     const date = new Date();
     const newProduct = {...data, id: date.getTime()}
-    setProducts([...products, newProduct]);
+    data.productImage.length >= MIN_ALLOWED_FILES_PRODUCT ?
+    setProducts([...products, newProduct]) :
+      Swal.fire({
+        icon: "error",
+        title: "Ups...",
+        text: `Debes subir al menos ${MIN_ALLOWED_FILES_PRODUCT} imagen. Intenta nuevamente`,
+        confirmButtonText: "Entendido",
+        confirmButtonColor: "#E91E63",
+      });
+      return;
   };
 
   const onHideModal = () => setModalShow(false);
@@ -209,22 +220,12 @@ const Page4 = () => {
             <div className="row">
                 <div className="col-md-6 col-lg-4">
                     {productPics?.length < MAX_ALLOWED_FILES_PRODUCT && (
-                      <>
                         <FormFile
-                        {...register("productImage", {
-                          required: true,
-                        })}
                         fileType="image/*"
-                        controlId="form-3"
+                        controlId="form-4"
                         multiple={true}
                         onChange={handleProductPicsChange}
                         />
-                        {errors.productImage?.type === "required" && (
-                          <p className="error-message-custom text-danger">
-                            * Campo requerido
-                          </p>
-                        )}
-                        </>
                     )}
                 </div>
 
@@ -242,15 +243,16 @@ const Page4 = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="d-flex d-md-inline justify-content-center mt-4">
-        <button type="submit" className="add-show-product rounded-5 mb-2">
-          Añadir este articulo
-        </button>
+        <div className="d-flex d-md-inline justify-content-center mt-4">
+          <button  className="add-show-product rounded-5 mb-2">
+            Añadir este articulo
+          </button>
+        </div>
       </div>
     </form>
-    <div className="modal-container d-flex justify-content-center mx-2">
+    <div className="modal-container container px-xs-5">
       <button
+        type="text"
         className="add-show-product mb-5 rounded-5"
         onClick={() => setModalShow(true)}>
         Ver mis productos
@@ -263,16 +265,14 @@ const Page4 = () => {
         onDeleteProduct={onDeleteProduct}
       />
     </div>
-    <div className="d-flex  justify-content-center mt-4">
-          <button type="submit" className="add-show-product rounded-5 mb-1">
-            Siguiente 
-          </button>
-        </div>
-    <div className="d-flex  justify-content-center mx-2">
-          <button className="back-button-custom m-auto">
-            Atras
-          </button>
-        </div>
+    <div className="container controllers-buttons-custom d-block d-md-flex flex-nowrap justify-content-center mt-4">
+      <button type="submit" className="order-md-2 add-show-product rounded-5 mb-1 mx-1">
+        Siguiente 
+      </button>
+        <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
+          Atras
+      </button>
+    </div>
    </div>
   );
   
