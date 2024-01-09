@@ -27,7 +27,7 @@ import VerifyAccount from "./pages/VerifyAccount";
 import Checkout from "./pages/checkout";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
-
+import Dashboard_Craft_Template from "./pages/Dashboard_craft_template";
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
         <Route path="/craftman/products" element={<ModalButtons/>}></Route>
         <Route path="/craftman/payments" element={<Payments/>}></Route>
         {/* Route dashobard artesano perfil */}
-        {/* Route dashboard artesano plantilla */}
+        <Route path="/craftman/template" element={<Dashboard_Craft_Template/>}></Route>
         <Route path="/craftman/orders" element={<OrdersCraftsman/>}></Route>
         <Route path="/craftman/orderDetail" element={<OrderDetail/>}></Route>
         <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
