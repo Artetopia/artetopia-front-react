@@ -22,7 +22,7 @@ function HeaderComponent() {
                             El marketplace de artesanías mas confiable
                         </p>
                     </div>
-                    <h1 className='title'>
+                    <h1 className='heroSection_title'>
                         Bienvenido a{' '}
                         <span className='pink_artetopia'>ARTETOPIA</span>
                     </h1>

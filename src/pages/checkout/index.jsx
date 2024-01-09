@@ -1,37 +1,20 @@
 import "./styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import ButtonAction from "../../components/buttonAction";
 import {useForm} from 'react-hook-form';
 
 const Checkout = () => {
-  const [expirationDate, setExpirationDate] = useState("");
-  const [errorsDateExpiration, setErrorsDateExpiration] = useState([]);
+  // const [expirationDate, setExpirationDate] = useState("");
+  // const [errorsDateExpiration, setErrorsDateExpiration] = useState([]);
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  // const [productsCart, setProductsCart] = useState ([
-  //     {
-  //       "Id": "1",
-  //       "name": "Artesano 1",
-  //       "products": [
-  //           { "id": "1", "name": "producto1", "quantity": 2, "image": "https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b" },
-  //           { "id": "2", "name": "producto2", "quantity": 3, "image": "https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b" }
-  //       ]
-  //     },
-  //     {
-  //       "Id": "2",
-  //       "name": "Artesano 2",
-  //       "products": [
-  //           { "id": "3", "name": "producto3", "quantity": 3, "image": "https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b" },
-  //           { "id": "4", "name": "producto4", "quantity": 4, "image": "https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b" }
-  //       ]
-  //     }
-  //   ]);
 
   const makeOrder = (data) => {
     console.log(data);
@@ -257,7 +240,7 @@ const Checkout = () => {
                     // onChange={handleInputChange}
                     // {...register("expirationDate")}
                     {...register('expirationDate', {
-                      required: 'Expiration Date is required',
+                      required: 'El campo es requerido',
                       pattern: {
                         value: /^(0[1-9]|1[0-2])\/\d{2}$/,
                         message: 'Formato invalido. Utilice el formato mm/yy',
@@ -295,10 +278,11 @@ const Checkout = () => {
           </div>
           <div className="col-lg-6 p-4">
             <h2>Productos seleccionados</h2>
-            <div className="container artesanoContainer-products checkoutBorder__primary my-3">
+            <div className="container artesanoContainer-products checkoutBorder__primary my-3 overflow-auto">
               <h4 className="text-center text-weight-bold mt-2">Artesano 1</h4>
-              <div className="d-flex justify-content-around align-items-center mb-4">
-                <div className="productContainer d-flex align-items-center">
+              <div className="artesanoContainer__products-maxHeight">
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
                   <img
                     src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
                     alt=""
@@ -306,14 +290,15 @@ const Checkout = () => {
                   />
                   <p className="productName mx-2 mb-0">Producto 1</p>
                 </div>
-                <div className="controls d-flex align-items-center">
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
                   <FontAwesomeIcon
                     icon={faMinus}
                     className="mx-2"
                   ></FontAwesomeIcon>
                   <input
                     type="text"
-                    className="form-control inputControls"
+                    className="form-control inputControls text-center"
                     disabled
                     value={2}
                   />
@@ -323,12 +308,14 @@ const Checkout = () => {
                   ></FontAwesomeIcon>
                 </div>
                 <FontAwesomeIcon
-                  icon={faXmark}
+                  icon={faTrashCan}
                   className="icon"
                 ></FontAwesomeIcon>
+                </div>
               </div>
-              <div className="d-flex justify-content-around align-items-center mb-4">
-                <div className="productContainer d-flex align-items-center">
+              <hr className="artesano__line-primary m-0"/>
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
                   <img
                     src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
                     alt=""
@@ -336,14 +323,15 @@ const Checkout = () => {
                   />
                   <p className="productName mx-2 mb-0">Producto 1</p>
                 </div>
-                <div className="controls d-flex align-items-center">
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
                   <FontAwesomeIcon
                     icon={faMinus}
                     className="mx-2"
                   ></FontAwesomeIcon>
                   <input
                     type="text"
-                    className="form-control inputControls"
+                    className="form-control inputControls text-center"
                     disabled
                     value={2}
                   />
@@ -353,15 +341,51 @@ const Checkout = () => {
                   ></FontAwesomeIcon>
                 </div>
                 <FontAwesomeIcon
-                  icon={faXmark}
+                  icon={faTrashCan}
                   className="icon"
                 ></FontAwesomeIcon>
+                </div>
+              </div>
+              <hr className="artesano__line-primary m-0"/>
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
+                  <img
+                    src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
+                    alt=""
+                    className="productImage"
+                  />
+                  <p className="productName mx-2 mb-0">Producto 1</p>
+                </div>
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
+                  <FontAwesomeIcon
+                    icon={faMinus}
+                    className="mx-2"
+                  ></FontAwesomeIcon>
+                  <input
+                    type="text"
+                    className="form-control inputControls text-center"
+                    disabled
+                    value={2}
+                  />
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    className="ms-2"
+                  ></FontAwesomeIcon>
+                </div>
+                <FontAwesomeIcon
+                  icon={faTrashCan}
+                  className="icon"
+                ></FontAwesomeIcon>
+                </div>
+              </div>
               </div>
             </div>
-            <div className="container artesanoContainer-products checkoutBorder__primary my-3">
+            <div className="container artesanoContainer-products checkoutBorder__primary my-3 overflow-auto">
               <h4 className="text-center text-weight-bold mt-2">Artesano 1</h4>
-              <div className="d-flex justify-content-around align-items-center mb-4">
-                <div className="productContainer d-flex align-items-center">
+              <div className="artesanoContainer__products-maxHeight">
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
                   <img
                     src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
                     alt=""
@@ -369,14 +393,15 @@ const Checkout = () => {
                   />
                   <p className="productName mx-2 mb-0">Producto 1</p>
                 </div>
-                <div className="controls d-flex align-items-center">
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
                   <FontAwesomeIcon
                     icon={faMinus}
                     className="mx-2"
                   ></FontAwesomeIcon>
                   <input
                     type="text"
-                    className="form-control inputControls"
+                    className="form-control inputControls text-center"
                     disabled
                     value={2}
                   />
@@ -386,12 +411,14 @@ const Checkout = () => {
                   ></FontAwesomeIcon>
                 </div>
                 <FontAwesomeIcon
-                  icon={faXmark}
+                  icon={faTrashCan}
                   className="icon"
                 ></FontAwesomeIcon>
+                </div>
               </div>
-              <div className="d-flex justify-content-around align-items-center mb-4">
-                <div className="productContainer d-flex align-items-center">
+              <hr className="artesano__line-primary m-0"/>
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
                   <img
                     src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
                     alt=""
@@ -399,14 +426,15 @@ const Checkout = () => {
                   />
                   <p className="productName mx-2 mb-0">Producto 1</p>
                 </div>
-                <div className="controls d-flex align-items-center">
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
                   <FontAwesomeIcon
                     icon={faMinus}
                     className="mx-2"
                   ></FontAwesomeIcon>
                   <input
                     type="text"
-                    className="form-control inputControls"
+                    className="form-control inputControls text-center"
                     disabled
                     value={2}
                   />
@@ -416,9 +444,44 @@ const Checkout = () => {
                   ></FontAwesomeIcon>
                 </div>
                 <FontAwesomeIcon
-                  icon={faXmark}
+                  icon={faTrashCan}
                   className="icon"
                 ></FontAwesomeIcon>
+                </div>
+              </div>
+              <hr className="artesano__line-primary m-0"/>
+              <div className="d-md-flex justify-content-around align-items-center mb-2 mt-2">
+                <div className="productContainer d-flex justify-content-center align-items-center">
+                  <img
+                    src="https://img.freepik.com/free-psd/laptop-mock-up_1310-197.jpg?w=1800&t=st=1703205183~exp=1703205783~hmac=9e7f0bc919569d3dae0f9c17f010bc8a3e06cd8378360c5c67cd0ff7c8b2802b"
+                    alt=""
+                    className="productImage"
+                  />
+                  <p className="productName mx-2 mb-0">Producto 1</p>
+                </div>
+                <div className="d-flex d-md-flex justify-content-center align-items-center mt-3 mt-sm-0">
+                <div className="controls d-flex align-items-center mr-3 mr-md-5">
+                  <FontAwesomeIcon
+                    icon={faMinus}
+                    className="mx-2"
+                  ></FontAwesomeIcon>
+                  <input
+                    type="text"
+                    className="form-control inputControls text-center"
+                    disabled
+                    value={2}
+                  />
+                  <FontAwesomeIcon
+                    icon={faPlus}
+                    className="ms-2"
+                  ></FontAwesomeIcon>
+                </div>
+                <FontAwesomeIcon
+                  icon={faTrashCan}
+                  className="icon"
+                ></FontAwesomeIcon>
+                </div>
+              </div>
               </div>
             </div>
             <div className="container checkoutBorder__primary p-4">

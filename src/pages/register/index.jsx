@@ -3,6 +3,7 @@ import ButtonAction from "../../components/buttonAction";
 import ValidationCircle from "../../components/ValidationCircle";
 import loginImage from "/images/login-image.png"
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const {
@@ -13,7 +14,7 @@ const Register = () => {
   } = useForm({mode: "onChange"});
   return (
     <>
-      <div className="container my-5">
+      <div className="container my-5 register-container">
         <div className="row">
           <div className="col-12 col-lg-6">
             <div className="text-center">
@@ -24,9 +25,9 @@ const Register = () => {
             </div>
             <form onSubmit={handleSubmit((data) => console.log(data))}>
               <div className="d-flex justify-content-center">
-                <div className="form-check form-check-inline">
+                <div className="form-check form-check-inline custom-control-input">
                   <input
-                    className="form-check-input custom-control-input"
+                    className="form-check-input"
                     type="radio"
                     name="clientType"
                     id="clientType1"
@@ -43,9 +44,9 @@ const Register = () => {
                     Cliente
                   </label>
                 </div>
-                <div className="form-check form-check-inline">
+                <div className="form-check form-check-inline custom-control-input">
                   <input
-                    className="form-check-input custom-control-input"
+                    className="form-check-input"
                     type="radio"
                     name="clientType"
                     id="clientType2"
@@ -146,7 +147,7 @@ const Register = () => {
                   </div>
                 </div>
               <div className="d-flex flex-column">
-              <span>Ya tengo una cuenta? <b className="text_primary">Iniciar sesión</b></span>
+              <span>Ya tengo una cuenta? <Link className="text_primary" to="/login">Iniciar sesión</Link></span>
               <ButtonAction buttonClass="button-primary mt-3" text="Registrarse"></ButtonAction>
               </div>
             </form>

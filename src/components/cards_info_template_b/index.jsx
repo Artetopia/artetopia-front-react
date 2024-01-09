@@ -4,13 +4,9 @@ const CardsAditionalTB = ({ title, text, background_img }) => {
         <>
             <Col className='d-flex justify-content-center pt-3'>
                 <Card inverse
-                    //style={{
-                    // width: '326px',
-                    //height: '450px'
-                    //}}
-                    className={`text-center ${background_img} position-relative w-100`}
+                    className={`text-center ${background_img} position-relative w-100 border-0`}
                 >
-                    <CardHeader tag="h4" className="card_title">
+                    <CardHeader tag="h4" className="card_title border-0">
                         {title}
                     </CardHeader>
                     <CardBody className='position-absolute top-50 start-0 p-0'>

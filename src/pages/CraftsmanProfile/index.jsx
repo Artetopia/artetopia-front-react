@@ -1,6 +1,6 @@
 import "./styles.css";
 import ButtonAction from "../../components/buttonAction";
-import FormFile from "../../components/FormFile/FormFile";
+import FormFile from "../../components/FormFile";
 
 const CraftsmanProfile = () => {
   // const
