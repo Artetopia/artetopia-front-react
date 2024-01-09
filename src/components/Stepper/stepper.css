@@ -81,11 +81,17 @@
 }
 
 .circle-step {
+  width: 50px;
+  height: 50px;
   width: 35px;
   height: 35px;
   border-width: 1px;
   border-style: solid;
   border-color: #e91e63 !important;
+}
+.circle-step.selected {
+  background: #e91e63;
+  color: white;
 }
 
 .border-progress-bar {
@@ -101,7 +107,10 @@
 .image-icon-svg {
   width: 24px;
   height: 24px;
-  color: #2b2e4a;
+  color: #e91e63;
+}
+.image-icon-svg.selected {
+  color: white;
 }
 
 .progress-icon-svg {
@@ -175,10 +184,19 @@
   height: 23px !important;
 }
 
+.modal-container {
+  padding-right: 20px !important;
+  padding-left: 21px !important;
+}
+
+.step-title-custom {
+  color: #e91e63;
+}
+
 @media (max-width: 575.98px) {
   .modal-container {
-    padding-right: 20px;
-    padding-left: 21px;
+    padding-right: 20px !important;
+    padding-left: 21px !important;
   }
   .controllers-buttons-custom {
     padding-right: 20px !important;

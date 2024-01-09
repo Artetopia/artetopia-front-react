@@ -5,6 +5,7 @@ import Stepper from "../../components/Stepper";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import "../../components/Stepper/stepper.css";
+import ButtonAction from "../../components/buttonAction";
 
 const MIN_ALLOWED_FILES_PRODUCT = 1;
 const MAX_ALLOWED_FILES_PRODUCT = 10;
@@ -70,13 +71,11 @@ const Page4 = () => {
   }
 
   return (
-    <div>
+    <div className='container '>
     <form onSubmit={handleSubmit(onSubmit)} className="mx-2" id="formStep4">
       <Stepper step={CURRENT_PAGE} />
 
-      <label className="subtitle-text mt-2 d-flex justify-content-center">
-        Sube tus productos
-      </label>
+      <h3 className="step-title-custom d-flex justify-content-center mt-2 mt-lg-0">Sube tus productos</h3>
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -266,9 +265,12 @@ const Page4 = () => {
       />
     </div>
     <div className="container controllers-buttons-custom d-block d-md-flex flex-nowrap justify-content-center mt-4">
-      <button type="submit" className="order-md-2 add-show-product rounded-5 mb-1 mx-1">
-        Siguiente 
-      </button>
+    <div className='order-md-2 text-center mt-0'>
+              <ButtonAction
+                buttonClass="button-primary"
+                text="Siguiente"
+              ></ButtonAction>
+            </div>
         <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
           Atras
       </button>

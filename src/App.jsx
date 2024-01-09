@@ -21,6 +21,13 @@ import AditionalTemplateB from "./pages/register_craftsman/info-aditional-templa
 import SelectTemplate from "./pages/register_craftsman/select_templates";
 import OrderDetail from "./pages/OrderDetail";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
+import VerifyAccount from "./pages/VerifyAccount";
+import TemplateB from "./pages/templates/templateB"
+import ShoppingCar from "./pages/shopping_car";
+import RegisterArtesanoPersonalInfo from "./pages/registerArtesanoPersonalInfo";
+import Checkout from './pages/checkout';
+import { useState } from "react";
+
 
 function App() {
    

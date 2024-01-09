@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import Stepper from "../../components/Stepper";
 import "../../components/Stepper/stepper.css";
 import { useForm } from "react-hook-form";
+import ButtonAction from "../../components/buttonAction";
 
 const MIN_ALLOWED_FILES_WEBSITE = 1;
 const MAX_ALLOWED_FILES_WEBSITE = 6;
@@ -79,33 +80,21 @@ const {
   = useForm();
 
     return (
-    <div>
+    <div className='container'>
     <form onSubmit={handleSubmit(onSubmit)} className="mx-2" id="formStep3">
-        <Stepper step={CURRENT_PAGE}/>
-
-        {/* <form onSubmit={handleSubmit(onSubmit)}  className='mx-2' id="formStep3"> */}
-          <label className='subtitle-text mt-2 d-flex justify-content-center'>Sube tus fotos</label>
+      <Stepper step={CURRENT_PAGE}/>
+      <h3 className="step-title-custom d-flex justify-content-center mt-2 mt-lg-0">Sube tus fotos</h3>
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-5">
                 <small className='body-text d-flex '>Foto de perfil <p className='asterisk'> *</p></small> 
                 <div className='formfile-uploader-container'> 
                   {profilePic  == null ?
-                  <>
                     <FormFile 
-                      // {...register("profilePic", {
-                      //   required: true,
-                      // })}
                       fileType='image/*' 
                       controlId="form-1" 
                       onChange={handleProfilePicChange} 
                     />
-                    {errors.profilePic?.type === "required" && (
-                      <p className="error-message-custom text-danger">
-                        * Campo requerido
-                      </p>
-                    )}
-                  </>
                   : ( 
                   <div className='d-inline-block position-relative '> 
                     <img className='image-uploaded-container d-block m-auto justify-content-center' src={URL.createObjectURL(profilePic)} alt="Selected file" /> 
@@ -120,18 +109,10 @@ const {
                   {banner  == null ?
                     <>
                     <FormFile 
-                        // {...register("bannerImage", {
-                        //   required: "* Campo requerido",
-                        // })}
                       fileType='image/*' 
                       controlId="form-2" 
                       onChange={handleBannerChange} 
                     />
-                    {errors.bannerImage?.type === "required" && (
-                      <p className="error-message-custom text-danger">
-                        * Campo requerido
-                      </p>
-                    )}
                     </>
                   : ( 
                   <div className='d-inline-block position-relative '> 
@@ -180,18 +161,15 @@ const {
             </div>
             
           </div>
-          {/* <div className="text-center mt-4">
-            <ButtonAction
-              buttonClass="button-primary"
-              text="Siguiente"
-            ></ButtonAction> */}
-          {/* </div> */}
           <div className=" d-block d-md-flex flex-nowrap justify-content-center mt-4">
-            <button className="order-md-2 add-show-product rounded-5 mb-1 mx-1">
-              Siguiente 
-            </button>
-              <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
-                Atras
+            <div className='order-md-2 text-center'>
+              <ButtonAction
+                buttonClass="button-primary"
+                text="Siguiente"
+              ></ButtonAction>
+            </div>
+            <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
+              Atras
             </button>
           </div>
           </div>
