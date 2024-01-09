@@ -81,19 +81,11 @@
 }
 
 .circle-step {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-width: 1px;
     border-style: solid;
-    
-}
-
-.inactive-icon {
-    border-color: $secondaryColor !important;
-}
-
-.active-icon {
-    color: $primaryColor !important;
+    border-color: $primaryColor !important;
 }
 
 .border-progress-bar {
@@ -115,11 +107,6 @@
 .progress-icon-svg {
     width: 22px;
     height: 20px;
-}  
-
-.circle-step {
-    width: 35px;
-    height: 35px;
 }
 
 .input-description {
@@ -142,6 +129,9 @@
     font-weight: 500 !important;
 }
 
+.container_stepper {
+    max-width: 100% !important;
+}
 .form-container {
     max-width: 100% !important;
 }

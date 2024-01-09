@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <>
             <hr className='footer-divider border-3 opacity-75' />
-            <div className='container footer-container'>
+            <div className='container footer-container mt-4'>
                 <div className='row'>
                     <div className='row col-lg-4 about-artetopia'>
                         <img
@@ -199,7 +199,7 @@ const Footer = () => {
                 <small className='copyright-text  d-flex flex-wrap justify-content-center'>
                     {' '}
                     Copyright de equipo{' '}
-                    <p className='name-artetopia'> Artetopia </p> | Todos los
+                    <span className='name-artetopia m-0'> Artetopia </span> | Todos los
                     derechos reservados
                 </small>
             </div>

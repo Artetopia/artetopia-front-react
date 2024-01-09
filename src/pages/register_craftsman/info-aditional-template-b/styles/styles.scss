@@ -1,0 +1,24 @@
+@import "../../../../styles/variables";
+.button_upload {
+    height: 10rem;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px #E91E63 dashed;
+}
+
+.input__primary {
+    border: 1px solid $secondaryColor;
+    border-radius: 30px;
+}
+
+.text_f {
+    font-size: 12px;
+}
+
+.alert {
+    color: #E91E63 !important;
+}
+
+.alert::before {
+    content: "⚠ " !important;
+}   

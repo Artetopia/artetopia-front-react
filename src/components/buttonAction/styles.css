@@ -5,9 +5,13 @@
   border: 1px solid #e91e63;
   padding: 8px 10px;
   border-radius: 4px;
-  width: 100%;
   min-width: 150px;
-  max-width: 300px;
+  max-width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+.button-primary:hover {
+  color: #ffffff;
 }
 
 .button-secondary {
@@ -16,7 +20,11 @@
   color: #e91e63;
   padding: 8px 10px;
   border-radius: 4px;
-  width: 100%;
   min-width: 150px;
-  max-width: 300px;
+  max-width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+.button-secondary:hover {
+  color: #e91e63;
 }/*# sourceMappingURL=styles.css.map */

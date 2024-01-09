@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.sidebar {
+  min-width: 280px;
+  max-width: 280px;
+  background: #2b2e4a;
+  color: #fff;
+  margin-left: -280px;
+  transition: all 0.5s;
+}
+
+.sidebar.is-open {
+  margin-left: 0;
+  transition: 0.5s;
+}
+
+.sidebar-header h3 {
+  color: #fff;
+  padding: 1em;
+}
+
+.sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+.menu-open {
+  background: #6d7fcc;
+}
+
+.sidebar-header > span {
+  position: relative;
+  float: right;
+  margin: 0.5em;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  display: none;
+}
+
+.side-menu {
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.navLink a {
+  color: #fff;
+  border-radius: 50px;
+}
+
+.navLink a:hover {
+  background-color: #e91e63 !important;
+  color: #fff;
+}
+
+.navLink.active {
+  background-color: #e91e63 !important;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+  .content.is-open {
+    margin-left: 100%;
+  }
+  .sidebar.is-open {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transition: all 0.5s, height 0s;
+  }
+  .sidebar.is-open > .sidebar-header span {
+    display: unset;
+  }
+  li a.dropdown-toggle::after {
+    display: inline-block;
+    position: relative;
+    left: 68%;
+  }
+}/*# sourceMappingURL=styles.css.map */

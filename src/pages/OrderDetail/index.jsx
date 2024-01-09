@@ -3,10 +3,30 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from "react";
 import FormFile from "../../components/FormFile";
+import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from "reactstrap";
+import {useForm} from 'react-hook-form';
 
-function OrderDetail() {
+const OrderDetail = () => {
 
 const [show, setShow] = useState(false);
+const [openAccordion, setOpenAccordion] = useState("1");
+
+const [shippingPic, setShipping] = useState(null);
+const [shippingError, setShippingError] = useState(false);
+
+const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+const toggleAccordion = (id) => {
+    if(openAccordion === id) {
+        setOpenAccordion();
+    } else {
+        setOpenAccordion(id);
+    }
+}
 
 const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
@@ -47,11 +67,19 @@ const getTotalPrice = ((pieces, price) => {
     return totalPrice;
 })
 
-const [shippingPic, setShipping] = useState(null);
     const handleShippingPicChange = (event) => { 
     const file = event.target.files[0]; 
     setShipping(file); 
 };
+
+const submitTrackingOrder = (data) => {
+    console.log(shippingPic);
+    if(shippingPic === null) {
+        setShippingError(!shippingError);
+    } else {
+        console.log(data);
+    }
+}
 
     return (
         <div className='container'>
@@ -63,35 +91,60 @@ const [shippingPic, setShipping] = useState(null);
                 Confirmar entrega a paqueteria
             </Button>
             <Modal show={show} onHide={handleClose}>
+            <form onSubmit={handleSubmit((data) => submitTrackingOrder(data))}>
                 <Modal.Body>
                 <div className="rounded-4 px-lg-2">
                     <h2 className='subtitle-custom'>Seguimiento</h2>
-                    <p className='body-text-container my-1'>Número de seguimiento</p>
-                    <input className='imput-custom rounded-5 px-3 w-100' placeholder='Número de seguimiento' type='text'/>
-                    <p className='body-text-container my-1'>Paquetería</p>
-                    <select className="form-select imput-custom selected-shipping rounded-5" aria-label="Default select example">
-                        <option className='body-text-container' selected>Selecciona una paquetería</option>
-                        <option className='body-text-container' value="1">DHL</option>
-                        <option className='body-text-container' value="2">Redpack</option>
-                        <option className='body-text-container' value="3">Estafeta</option>
-                        <option className='body-text-container' value="4">FedEx</option>
-                        <option className='body-text-container' value="5">UPS</option>
-                        <option className='body-text-container' value="6">Correos de México</option>
-                        <option className='body-text-container' value="7">...Otro</option>
-                    </select>
+                        <div className="form-group">
+                            <p className='body-text-container my-1'>Número de seguimiento</p>
+                            <input className='form-control imput-custom w-100' placeholder='Número de seguimiento' type='text' name="shipingNumber" id="shipingNumber" {...register("shipingNumber", {
+                                required: {value: true, message: "El campo es requerido"}
+                            })}/>
+                            {errors.shipingNumber && (
+                                <p className="text-danger m-0">{errors.shipingNumber.message}</p>
+                            )}
+                        </div>
+                        <div className="form-group">
+                            <p className='body-text-container my-1'>Paquetería</p>
+                            <select className="form-select imput-custom selected-shipping rounded-5" aria-label="Default select example" name="carrier" id="carrier" {...register("carrier", {
+                                required: {value: true, message: "El campo es requerido"}
+                            })}>
+                                <option className='body-text-container' value="">Selecciona una paquetería</option>
+                                <option className='body-text-container' value="1">DHL</option>
+                                <option className='body-text-container' value="2">Redpack</option>
+                                <option className='body-text-container' value="3">Estafeta</option>
+                                <option className='body-text-container' value="4">FedEx</option>
+                                <option className='body-text-container' value="5">UPS</option>
+                                <option className='body-text-container' value="6">Correos de México</option>
+                                <option className='body-text-container' value="7">Otro</option>
+                            </select>
+                            {errors.carrier && (
+                                <p className="text-danger m-0">{errors.carrier.message}</p>
+                            )}
+                        </div>
                     <p className='body-text-container my-1'>Foto de confirmación de envío</p>
                     {shippingPic  == null ?
                         <FormFile fileType='image/*' controlId="form-1" onChange={handleShippingPicChange} />
-                        : ( 
-                        <img className='image-uploaded-container d-block m-auto justify-content-center w-100' src={URL.createObjectURL(shippingPic)} alt="Selected file" /> 
+                        : (
+                            <>
+                            <img className='image-uploaded-container d-block m-auto justify-content-center w-100' src={URL.createObjectURL(shippingPic)} alt="Selected file" />
+                            <button className="btn custom-button mt-2" type="button" onClick={() => setShipping(null)}>Eliminar foto</button>
+                            </>
+                        )}
+                    {shippingError && (
+                        <p className="text-danger m-0">Debe de seleccionar una imagen</p>
                     )}
                 </div>
                 </Modal.Body>
                 <Modal.Footer className='d-flex justify-content-center'>
-                    <Button className='close-modal-custom px-4' variant="secondary" onClick={handleClose}>
+                    <Button className='close-modal-custom px-4' onClick={handleClose}>
                     Cerrar
                     </Button>
+                    <Button type="submit" className='save-modal-custom px-4'>
+                    Guardar
+                    </Button>
                 </Modal.Footer>
+                </form>
             </Modal>
             <div className="d-flex justify-content-center justify-content-md-between my-3">
                 <ul className="list-group list-group-horizontal position-relative overflow-auto w-100">
@@ -122,16 +175,11 @@ const [shippingPic, setShipping] = useState(null);
                     </table>
                 </ul>
             </div>
-                <div className="accordion" id="accordionExample">
-                    <div className="accordion-item accordion-custom">
-                        <h2 className="accordion-header">
-                        <button className="accordion-button accordion-custom" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           Pedido #{number}
-                        </button>
-                        </h2>
-                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div className="accordion-body">
-                            <div className="d-flex justify-content-center justify-content-md-between my-3">
+            <Accordion open={openAccordion} toggle={toggleAccordion}>
+                <AccordionItem className="accordion-custom">
+                <AccordionHeader className="accordion-custom" targetId="1">Pedido #{number}</AccordionHeader>
+                    <AccordionBody accordionId="1">
+                    <div className="d-flex justify-content-center justify-content-md-between my-3">
                                     <ul className="list-group list-group-horizontal position-relative overflow-auto w-100">
                                         <table className="table">
                                             <tbody>
@@ -154,12 +202,10 @@ const [shippingPic, setShipping] = useState(null);
                                             </tbody>
                                         </table>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+                                </div>  
+                    </AccordionBody>
+                </AccordionItem>
+            </Accordion>
             </div>
             
         

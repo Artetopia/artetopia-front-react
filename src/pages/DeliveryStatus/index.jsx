@@ -1,6 +1,6 @@
 import "./deliveryStatus.scss";
 
-const deliveryStatus = ({guideNumber, status}) => {
+const DeliveryStatus = ({guideNumber, status}) => {
 
     return (
         <>
@@ -56,4 +56,4 @@ const deliveryStatus = ({guideNumber, status}) => {
     )
 }
 
-export default deliveryStatus;
+export default DeliveryStatus;
