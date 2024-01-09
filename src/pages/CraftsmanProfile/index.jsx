@@ -33,6 +33,7 @@ const CraftsmanProfile = () => {
                     <ButtonAction
                       buttonClass="button-primary font-size-small mt-4 mt-xl-1"
                       text="Cambiar foto perfil"
+                      type="submit"
                     ></ButtonAction>
                   </div>
                 </form>
@@ -114,6 +115,7 @@ const CraftsmanProfile = () => {
                     <ButtonAction
                       buttonClass="button-primary font-size-small mt-5"
                       text="Editar datos personales"
+                      type="submit"
                     ></ButtonAction>
                   </div>
                 </form>
