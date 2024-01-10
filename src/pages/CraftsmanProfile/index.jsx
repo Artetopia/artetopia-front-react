@@ -1,9 +1,14 @@
 import "./styles.css";
 import ButtonAction from "../../components/buttonAction";
+import { useForm } from "react-hook-form";
 import FormFile from "../../components/FormFile";
 
 const CraftsmanProfile = () => {
-  // const
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   return (
     <>
       <div className="container">
@@ -37,24 +42,48 @@ const CraftsmanProfile = () => {
                     ></ButtonAction>
                   </div>
                 </form>
-                <form className="col-lg-6" action="#">
+                <form
+                  onSubmit={handleSubmit((data) => console.log(data))}
+                  className="col-lg-6"
+                  action="#"
+                >
                   <div className="form-group mt-2 mt-xl-4">
-                    <label htmlFor="name">Nombre</label>
+                    <label htmlFor="name">Nombre(s)</label>
                     <input
                       type="text"
                       className="form-control primary_input shadow-none mt-1"
                       name="name"
                       id="name"
+                      {...register("name", {
+                        required: {
+                          value: true,
+                          message: "El campo es obligatorio",
+                        },
+                      })}
                     />
+                    {errors.name && (
+                      <p className="text-danger m-0">{errors.name.message}</p>
+                    )}
                   </div>
                   <div className="mt-2">
-                    <label htmlFor="surname">Apellidos</label>
+                    <label htmlFor="surname">Apellido(s)</label>
                     <input
                       type="text"
                       className="form-control primary_input shadow-none mt-1"
                       name="surname"
                       id="surname"
+                      {...register("surname", {
+                        required: {
+                          value: true,
+                          message: "El campo es requerido",
+                        },
+                      })}
                     />
+                    {errors.surname && (
+                      <p className="text-danger m-0">
+                        {errors.surname.message}
+                      </p>
+                    )}
                   </div>
                   <div className="mt-2">
                     <label htmlFor="phone">Teléfono</label>
@@ -64,8 +93,25 @@ const CraftsmanProfile = () => {
                         className="form-control primary_input shadow-none mt-1"
                         name="phone"
                         id="phone"
+                        {...register("phone", {
+                          required: {
+                            value: true,
+                            message: "El campo es obligatorio",
+                          },
+                          minLength: {
+                            value: 10,
+                            message: "El teléfono debe de contener 10 dígitos",
+                          },
+                          maxLength: {
+                            value: 10,
+                            message: "El teléfono debe de contener 10 dígitos",
+                          },
+                        })}
                       />
                     </div>
+                    {errors.phone && (
+                      <p className="text-danger m-0">{errors.phone.message}</p>
+                    )}
                   </div>
                   <div className="mt-2">
                     <label htmlFor="city">Estado</label>
@@ -74,6 +120,12 @@ const CraftsmanProfile = () => {
                       className="form-select form-select-lg primary_input shadow-none mt-1 craftsman-profile-font-dropdown content-colorSecondary__input"
                       name="state"
                       id="state"
+                      {...register("state", {
+                        required: {
+                          value: true,
+                          message: "El campo es requerido",
+                        },
+                      })}
                     >
                       <option value="Aguascalientes">Aguascalientes</option>
                       <option value="Baja California">Baja California</option>
@@ -110,11 +162,20 @@ const CraftsmanProfile = () => {
                       <option value="Yucatán">Yucatán</option>
                       <option value="Zacatecas">Zacatecas</option>
                     </select>
+                    {errors.state && (
+                      <p className="text-danger m-0">{errors.state.message}</p>
+                    )}
                   </div>
                   <div className="d-flex justify-content-md-end mb-lg-5">
                     <ButtonAction
                       buttonClass="button-primary font-size-small mt-5"
                       text="Editar datos personales"
+                      type="submit"
+                    ></ButtonAction>
+
+                    <ButtonAction
+                      buttonClass="button-primary font-size-small mt-5"
+                      text="Guardar"
                       type="submit"
                     ></ButtonAction>
                   </div>
