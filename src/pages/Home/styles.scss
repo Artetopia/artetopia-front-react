@@ -16,10 +16,12 @@
   }
 }
 
-.input_primary {
-  border: 1px solid $secondaryColor !important;
-  max-width: 500px;
-  border-radius: 30px !important;
+.section__artesano {
+  .input_primary {
+    border: 1px solid $secondaryColor !important;
+    max-width: 500px;
+    border-radius: 30px !important;
+  }
 }
 
 .card_about {
