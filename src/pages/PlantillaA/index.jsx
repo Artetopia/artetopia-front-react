@@ -36,18 +36,18 @@ const PlantillaA = () => {
   ];
   return (
     <>
-      <div className="position-relative">
-        <img src={bgPlantillaA} alt="" className="w-100 d-block" />
+      <div className="position-relative templateA-container">
+        <img src={bgPlantillaA} alt="" className="w-100 d-block templateA-image" />
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-8 mt-4">
-              <p className="text-center">
+              <p className="text-center templateA-description mb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit qui consectetur quam magni maxime, fuga ducimus facilis
                 aut quasi laborum? Saepe dolorem voluptatem tenetur perspiciatis
                 quasi odio sapiente, quas odit?
               </p>
-              <div className="d-flex social-media-container justify-content-center">
+              <div className="d-flex social-media-container justify-content-center mb-3">
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="social-primary text-white m-1 border-0"

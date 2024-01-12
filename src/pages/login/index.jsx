@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import loginImage from "../../../public/assets/login_image.png";
+import loginImage from "/assets/login_image.png";
 import { Link } from "react-router-dom";
 import ButtonAction from "../../components/buttonAction";
 import { useForm } from "react-hook-form";
@@ -40,7 +40,7 @@ const LoginForm = () => {
             </div>
             <div className="d-flex flex-column">
             <span className="mt-2">No tienes cuenta? <Link className="text_primary fw-bold" to="/register">Regístrate</Link></span>
-            <ButtonAction text="Iniciar sesión" buttonClass="button-primary mt-3"></ButtonAction>
+            <ButtonAction text="Iniciar sesión" buttonClass="button-primary mt-3" type="submit"></ButtonAction>
             </div>
           </form>
         </div>
