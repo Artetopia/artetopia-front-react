@@ -80,11 +80,14 @@
 }
 
 .comprar {
-    width: 141px;
+    width: 241px;
     height: 46px;
     border-radius: 4px;
     background-color: #e91e63;
     margin-bottom: 15px;
+    color: white;
+    border: none;
+
 }
 
 
@@ -167,6 +170,14 @@
   margin: 8px;
 }
 
+.carrito {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.comprar {
+    color: white;
+}
+
 
 /* Call to action */
 
@@ -184,10 +195,14 @@
     margin-top: 30px;
 }
 
+
+
   }
 
 
 @media only screen and (min-width: 1400px) {
+
+   
     .flex-changes {
         display: flex;
         flex-direction: row;
@@ -223,5 +238,12 @@
     .carrousel-image {
         width: 217px;
         height: 209px;
+    }
+    .carrito {
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+    .comprar {
+        color: white;
     }
 }
