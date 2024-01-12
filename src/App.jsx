@@ -28,7 +28,7 @@ import Checkout from "./pages/checkout";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
 import Artesano from "./pages/Artesano";
-
+import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
   return (
