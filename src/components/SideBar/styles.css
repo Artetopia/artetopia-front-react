@@ -52,12 +52,14 @@
 
 .navLink a {
   color: #fff;
-  border-radius: 50px;
+  text-decoration: none;
 }
 
-.navLink a:hover {
+.navLink:hover {
   background-color: #e91e63 !important;
   color: #fff;
+  border-radius: 50px;
+  padding: 10px;
 }
 
 .navLink.active {
