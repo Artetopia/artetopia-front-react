@@ -21,7 +21,7 @@ const ImageGallery = () => {
 
     <>
     <div className="container">
-          <section className='username'>
+    <section className='username'>
         <img src={Imagen6} alt="user_image" className='user_image' />
         <h1 className='username_tittle'>Jose Mungüia</h1>
     </section>
@@ -59,7 +59,7 @@ const ImageGallery = () => {
       <h3 className='price'>$450</h3>
       
       <div className='button-comprar'>
-      <button className='comprar'><img src={Carrito} className='carrito'></img>Comprar</button>
+      <button className='comprar'><img src={Carrito} className='carrito'></img>Agregar al carrito</button>
       </div>
       </section>
       

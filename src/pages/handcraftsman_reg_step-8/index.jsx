@@ -8,10 +8,9 @@ const Step_8 = () => {
   return (
     <>
       <div className="d-flex flex-column align-items-center">
+      <div className="d-flex justify-content-center align-items-center">
       <h1 className="tittle">Felicidades!</h1>
-      <p className="paragraph">
-        Haz concluido tu registro como <span className="paragraph_bold">artesano vendedor</span> en <span className="paragraph_pink">Artetopia.</span>
-      </p>
+      </div>
       <img src={Step8image} alt="Joven que felizita al usuario con el registro" className="image_final-step" />
       <p className="paragraph_confirmation">
         Por favor, revisa tu correo los proximos dias porque te estaremos
@@ -19,7 +18,7 @@ const Step_8 = () => {
       </p>
 
       <div>
-      <Button color="primary" style={{ backgroundColor: "#e91e63", outline: "none" }}>
+      <Button color="primary" style={{ backgroundColor: "#e91e63", outline: "none" , border: 'none'}}>
           Regresar a Artetopia
         </Button>
       </div>

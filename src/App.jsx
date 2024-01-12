@@ -26,169 +26,12 @@ import TemplateB from "./pages/templates/templateB"
 import ShoppingCar from "./pages/shopping_car";
 import RegisterArtesanoPersonalInfo from "./pages/registerArtesanoPersonalInfo";
 import Checkout from './pages/checkout';
-import { useState } from "react";
 
+import Artesano from "./pages/Artesano";
+import CraftsmanProfile from "./pages/CraftsmanProfile";
+import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
-   
-  const [artesanos, setArtesanos] = useState([
-    {
-    id: 1,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 2,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 3,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 4,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 5,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 6,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 7,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {id: 8,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 9,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 10,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 11,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-    {
-        id: 12,
-      name: "Landon Hunt",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos dicta delectus praesentium, atque quam necessitatibus, quibusdam maxime quaerat tenetur sint quod suscipit neque animi excepturi. Corporis molestiae nemo deserunt magnam.",
-      profileImage: "https://randomuser.me/api/portraits/men/64.jpg",
-      images: [
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-        "https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp",
-      ],
-    },
-  ]);
-  const [numberOfItemsArtesano, setNumberOfItemsArtesano] = useState(6);
 
   return (
     <>
@@ -196,21 +39,24 @@ function App() {
         <Navbare></Navbare>
       </header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
-        <Route path="/login" element={<LoginForm/>}></Route>
-        <Route path="/verify" element={<VerifyAccount/>}></Route>
-        <Route path="/craftmans" element={<DashboardClient/>}></Route>
-        <Route path="/craftmanA" element={<PlantillaA/>}></Route>
-        <Route path="/craftmanB" element={<TemplateB/>}></Route>
-        <Route path="/productDetail" element={<ImageGallery/>}></Route>
-        <Route path="/cart" element={<ShoppingCar/>}></Route>
-        <Route path="/checkout" element={<Checkout/>}></Route>
-        <Route path="/delivery" element={<DeliveryStatus guideNumber={1234} status="delivered"/>}></Route>
-        <Route path="/craftman/products" element={<ModalButtons/>}></Route>
-        <Route path="/craftman/payments" element={<Payments/>}></Route>
-        {/* Route dashobard artesano perfil */}
-        {/* Route dashboard artesano plantilla */}
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<LoginForm />}></Route>
+        <Route path="/verify" element={<VerifyAccount />}></Route>
+        <Route path="/craftmans" element={<DashboardClient />}></Route>
+        <Route path="/craftmanA" element={<PlantillaA />}></Route>
+        <Route path="/craftmanB" element={<TemplateB />}></Route>
+        <Route path="/productDetail" element={<ImageGallery />}></Route>
+        <Route path="/cart" element={<ShoppingCar />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
+        <Route
+          path="/delivery"
+          element={<DeliveryStatus guideNumber={1234} status="delivered" />}
+        ></Route>
+        <Route path="/craftman/products" element={<ModalButtons />}></Route>
+        <Route path="/craftman/payments" element={<Payments />}></Route>
+        <Route path="/craftman/profile" element={<CraftsmanProfile />}></Route>
+        <Route path="/craftman/template" element={<DashboardTemplate/>}></Route>
         <Route path="/craftman/orders" element={<OrdersCraftsman/>}></Route>
         <Route path="/craftman/orderDetail" element={<OrderDetail/>}></Route>
         <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
@@ -221,6 +67,7 @@ function App() {
         <Route path="/register/infoTemplate" element={<AditionalTemplateB/>}></Route>
         <Route path="/register/payment" element={<Step_7/>}></Route>
         <Route path="/register/complete" element={<Step_8/>}></Route>
+        <Route path="/craftman" element={<Artesano/>}></Route>
       </Routes>
       <footer>
         <Footer></Footer>

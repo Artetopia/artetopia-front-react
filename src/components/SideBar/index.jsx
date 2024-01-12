@@ -1,21 +1,108 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faShop, faListCheck, faFile, faCreditCard, faUserPlus, faCircleUser, faCircleXmark, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faShop,
+  faListCheck,
+  faFile,
+  faCreditCard,
+  faUserPlus,
+  faCircleUser,
+  faCircleXmark,
+  faArrowRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 const SideBar = ({ isOpen, toggle, userRole }) => {
   const itemsMenu = [
-    { name: "Mi perfil", goesTo:"", type: "link", icon: faUser, id: 1, role: "Artesano" },
-    { name: "Mis productos", goesTo:"", type: "link", icon: faShop, id: 2, role: "Artesano" },
-    { name: "Mis pedidos", goesTo:"", type: "link", icon: faListCheck, id: 3, role: "Artesano" },
-    { name: "Plantilla", goesTo:"", type: "link", icon: faFile, id: 4, role: "Artesano" },
-    { name: "Pagos", goesTo:"", type: "link", icon: faCreditCard, id: 5, role: "Artesano" },
-    { name: "Artesanos pendientes", goesTo:"", type: "link", icon: faUserPlus, id: 6, role: "Admin" },
-    { name: "Artesanos", goesTo:"", type: "link", icon: faUser, id: 7, role: "Admin" },
-    { name: "Pedidos", goesTo:"", type: "link", icon: faListCheck, id: 8, role: "Admin" },
-    { name: "Usuarios", goesTo:"", type: "link", icon: faCircleUser, id: 9, role: "Admin" },
+    {
+      name: "Mi perfil",
+      goesTo: "",
+      type: "link",
+      icon: faUser,
+      id: 1,
+      role: "Artesano",
+      url: "profile"
+    },
+    {
+      name: "Mis productos",
+      goesTo: "",
+      type: "link",
+      icon: faShop,
+      id: 2,
+      role: "Artesano",
+      url: "products"
+    },
+    {
+      name: "Mis pedidos",
+      goesTo: "",
+      type: "link",
+      icon: faListCheck,
+      id: 3,
+      role: "Artesano",
+      url: "orders"
+    },
+    {
+      name: "Plantilla",
+      goesTo: "",
+      type: "link",
+      icon: faFile,
+      id: 4,
+      role: "Artesano",
+      url: "template"
+    },
+    {
+      name: "Pagos",
+      goesTo: "/artesano/payments",
+      type: "link",
+      icon: faCreditCard,
+      id: 5,
+      role: "Artesano",
+      url: "payments"
+    },
+    {
+      name: "Artesanos pendientes",
+      goesTo: "",
+      type: "link",
+      icon: faUserPlus,
+      id: 6,
+      role: "Admin",
+      url: "pendingCraftmans"
+    },
+    {
+      name: "Artesanos",
+      goesTo: "",
+      type: "link",
+      icon: faUser,
+      id: 7,
+      role: "Admin",
+      url: "craftmans"
+    },
+    {
+      name: "Pedidos",
+      goesTo: "",
+      type: "link",
+      icon: faListCheck,
+      id: 8,
+      role: "Admin",
+      url: "orders"
+    },
+    {
+      name: "Usuarios",
+      goesTo: "",
+      type: "link",
+      icon: faCircleUser,
+      id: 9,
+      role: "Admin",
+      url: "users"
+    },
   ];
+  const location = useLocation();
+  const {pathname} = location;
+  console.log(pathname);
+
   const [itemsMenuFilter, setItemsMenuFilter] = useState([]);
 
   useEffect(() => {
@@ -47,45 +134,24 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
             {itemsMenuFilter.map((data) => {
               return (
                 <>
-                  <NavItem className="navLink mb-1">
-                    <NavLink>
+                  <NavItem className={`navLink my-1 p-2 ${pathname.includes(data.url) ? "active" : ""}`}>
+                    <Link to={data.goesTo}>
                       <FontAwesomeIcon icon={data.icon} className="mr-2" />
                       {data.name}
-                    </NavLink>
+                    </Link>
                   </NavItem>
                 </>
               );
             })}
-             <NavItem className="navLink mb-1">
-                    <NavLink>
-                      <FontAwesomeIcon icon={faArrowRightFromBracket} className="mr-2" />
-                      Cerrar sesión
-                    </NavLink>
-                  </NavItem>
-            {/* <NavItem className="navLink active mb-1">
-              <NavLink>
-                <FontAwesomeIcon icon={faUserPlus} className="mr-2" />
-                Artesanos pendientes
-              </NavLink>
+            <NavItem className="navLink my-1 p-2">
+              <Link to="/">
+                <FontAwesomeIcon
+                  icon={faArrowRightFromBracket}
+                  className="mr-2"
+                />
+                Cerrar sesión
+              </Link>
             </NavItem>
-            <NavItem className="navLink mb-1">
-              <NavLink>
-                <FontAwesomeIcon icon={faCircleXmark} className="mr-2" />
-                Portfolio
-              </NavLink>
-            </NavItem>
-            <NavItem className="navLink mb-1">
-              <NavLink>
-                <FontAwesomeIcon icon={faCircleXmark} className="mr-2" />
-                FAQ
-              </NavLink>
-            </NavItem>
-            <NavItem className="navLink mb-1">
-              <NavLink>
-                <FontAwesomeIcon icon={faCircleXmark} className="mr-2" />
-                Contact
-              </NavLink>
-            </NavItem> */}
           </Nav>
         </div>
       </div>
