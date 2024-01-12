@@ -10,7 +10,6 @@ import RegisterArtesanoInfoSite from "./pages/registerArtesanoInfoSite";
 import ModalButtons from "./pages/caftrsman_list-of-products";
 import DashboardClient from "./pages/Dashboard-cliente";
 import DeliveryStatus from "./pages/DeliveryStatus";
-import List_products from "./pages/handcraftsman_product-list";
 import Step_7 from "./pages/handcraftsman_reg_step-7";
 import Step_8 from "./pages/handcraftsman_reg_step-8";
 import Page3 from "./pages/Page3";
@@ -20,18 +19,20 @@ import PlantillaA from "./pages/PlantillaA";
 import ImageGallery from "./pages/product-carousel/ImageGallery";
 import AditionalTemplateB from "./pages/register_craftsman/info-aditional-template-b";
 import SelectTemplate from "./pages/register_craftsman/select_templates";
-import RegisterArtesanoPersonalInfo from "./pages/registerArtesanoPersonalInfo";
-import ShoppingCar from "./pages/shopping_car";
-import TemplateB from "./pages/templates/templateB";
-import VerifyAccount from "./pages/VerifyAccount";
-import Checkout from "./pages/checkout";
-import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
+import OrdersCraftsman from "./pages/OrdersCraftsman";
+import VerifyAccount from "./pages/VerifyAccount";
+import TemplateB from "./pages/templates/templateB"
+import ShoppingCar from "./pages/shopping_car";
+import RegisterArtesanoPersonalInfo from "./pages/registerArtesanoPersonalInfo";
+import Checkout from './pages/checkout';
+
 import Artesano from "./pages/Artesano";
 import CraftsmanProfile from "./pages/CraftsmanProfile";
 import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
+
   return (
     <>
       <header>
