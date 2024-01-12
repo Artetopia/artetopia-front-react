@@ -27,7 +27,8 @@ import VerifyAccount from "./pages/VerifyAccount";
 import Checkout from "./pages/checkout";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
-
+import Artesano from "./pages/Artesano";
+import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path="/register/infoTemplate" element={<AditionalTemplateB/>}></Route>
         <Route path="/register/payment" element={<Step_7/>}></Route>
         <Route path="/register/complete" element={<Step_8/>}></Route>
+        <Route path="/craftman" element={<Artesano/>}></Route>
       </Routes>
       <footer>
         <Footer></Footer>
