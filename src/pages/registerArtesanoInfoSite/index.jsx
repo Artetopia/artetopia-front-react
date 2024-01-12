@@ -62,11 +62,11 @@ const RegisterArtesanoInfoSite = () => {
   return (
     <>
       <div className="container infoSite-container">
-        <div className="row">
+        <div className="row mt-3">
           <Stepper step={CURRENT_PAGE}></Stepper>
         </div>
         <div className="row text-center">
-          <h3 className="infoSite-subHeading">Información de tu sitio</h3>
+          <h3 className="infoSite-subHeading mt-2 mt-lg-0">Información de tu sitio</h3>
         </div>
         <form onSubmit={handleSubmit((data) => submitArtesanoInfoSite(data))}>
           <div className="row mt-4">

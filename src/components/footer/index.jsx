@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <>
             <hr className='footer-divider border-3 opacity-75' />
-            <div className='container footer-container'>
+            <div className='container footer-container mt-4'>
                 <div className='row'>
                     <div className='row col-lg-4 about-artetopia'>
                         <img

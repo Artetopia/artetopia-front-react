@@ -10,6 +10,13 @@
         border-radius: 50px;
     }
     .artesanoContainer-products {
+        .artesanoContainer__products-maxHeight {
+            max-height: 120px;
+        }
+        .artesano__line-primary {
+            color: $primaryColor;
+            height: 1px;
+        }
         .productImage {
             width: 40px;
             height: 40px;
@@ -21,6 +28,7 @@
         }
         .icon {
             font-size: 20px;
+            color: $primaryColor;
         }
         .controls {
             .inputControls {

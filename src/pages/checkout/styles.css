@@ -7,6 +7,13 @@
   border: 1px solid #2b2e4a;
   border-radius: 50px;
 }
+.checkout-container .artesanoContainer-products .artesanoContainer__products-maxHeight {
+  max-height: 120px;
+}
+.checkout-container .artesanoContainer-products .artesano__line-primary {
+  color: #e91e63;
+  height: 1px;
+}
 .checkout-container .artesanoContainer-products .productImage {
   width: 40px;
   height: 40px;
@@ -19,6 +26,7 @@
 }
 .checkout-container .artesanoContainer-products .icon {
   font-size: 20px;
+  color: #e91e63;
 }
 .checkout-container .artesanoContainer-products .controls .inputControls {
   max-width: 40px;

@@ -9,7 +9,7 @@ import {
   Container,
 } from "reactstrap";
 import "./styles.css";
-import loginImage from "../../../public/assets/login_image.png";
+import loginImage from "/assets/login_image.png";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {

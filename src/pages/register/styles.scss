@@ -1,37 +1,29 @@
 @import "../../styles/variables";
-* {
-    font-family: $fontkarla;
-}
 
-input[type="radio"]:checked {
-    background-color: $primaryColor;
-    border-color: $primaryColor;
-}
-
-.title-login{
+.register-container {
+  .title-login {
     font-family: $fontMontserrat;
     font-weight: bold;
     &.title-colorSecondary {
-        color: $secondaryColor;
+      color: $secondaryColor;
     }
-}
-
-.description {
+  }
+  .description {
     &.description-colorSecondary {
-        color: $secondaryColor;
+      color: $secondaryColor;
     }
-}
-
-.form-container .form-container__input {
+  }
+  .custom-control-input {
+    input[type="radio"]:checked {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+    }
+  }
+  .form-container .form-container__input {
     border: 1px solid $secondaryColor;
     border-radius: 30px;
-}
-
-.circle {
-    width: 25px;
-    height: 25px;
-}
-
-.text_primary {
+  }
+  .text_primary {
     color: $primaryColor;
+  }
 }

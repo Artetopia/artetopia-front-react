@@ -8,7 +8,7 @@ import "./styles.css";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const ImageGallery = () => {
-  const images = [Imagen1, Imagen2, Imagen3]; //
+  const images = [Imagen1, Imagen2, Imagen3, Imagen3]; //
 
   // State to keep track of the current main image index
   const [currentIndex, setCurrentIndex] = useState(0);
