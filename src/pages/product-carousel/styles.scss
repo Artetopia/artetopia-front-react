@@ -37,14 +37,13 @@
     height: 100px;
     width: 100px;
     margin: 8px;
-  }
+}
 
 
 .section_product {
     background-color: $secondaryColor;
-    width: 100%;
     padding: 10px;
-    height: auto;
+    height: 520px;
 }
 
 /* Title and paragraph of the blue card */
@@ -66,8 +65,6 @@
 
 
 .main-image {
-    width: 100%;
-    height: 243px;
     object-fit: contain;
 }
 
@@ -106,89 +103,89 @@
 /* Media querries, next is tablet */
 
 @media only screen and (min-width: 768px) {
-   /* Username */
-   
-.username {
-    justify-content: start;
+    /* Username */
+
+    .username {
+        justify-content: start;
+    }
+
+    .user_image {
+        width: 133px;
+        height: 133px;
+        margin: 20px 80px 20px 30px;
+    }
+
+    .username_tittle {
+        font-family: $fontMontserrat;
+        font-size: 40px;
+    }
+
+    /* Main card, next is title and p */
+
+
+    .section_product {
+        background-color: $secondaryColor;
+        width: 90%;
+        padding: 10px;
+        margin: 20px;
+        height: 720px;
+    }
+
+    .card_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paragraph {
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .product_title {
+        font-size: 36px;
+        margin: 2px;
+        font-family: $fontMontserrat;
+    }
+
+
+    /* Images (main and carrousel) */
+
+
+    .main-image {
+        height: 355px;
+    }
+
+
+    .carrousel-image {
+        height: 154px;
+        width: 168px;
+        margin: 8px;
+    }
+
+
+    /* Call to action */
+
+    .price {
+        font-size: 40px;
+        margin-top: 0px;
+        padding-right: 40px;
+    }
+
+    .call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
 }
 
-.user_image {
-    width: 133px;
-    height: 133px;
-    margin: 20px 80px 20px 30px;
-}
 
-.username_tittle {
-    font-family: $fontMontserrat;
-    font-size: 40px;
-}
-
-/* Main card, next is title and p */
-
-
-.section_product {
-    background-color: $secondaryColor;
-    width: 90%;
-    padding: 10px;
-    margin: 20px;
-}
-
-.card_flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.paragraph {
-    font-size: 24px;
-    margin-bottom: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.product_title {
-    font-size: 36px;
-    margin: 2px;
-    font-family: $fontMontserrat;
-}
-
-
-/* Images (main and carrousel) */
-  
-
- .main-image {
-    width: 533px;
-    height: 355px;
- }
-
-
-.carrousel-image {
-  height: 154px;
-  width: 168px;
-  margin: 8px;
-}
-
-
-/* Call to action */
-
-.price {
-    font-size: 40px;
-    margin-top: 0px;
-    padding-right: 40px;
-}
-
-.call-to-action {
-    display: flex;
-    align-items:center;
-    justify-content: flex-start;
-    margin-left: 100px;
-    margin-top: 30px;
-}
-
-  }
-
-
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1024px) {
     .flex-changes {
         display: flex;
         flex-direction: row;
@@ -203,19 +200,22 @@
         text-align: left;
         margin: 15px;
     }
+
     .paragraph {
         text-align: left;
         margin: 15px;
         margin-bottom: 40px;
     }
+
     .main-image {
-        width: 887px;
         height: 515px;
         object-fit: contain;
     }
+
     .call-to-action {
         margin: 40px;
     }
+
     .card_flex {
         width: 1280px;
         height: 857px;
@@ -224,5 +224,9 @@
     .carrousel-image {
         width: 217px;
         height: 209px;
+    }
+
+    .section_product_carrusel {
+        height: 650px;
     }
 }
