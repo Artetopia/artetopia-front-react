@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.login__container {
+    .login__title {
+        font-family: $fontMontserrat;
+        color: $secondaryColor;
+        font-weight: bold;
+    }
+    .login__image {
+        width: 100%;
+        max-height: 650px;
+        object-fit: contain;
+    }
+    .input_primary {
+        border: 1px solid $secondaryColor;
+        border-radius: 30px;
+    }
+    .text_primary {
+        color: $primaryColor;
+    }
+}

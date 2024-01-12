@@ -4,10 +4,6 @@ fieldset, label {
   padding: 0;
 }
 
-body {
-  margin: 20px;
-}
-
 .rating {
   border: none;
   margin-right: 49px;
@@ -48,7 +44,7 @@ body {
   color: #FFED85;
 }
 
-.card {
+.card_feed {
   position: relative;
   display: flex;
   width: 350px;
@@ -73,24 +69,6 @@ p {
 
 h4 {
   margin-top: 18px;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn {
-  border-radius: 22px;
-  text-transform: capitalize;
-  font-size: 13px;
-  padding: 8px 19px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #D50000;
-}
-
-.btn:hover {
-  background-color: #D32F2F !important;
 }
 
 .website-name-label {

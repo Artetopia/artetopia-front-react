@@ -1,35 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-* {
-  font-family: "Karla", sans-serif;
-}
-
-input[type=radio]:checked {
-  background-color: #e91e63;
-  border-color: #e91e63;
-}
-
-.title-login {
+.register-container .title-login {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
-.title-login.title-colorSecondary {
+.register-container .title-login.title-colorSecondary {
   color: #2b2e4a;
 }
-
-.description.description-colorSecondary {
+.register-container .description.description-colorSecondary {
   color: #2b2e4a;
 }
-
-.form-container .form-container__input {
+.register-container .custom-control-input input[type=radio]:checked {
+  background-color: #e91e63;
+  border-color: #e91e63;
+}
+.register-container .form-container .form-container__input {
   border: 1px solid #2b2e4a;
   border-radius: 30px;
 }
-
-.circle {
-  width: 25px;
-  height: 25px;
-}
-
-.text_primary {
+.register-container .text_primary {
   color: #e91e63;
 }/*# sourceMappingURL=styles.css.map */

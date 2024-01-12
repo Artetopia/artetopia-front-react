@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+
+.heading_primary {
+  color: $primaryColor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.bg_secondary {
+  background-color: $secondaryColor;
+}
+
+#call-to-action {
+  .max__width {
+    max-width: 75%;
+  }
+}
+
+.section__artesano {
+  .input_primary {
+    border: 1px solid $secondaryColor !important;
+    max-width: 500px;
+    border-radius: 30px !important;
+  }
+}
+
+.card_about {
+  height:30rem !important;
+  min-height: fit-content !important;
+ }
+ .card_text {
+   font-family: $fontkarla;
+   font-size: 18px;  
+ }
+ 
+ .card_title {
+   font-family: "Montserrat", sans-serif;
+ }
+ 
+ .card_artetopia1 {
+   text-align: center;
+   background-image: $gradientCard,
+     url("/images/artetopia_1.png");
+   background-size: cover;
+ }
+ 
+ .card_artetopia2 {
+   text-align: center;
+   background-image: $gradientCard,
+     url("/images/artetopia_2.png");
+   background-size: cover;
+ }
+ 
+ .card_artetopia3 {
+   text-align: center;
+   background-image: $gradientCard,
+     url("/images/artetopia_3.png");
+   background-size: cover;
+ }

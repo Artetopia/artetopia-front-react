@@ -52,17 +52,19 @@
 
 .navLink a {
   color: #fff;
-  border-radius: 50px;
+  text-decoration: none;
 }
 
-.navLink a:hover {
+.navLink:hover {
   background-color: #e91e63 !important;
   color: #fff;
+  border-radius: 50px;
 }
 
 .navLink.active {
   background-color: #e91e63 !important;
   border-radius: 50px;
+  color: #fff;
 }
 
 @media only screen and (max-width: 500px) {

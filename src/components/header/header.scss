@@ -47,7 +47,7 @@
     display: none;
 }
 
-.title {
+.heroSection_title {
     /* margin: 10px; */
     margin-top: 40px;
     margin-bottom: 40px;
@@ -110,7 +110,7 @@
 /* Media Querries */
 
 @media only screen and (min-width: 744px) {
-    .title {
+    .heroSection_title {
         font-size: 40px;
     }
     .pink_artetopia {
@@ -139,7 +139,7 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .title {
+    .heroSection_title {
         font-size: 70px;
     }
     .pink_artetopia {
@@ -170,14 +170,14 @@
         transition: all 0.5s;
     }
 
-    .desktop_video_icon:hover {
-        transform: translateZ(25px);
-    }
+    // .desktop_video_icon:hover {
+    //     transform: translateZ(25px);
+    // }
 
    
 
 
-    .title {
+    .heroSection_title {
         width: 525px;
         text-align: left;
         margin: 0px;
