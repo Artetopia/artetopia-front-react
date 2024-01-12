@@ -1,5 +1,6 @@
 import "./styles.css";
 import ButtonAction from "../../components/buttonAction";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormFile from "../../components/FormFile";
 
@@ -9,6 +10,11 @@ const CraftsmanProfile = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [profilePicture, setProfilePicture] = useState(null);
+  const handleProfilePicture = (event) => {
+    const file = event.target.files[0];
+    setProfilePicture(file);
+  };
   return (
     <>
       <div className="container">
@@ -19,20 +25,23 @@ const CraftsmanProfile = () => {
               <div className="d-lg-flex">
                 <form className="col-lg-6" action="#">
                   <div className="d-flex justify-content-center p-xl-3">
-                    {/* <div className="col-12">
-                    <FormFile
-                      className="profile-pic-size"
-                      fileType="image/*"
-                      controlId="form-3"
-                      // multiple={true}
-                      // onChange={handleProductPicsChange}
-                    />
-                  </div> */}
-                    <img
-                      className="profile-picture__craftsman img-fluid img-thumbnail"
-                      src="../public/images/craftsmanProfilePicture.png"
-                      alt="Profile Picture"
-                    />
+                    {!profilePicture ? (
+                      <div className="col-12">
+                        <FormFile
+                          className="profile-pic-size"
+                          fileType="image/*"
+                          controlId="form-3"
+                          // multiple={true}
+                          onChange={handleProfilePicture}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        className="profile-picture__craftsman img-thumbnail"
+                        src={URL.createObjectURL(profilePicture)}
+                        alt="Profile Picture"
+                      />
+                    )}
                   </div>
                   <div className="d-flex justify-content-md-center">
                     <ButtonAction
@@ -40,6 +49,14 @@ const CraftsmanProfile = () => {
                       text="Cambiar foto perfil"
                       type="submit"
                     ></ButtonAction>
+                    {profilePicture && (
+                      <ButtonAction
+                        buttonClass="button-secondary font-size-small mt-4 mt-xl-1 ms-3"
+                        text="Eliminar"
+                        type="button"
+                        action={() => setProfilePicture(null)}
+                      ></ButtonAction>
+                    )}
                   </div>
                 </form>
                 <form
@@ -294,6 +311,11 @@ const CraftsmanProfile = () => {
                     <ButtonAction
                       buttonClass="button-primary font-size-small mt-3"
                       text="Editar"
+                    ></ButtonAction>
+                    <ButtonAction
+                      buttonClass="button-primary font-size-small mt-3"
+                      text="Guardar"
+                      type="submit"
                     ></ButtonAction>
                   </div>
                 </div>

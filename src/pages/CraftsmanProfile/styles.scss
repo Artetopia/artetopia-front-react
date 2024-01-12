@@ -17,9 +17,10 @@
 }
 
 .profile-picture__craftsman {
-  height: 62%;
-  width: 62%;
+  height: 225px;
+  width: 225px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .craftsman-profile-categories__selected {
