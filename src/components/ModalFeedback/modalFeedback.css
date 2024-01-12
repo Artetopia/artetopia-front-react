@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+
+.rating {
+  border: none;
+  margin-right: 49px;
+}
+
+.rating > [id^=star] {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 2.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+.rating > [id^=star]:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+.rating > [id^=star]:checked + label:hover,
+.rating > [id^=star]:checked ~ label:hover,
+.rating > label:hover ~ [id^=star]:checked ~ label,
+.rating > [id^=star]:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+.card_feed {
+  position: relative;
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: none !important;
+}
+
+.card .card-body {
+  padding: 1rem 1rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+p {
+  font-size: 14px;
+}
+
+h4 {
+  margin-top: 18px;
+}
+
+.website-name-label {
+  color: #e91e63;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  height: 100px;
+}
+
+.website-profilePic {
+  width: 140px;
+  height: 134px;
+  border-color: #e91e63;
+  border-style: solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rate-text {
+  color: #2b2e4a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.custom-button {
+  background-color: #e91e63 !important;
+  border-color: #e91e63 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: white;
+}
+
+.custom-button:hover {
+  background-color: #e91e63 !important;
+}
+
+@media (min-width: 768px) {
+  .website-profilePic {
+    width: 180px;
+    height: 170px;
+  }
+}
+@media (min-width: 992px) {
+  .website-profilePic {
+    width: 220px;
+    height: 210px;
+  }
+}/*# sourceMappingURL=modalFeedback.css.map */

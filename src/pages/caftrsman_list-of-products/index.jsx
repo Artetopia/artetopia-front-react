@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './styles.css';
-import ImageProduct from "../../assets/image_producto.png"
+import ImageProduct from "/assets/Image_producto.png";
 
 
 const ModalButtons = () => {

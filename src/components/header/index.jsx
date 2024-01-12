@@ -6,6 +6,7 @@ import imagePlayButtton from '../../../public/assets/play-button.svg';
 import topDescription from '../../../public/assets/top_descripcion.svg';
 import Navbare from '../../components/navbar';
 import AnimationButton from '../../components/animation_button';
+import ButtonAction from '../buttonAction';
 
 function HeaderComponent() {
     return (
@@ -21,7 +22,7 @@ function HeaderComponent() {
                             El marketplace de artesanías mas confiable
                         </p>
                     </div>
-                    <h1 className='title'>
+                    <h1 className='heroSection_title'>
                         Bienvenido a{' '}
                         <span className='pink_artetopia'>ARTETOPIA</span>
                     </h1>
@@ -32,7 +33,7 @@ function HeaderComponent() {
                         artesanos de México.
                     </p>
                     <div className='hero_flex_button_icon'>
-                        <AnimationButton></AnimationButton>
+                        <ButtonAction buttonClass="button-primary" text="Registrarse" action="./register"></ButtonAction>
                         <div className='desktop_video'>
                             <img
                                 src={imagePlayButtton}

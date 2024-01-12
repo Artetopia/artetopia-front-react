@@ -9,7 +9,8 @@ import {
   Container,
 } from "reactstrap";
 import "./styles.css";
-import loginImage from "../../assets/login_image.png"
+import loginImage from "/assets/login_image.png";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [login, setLogin] = useState("");
@@ -62,7 +63,7 @@ const LoginForm = () => {
                 Email
               </Label>
               <Input
-                className="form_login"
+                className="form-control form_login"
                 type="email"
                 name="email"
                 id="email"
@@ -109,7 +110,7 @@ const LoginForm = () => {
 
         <div className="flex_submit_button">
           <p className="form_text_registrate">
-            No tienes cuenta?  <span>Registrate</span>
+            No tienes cuenta?  <Link className="login__link">Registrate</Link>
           </p>
           <button className="submit_button">Iniciar sesión</button>
         </div>

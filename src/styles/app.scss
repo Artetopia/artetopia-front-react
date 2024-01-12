@@ -25,15 +25,6 @@ $fontkarla: "Karla", sans-serif;
   background-color: $secondaryColor;
 }
 
-.button-primary {
-  background-color: $primaryColor;
-  color: $textColorWhite;
-  border: 1px solid $primaryColor;
-  padding: 8px 10px;
-  border-radius: 4px;
-  width: 300px;
-  max-width: 100%;
-}
 
 #call-to-action {
   .max__width {
