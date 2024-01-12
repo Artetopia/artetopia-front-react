@@ -28,6 +28,7 @@ import Checkout from "./pages/checkout";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
 import Artesano from "./pages/Artesano";
+import CraftsmanProfile from "./pages/CraftsmanProfile";
 import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
@@ -37,21 +38,24 @@ function App() {
         <Navbare></Navbare>
       </header>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
-        <Route path="/login" element={<LoginForm/>}></Route>
-        <Route path="/verify" element={<VerifyAccount/>}></Route>
-        <Route path="/craftmans" element={<DashboardClient/>}></Route>
-        <Route path="/craftmanA" element={<PlantillaA/>}></Route>
-        <Route path="/craftmanB" element={<TemplateB/>}></Route>
-        <Route path="/productDetail" element={<ImageGallery/>}></Route>
-        <Route path="/cart" element={<ShoppingCar/>}></Route>
-        <Route path="/checkout" element={<Checkout/>}></Route>
-        <Route path="/delivery" element={<DeliveryStatus guideNumber={1234} status="delivered"/>}></Route>
-        <Route path="/craftman/products" element={<ModalButtons/>}></Route>
-        <Route path="/craftman/payments" element={<Payments/>}></Route>
-        {/* Route dashobard artesano perfil */}
-        {/* Route dashboard artesano plantilla */}
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<LoginForm />}></Route>
+        <Route path="/verify" element={<VerifyAccount />}></Route>
+        <Route path="/craftmans" element={<DashboardClient />}></Route>
+        <Route path="/craftmanA" element={<PlantillaA />}></Route>
+        <Route path="/craftmanB" element={<TemplateB />}></Route>
+        <Route path="/productDetail" element={<ImageGallery />}></Route>
+        <Route path="/cart" element={<ShoppingCar />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
+        <Route
+          path="/delivery"
+          element={<DeliveryStatus guideNumber={1234} status="delivered" />}
+        ></Route>
+        <Route path="/craftman/products" element={<ModalButtons />}></Route>
+        <Route path="/craftman/payments" element={<Payments />}></Route>
+        <Route path="/craftman/profile" element={<CraftsmanProfile />}></Route>
+        <Route path="/craftman/template" element={<DashboardTemplate/>}></Route>
         <Route path="/craftman/orders" element={<OrdersCraftsman/>}></Route>
         <Route path="/craftman/orderDetail" element={<OrderDetail/>}></Route>
         <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
