@@ -11,7 +11,7 @@ const CardsAditionalTB = ({ title, text, background_img }) => {
                     </CardHeader>
                     <CardBody className='position-absolute top-50 start-0 p-0'>
                         <CardText className='px-2 card_text'>
-                           <p>{text}</p> 
+                           <p className='text-white'>{text}</p> 
                         </CardText>
                     </CardBody>
                 </Card>

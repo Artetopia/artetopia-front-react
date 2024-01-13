@@ -4,6 +4,7 @@ import CardsAditionalTB from "../../../components/cards_info_template_b";
 import ButtonAction from "../../../components/buttonAction";
 import CardsProductB from "../../../components/card_product_t_b";
 import GalleryTemplateB from "../../../components/gallery_template_b";
+import CarruselTemplateB from "../../../components/carrusel_template_b";
 const TemplateB = () => {
   const addToCart = (product) => {
     console.log("Carrito", product);
@@ -18,13 +19,13 @@ const TemplateB = () => {
           <h2 className="saludo_artesano fw-semibold text-center m-3">
             Hola, soy <small className="name_artesano">Jose Munguía</small>
           </h2>
-          <h4 className="text-template-b text-center pt-3">
+          <h4 className="text-template-b text-center pt-3 mb-3">
             Soy del estado de Oaxaca me dedicado a la artesanía por toda mi
             vida, me encantaría que puedan ver, mi arte, y mi proceso que esta
             en los videos abajo...
           </h4>
         </div>
-        <section className="video mt-3">
+        <section className="video mt-4">
           <div className="container">
              {/* Dependiendo de si tiene video de youtube o video mp4, hay que revisar */}
             {/* <div className="embed-responsive embed-responsive-16by9">
@@ -88,7 +89,7 @@ const TemplateB = () => {
             </div>
           </div>
           <div className="galeria container mt-3">
-            <GalleryTemplateB
+            <GalleryTemplateB 
               img1="../images/galery_template_b/g-1.png"
               img2="../images/galery_template_b/g-2.png"
               img3="../images/galery_template_b/g-3.png"
@@ -96,6 +97,14 @@ const TemplateB = () => {
               img5="../images/galery_template_b/g-5.png"
               img6="../images/galery_template_b/g-6.png"
             ></GalleryTemplateB>
+            <CarruselTemplateB
+              img1="../images/galery_template_b/g-1.png"
+              img2="../images/galery_template_b/g-2.png"
+              img3="../images/galery_template_b/g-3.png"
+              img4="../images/galery_template_b/g-4.png"
+              img5="../images/galery_template_b/g-5.png"
+              img6="../images/galery_template_b/g-6.png"
+            ></CarruselTemplateB>
           </div>
         </section>
         <section className="products mt-3">

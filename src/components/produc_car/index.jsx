@@ -1,16 +1,19 @@
 import { useState } from "react";
-const ProductCard = ({imge,name_product,name_craftman,price,cantidad}) => {
+const ProductCard = ({ imge, name_product, name_craftman, price, cantidad }) => {
     const [active, setActive] = useState(false);
     return (
         <>
             <div className='row mt-3'>
-                <div className='col-3'>
+                <div className="col-1">
+                    <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked"/>
+                </div>
+                <div className='col-2'>
                     <img src={imge} alt="" className="rounded image_card w-100" />
                 </div>
                 <div className='col-6'>
                     <div className="d-flex flex-column justify-content-between">
                         <div className="mb-lg-3">
-                            <h4>{name_product}</h4>
+                            <h4 className="w-100">{name_product}</h4>
                             <h5>{name_craftman}</h5>
                         </div>
                         <div className="d-flex justify-content-end">
@@ -21,16 +24,14 @@ const ProductCard = ({imge,name_product,name_craftman,price,cantidad}) => {
                                 </svg>
                             </button>
                             <button className="heart-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                </svg>
+                                <img src="/trash.svg" alt="" />
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className='col-3'>
+                <div className='col-12 col-md-3'>
                     <h3>$ {price}</h3>
-                    <hr className="hrcar" />
+                    <hr className="hrcar border-3" />
                     <div className="d-flex justify-content-around align-items-center car-add rounded w-100 p-2">
                         <button className="heart-button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-dash-lg" viewBox="0 0 16 16">
@@ -46,6 +47,7 @@ const ProductCard = ({imge,name_product,name_craftman,price,cantidad}) => {
                     </div>
                 </div>
             </div>
+            <hr className="hrcar border-2" />
         </>
     );
 };

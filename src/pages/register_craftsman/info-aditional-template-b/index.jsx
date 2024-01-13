@@ -56,6 +56,9 @@ const AditionalTemplateB = () => {
                   />
                 ) : (
                   <>
+                    <div className="text-end">
+                      <button onClick={() => setProfilePic(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
+                    </div>
                     <div className="embed-responsive embed-responsive-16by9">
                       <video
                         className="embed-responsive-item"
@@ -69,13 +72,12 @@ const AditionalTemplateB = () => {
                         />
                       </video>
                     </div>
-                    <ButtonAction buttonClass="button-primary mt-2" text="Borrar video" type="button" action={() => setProfilePic(null)}></ButtonAction>
                   </>
                 )}
               </div>
               <p className="text_f fw-semibold">Maximo 30 segundos o 30 MB</p>
             </Col>
-            <Col className="pt-lg-5 mt-lg-5">
+            <Col className="mt-lg-5">
               <label htmlFor="exampleEmail">O inserta tu URL</label>
               <input
                 id="urlimage"
@@ -98,7 +100,7 @@ const AditionalTemplateB = () => {
             </Col>
           </Row>
           <p className="fw-semibold">Agrega hasta tres secciones</p>
-          <Row xs="1" lg="3">
+          <Row xs="1" lg="3" className="mt-4">
             <Col className="grid gap-3">
               <label htmlFor="title">Titulo</label>
               <input
@@ -139,15 +141,25 @@ const AditionalTemplateB = () => {
                     onChange={handleImageOne}
                   />
                 ) : (
-                  <img
-                    className="image-uploaded-container d-block m-auto justify-content-center"
-                    src={URL.createObjectURL(imagesecondary)}
-                    alt="Selected file"
-                  />
+                  <>
+                    <div className="text-end">
+                      <button onClick={() => setImagesecondary(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
+                    </div>
+
+                    <div>
+                      <img
+                        className="m-2 d-block justify-content-center w-100"
+                        src={URL.createObjectURL(imagesecondary)}
+                        alt="Selected file"
+                      />
+                    </div>
+                  </>
+
                 )}
               </div>
             </Col>
-            <Col className="grid gap-3">
+            <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
+            <Col className="grid gap-3 section_color">
               <label htmlFor="title2">Titulo</label>
               <input
                 id="title2"
@@ -193,14 +205,24 @@ const AditionalTemplateB = () => {
                     onChange={handleImageTree}
                   />
                 ) : (
-                  <img
-                    className="image-uploaded-container d-block m-auto justify-content-center"
-                    src={URL.createObjectURL(imagetree)}
-                    alt="Selected file"
-                  />
+                  <>
+                    <div className="text-end">
+                      <button onClick={() => setImagetree(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
+                    </div>
+
+                    <div>
+                      <img
+                        className="m-2 d-block justify-content-center w-100"
+                        src={URL.createObjectURL(imagetree)}
+                        alt="Selected file"
+                      />
+                    </div>
+                  </>
+
                 )}
               </div>
             </Col>
+            <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
             <Col className="grid gap-3">
               <label htmlFor="title3">Titulo</label>
               <input
@@ -247,15 +269,24 @@ const AditionalTemplateB = () => {
                     onChange={handleImageFor}
                   />
                 ) : (
-                  <img
-                    className="image-uploaded-container d-block m-auto justify-content-center"
-                    src={URL.createObjectURL(imagefor)}
-                    alt="Selected file"
-                  />
+                  <>
+                    <div className="text-end">
+                      <button onClick={() => setImagefor(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
+                    </div>
+
+                    <div>
+                      <img
+                        className="m-2 d-block justify-content-center w-100"
+                        src={URL.createObjectURL(imagefor)}
+                        alt="Selected file"
+                      />
+                    </div>
+                  </>
                 )}
               </div>
             </Col>
           </Row>
+
           <div className="container text-center">
             <ButtonAction
               buttonClass="button-secondary m-3"
