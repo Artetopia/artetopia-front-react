@@ -148,7 +148,7 @@ const Register = () => {
                 </div>
               <div className="d-flex flex-column">
               <span>Ya tengo una cuenta? <Link className="text_primary" to="/login">Iniciar sesión</Link></span>
-              <ButtonAction buttonClass="button-primary mt-3" text="Registrarse"></ButtonAction>
+              <ButtonAction buttonClass="button-primary mt-3" text="Registrarse" type="submit"></ButtonAction>
               </div>
             </form>
           </div>
