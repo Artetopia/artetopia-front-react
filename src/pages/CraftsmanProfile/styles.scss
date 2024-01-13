@@ -1,11 +1,11 @@
 @import "../../styles/variables";
-* {
-  font-family: $fontMontserrat;
-  color: $secondaryColor;
-  &.content-colorSecondary__input {
-    color: $secondaryColor;
-  }
-}
+// * {
+//   font-family: $fontMontserrat;
+//   color: $secondaryColor;
+//   &.content-colorSecondary__input {
+//     color: $secondaryColor;
+//   }
+// }
 
 .primary_input {
   border: 1px solid #2b2e4a!important;

@@ -11,10 +11,8 @@ import ButtonAction from '../buttonAction';
 function HeaderComponent() {
     return (
         <div>
-            {/* Navbar */}
-            
             {/* Hero Section */}
-            <div className='hero_section_desktop' id='nosotros'>
+            <div className='container hero_section_desktop' id='nosotros'>
                 <section className='hero_section'>
                     <div className='top_description'>
                         <img src={topDescription} alt='checkmark icon' />
@@ -33,7 +31,7 @@ function HeaderComponent() {
                         artesanos de México.
                     </p>
                     <div className='hero_flex_button_icon'>
-                        <ButtonAction buttonClass="button-primary" text="Registrarse" action="./register"></ButtonAction>
+                        <ButtonAction buttonClass="button-primary mt-3" text="Registrarse" action="./register"></ButtonAction>
                         <div className='desktop_video'>
                             <img
                                 src={imagePlayButtton}
