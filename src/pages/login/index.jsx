@@ -1,126 +1,54 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormFeedback,
-  Container,
-} from "reactstrap";
 import "./styles.css";
 import loginImage from "/assets/login_image.png";
 import { Link } from "react-router-dom";
+import ButtonAction from "../../components/buttonAction";
+import { useForm } from "react-hook-form";
 
 const LoginForm = () => {
-  const [login, setLogin] = useState("");
-  const [email, setEmail] = useState("");
-  const [loginError, setLoginError] = useState("");
-  const [emailError, setEmailError] = useState("");
-
-  const validateLogin = () => {
-    if (login.trim() === "") {
-      setLoginError("Contraseña es nesesaria");
-    } else {
-      setLoginError("");
-    }
-  };
-
-  const validateEmail = () => {
-    // A simple email validation regex, you can use a more robust one as needed
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email.trim() === "") {
-      setEmailError("Email es nesesario");
-    } else if (!emailRegex.test(email)) {
-      setEmailError("Formato invalido de email");
-    } else {
-      setEmailError("");
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // You can perform additional actions here, such as making an API call for authentication
-
-    // For demonstration purposes, let's log the login and email values
-    console.log("Password:", login);
-    console.log("Email:", email);
-  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   return (
     <>
-      <Container>
-        
-        <div className="desktop_flex">
-        <div className="destop_left_inputs">
-        <section className="flex_login">
-          <h1 className="tittle">Bienvienido!</h1>
-          <Form onSubmit={handleSubmit}>
-            <FormGroup className="form_input">
-              <Label for="email" className="form_login">
-                Email
-              </Label>
-              <Input
-                className="form-control form_login"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Ingresa tu email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onBlur={validateEmail}
-                invalid={emailError !== ""}
-                style={{
-                  borderColor: loginError !== "#2b2e4a" ? "#2b2e4a" : "#2b2e4a",
-                  outline: "none",
-                  borderRadius: "12px",
-                  height: "24px",
-                }}
-              />
-              <FormFeedback>{emailError}</FormFeedback>
-            </FormGroup>
-
-            <FormGroup className="form_input">
-              <Label for="password" className="form_login">
-                Password
-              </Label>
-              <Input
-                className="form_login"
-                type="password"
-                name="login"
-                id="login"
-                placeholder="Ingresa tu contraseña"
-                value={login}
-                onChange={(e) => setLogin(e.target.value)}
-                onBlur={validateLogin}
-                invalid={loginError !== ""}
-                style={{
-                  borderColor: loginError !== "#2b2e4a" ? "#2b2e4a" : "#2b2e4a",
-                  outline: "none",
-                  borderRadius: "12px",
-                  height: "24px",
-                }}
-              />
-              <FormFeedback>{loginError}</FormFeedback>
-            </FormGroup>
-          </Form>
-        </section>
-
-        <div className="flex_submit_button">
-          <p className="form_text_registrate">
-            No tienes cuenta?  <Link className="login__link">Registrate</Link>
-          </p>
-          <button className="submit_button">Iniciar sesión</button>
+    <div className="container my-5 login__container">
+      <div className="row justify-content-center align-items-center">
+        <div className="col-12 col-lg-6">
+          <h1 className="login__title text-center">Bienvenido</h1>
+          <form noValidate onSubmit={handleSubmit((data) => console.log(data))}>
+            <div className="form-group">
+              <label htmlFor="">Email</label>
+              <input type="email" className="form-control input_primary" name="email" id="email"   {...register("email", {
+                      required: {value: true, message: "El campo es requerido"},
+                      pattern: {value: /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/, message: "Formato invalido, ingrese un email valido"}
+                    })}/>
+              {errors.email && (
+                <p className="text-danger m-0">{errors.email.message}</p>
+              )}
+            </div>
+            <div className="form-group mt-2">
+              <label htmlFor="">Contraseña</label>
+              <input type="text" className="form-control input_primary" {...register("password", {
+                required: {value: true, message: "El campo es requerido"}
+              })}/>
+             {errors.password && (
+               <p className="text-danger m-0">{errors.password.message}</p>
+             )} 
+            </div>
+            <div className="d-flex flex-column">
+            <span className="mt-2">No tienes cuenta? <Link className="text_primary fw-bold" to="/register">Regístrate</Link></span>
+            <ButtonAction text="Iniciar sesión" buttonClass="button-primary mt-3" type="submit"></ButtonAction>
+            </div>
+          </form>
         </div>
-        </div>
-
-        <img src={loginImage} alt="Imagen de artesano trabajando" className="login_image" />
-
-        </div>
-        
-      </Container>
+        <div className="d-none d-lg-block col-lg-6">
+            <img src={loginImage} alt="" className="img-fluid login__image"/>
+          </div>
+      </div>
+    </div>
     </>
   );
 };
