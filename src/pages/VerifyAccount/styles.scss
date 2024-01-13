@@ -1,1 +1,28 @@
 @import "../../styles/variables";
+
+.title-verification {
+    font-family: $fontMontserrat;
+    font-weight: bold;
+  }
+  
+  .input-codes {
+    height: 70px;
+    width: 60px;
+  }
+  
+  .verify-input {
+    background-color: $primaryColor;
+    color: #fff;
+    border-radius: 10%;
+    border-style: none;
+    font-size: 24px;
+  }
+  
+  .send-again {
+    color: $primaryColor;
+    text-decoration-color: $primaryColor;
+      &:hover{
+        color: #fc6a9b;
+        text-decoration-color: #fc6a9b;
+      }
+  }
