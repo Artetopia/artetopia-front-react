@@ -15,6 +15,11 @@ const CraftsmanProfile = () => {
     const file = event.target.files[0];
     setProfilePicture(file);
   };
+  const [headerPicture, setHeaderPicture] = useState(null);
+  const handleHeaderPicture = (event) => {
+    const file = event.target.files[0];
+    setHeaderPicture(file);
+  };
   return (
     <>
       <div className="container">
@@ -30,7 +35,7 @@ const CraftsmanProfile = () => {
                         <FormFile
                           className="profile-pic-size"
                           fileType="image/*"
-                          controlId="form-3"
+                          controlId="form-1"
                           // multiple={true}
                           onChange={handleProfilePicture}
                         />
@@ -190,11 +195,11 @@ const CraftsmanProfile = () => {
                       type="submit"
                     ></ButtonAction>
 
-                    <ButtonAction
+                    {/* <ButtonAction
                       buttonClass="button-primary font-size-small mt-5"
                       text="Guardar"
                       type="submit"
-                    ></ButtonAction>
+                    ></ButtonAction> */}
                   </div>
                 </form>
               </div>
@@ -203,19 +208,36 @@ const CraftsmanProfile = () => {
                 <form action="#">
                   <div className="mt-1">
                     <h6>Foto de portada</h6>
-                    <div className="col-12">
-                      <FormFile
-                        fileType="image/*"
-                        controlId="form-3"
-                        // multiple={true}
-                        // onChange={handleProductPicsChange}
+                    {!headerPicture ? (
+                      <div className="col-12">
+                        <FormFile
+                          fileType="image/*"
+                          controlId="form-3"
+                          // multiple={true}
+                          onChange={handleHeaderPicture}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        className="img-thumbnail"
+                        src={URL.createObjectURL(headerPicture)}
+                        alt="Header Picture"
                       />
-                    </div>
+                    )}
                     <div className="d-flex justify-content-md-end">
                       <ButtonAction
                         buttonClass="button-primary font-size-small mt-3"
                         text="Cambiar foto portada"
+                        type="submit"
                       ></ButtonAction>
+                      {headerPicture && (
+                        <ButtonAction
+                          buttonClass="button-secondary font-size-small mt-3 ms-3"
+                          text="Eliminar"
+                          type="button"
+                          action={() => setHeaderPicture(null)}
+                        ></ButtonAction>
+                      )}
                     </div>
                   </div>
                 </form>
