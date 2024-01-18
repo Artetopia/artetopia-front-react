@@ -28,12 +28,11 @@ const CraftsmanProfile = () => {
           <div>
             <div className="p-4 px-md-5 m-md-5">
               <div className="d-lg-flex">
-                <form className="col-lg-6" action="#">
+                <form className="col-lg-6">
                   <div className="d-flex justify-content-center p-xl-3">
                     {!profilePicture ? (
                       <div className="col-12">
                         <FormFile
-                          className="profile-pic-size"
                           fileType="image/*"
                           controlId="form-1"
                           // multiple={true}
