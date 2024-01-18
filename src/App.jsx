@@ -27,6 +27,8 @@ import VerifyAccount from "./pages/VerifyAccount";
 import Checkout from "./pages/checkout";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
+import UserProfile from "./pages/userProfile/UserProfile";
+import UserDeliveries from "./pages/userDeliveries/UserDeliveries";
 
 
 function App() {
@@ -61,6 +63,9 @@ function App() {
         <Route path="/register/infoTemplate" element={<AditionalTemplateB/>}></Route>
         <Route path="/register/payment" element={<Step_7/>}></Route>
         <Route path="/register/complete" element={<Step_8/>}></Route>
+        {/* Route for user profile */}
+        <Route path="/user/profile" element={<UserProfile />}></Route>
+        <Route path="/user/deliveries" element={<UserDeliveries/>}></Route>
       </Routes>
       <footer>
         <Footer></Footer>
