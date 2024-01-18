@@ -29,6 +29,7 @@ import OrdersCraftsman from "./pages/OrdersCraftsman";
 import OrderDetail from "./pages/OrderDetail";
 import UserProfile from "./pages/userProfile/UserProfile";
 import UserDeliveries from "./pages/userDeliveries/UserDeliveries";
+import UserAllDeliveries from "./pages/userAllDeliveries/UserAllDeliveries";
 
 
 function App() {
@@ -66,6 +67,8 @@ function App() {
         {/* Route for user profile */}
         <Route path="/user/profile" element={<UserProfile />}></Route>
         <Route path="/user/deliveries" element={<UserDeliveries/>}></Route>
+        <Route path="/user/allDeliveries" element={<UserAllDeliveries/>}></Route>
+        {/* <Route path="/user/all/deliveries" element={<UserAllDeliveries/>}></Route> */}
       </Routes>
       <footer>
         <Footer></Footer>
