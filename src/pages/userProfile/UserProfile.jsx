@@ -23,28 +23,45 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <div className="row">
-        <div className="p-4 px-md-5 m-md-5">
+        <div className="mr-3">
           <div className="d-lg-flex">
             <form className="col-lg-6" onSubmit={handleSubmit(onSubmit)}>
-              <div className="d-flex justify-content-center p-xl-3 photo">
-                {!profilePicture ? (
-                  <div className="col-12">
-                    <FormFile
-                      className="profile-pic-size"
-                      fileType="image/*"
-                      controlId="form-3"
-                      onChange={handleProfilePicture}
-                    />
-                  </div>
-                ) : (
-                  <img
-                    className="profile-picture__craftsman img-thumbnail"
-                    src={URL.createObjectURL(profilePicture)}
-                    alt="Profile"
-                  />
-                )}
+              <div className="d-flex justify-content-center p-xl-3 photo mr-3 mt-5 mt-lg-2">
+              {!profilePicture ? (
+                      <div className="col-12">
+                        <FormFile
+                          fileType="image/*"
+                          controlId="form-1"
+                          // multiple={true}
+                          onChange={handleProfilePicture}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        className="profile-picture__craftsman img-thumbnail"
+                        src={URL.createObjectURL(profilePicture)}
+                        alt="Profile Picture"
+                      />
+                    )}
+                {/* // {!profilePicture ? (
+
+                //   <div className="col-12">
+                //     <FormFile
+                //       className="profile-pic-size"
+                //       fileType="image/*"
+                //       controlId="form-3"
+                //       onChange={handleProfilePicture}
+                //     />
+                //   </div>
+                // ) : (
+                //   <img
+                //     className="profile-picture__craftsman img-thumbnail"
+                //     src={URL.createObjectURL(profilePicture)}
+                //     alt="Profile"
+                //   />
+                )} */}
               </div>
               <div className="d-flex justify-content-md-center">
                 <ButtonAction
@@ -141,7 +158,7 @@ const UserProfile = () => {
 
 
         <div className="d-flex justify-content-center">
-        <form className="col-8" onSubmit={handleSubmit(onSubmit)}>
+        <form className="col-12" onSubmit={handleSubmit(onSubmit)}>
               <div className="form-group mt-2 mt-xl-4">
                 <h4><b>Seguridad</b> </h4>
                 <label htmlFor="name">Contraseña</label>

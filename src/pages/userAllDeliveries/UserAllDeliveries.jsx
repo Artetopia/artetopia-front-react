@@ -23,6 +23,10 @@ const UserAllDeliveries = () => {
     <UserDeliveryCart></UserDeliveryCart>
     <UserDeliveryCart></UserDeliveryCart>
     <UserDeliveryCart></UserDeliveryCart>
+    <UserDeliveryCart></UserDeliveryCart>
+    <UserDeliveryCart></UserDeliveryCart>
+    <UserDeliveryCart></UserDeliveryCart>
+    <UserDeliveryCart></UserDeliveryCart>
     </div>
     </div>
     </>
