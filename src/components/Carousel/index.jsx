@@ -4,11 +4,9 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
 } from 'reactstrap';
 
 function ComponentCarousel( { files=[], ...rest }) {
-
   const items = files?.map(file => ({
     src: URL.createObjectURL(file),
     name: file?.name
@@ -39,27 +37,26 @@ function ComponentCarousel( { files=[], ...rest }) {
       <CarouselItem 
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.name}
       >
-        <img src={item.src} alt={item.altText} className='carousel-container d-flex justify-content-center'/>
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <img src={item.src} alt={item.altText} className='image-carousel-container carousel-container '/>
+        
       </CarouselItem>
     );
   });
-
+  // En caso de que se borre el ultimo elemento cuando se muestra en el carrousel
+  // se usa el index como el del nuevo ultimo elemento
+  const currentIndex = activeIndex >= items?.length ? (items?.length -1) : activeIndex;
   return (
     <Carousel
-      activeIndex={activeIndex}
+      activeIndex={currentIndex}
       next={next}
       previous={previous}
       {...rest}
     >
       <CarouselIndicators
         items={items}
-        activeIndex={activeIndex}
+        activeIndex={currentIndex}
         onClickHandler={goToIndex}
       />
       {slides}

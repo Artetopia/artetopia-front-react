@@ -2,7 +2,7 @@ import "./CardCraftsman.scss"
 
 const CardCraftsman = ({websiteName, profilePic, rate, categories}) => {
     return (
-        <div className="col-12 col-lg-4 card-craftsman-container rounded-4 my-3 px-lg-2">
+        <div className="col-12 col-lg-4 card-craftsman-container rounded-4 p-2 pb-5 my-3 px-lg-2">
         <h5 className='website-name-label text-center py-3'>{websiteName}</h5>
             <img className='website-profilePic rounded-circle my-1 border-2 d-block' src={profilePic} alt={`Foto de perfil de ${websiteName}`}/>
             <div className='d-flex justify-content-center py-3 my-3 text-warning'>

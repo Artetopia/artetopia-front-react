@@ -42,7 +42,19 @@
 }
 
 .image-uploaded-container {
-    height: 350px;
+    height: 200px;
+    width: 300px;
+    object-fit: contain;
+}
+
+.image-carousel-container {
+    height: 300px;
+    width: 350px;
+    object-fit: contain;
+}
+
+.carousel-container {
+    height: 300px !important;
 }
 
 .upload-file-text   {
@@ -59,6 +71,7 @@
 .add-show-product {
     font-family: $fontkarla !important;
     font-size: 16px !important;
+    color: $primaryColor;
     width: 100%;
     background-color: white;
     border: solid;
@@ -68,6 +81,8 @@
 }
 
 .circle-step {
+    width: 50px;
+    height: 50px;
     width: 35px;
     height: 35px;
     border-width: 1px;
@@ -78,7 +93,6 @@
         color: white;
     }
 }
-
 .border-progress-bar {
     border-style: solid;
     border-color: $primaryColor !important;
@@ -95,7 +109,7 @@
     color: $primaryColor;
     &.selected {
         color: white;
-    }
+     }
 }   
 
 .progress-icon-svg {
@@ -115,10 +129,6 @@
     border-style: dashed;
     border-color: $secondaryColor;
 }
-.back-button {
-    border-color: $primaryColor !important;
-    color: $primaryColor !important;
-}
 
 .handle-buttons {
     width: 100%;
@@ -130,11 +140,68 @@
 .container_stepper {
     max-width: 100% !important;
 }
+.form-container {
+    max-width: 100% !important;
+}
 
 .error-message-custom {
     font-size: 10px;
 }
-  
+
+.carousel-indicators button {
+    border: none;
+    background-color: #968ebe !important;
+}
+
+.carousel-indicators .active {
+    background-color: $primaryColor !important;
+}
+
+.carousel-control-next-icon {
+    background-color: $primaryColor !important;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon { 
+    background-color: $primaryColor !important;
+    border-radius: 5px;
+}
+
+.close-icon-custom {
+    color: $primaryColor;
+}
+
+.back-button-custom {
+    background-color: white;
+    border: none;
+    color: $primaryColor;
+    text-decoration: underline !important;
+}
+
+.progress, .progress-stacked {
+    height: 23px !important;
+}
+
+.modal-container {
+    padding-right: 20px !important;
+    padding-left: 21px !important;
+}
+
+.step-title-custom {
+    color: $primaryColor;
+}
+
+@media (max-width: 575.98px) { 
+    .modal-container {
+        padding-right: 20px !important;
+        padding-left: 21px !important;
+    }
+    .controllers-buttons-custom {
+        padding-right: 20px !important;
+        padding-left: 16px !important;
+    }   
+}
+
 @media (min-width: 768px) {
     .file-uploader-container {
         height: 300px;
@@ -151,6 +218,13 @@
     }
     .carousel-container {
         height: 200px;
+    }
+    .add-show-product {
+        width: 200px;
+    }
+    .back-button-custom {
+        width: 200px !important;
+        border-radius: 2px;
     }
 }
 @media (min-width: 992px) {

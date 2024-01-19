@@ -1,8 +1,10 @@
 import ProductCard from "../../components/produc_car";
 import "./styles/styles.css"
 import ButtonAction from "../../components/buttonAction";
-const ShoppingCar = () => {
 
+
+    
+const ShoppingCar = () => {
     return (
         <>
             <div className='container'>
@@ -11,7 +13,42 @@ const ShoppingCar = () => {
                         <h1 className="me-3">Carrito </h1>
                         <small> productos</small>
                     </div>
-                    <div className='col-12 col-lg-8'>
+                    <div id="container_card"
+                    style={{
+                        overflowX: "scroll",
+                        overflowY: "scroll",
+                        whiteSpace: "nowrap",
+                        marginTop: "10px",
+                      }}
+                     className='col-12 col-lg-9 '>
+                        <ProductCard
+                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
+                            name_product="Catrinas con vestidos tipicos"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                        ></ProductCard>
+                        <ProductCard
+                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
+                            name_product="Catrinas con vestidos tipicos"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                        ></ProductCard>
+                        <ProductCard
+                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
+                            name_product="Catrinas con vestidos tipicos"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                        ></ProductCard>
+                        <ProductCard
+                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
+                            name_product="Catrinas con vestidos tipicos"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                        ></ProductCard>
                         <ProductCard
                             imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
                             name_product="Catrinas con vestidos tipicos"
@@ -41,12 +78,12 @@ const ShoppingCar = () => {
                             cantidad="1"
                         ></ProductCard>
                     </div>
-                    <div className='col-12 col-lg-4 text-center'>
+                    <div className='col-12 col-lg-3 text-center p-3'>
                         <button className="btn btn-outline-secondary w-100 p-3 mb-3 shadow mt-3 mt-lg-0">Seguir comprando </button>
                         <div className="container_checkout p-3 rounded">
                             <div className="d-flex justify-content-between">
-                                <small>En total # artesanos</small>
-                                <h4>$Total</h4>
+                                <small className="text-white">En total # artesanos</small>
+                                <h4 className="text-white">$Total</h4>
                             </div>
                             <hr />
                             <ButtonAction

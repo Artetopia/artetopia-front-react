@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.primary_input {
+  border: 1px solid #2b2e4a !important;
+  border-radius: 50px !important;
+}
+
+.craftsman-profile-font-dropdown {
+  font-size: 14px !important;
+}
+
+.profile-picture__craftsman {
+  height: 225px;
+  width: 225px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.craftsman-profile-categories__selected {
+  height: 125px;
+}/*# sourceMappingURL=styles.css.map */
