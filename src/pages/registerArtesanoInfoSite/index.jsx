@@ -262,7 +262,6 @@ const RegisterArtesanoInfoSite = () => {
             <ButtonAction
               buttonClass="button-primary"
               text="Siguiente"
-              type="submit"
             ></ButtonAction>
           </div>
         </form>

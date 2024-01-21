@@ -3,6 +3,7 @@ import ButtonAction from "../../components/buttonAction";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormFile from "../../components/FormFile";
+import Select from "react-select";
 
 const CraftsmanProfile = () => {
   const {
@@ -23,11 +24,49 @@ const CraftsmanProfile = () => {
     setHeaderPicture(file);
   };
 
+  const [selectedOptions, setSelecteOptions] = useState([]);
+  const [errorCategories, setErrorCategories] = useState(false);
+
+  const checkSelectedOptions = () => {
+    console.log(selectedOptions);
+    selectedOptions.length > 0 && setErrorCategories(false);
+  };
+
+  const handleChange = (selected) => {
+    setSelecteOptions(selected);
+    checkSelectedOptions();
+  };
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: "50px",
+      borderColor: "#000000",
+    }),
+  };
+
+  const submitCraftsmanInfoSite = (data) => {
+    if (selectedOptions.length > 0) {
+      console.log(selectedOptions);
+      console.log(data);
+    } else {
+      setErrorCategories(true);
+    }
+  };
+
+  const noOptionsMessage = ({ inputValue }) =>
+    `No se ha encontrado el valor: "${inputValue}"`;
+
+  const options = [
+    { value: "bordados", label: "Bordados" },
+    { value: "joyería", label: "Joyería" },
+    { value: "tejidos", label: "Tejidos" },
+  ];
+
   return (
     <>
       <div className="container">
         <div className="row">
-          {/* <div className="col-12"></div> */}
           <div>
             <div className="p-4 px-md-5 m-md-5">
               <div className="row d-lg-flex">
@@ -38,7 +77,6 @@ const CraftsmanProfile = () => {
                         <FormFile
                           fileType="image/*"
                           controlId="form-1"
-                          // multiple={true}
                           onChange={handleProfilePicture}
                         />
                       </div>
@@ -244,7 +282,9 @@ const CraftsmanProfile = () => {
                   </div>
                 </form>
               </div>
-              <form onSubmit={handleSubmit((data) => console.log(data))}>
+              <form
+                onSubmit={handleSubmit((data) => submitCraftsmanInfoSite(data))}
+              >
                 <div className="form-group">
                   <div className="mt-5">
                     <label htmlFor="storeName">Nombre de tu tienda</label>
@@ -391,16 +431,19 @@ const CraftsmanProfile = () => {
                   </div>
                   <div className="col-12 mt-3 mb-3">
                     <label htmlFor="city">Selecciona la categoría</label>
-                    <select
-                      type="text"
-                      className="form-select form-select-lg primary_input shadow-none mt-1 craftsman-profile-font-dropdown content-colorSecondary__input"
-                      name="category"
-                      id="category"
-                    >
-                      <option value="Bordados">Bordados</option>
-                      <option value="Joyería">Joyería</option>
-                      <option value="Tejidos">Tejidos</option>
-                    </select>
+                    <Select
+                      isMulti
+                      options={options}
+                      onChange={handleChange}
+                      noOptionsMessage={noOptionsMessage}
+                      placeholder="Categorías"
+                      styles={customStyles}
+                    />
+                    {errorCategories && (
+                      <p className="text-danger m-0">
+                        Debe seleccionar una categoría
+                      </p>
+                    )}
                   </div>
                   <div className="d-flex justify-content-md-end">
                     <ButtonAction
