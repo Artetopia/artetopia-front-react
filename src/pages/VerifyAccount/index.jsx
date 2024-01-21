@@ -8,7 +8,7 @@ const VerifyAccount = () => {
       <section className="container">
         <section className="row d-flex flex-column align-items-center text-center">
           <div className="d-flex flex-column align-items-lg-start text-lg-start text-xl-start">
-            <h1 className="title-verification mt-lg-5 ms-lg-5 fs-sm-3">
+            <h1 className="title-verification mt-5 ms-lg-5 fs-sm-3">
               Verifica tu cuenta
             </h1>
             <p className="fs-4 col-lg-9 col-xl-8 ms-lg-5">
@@ -16,10 +16,9 @@ const VerifyAccount = () => {
               ejemplo@ejemplo.com
               {/* {email} */}
             </p>
-            <p className="fs-4 ms-lg-5">Por favor, ingresa el código:</p>
+            <p className="my-3 fs-4 ms-lg-5">Por favor, ingresa el código:</p>
           </div>
-
-          <div>
+          <div className="mt-1">
             <input
               className="input-codes p-4 mx-1 mx-md-2 verify-input"
               type="text"
@@ -57,7 +56,7 @@ const VerifyAccount = () => {
             </a>
           </p>
           <ButtonAction
-            buttonClass="button-primary mt-1"
+            buttonClass="button-primary my-3 my-lg-4"
             text="Continuar"
           ></ButtonAction>
         </section>
