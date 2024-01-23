@@ -61,6 +61,7 @@ const CraftsmanProfile = () => {
     { value: "bordados", label: "Bordados" },
     { value: "joyería", label: "Joyería" },
     { value: "tejidos", label: "Tejidos" },
+    { value: "cuero", label: "Cuero" },
   ];
 
   return (
