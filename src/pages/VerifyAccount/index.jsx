@@ -33,7 +33,7 @@ const VerifyAccount = () => {
           >
             <div className="mt-1">
               <input
-                type="text"
+                type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
                 name="firstNumber"
                 id="firstNumber"
@@ -47,13 +47,13 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {errors.firstNumber && (
+              {/* {errors.number && (
                 <p className="text-danger m-0 mt-2">
-                  {errors.firstNumber.message}
+                  {errors.number.message}
                 </p>
-              )}
+              )} */}
               <input
-                type="text"
+                type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
                 name="secondNumber"
                 id="secondNumber"
@@ -67,13 +67,13 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {errors.secondNumber && (
+              {/* {errors.secondNumber && (
                 <p className="text-danger m-0 mt-2">
                   {errors.secondNumber.message}
                 </p>
-              )}
+              )} */}
               <input
-                type="text"
+                type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
                 name="thirdNumber"
                 id="thirdNumber"
@@ -87,13 +87,13 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {errors.thirdNumber && (
+              {/* {errors.thirdNumber && (
                 <p className="text-danger m-0 mt-2">
                   {errors.thirdNumber.message}
                 </p>
-              )}
+              )} */}
               <input
-                type="text"
+                type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
                 name="forthNumber"
                 id="forthNumber"
@@ -107,12 +107,21 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {errors.forthNumber && (
+            </div>
+            {errors.firstName && (
+              <div>
+                <p className="text-danger m-0 mt-2">
+                  {errors.firstName.message}
+                </p>
+              </div>
+            )}
+            {errors.forthNumber && (
+              <div>
                 <p className="text-danger m-0 mt-2">
                   {errors.forthNumber.message}
                 </p>
-              )}
-            </div>
+              </div>
+            )}
             <p className="mt-3 mb-2 fs-5">5:00</p>
             <p className="fs-6">
               ¿No recibiste el código?{" "}
