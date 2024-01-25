@@ -3,6 +3,7 @@ import ButtonAction from "../../components/buttonAction";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormFile from "../../components/FormFile";
+import Select from "react-select";
 
 const CraftsmanProfile = () => {
   const {
@@ -10,28 +11,73 @@ const CraftsmanProfile = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const [profilePicture, setProfilePicture] = useState(null);
   const handleProfilePicture = (event) => {
     const file = event.target.files[0];
     setProfilePicture(file);
   };
+
+  const [headerPicture, setHeaderPicture] = useState(null);
+  const handleHeaderPicture = (event) => {
+    const file = event.target.files[0];
+    setHeaderPicture(file);
+  };
+
+  const [selectedOptions, setSelecteOptions] = useState([]);
+  const [errorCategories, setErrorCategories] = useState(false);
+
+  const checkSelectedOptions = () => {
+    console.log(selectedOptions);
+    selectedOptions.length > 0 && setErrorCategories(false);
+  };
+
+  const handleChange = (selected) => {
+    setSelecteOptions(selected);
+    checkSelectedOptions();
+  };
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: "50px",
+      borderColor: "#000000",
+    }),
+  };
+
+  const submitCraftsmanInfoSite = (data) => {
+    if (selectedOptions.length > 0) {
+      console.log(selectedOptions);
+      console.log(data);
+    } else {
+      setErrorCategories(true);
+    }
+  };
+
+  const noOptionsMessage = ({ inputValue }) =>
+    `No se ha encontrado el valor: "${inputValue}"`;
+
+  const options = [
+    { value: "bordados", label: "Bordados" },
+    { value: "joyería", label: "Joyería" },
+    { value: "tejidos", label: "Tejidos" },
+    { value: "cuero", label: "Cuero" },
+  ];
+
   return (
     <>
       <div className="container">
         <div className="row">
-          {/* <div className="col-12"></div> */}
           <div>
             <div className="p-4 px-md-5 m-md-5">
-              <div className="d-lg-flex">
-                <form className="col-lg-6" action="#">
+              <div className="row d-lg-flex">
+                <form className="col-lg-6">
                   <div className="d-flex justify-content-center p-xl-3">
                     {!profilePicture ? (
                       <div className="col-12">
                         <FormFile
-                          className="profile-pic-size"
                           fileType="image/*"
-                          controlId="form-3"
-                          // multiple={true}
+                          controlId="form-1"
                           onChange={handleProfilePicture}
                         />
                       </div>
@@ -190,11 +236,11 @@ const CraftsmanProfile = () => {
                       type="submit"
                     ></ButtonAction>
 
-                    <ButtonAction
+                    {/* <ButtonAction
                       buttonClass="button-primary font-size-small mt-5"
                       text="Guardar"
                       type="submit"
-                    ></ButtonAction>
+                    ></ButtonAction> */}
                   </div>
                 </form>
               </div>
@@ -203,34 +249,69 @@ const CraftsmanProfile = () => {
                 <form action="#">
                   <div className="mt-1">
                     <h6>Foto de portada</h6>
-                    <div className="col-12">
-                      <FormFile
-                        fileType="image/*"
-                        controlId="form-3"
-                        // multiple={true}
-                        // onChange={handleProductPicsChange}
+                    {!headerPicture ? (
+                      <div className="col-12">
+                        <FormFile
+                          fileType="image/*"
+                          controlId="form-3"
+                          // multiple={true}
+                          onChange={handleHeaderPicture}
+                        />
+                      </div>
+                    ) : (
+                      <img
+                        className="img-thumbnail"
+                        src={URL.createObjectURL(headerPicture)}
+                        alt="Header Picture"
                       />
-                    </div>
+                    )}
                     <div className="d-flex justify-content-md-end">
                       <ButtonAction
                         buttonClass="button-primary font-size-small mt-3"
                         text="Cambiar foto portada"
+                        type="submit"
                       ></ButtonAction>
+                      {headerPicture && (
+                        <ButtonAction
+                          buttonClass="button-secondary font-size-small mt-3 ms-3"
+                          text="Eliminar"
+                          type="button"
+                          action={() => setHeaderPicture(null)}
+                        ></ButtonAction>
+                      )}
                     </div>
                   </div>
                 </form>
               </div>
-              <form action="#">
+              <form
+                onSubmit={handleSubmit((data) => submitCraftsmanInfoSite(data))}
+              >
                 <div className="form-group">
                   <div className="mt-5">
                     <label htmlFor="storeName">Nombre de tu tienda</label>
                     <input
                       type="text"
                       className="form-control primary_input shadow-none mt-1"
-                      name="surname"
-                      id="surname"
+                      name="storeName"
+                      id="storeName"
                       placeholder="www.artetopia.com/tu-tienda"
+                      {...register("storeName", {
+                        required: {
+                          value: true,
+                          message: "El campo es requerido",
+                        },
+                        pattern: {
+                          value: /^[^\s!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$/,
+                          message:
+                            "No debe de contener ningún caracter especial (~@#_-^*%/.+:;=) ni espacios en blanco",
+                        },
+                      })}
                     />
+                    {errors.storeName && (
+                      <p className="text-danger m-0">
+                        {errors.storeName.message}
+                      </p>
+                    )}
                   </div>
                   <div className="mt-2">
                     <label htmlFor="description">
@@ -241,10 +322,21 @@ const CraftsmanProfile = () => {
                       className="form-control primary_input shadow-none mt-1"
                       name="description"
                       id="description"
+                      {...register("description", {
+                        required: {
+                          value: true,
+                          message: "El campo es requerido",
+                        },
+                      })}
                     />
+                    {errors.description && (
+                      <p className="text-danger m-0">
+                        {errors.description.message}
+                      </p>
+                    )}
                   </div>
                   <h6 className="mt-3 mb-1">Redes sociales</h6>
-                  <div className="d-lg-flex">
+                  <div className="row d-lg-flex">
                     <div className="mt-2 col-lg-6">
                       <div className="form-group">
                         <label htmlFor="facebook">Facebook</label>
@@ -254,8 +346,19 @@ const CraftsmanProfile = () => {
                           name="facebook"
                           id="facebook"
                           placeholder="@"
+                          {...register("facebook", {
+                            pattern: {
+                              value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                              message: "El valor ingresado no es una URL",
+                            },
+                          })}
                         />
                       </div>
+                      {errors.facebook && (
+                        <p className="text-danger m-0">
+                          {errors.facebook.message}
+                        </p>
+                      )}
                       <div className="form-group">
                         <label className="mt-2" htmlFor="instagram">
                           Instagram
@@ -266,8 +369,19 @@ const CraftsmanProfile = () => {
                           name="instagram"
                           id="instagram"
                           placeholder="@"
+                          {...register("instagram", {
+                            pattern: {
+                              value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                              message: "El valor ingresado no es una URL",
+                            },
+                          })}
                         />
                       </div>
+                      {errors.instagram && (
+                        <p className="text-danger m-0">
+                          {errors.instagram.message}
+                        </p>
+                      )}
                     </div>
                     <div className="mt-2 col-lg-6">
                       <div className="mb-1 form-group">
@@ -278,10 +392,21 @@ const CraftsmanProfile = () => {
                           name="twitter"
                           id="twitter"
                           placeholder="@"
+                          {...register("twitter", {
+                            pattern: {
+                              value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                              message: "El valor ingresado no es una URL",
+                            },
+                          })}
                         />
                       </div>
+                      {errors.twitter && (
+                        <p className="text-danger m-0">
+                          {errors.twitter.message}
+                        </p>
+                      )}
                       <div className="form-group">
-                        <label className="mt-2" htmlFor="tiktok">
+                        <label className="mt-1" htmlFor="tiktok">
                           TikTok
                         </label>
                         <input
@@ -290,33 +415,48 @@ const CraftsmanProfile = () => {
                           name="tiktok"
                           id="tiktok"
                           placeholder="@"
+                          {...register("tiktok", {
+                            pattern: {
+                              value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                              message: "El valor ingresado no es una URL",
+                            },
+                          })}
                         />
                       </div>
+                      {errors.tiktok && (
+                        <p className="text-danger m-0">
+                          {errors.tiktok.message}
+                        </p>
+                      )}
                     </div>
                   </div>
                   <div className="col-12 mt-3 mb-3">
                     <label htmlFor="city">Selecciona la categoría</label>
-                    <select
-                      type="text"
-                      className="form-select form-select-lg primary_input shadow-none mt-1 craftsman-profile-font-dropdown content-colorSecondary__input"
-                      name="category"
-                      id="category"
-                    >
-                      <option value="Bordados">Bordados</option>
-                      <option value="Joyería">Joyería</option>
-                      <option value="Tejidos">Tejidos</option>
-                    </select>
+                    <Select
+                      isMulti
+                      options={options}
+                      onChange={handleChange}
+                      noOptionsMessage={noOptionsMessage}
+                      placeholder="Categorías"
+                      styles={customStyles}
+                    />
+                    {errorCategories && (
+                      <p className="text-danger m-0">
+                        Debe seleccionar una categoría
+                      </p>
+                    )}
                   </div>
                   <div className="d-flex justify-content-md-end">
                     <ButtonAction
                       buttonClass="button-primary font-size-small mt-3"
                       text="Editar"
+                      type="submit"
                     ></ButtonAction>
-                    <ButtonAction
+                    {/* <ButtonAction
                       buttonClass="button-primary font-size-small mt-3"
                       text="Guardar"
                       type="submit"
-                    ></ButtonAction>
+                    ></ButtonAction> */}
                   </div>
                 </div>
               </form>
