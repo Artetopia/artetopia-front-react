@@ -19,11 +19,21 @@
 
 .send-again {
   color: #e91e63;
-  -webkit-text-decoration-color: #e91e63;
-          text-decoration-color: #e91e63;
+  text-decoration-color: #e91e63;
 }
 .send-again:hover {
   color: #fc6a9b;
-  -webkit-text-decoration-color: #fc6a9b;
-          text-decoration-color: #fc6a9b;
+  text-decoration-color: #fc6a9b;
+}
+
+.container-verification {
+  max-width: 40%;
+  height: auto;
+}
+
+.character-verification {
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */
