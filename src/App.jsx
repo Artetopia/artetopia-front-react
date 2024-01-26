@@ -22,17 +22,16 @@ import SelectTemplate from "./pages/register_craftsman/select_templates";
 import OrderDetail from "./pages/OrderDetail";
 import OrdersCraftsman from "./pages/OrdersCraftsman";
 import VerifyAccount from "./pages/VerifyAccount";
-import TemplateB from "./pages/templates/templateB"
+import TemplateB from "./pages/templates/templateB";
 import ShoppingCar from "./pages/shopping_car";
 import RegisterArtesanoPersonalInfo from "./pages/registerArtesanoPersonalInfo";
-import Checkout from './pages/checkout';
+import Checkout from "./pages/checkout";
 
 import Artesano from "./pages/Artesano";
 import CraftsmanProfile from "./pages/CraftsmanProfile";
 import DashboardTemplate from "./pages/Dashboard_craft_template";
 
 function App() {
-
   return (
     <>
       <header>
@@ -42,7 +41,10 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<LoginForm />}></Route>
-        <Route path="/verify" element={<VerifyAccount />}></Route>
+        <Route
+          path="/verify"
+          element={<VerifyAccount email="example@gmail.com" />}
+        ></Route>
         <Route path="/craftmans" element={<DashboardClient />}></Route>
         <Route path="/craftmanA" element={<PlantillaA />}></Route>
         <Route path="/craftmanB" element={<TemplateB />}></Route>
@@ -56,18 +58,33 @@ function App() {
         <Route path="/craftman/products" element={<ModalButtons />}></Route>
         <Route path="/craftman/payments" element={<Payments />}></Route>
         <Route path="/craftman/profile" element={<CraftsmanProfile />}></Route>
-        <Route path="/craftman/template" element={<DashboardTemplate/>}></Route>
-        <Route path="/craftman/orders" element={<OrdersCraftsman/>}></Route>
-        <Route path="/craftman/orderDetail" element={<OrderDetail/>}></Route>
-        <Route path="/register/personalInfo" element={<RegisterArtesanoPersonalInfo/>}></Route>
-        <Route path="/register/siteInfo" element={<RegisterArtesanoInfoSite/>}></Route>
-        <Route path="/register/photos" element={<Page3/>}></Route>
-        <Route path="/register/products" element={<Page4/>}></Route>
-        <Route path="/register/selectTemplate" element={<SelectTemplate/>}></Route>
-        <Route path="/register/infoTemplate" element={<AditionalTemplateB/>}></Route>
-        <Route path="/register/payment" element={<Step_7/>}></Route>
-        <Route path="/register/complete" element={<Step_8/>}></Route>
-        <Route path="/craftman" element={<Artesano/>}></Route>
+        <Route
+          path="/craftman/template"
+          element={<DashboardTemplate />}
+        ></Route>
+        <Route path="/craftman/orders" element={<OrdersCraftsman />}></Route>
+        <Route path="/craftman/orderDetail" element={<OrderDetail />}></Route>
+        <Route
+          path="/register/personalInfo"
+          element={<RegisterArtesanoPersonalInfo />}
+        ></Route>
+        <Route
+          path="/register/siteInfo"
+          element={<RegisterArtesanoInfoSite />}
+        ></Route>
+        <Route path="/register/photos" element={<Page3 />}></Route>
+        <Route path="/register/products" element={<Page4 />}></Route>
+        <Route
+          path="/register/selectTemplate"
+          element={<SelectTemplate />}
+        ></Route>
+        <Route
+          path="/register/infoTemplate"
+          element={<AditionalTemplateB />}
+        ></Route>
+        <Route path="/register/payment" element={<Step_7 />}></Route>
+        <Route path="/register/complete" element={<Step_8 />}></Route>
+        <Route path="/craftman" element={<Artesano />}></Route>
       </Routes>
       <footer>
         <Footer></Footer>
