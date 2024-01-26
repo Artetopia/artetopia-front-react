@@ -2,7 +2,7 @@ import "../VerifyAccount/styles.css";
 import ButtonAction from "../../components/buttonAction";
 import { useForm } from "react-hook-form";
 
-const VerifyAccount = () => {
+const VerifyAccount = ({ email }) => {
   // const { email } = userForm();
 
   const {
@@ -10,6 +10,14 @@ const VerifyAccount = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const onSubmit = (data) => {
+    if (Object.keys(errors).length > 0) {
+      console.log("Por favor, completa todos los campos.");
+      return;
+    }
+    console.log(data);
+  };
 
   return (
     <>
@@ -20,14 +28,14 @@ const VerifyAccount = () => {
               Verifica tu cuenta
             </h1>
             <p className="fs-4 col-lg-9 col-xl-8 ms-lg-5">
-              Hemos enviado un código de verificación a tu correo electrónico
-              ejemplo@ejemplo.com
-              {/* {email} */}
+              Hemos enviado un código de verificación a tu correo electrónico{" "}
+              {email}.
             </p>
             <p className="my-3 fs-4 ms-lg-5">Por favor, ingresa el código:</p>
           </div>
           <form
-            onSubmit={handleSubmit((data) => console.log(data))}
+            // onSubmit={handleSubmit((data) => console.log(data))}
+            onSubmit={handleSubmit(onSubmit)}
             className="col-lg-6"
             action="#"
           >
@@ -38,7 +46,7 @@ const VerifyAccount = () => {
                 name="firstNumber"
                 id="firstNumber"
                 inputMode="numeric"
-                maxLength={1}
+                maxLength="1"
                 // value="1"
                 {...register("firstNumber", {
                   required: {
@@ -47,11 +55,6 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {/* {errors.number && (
-                <p className="text-danger m-0 mt-2">
-                  {errors.number.message}
-                </p>
-              )} */}
               <input
                 type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
@@ -67,11 +70,6 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {/* {errors.secondNumber && (
-                <p className="text-danger m-0 mt-2">
-                  {errors.secondNumber.message}
-                </p>
-              )} */}
               <input
                 type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
@@ -87,11 +85,6 @@ const VerifyAccount = () => {
                   },
                 })}
               />
-              {/* {errors.thirdNumber && (
-                <p className="text-danger m-0 mt-2">
-                  {errors.thirdNumber.message}
-                </p>
-              )} */}
               <input
                 type="number"
                 className="input-codes p-4 mx-1 mx-md-2 verify-input"
@@ -108,10 +101,10 @@ const VerifyAccount = () => {
                 })}
               />
             </div>
-            {errors.forthNumber && (
+            {Object.keys(errors).length > 0 && (
               <div>
                 <p className="text-danger m-0 mt-2">
-                  {errors.forthNumber.message}
+                  Por favor, completa todos los campos
                 </p>
               </div>
             )}
@@ -135,57 +128,3 @@ const VerifyAccount = () => {
 };
 
 export default VerifyAccount;
-
-// import "../VerifyAccount/styles.css";
-// import ButtonAction from "../../components/buttonAction";
-// import { useForm } from "react-hook-form";
-// import VerificationInput from "react-verification-input";
-
-// const VerifyAccount = () => {
-//   // const { email } = userForm();
-
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//   } = useForm();
-
-//   return (
-//     <>
-//       <section className="container">
-//         <section className="row d-flex flex-column align-items-center text-center">
-//           <div className="d-flex flex-column align-items-lg-start text-lg-start text-xl-start">
-//             <h1 className="title-verification mt-5 ms-lg-5 fs-sm-3">
-//               Verifica tu cuenta
-//             </h1>
-//             <p className="fs-4 col-lg-9 col-xl-8 ms-lg-5">
-//               Hemos enviado un código de verificación a tu correo electrónico
-//               ejemplo@ejemplo.com
-//               {/* {email} */}
-//             </p>
-//             <p className="my-3 fs-4 ms-lg-5">Por favor, ingresa el código:</p>
-//           </div>
-//           <VerificationInput
-//             length={4}
-//             validChars="0-9"
-//             classNames={{
-//               container: "container-verification",
-//               character: "character-verification",
-//               characterInactive: "character--inactive",
-//               characterSelected: "character--selected",
-//               characterFilled: "character--filled",
-//             }}
-//           />
-
-//           <ButtonAction
-//             buttonClass="button-primary my-3 my-lg-4"
-//             text="Continuar"
-//             type="submit"
-//           ></ButtonAction>
-//         </section>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default VerifyAccount;
