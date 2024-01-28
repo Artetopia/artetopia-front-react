@@ -1,157 +1,113 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
-import './styles.css';
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
+import ButtonAction from "../../components/buttonAction";
+import ModalProduct from "../../components/ModalProduct";
+import "./styles.css";
 import ImageProduct from "/assets/Image_producto.png";
 
-
 const ModalButtons = () => {
-  const [showModal1, setShowModal1] = useState(false);
-  const [showModal2, setShowModal2] = useState(false);
-  const [showModal3, setShowModal3] = useState(false);
-  const [showModal4, setShowModal4] = useState(false);
-  const [showModal5, setShowModal5] = useState(false);
-  const [showModal6, setShowModal6] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [productModal, setProductModal] = useState(false);
 
-  const openModal = (modalNumber) => {
-    switch (modalNumber) {
-      case 1:
-        setShowModal1(true);
-        break;
-      case 2:
-        setShowModal2(true);
-        break;
-      case 3:
-        setShowModal3(true);
-        break;
-      case 4:
-        setShowModal4(true);
-        break;
-      case 5:
-        setShowModal5(true);
-        break;
-      case 6:
-        setShowModal6(true);
-        break;
-      default:
-        break;
-    }
+  const onHideModal = () => {
+    setProductModal(false);
   };
 
-  const closeModal = (modalNumber) => {
-    switch (modalNumber) {
-      case 1:
-        setShowModal1(false);
-        break;
-      case 2:
-        setShowModal2(false);
-        break;
-      case 3:
-        setShowModal3(false);
-        break;
-      case 4:
-        setShowModal4(false);
-        break;
-      case 5:
-        setShowModal5(false);
-        break;
-      case 6:
-        setShowModal6(false);
-        break;
-      default:
-        break;
-    }
+  const showModalProduct = () => {
+    setProductModal(true);
+    console.log(productModal);
   };
 
   return (
-    <div className='main'>
+    <div className="main">
       {/* Buttons */}
-      <div className='main-container'>
-       <div className='tittle'>
-        <h3 className='my_products'>MIS PRODUCTOS</h3>
-        <Button id='tittle-btn'>Agregar nuevo producto</Button>
-       </div>
-
-      <Button variant="primary" onClick={() => openModal(1)}  id='custom_btn'>
-        Open Modal 1
-      </Button>
-      <Button variant="primary" onClick={() => openModal(2)} id='custom_btn' >
-        Open Modal 2
-      </Button>
-      <Button variant="primary" onClick={() => openModal(3)}  id='custom_btn'>
-        Open Modal 3
-      </Button>
-      <Button variant="primary" onClick={() => openModal(4)}  id='custom_btn'>
-        Open Modal 4
-      </Button>
-      <Button variant="primary" onClick={() => openModal(5)}  id='custom_btn'>
-        Open Modal 5
-      </Button>
-      <Button variant="primary" onClick={() => openModal(6)} id='custom_btn' >
-        Open Modal 6
-      </Button>
+      <div className="main-container">
+        <div className="tittle">
+          <h3 className="my_products">MIS PRODUCTOS</h3>
+          <ButtonAction
+            text="Agregar nuevo producto"
+            type="button"
+            buttonClass="button-primary"
+            action={showModalProduct}
+          ></ButtonAction>
+        </div>
+        <ModalProduct show={productModal} onHide={onHideModal}></ModalProduct>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 1
+        </Button>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 2
+        </Button>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 3
+        </Button>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 4
+        </Button>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 5
+        </Button>
+        <Button
+          variant="primary"
+          className="productButton"
+          onClick={() => setShowModal(!showModal)}
+        >
+          Open Modal 6
+        </Button>
       </div>
 
       {/* Modals */}
-      <Modal show={showModal1} onHide={() => closeModal(1)} >
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(!showModal)}
+        className="rounded"
+      >
         {/* <Modal.Header closeButton className='modal-card'>
         </Modal.Header> */}
-        <img src={ImageProduct} alt="" className='image' />
-        <div className='modal-tittle'>
-        <Modal.Title>Muñeca Mexicana</Modal.Title>
-        <Modal.Title>$100</Modal.Title>
+        <img
+          src={ImageProduct}
+          alt=""
+          className="productImage__modal rounded w-100"
+        />
+        <div className="modal-tittle">
+          <Modal.Title>Muñeca Mexicana</Modal.Title>
+          <Modal.Title>$100</Modal.Title>
         </div>
-        <Modal.Body className='text-start ps-3 body' >
-           Muñeqas de tela tradicionales.
+        <Modal.Body className="text-start ps-3 body">
+          Muñeqas de tela tradicionales.
         </Modal.Body>
-        <div className='modal-btn' >
-            <Button className='m-2'>Editar</Button>
-            <Button className='m-2'>Borrar</Button>
+        <div className="modal-btn d-flex justify-content-center pb-3">
+          <ButtonAction
+            text="Editar"
+            buttonClass="button-primary mr-3"
+            type="button"
+          ></ButtonAction>
+          <ButtonAction
+            text="Eliminar"
+            buttonClass="button-secondary"
+            type="button"
+          ></ButtonAction>
         </div>
-      </Modal>
-
-      <Modal show={showModal2} onHide={() => closeModal(2)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal 2</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Content for Modal 2 goes here.
-        </Modal.Body>
-      </Modal>
-
-      <Modal show={showModal3} onHide={() => closeModal(3)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal 3</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Content for Modal 3 goes here.
-        </Modal.Body>
-      </Modal>
-
-      <Modal show={showModal4} onHide={() => closeModal(4)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal 4</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Content for Modal 4 goes here.
-        </Modal.Body>
-      </Modal>
-
-      <Modal show={showModal5} onHide={() => closeModal(5)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal 5</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Content for Modal 5 goes here.
-        </Modal.Body>
-      </Modal>
-
-      <Modal show={showModal6} onHide={() => closeModal(6)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal 6</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Content for Modal 6 goes here.
-        </Modal.Body>
       </Modal>
     </div>
   );

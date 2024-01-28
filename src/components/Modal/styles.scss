@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.modal__container {
+    .principal-text {
+        color: $primaryColor;
+    }
+    .edit-icons {
+        color: $primaryColor;
+        font-size: 20px;
+    }
+}

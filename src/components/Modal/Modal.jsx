@@ -1,51 +1,75 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
-// import "./modal.css"
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
+import Row from "react-bootstrap/Row";
+import ButtonAction from "../buttonAction";
+import "./styles.css";
 
 function MydModalWithGrid(props) {
-  console.log('products modal', props.products)
+  console.log("products modal", props.products);
 
   return (
-    <Modal {...props} aria-labelledby="example-modal-sizes-title-lg"
+    <Modal
+      {...props}
+      aria-labelledby="example-modal-sizes-title-lg"
+      className="modal__container"
+      size="lg"
     >
       <Modal.Header closeButton>
-        <Modal.Title className='principal-text' id="example-modal-sizes-title-lg">
+        <Modal.Title
+          className="principal-text"
+          id="example-modal-sizes-title-lg"
+        >
           Mis productos
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="grid-example">
         <Container>
-          {props.products.map((product, index) =>
-              <Row key={product.id} className='d-md-flex flex-md-nowrap mb-5'> 
-                <Col className='body-text order-md-first' xs={6} md={1}>
-                  #{index+1} 
-                </Col>
-                <Col className='order-md-last d-flex justify-content-end' xs={6} md={1}>
-                  <i className='order-md-6 edit-icons mx-2 fa fa-pencil' onClick={() => props.onEditProduct(product)} />
-                  <i className='order-md-7 edit-icons fa fa-trash-o'onClick={() => props.onDeleteProduct(product)} />
-                </Col>
-                <Col className='body-text order-md-2' xs={12} md={2}>
-                  <p>{product.name}</p>
-                </Col>
-                <Col className='body-text order-md-3' xs={12} md={3}>
-                  <p>{product.description}</p>
-                </Col>
-                <Col className='body-text order-md-4' xs={6} md={2}>
-                  {product.stock} pz
-                </Col>
-                <Col className='body-text order-md-5' xs={6} md={3}>
-                ${product.price}
-                </Col>
-              </Row>
-            )}
+          <Row>
+            <table className="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre del articulo</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Inventario</th>
+                  <th scope="col">Precio</th>
+                  <th scope=""></th>
+                </tr>
+              </thead>
+              <tbody>
+                {props.products.map((product, index) => (
+                  <>
+                    <tr>
+                      <td scope="row">{index + 1}</td>
+                      <td>{product.name}</td>
+                      <td>{product.description}</td>
+                      <td>{product.stock}</td>
+                      <td>${product.price}</td>
+                      <td>
+                        <div className="col-sm-6 d-flex">
+                          <i
+                            className="edit-icons mx-2 fa fa-pencil"
+                            onClick={() => props.onEditProduct(product)}
+                          />
+                          <i
+                            className="edit-icons fa fa-trash-o"
+                            onClick={() => props.onDeleteProduct(product)}
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                  </>
+                ))}
+              </tbody>
+            </table>
+          </Row>
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="white" className="body-text close-modal-button mt-3 mb-3" onClick={props.onHide}>Cerrar</Button>
+        <ButtonAction text="Cerrar" buttonClass="button-secondary" type="button" action={props.onHide}></ButtonAction>
       </Modal.Footer>
     </Modal>
   );

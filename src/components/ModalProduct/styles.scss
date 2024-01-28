@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.modalProduct__container {
+    .principal-text {
+        color: $primaryColor;
+    }
+    .primary-input {
+        border-radius: 30px;
+        border: 1px solid $secondaryColor;
+    }
+    .close-icon-custom {
+        background-color: $primaryColor;
+        color: white;
+        border-radius: 50px;
+        padding: 5px;
+    }
+}

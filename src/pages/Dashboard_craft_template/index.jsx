@@ -37,9 +37,9 @@ const DashboardTemplate = () => {
     };
     return (
         <>
-            <div className="container">
+            <div className="container template__container">
                 <form onSubmit={handleSubmit((data) => console.log(data))}>
-                    <h2 className="text-center mb-3 fw-bold" id="heading_secondary">
+                    <h2 className="text-center mb-3 mt-3 fw-bold" id="heading_secondary">
                         Edita tu información
                     </h2>
                     <div className="row">
@@ -81,10 +81,10 @@ const DashboardTemplate = () => {
                             </div>
                         </div>
                     </div>
-                </form>
                 <Row className="mt-4 mb-5">
                     <Col className=" col-12">
                         <div className="formfile-uploader-container">
+                        <label htmlFor="exampleEmail">Sube un video a tu sitio</label>
                             {profilePic == null ? (
                                 <FormFile
                                     fileType="video/*"
@@ -115,6 +115,7 @@ const DashboardTemplate = () => {
                         <p className="text_f fw-semibold">Maximo 30 segundos o 30 MB</p>
                     </Col>
                     <Col className="mt-lg-5">
+                        <div className="form-group">
                         <label htmlFor="exampleEmail">O inserta tu URL</label>
                         <input
                             id="urlimage"
@@ -134,11 +135,13 @@ const DashboardTemplate = () => {
                         {errors.videoUrl && (
                             <p className="text-danger m-0">{errors.videoUrl.message}</p>
                         )}
+                        </div>
                     </Col>
                 </Row>
                 <p className="fw-bold">Agrega hasta tres secciones</p>
                 <Row xs="1" lg="3" className="mt-4">
                     <Col className="grid gap-3">
+                        <div className="form-group mb-3">
                         <label htmlFor="title">Titulo</label>
                         <input
                             id="title"
@@ -153,6 +156,8 @@ const DashboardTemplate = () => {
                         {errors.title && (
                             <p className="text-danger m-0">{errors.title.message}</p>
                         )}
+                        </div>
+                        <div className="form-group mb-3">
                         <label htmlFor="description">Descripción</label>
                         <textarea
                             id="description"
@@ -168,7 +173,9 @@ const DashboardTemplate = () => {
                         />
                         {errors.description && (
                             <p className="text-danger m-0">{errors.description.message}</p>
-                        )}
+                        )}  
+                        </div>
+                        <div className="form-group">
                         <label htmlFor="">Imagen</label>
                         <div className="formfile-uploader-container">
                             {imagesecondary == null ? (
@@ -194,9 +201,11 @@ const DashboardTemplate = () => {
 
                             )}
                         </div>
+                        </div>
                     </Col>
                     <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
                     <Col className="grid gap-3">
+                        <div className="form-group mb-3">
                         <label htmlFor="title2">Titulo</label>
                         <input
                             id="title2"
@@ -214,6 +223,8 @@ const DashboardTemplate = () => {
                         {errors.title2 && (
                             <p className="text-danger m-0">{errors.title2.message}</p>
                         )}
+                        </div>
+                        <div className="form-group mb-3">
                         <label htmlFor="description2">Descripción</label>
                         <textarea
                             id="description2"
@@ -233,6 +244,8 @@ const DashboardTemplate = () => {
                         {errors.description2 && (
                             <p className="text-danger m-0">{errors.description2.message}</p>
                         )}
+                        </div>
+                        <div className="form-group">
                         <label htmlFor="">Imagen</label>
                         <div className="formfile-uploader-container">
                             {imagetree == null ? (
@@ -258,9 +271,11 @@ const DashboardTemplate = () => {
 
                             )}
                         </div>
+                        </div>
                     </Col>
                     <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
                     <Col className="grid gap-3">
+                        <div className="form-group mb-3">
                         <label htmlFor="title3">Titulo</label>
                         <input
                             id="title3"
@@ -278,6 +293,8 @@ const DashboardTemplate = () => {
                         {errors.title3 && (
                             <p className="text-danger m-0">{errors.title3.message}</p>
                         )}
+                        </div>
+                        <div className="form-group mb-3">
                         <label htmlFor="description3">Descripción</label>
                         <textarea
                             id="description3"
@@ -297,6 +314,8 @@ const DashboardTemplate = () => {
                         {errors.description3 && (
                             <p className="text-danger m-0">{errors.description3.message}</p>
                         )}
+                        </div>
+                        <div className="form-group">
                         <label htmlFor="">Imagen</label>
                         <div className="formfile-uploader-container">
                             {imagefor == null ? (
@@ -321,9 +340,10 @@ const DashboardTemplate = () => {
                                 </>
                             )}
                         </div>
+                        </div>
                     </Col>
                 </Row>
-                <div className=" container row mt-5">
+                <div className="row mt-5 colors__container">
                     <div className="col-12 col-lg-4 mb-3">
                         <div className="form-check">
                             <input
@@ -380,6 +400,10 @@ const DashboardTemplate = () => {
                         <p className="text-danger m-0">{errors.color.message}</p>
                     )}
                 </div>
+                <div className="row d-flex justify-content-center">
+                    <ButtonAction buttonClass="button-primary" text="Guardar" type="submit"></ButtonAction>
+                </div>
+                </form>
             </div>
         </>
     )

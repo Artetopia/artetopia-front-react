@@ -29,6 +29,7 @@
 
 .card_materiales {
   height: 25rem !important;
+  min-height: -webkit-fit-content !important;
   min-height: -moz-fit-content !important;
   min-height: fit-content !important;
   text-align: center;
@@ -38,6 +39,7 @@
 
 .card_historia {
   height: 25rem !important;
+  min-height: -webkit-fit-content !important;
   min-height: -moz-fit-content !important;
   min-height: fit-content !important;
   text-align: center;
@@ -47,6 +49,7 @@
 
 .card_respons {
   height: 25rem !important;
+  min-height: -webkit-fit-content !important;
   min-height: -moz-fit-content !important;
   min-height: fit-content !important;
   text-align: center;
@@ -67,6 +70,7 @@
   color: #ffffff;
   border: 1px solid #e91e63;
   border-radius: 4px;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
