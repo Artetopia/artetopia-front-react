@@ -1,9 +1,9 @@
 // HeaderComponent.js
 import './header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import image from '../../../public/assets/hero-image.svg';
-import imagePlayButtton from '../../../public/assets/play-button.svg';
-import topDescription from '../../../public/assets/top_descripcion.svg';
+import image from '/assets/hero-image.svg';
+import imagePlayButtton from '/assets/play-button.svg';
+import topDescription from '/assets/top_descripcion.svg';
 import Navbare from '../../components/navbar';
 import AnimationButton from '../../components/animation_button';
 import ButtonAction from '../buttonAction';

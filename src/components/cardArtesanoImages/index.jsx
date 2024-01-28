@@ -1,4 +1,4 @@
-import bgArtesano from "../../../public/assets/bgArtesano.png";
+import bgArtesano from "/assets/bgArtesano.png";
 import "./styles.css";
 const CardArtesanoImages = ({ name, description, profileImage, images }) => {
   return (

@@ -65,7 +65,7 @@ const Register = () => {
               </div>
               {errors.clientType && (
                 <div className="text-center">
-                   <p className="font-weight-bold m-0 text-danger">{errors.clientType.message}</p>
+                   <p className="m-0 text-danger">{errors.clientType.message}</p>
                 </div>
                 )}
               <div className="form-container">
@@ -85,7 +85,7 @@ const Register = () => {
                     })}
                   />
                   {errors.email && (
-                  <p className="font-weight-bold m-0 text-danger">{errors.email.message}</p>
+                  <p className="m-0 text-danger">{errors.email.message}</p>
                 )}
                 </div>
                 <div className="form-group mb-3">

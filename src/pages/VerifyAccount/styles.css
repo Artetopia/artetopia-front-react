@@ -19,7 +19,8 @@
 
 .send-again {
   color: #e91e63;
-  text-decoration-color: #e91e63;
+  -webkit-text-decoration-color: #e91e63;
+          text-decoration-color: #e91e63;
 }
 .send-again:hover {
   color: #fc6a9b;

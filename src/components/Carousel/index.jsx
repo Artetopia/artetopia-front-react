@@ -39,7 +39,9 @@ function ComponentCarousel( { files=[], ...rest }) {
         onExited={() => setAnimating(false)}
         key={item.name}
       >
+        <div className="d-flex justify-content-center">
         <img src={item.src} alt={item.altText} className='image-carousel-container carousel-container '/>
+        </div>
         
       </CarouselItem>
     );
@@ -53,6 +55,7 @@ function ComponentCarousel( { files=[], ...rest }) {
       next={next}
       previous={previous}
       {...rest}
+      className="w-100"
     >
       <CarouselIndicators
         items={items}

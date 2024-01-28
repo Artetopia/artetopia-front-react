@@ -35,7 +35,7 @@ const AditionalTemplateB = () => {
     setProfilePic(file);
   };
   return (
-    <div className="container">
+    <div className="container infoTemplate__container">
       <Stepper step={6}></Stepper>
       <h2 className="text-center">Agrega mas fotos sobre tu sitio </h2>
       <p className="text-center">
@@ -43,10 +43,10 @@ const AditionalTemplateB = () => {
         informacion para que te conozcan:
       </p>
       <p className="fw-semibold">Sube un video a tu sitio</p>
-      <div className="container">
+      <div className="container form__container">
         <form onSubmit={handleSubmit((data) => console.log(data))}>
           <Row>
-            <Col className=" col-12 col-lg-7">
+            <Col className="col-12 col-lg-7">
               <div className="formfile-uploader-container">
                 {profilePic == null ? (
                   <FormFile
@@ -57,7 +57,12 @@ const AditionalTemplateB = () => {
                 ) : (
                   <>
                     <div className="text-end">
-                      <button onClick={() => setProfilePic(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
+                      <button
+                        onClick={() => setProfilePic(null)}
+                        className="bg-transparent border border-0"
+                      >
+                        <img src="/trash.svg" />
+                      </button>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
                       <video
@@ -78,211 +83,259 @@ const AditionalTemplateB = () => {
               <p className="text_f fw-semibold">Maximo 30 segundos o 30 MB</p>
             </Col>
             <Col className="mt-lg-5">
-              <label htmlFor="exampleEmail">O inserta tu URL</label>
-              <input
-                id="urlimage"
-                name="url"
-                placeholder="www.sitio.com"
-                type="text"
-                className="w-100 form-control input__primary"
-                {...register("videoUrl", {
-                  required: { value: false },
-                  pattern: {
-                    value:
-                      /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/,
-                    message: "La dirección url debe de ser de youtube",
-                  },
-                })}
-              />
-              {errors.videoUrl && (
-                <p className="text-danger m-0">{errors.videoUrl.message}</p>
-              )}
+              <div className="form-group">
+                <label htmlFor="exampleEmail">Ó inserta tu URL</label>
+                <input
+                  id="urlimage"
+                  name="url"
+                  placeholder="www.sitio.com"
+                  type="text"
+                  className="w-100 form-control input__primary"
+                  {...register("videoUrl", {
+                    required: { value: false },
+                    pattern: {
+                      value:
+                        /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/,
+                      message: "La dirección url debe de ser de youtube",
+                    },
+                  })}
+                />
+                {errors.videoUrl && (
+                  <p className="text-danger m-0">{errors.videoUrl.message}</p>
+                )}
+              </div>
             </Col>
           </Row>
           <p className="fw-semibold">Agrega hasta tres secciones</p>
           <Row xs="1" lg="3" className="mt-4">
             <Col className="grid gap-3">
-              <label htmlFor="title">Titulo</label>
-              <input
-                id="title"
-                name="title"
-                placeholder="Titulo"
-                type="text"
-                className="w-100 form-control input__primary"
-                {...register("title", {
-                  required: { value: true, message: "El campo es requerido" },
-                })}
-              />
-              {errors.title && (
-                <p className="text-danger m-0">{errors.title.message}</p>
-              )}
-              <label htmlFor="description">Descripción</label>
-              <textarea
-                id="description"
-                name="description"
-                placeholder="Descripción de tu imagen"
-                type="text"
-                cols={10}
-                rows={5}
-                className="input__primary form-control w-100"
-                {...register("description", {
-                  required: { value: true, message: "El campo es obligatorio" },
-                })}
-              />
-              {errors.description && (
-                <p className="text-danger m-0">{errors.description.message}</p>
-              )}
-              <label htmlFor="">Imagen</label>
-              <div className="formfile-uploader-container">
-                {imagesecondary == null ? (
-                  <FormFile
-                    fileType="image/*"
-                    controlId="form-2"
-                    onChange={handleImageOne}
-                  />
-                ) : (
-                  <>
-                    <div className="text-end">
-                      <button onClick={() => setImagesecondary(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
-                    </div>
-
-                    <div>
-                      <img
-                        className="m-2 d-block justify-content-center w-100"
-                        src={URL.createObjectURL(imagesecondary)}
-                        alt="Selected file"
-                      />
-                    </div>
-                  </>
-
+              <div className="form-group mb-3">
+                <label htmlFor="title">Titulo</label>
+                <input
+                  id="title"
+                  name="title"
+                  placeholder="Titulo"
+                  type="text"
+                  className="w-100 form-control input__primary"
+                  {...register("title", {
+                    required: { value: true, message: "El campo es requerido" },
+                  })}
+                />
+                {errors.title && (
+                  <p className="text-danger m-0">{errors.title.message}</p>
                 )}
               </div>
+              <div className="form-group mb-3">
+                <label htmlFor="description">Descripción</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  placeholder="Descripción de tu imagen"
+                  type="text"
+                  cols={10}
+                  rows={5}
+                  className="input__primary form-control w-100"
+                  {...register("description", {
+                    required: {
+                      value: true,
+                      message: "El campo es obligatorio",
+                    },
+                  })}
+                />
+                {errors.description && (
+                  <p className="text-danger m-0">
+                    {errors.description.message}
+                  </p>
+                )}
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="">Imagen</label>
+                <div className="formfile-uploader-container">
+                  {imagesecondary == null ? (
+                    <FormFile
+                      fileType="image/*"
+                      controlId="form-2"
+                      onChange={handleImageOne}
+                    />
+                  ) : (
+                    <>
+                      <div className="position-relative">
+                        <div className="position-absolute top-0 end-0">
+                          <button
+                            onClick={() => setImagesecondary(null)}
+                            className="btn bg-transparent border-0"
+                          >
+                            <img src="/trash.svg" alt="Delete" />
+                          </button>
+                        </div>
+
+                        <div>
+                          <img
+                            className="m-2 d-block section__image w-100"
+                            src={URL.createObjectURL(imagesecondary)}
+                            alt="Selected file"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
             </Col>
-            <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
+            <hr className="border border-danger border-3 my-3  d-block d-lg-none" />
             <Col className="grid gap-3 section_color">
-              <label htmlFor="title2">Titulo</label>
-              <input
-                id="title2"
-                name="title2"
-                placeholder="Titulo"
-                type="text"
-                className="w-100 input__primary form-control"
-                {...register("title2", {
-                  required: {
-                    value: true,
-                    message: "El campo es obligatorio.",
-                  },
-                })}
-              />
-              {errors.title2 && (
-                <p className="text-danger m-0">{errors.title2.message}</p>
-              )}
-              <label htmlFor="description2">Descripción</label>
-              <textarea
-                id="description2"
-                name="description2"
-                placeholder="Descripción de tu imagen"
-                type="text"
-                cols={10}
-                rows={5}
-                className="input_descroption input__primary form-control w-100"
-                {...register("description2", {
-                  required: {
-                    value: true,
-                    message: "El campo es obligatorio.",
-                  },
-                })}
-              />
-              {errors.description2 && (
-                <p className="text-danger m-0">{errors.description2.message}</p>
-              )}
-              <label htmlFor="">Imagen</label>
-              <div className="formfile-uploader-container">
-                {imagetree == null ? (
-                  <FormFile
-                    fileType="image/*"
-                    controlId="form-3"
-                    onChange={handleImageTree}
-                  />
-                ) : (
-                  <>
-                    <div className="text-end">
-                      <button onClick={() => setImagetree(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
-                    </div>
-
-                    <div>
-                      <img
-                        className="m-2 d-block justify-content-center w-100"
-                        src={URL.createObjectURL(imagetree)}
-                        alt="Selected file"
-                      />
-                    </div>
-                  </>
-
+              <div className="form-group mb-3">
+                <label htmlFor="title2">Titulo</label>
+                <input
+                  id="title2"
+                  name="title2"
+                  placeholder="Titulo"
+                  type="text"
+                  className="w-100 input__primary form-control"
+                  {...register("title2", {
+                    required: {
+                      value: true,
+                      message: "El campo es obligatorio.",
+                    },
+                  })}
+                />
+                {errors.title2 && (
+                  <p className="text-danger m-0">{errors.title2.message}</p>
                 )}
               </div>
-            </Col>
-            <hr className="border border-danger border-3 my-3  d-block d-lg-none"/>
-            <Col className="grid gap-3">
-              <label htmlFor="title3">Titulo</label>
-              <input
-                id="title3"
-                name="title3"
-                placeholder="Titulo"
-                type="text"
-                className="w-100 input__primary form-control"
-                {...register("title3", {
-                  required: {
-                    value: true,
-                    message: "El campo es obligatorio.",
-                  },
-                })}
-              />
-              {errors.title3 && (
-                <p className="text-danger m-0">{errors.title3.message}</p>
-              )}
-              <label htmlFor="description3">Descripción</label>
-              <textarea
-                id="description3"
-                name="description3"
-                placeholder="Descripción de tu imagen"
-                type="text"
-                cols={10}
-                rows={5}
-                className="input_descroption input__primary form-control w-100"
-                {...register("description3", {
-                  required: {
-                    value: true,
-                    message: "El campo es obligatorio.",
-                  },
-                })}
-              />
-              {errors.description3 && (
-                <p className="text-danger m-0">{errors.description3.message}</p>
-              )}
-              <label htmlFor="">Imagen</label>
-              <div className="formfile-uploader-container">
-                {imagefor == null ? (
-                  <FormFile
-                    fileType="image/*"
-                    controlId="form-4"
-                    onChange={handleImageFor}
-                  />
-                ) : (
-                  <>
-                    <div className="text-end">
-                      <button onClick={() => setImagefor(null)} className="bg-transparent border border-0"><img src="/trash.svg" /></button>
-                    </div>
-
-                    <div>
-                      <img
-                        className="m-2 d-block justify-content-center w-100"
-                        src={URL.createObjectURL(imagefor)}
-                        alt="Selected file"
-                      />
-                    </div>
-                  </>
+              <div className="form-group mb-3">
+                <label htmlFor="description2">Descripción</label>
+                <textarea
+                  id="description2"
+                  name="description2"
+                  placeholder="Descripción de tu imagen"
+                  type="text"
+                  cols={10}
+                  rows={5}
+                  className="input_descroption input__primary form-control w-100"
+                  {...register("description2", {
+                    required: {
+                      value: true,
+                      message: "El campo es obligatorio.",
+                    },
+                  })}
+                />
+                {errors.description2 && (
+                  <p className="text-danger m-0">
+                    {errors.description2.message}
+                  </p>
                 )}
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="">Imagen</label>
+                <div className="formfile-uploader-container">
+                  {imagetree == null ? (
+                    <FormFile
+                      fileType="image/*"
+                      controlId="form-3"
+                      onChange={handleImageTree}
+                    />
+                  ) : (
+                    <>
+                      <div className="position-relative">
+                        <div className="position-absolute top-0 end-0">
+                          <button
+                            onClick={() => setImagetree(null)}
+                            className="btn bg-transparent border-0"
+                          >
+                            <img src="/trash.svg" alt="Delete" />
+                          </button>
+                        </div>
+
+                        <div>
+                          <img
+                            className="m-2 d-block section__image w-100"
+                            src={URL.createObjectURL(imagetree)}
+                            alt="Selected file"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            </Col>
+            <hr className="border border-danger border-3 my-3  d-block d-lg-none" />
+            <Col className="grid gap-3">
+              <div className="form-group mb-3">
+                <label htmlFor="title3">Titulo</label>
+                <input
+                  id="title3"
+                  name="title3"
+                  placeholder="Titulo"
+                  type="text"
+                  className="w-100 input__primary form-control"
+                  {...register("title3", {
+                    required: {
+                      value: true,
+                      message: "El campo es obligatorio.",
+                    },
+                  })}
+                />
+                {errors.title3 && (
+                  <p className="text-danger m-0">{errors.title3.message}</p>
+                )}
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="description3">Descripción</label>
+                <textarea
+                  id="description3"
+                  name="description3"
+                  placeholder="Descripción de tu imagen"
+                  type="text"
+                  cols={10}
+                  rows={5}
+                  className="input_descroption input__primary form-control w-100"
+                  {...register("description3", {
+                    required: {
+                      value: true,
+                      message: "El campo es obligatorio.",
+                    },
+                  })}
+                />
+                {errors.description3 && (
+                  <p className="text-danger m-0">
+                    {errors.description3.message}
+                  </p>
+                )}
+              </div>
+              <div className="form-group mb-3">
+                <label htmlFor="">Imagen</label>
+                <div className="formfile-uploader-container">
+                  {imagefor == null ? (
+                    <FormFile
+                      fileType="image/*"
+                      controlId="form-4"
+                      onChange={handleImageFor}
+                    />
+                  ) : (
+                    <>
+                      <div className="position-relative">
+                        <div className="position-absolute top-0 end-0">
+                          <button
+                            onClick={() => setImagefor(null)}
+                            className="btn bg-transparent border-0"
+                          >
+                            <img src="/trash.svg" alt="Delete" />
+                          </button>
+                        </div>
+
+                        <div>
+                          <img
+                            className="m-2 d-block w-100"
+                            src={URL.createObjectURL(imagefor)}
+                            alt="Selected file"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </Col>
           </Row>
@@ -291,7 +344,7 @@ const AditionalTemplateB = () => {
             <ButtonAction
               buttonClass="button-secondary m-3"
               text="Atras"
-              type="button"
+              action="../register/selectTemplate"
             ></ButtonAction>
             <ButtonAction
               buttonClass="button-primary m-3"

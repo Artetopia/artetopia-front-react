@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Montserrat:wght@700&display=swap');
-
-// Main regrangle shape
+@import "../../styles/variables";
 
 .main {
     display: flex;
@@ -13,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #e91e63;
+    border: 2px solid $primaryColor;
     width: 98%;
     border-radius: 10px;
 }
@@ -31,7 +28,7 @@
 
 #tittle-btn {
     font-size: 10px;
-    background-color: #e91e63;
+    background-color: $primaryColor;
     border: none;
 
 }
@@ -41,49 +38,51 @@
     margin: 10px;
 }
 
-
-// Option BTN 
-
-
-
-#custom_btn {
-    width: 95%;
-    height: 40px;
-    text-align: left;
-    background-color: white;
-    border: 2px solid #2b2e4a;
-    color: #2b2e4a;
-    border-radius: 23px;
-    margin: 10px;
-    font-family: "Karla", sans-serif;
-}
-
-
 // Modal
 
-.image {
-    width: 100%;
-    background-color: #2b2e4a;
+.productImage__modal {
+    height: 450px;
+    object-fit: cover;
+    background-color: $secondaryColor;
 }
 
 .modal-tittle {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    background-color: #2b2e4a;
+    background-color: $secondaryColor;
     color: white;
 }
 
 .modal-btn {
-    display: flex;
-    justify-content: right;
-    background-color: #2b2e4a;
-    color: white;
+    background-color: $secondaryColor;
 }
 
 
 
 .body {
-    background-color: #2b2e4a;
+    background-color: $secondaryColor;
     color: white;
+}
+
+.productButton {
+    width: 95%;
+    height: 40px;
+    text-align: left;
+    background-color: white;
+    border: 2px solid $secondaryColor;
+    color: $secondaryColor;
+    border-radius: 23px;
+    margin: 10px;
+    font-family: $fontkarla;
+    &:hover{
+        border-color: $primaryColor;
+        background-color: $secondaryColor;
+    }
+    &:focus {
+        background-color: white;
+        border: 2px solid $secondaryColor;
+        box-shadow: none !important;
+        color: $secondaryColor !important;
+    }
 }

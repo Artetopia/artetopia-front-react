@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ButtonAction from "../../components/buttonAction";
-import Imagen1 from "../../../public/imagen1.png";
-import Imagen2 from "../../../public/imagen2.jpeg";
-import Imagen3 from "../../../public/imagen3.jpeg";
-import Imagen6 from "../../../public/imagen6.png";
+import Imagen1 from "/imagen1.png";
+import Imagen2 from "/imagen2.jpeg";
+import Imagen3 from "/imagen3.jpeg";
+import Imagen6 from "/imagen6.png";
 import "./styles.css";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 

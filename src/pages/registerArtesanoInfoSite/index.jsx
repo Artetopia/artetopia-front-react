@@ -31,7 +31,7 @@ const RegisterArtesanoInfoSite = () => {
     control: (provided) => ({
       ...provided,
       borderRadius: "50px",
-      borderColor: "#000000",
+      borderColor: "#000000"
     }),
   };
 
@@ -259,9 +259,15 @@ const RegisterArtesanoInfoSite = () => {
             </div>
           </div>
           <div className="text-center mt-4">
+          <ButtonAction
+              buttonClass="btn button-secondary mr-3"
+              text="Atras"
+              action="../register/personalInfo"
+            ></ButtonAction>
             <ButtonAction
               buttonClass="button-primary"
               text="Siguiente"
+              type="submit"
             ></ButtonAction>
           </div>
         </form>

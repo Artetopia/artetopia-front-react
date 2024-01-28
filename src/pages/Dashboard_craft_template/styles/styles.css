@@ -1,49 +1,45 @@
-.prymaricolor1 {
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.template__container .input__primary {
+  border: 1px solid #2b2e4a;
+  border-radius: 30px;
+}
+.template__container .colors__container .prymaricolor1 {
   background-color: #3D0C11;
   height: 5rem;
 }
-
-.secondarycolor1 {
+.template__container .colors__container .secondarycolor1 {
   background-color: #D80032;
   height: 5rem;
 }
-
-.thirdcolor1 {
+.template__container .colors__container .thirdcolor1 {
   background-color: #F78CA2;
   height: 5rem;
 }
-
-.prymaricolor2 {
+.template__container .colors__container .prymaricolor2 {
   background-color: #331D2C;
   height: 5rem;
 }
-
-.secondarycolor2 {
+.template__container .colors__container .secondarycolor2 {
   background-color: #3F2E3E;
   height: 5rem;
 }
-
-.thirdcolor2 {
+.template__container .colors__container .thirdcolor2 {
   background-color: #A78295;
   height: 5rem;
 }
-
-.prymaricolor3 {
+.template__container .colors__container .prymaricolor3 {
   background-color: #6C3428;
   height: 5rem;
 }
-
-.secondarycolor3 {
+.template__container .colors__container .secondarycolor3 {
   background-color: #BA704F;
   height: 5rem;
 }
-
-.thirdcolor3 {
+.template__container .colors__container .thirdcolor3 {
   background-color: #DFA878;
   height: 5rem;
 }
-
-.link_up {
+.template__container .colors__container .link_up {
   color: #2196F3;
   text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
