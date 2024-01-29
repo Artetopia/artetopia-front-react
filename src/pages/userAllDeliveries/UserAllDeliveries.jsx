@@ -1,22 +1,37 @@
-import UserDeliveryCart from "../../components/user_delivery_cart"
+import UserDeliveryCart from "../../components/user_delivery_cart";
+import React, { useState } from 'react';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import "./styles.scss"
 
 const UserAllDeliveries = () => {
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedMonth, setSelectedMonth] = useState(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleSelect = (month) => {
+    setSelectedMonth(month);
+    // You can add your logic here for handling the selected month
+  };
+
   return (
     <>
     <div className="hello p-5">
     <section className="d-flex justify-content-between p-3">
       <h3>Mis Pedidos</h3>
-      <div className="dropdown">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a className="dropdown-item" href="#">Action</a>
-    <a className="dropdown-item" href="#">Another action</a>
-    <a className="dropdown-item" href="#">Something else here</a>
-  </div>
-      </div>
+      <Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
+      <DropdownToggle caret>
+        {selectedMonth ? `${selectedMonth} months` : 'Select Months'}
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem onClick={() => handleSelect(3)}>3 months</DropdownItem>
+        <DropdownItem onClick={() => handleSelect(6)}>6 months</DropdownItem>
+        <DropdownItem onClick={() => handleSelect(9)}>9 months</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
     </section>
     <div className="d-flex justify-content-center flex-wrap gap-5">
     <UserDeliveryCart></UserDeliveryCart>

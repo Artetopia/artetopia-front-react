@@ -30,11 +30,28 @@ const UserDeliveries = () => {
                             userDeliveries
                         ></ProductCard>
                         <ProductCard
+                            imge="https://c8.alamy.com/comp/2HEMDJD/mexican-crafts-details-san-miguel-de-allende-mexico-2HEMDJD.jpg"
+                            name_product="Muñeqas tradicionales"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                            userDeliveries
+                        ></ProductCard>
+                        <ProductCard
+                            imge="https://i.pinimg.com/564x/60/6e/53/606e535f100765eedb951fee99839cad.jpg"
+                            name_product="Poster tradicional"
+                            name_craftman="Victor"
+                            price="240"
+                            cantidad="2"
+                            userDeliveries
+                        ></ProductCard>
+                        <ProductCard
                             imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
                             name_product="Catrinas con vestidos tipicos"
                             name_craftman="Victor"
                             price="240"
                             cantidad="2"
+                            userDeliveries
                         ></ProductCard>
                         <ProductCard
                             imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
@@ -42,41 +59,7 @@ const UserDeliveries = () => {
                             name_craftman="Victor"
                             price="240"
                             cantidad="2"
-                        ></ProductCard>
-                        <ProductCard
-                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
-                            name_product="Catrinas con vestidos tipicos"
-                            name_craftman="Victor"
-                            price="240"
-                            cantidad="2"
-                        ></ProductCard>
-                        <ProductCard
-                            imge="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Catrinas_2.jpg/220px-Catrinas_2.jpg"
-                            name_product="Catrinas con vestidos tipicos"
-                            name_craftman="Victor"
-                            price="240"
-                            cantidad="2"
-                        ></ProductCard>
-                        <ProductCard
-                            imge="https://chompoartesanias.com/wp-content/uploads/2022/10/20211127_140458-scaled.jpg"
-                            name_product="Botella de Tequila Venado"
-                            name_craftman="Jose"
-                            price="1500"
-                            cantidad="2"
-                        ></ProductCard>
-                        <ProductCard
-                            imge="https://ungustito.mx/wp-content/uploads/2022/05/regalale-una-artesania-a-tu-mama-este-10-de-mayo-de-tienda-casart-1.jpg"
-                            name_product="Juego de Té de barro"
-                            name_craftman="Victor"
-                            price="2040"
-                            cantidad="1"
-                        ></ProductCard>
-                        <ProductCard
-                            imge="https://img.freepik.com/fotos-premium/accesorios-hechos-chaquira-multicolor-artesanias-mexicanas-hechas-piedras-colores_955012-265.jpg"
-                            name_product="Pendientes"
-                            name_craftman="Jule"
-                            price="800"
-                            cantidad="1"
+                            userDeliveries
                         ></ProductCard>
                     </div>
    </div>

@@ -7,8 +7,8 @@ const UserDeliveryCart = () => {
       <h3><b>PedidoNúmero12</b></h3>
       <p>Pedido el 28/11/2023</p>
       <p className="p-2">2 artículos</p>
-      <ButtonAction  type="button" text={"Vista detalle"}></ButtonAction>
+      <ButtonAction  type="button" buttonClass="button-primary" text={"Vista detalle"}></ButtonAction>
     </div>
   )
 }
-export default UserDeliveryCart
+export default UserDeliveryCart;
