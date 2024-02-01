@@ -31,7 +31,7 @@ const RegisterArtesanoInfoSite = () => {
     control: (provided) => ({
       ...provided,
       borderRadius: "50px",
-      borderColor: "#000000",
+      borderColor: "#000000"
     }),
   };
 
@@ -66,7 +66,9 @@ const RegisterArtesanoInfoSite = () => {
           <Stepper step={CURRENT_PAGE}></Stepper>
         </div>
         <div className="row text-center">
-          <h3 className="infoSite-subHeading mt-2 mt-lg-0">Información de tu sitio</h3>
+          <h3 className="infoSite-subHeading mt-2 mt-lg-0">
+            Información de tu sitio
+          </h3>
         </div>
         <form onSubmit={handleSubmit((data) => submitArtesanoInfoSite(data))}>
           <div className="row mt-4">
@@ -139,82 +141,82 @@ const RegisterArtesanoInfoSite = () => {
                 )}
               </div>
               <div className="from-group mb-3">
-              <div className="input-group input_primary">
-                <div className="input-group-prepend">
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className="input-group-text m-1 bg-transparent border-0"
-                    id="instagram"
+                <div className="input-group input_primary">
+                  <div className="input-group-prepend">
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      className="input-group-text m-1 bg-transparent border-0"
+                      id="instagram"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control input-primary__border"
+                    aria-describedby="instagram"
+                    name="instagram"
+                    {...register("instagram", {
+                      pattern: {
+                        value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                        message: "El valor no es una url",
+                      },
+                    })}
                   />
                 </div>
-                <input
-                  type="text"
-                  className="form-control input-primary__border"
-                  aria-describedby="instagram"
-                  name="instagram"
-                  {...register("instagram", {
-                    pattern: {
-                      value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
-                      message: "El valor no es una url",
-                    },
-                  })}
-                />
-              </div>
-              {errors.instagram && (
+                {errors.instagram && (
                   <p className="text-danger m-0">{errors.facebook.message}</p>
                 )}
               </div>
             </div>
             <div className="col-12 col-lg-6">
               <div className="form-group mb-3">
-              <div className="input-group input_primary">
-                <div className="input-group-prepend">
-                  <FontAwesomeIcon
-                    icon={faXTwitter}
-                    className="input-group-text m-1 bg-transparent border-0"
-                    id="twitter"
+                <div className="input-group input_primary">
+                  <div className="input-group-prepend">
+                    <FontAwesomeIcon
+                      icon={faXTwitter}
+                      className="input-group-text m-1 bg-transparent border-0"
+                      id="twitter"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control input-primary__border"
+                    aria-describedby="twitter"
+                    name="twitter"
+                    {...register("twitter", {
+                      pattern: {
+                        value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                        message: "El valor no es una url",
+                      },
+                    })}
                   />
                 </div>
-                <input
-                  type="text"
-                  className="form-control input-primary__border"
-                  aria-describedby="twitter"
-                  name="twitter"
-                  {...register("twitter", {
-                    pattern: {
-                      value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
-                      message: "El valor no es una url",
-                    },
-                  })}
-                />
-              </div>
-              {errors.twitter && (
+                {errors.twitter && (
                   <p className="text-danger m-0">{errors.facebook.message}</p>
                 )}
               </div>
               <div className="form-group mb-3">
-              <div className="input-group input_primary">
-                <div className="input-group-prepend">
-                  <FontAwesomeIcon
-                    icon={faTiktok}
-                    className="input-group-text m-1 bg-transparent border-0"
-                    id="tiktok"
+                <div className="input-group input_primary">
+                  <div className="input-group-prepend">
+                    <FontAwesomeIcon
+                      icon={faTiktok}
+                      className="input-group-text m-1 bg-transparent border-0"
+                      id="tiktok"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control input-primary__border"
+                    aria-describedby="tiktok"
+                    name="tiktok"
+                    {...register("tiktok", {
+                      pattern: {
+                        value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
+                        message: "El valor no es una url",
+                      },
+                    })}
                   />
                 </div>
-                <input
-                  type="text"
-                  className="form-control input-primary__border"
-                  aria-describedby="tiktok"
-                  name="tiktok"
-                  {...register("tiktok", {
-                    pattern: {
-                      value: /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/,
-                      message: "El valor no es una url",
-                    },
-                  })}
-                />
-              </div>
-              {errors.tiktok && (
+                {errors.tiktok && (
                   <p className="text-danger m-0">{errors.facebook.message}</p>
                 )}
               </div>
@@ -257,9 +259,15 @@ const RegisterArtesanoInfoSite = () => {
             </div>
           </div>
           <div className="text-center mt-4">
+          <ButtonAction
+              buttonClass="btn button-secondary mr-3"
+              text="Atras"
+              action="../register/personalInfo"
+            ></ButtonAction>
             <ButtonAction
               buttonClass="button-primary"
               text="Siguiente"
+              type="submit"
             ></ButtonAction>
           </div>
         </form>

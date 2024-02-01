@@ -11,7 +11,7 @@ const MIN_ALLOWED_FILES_PRODUCT = 1;
 const MAX_ALLOWED_FILES_PRODUCT = 10;
 const CURRENT_PAGE = 4;
 
-const Page4 = () => { 
+const Page4 = () => {
   const [modalShow, setModalShow] = useState(false);
 
   const [productPics, setProductPics] = useState([]);
@@ -33,250 +33,220 @@ const Page4 = () => {
     setProductPics([...productPics, ...files]);
   };
   const handleDeleteSelectedFile = (pic) => {
-    const newArray = productPics.filter(productPic => !productPic.name.includes(pic.name))
-    setProductPics([...newArray])
-  }
+    const newArray = productPics.filter(
+      (productPic) => !productPic.name.includes(pic.name)
+    );
+    setProductPics([...newArray]);
+  };
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const [products, setProducts] = useState([]);
-  
+
   const onSubmit = (data) => {
-    data.productImage = [...productPics]   
+    data.productImage = [...productPics];
     const date = new Date();
-    const newProduct = {...data, id: date.getTime()}
-    data.productImage.length >= MIN_ALLOWED_FILES_PRODUCT ?
-    setProducts([...products, newProduct]) :
-      Swal.fire({
-        icon: "error",
-        title: "Ups...",
-        text: `Debes subir al menos ${MIN_ALLOWED_FILES_PRODUCT} imagen. Intenta nuevamente`,
-        confirmButtonText: "Entendido",
-        confirmButtonColor: "#E91E63",
-      });
-      return;
+    const newProduct = { ...data, id: date.getTime() };
+    data.productImage.length >= MIN_ALLOWED_FILES_PRODUCT
+      ? setProducts([...products, newProduct])
+      : Swal.fire({
+          icon: "error",
+          title: "Ups...",
+          text: `Debes subir al menos ${MIN_ALLOWED_FILES_PRODUCT} imagen. Intenta nuevamente`,
+          confirmButtonText: "Entendido",
+          confirmButtonColor: "#E91E63",
+        });
+        reset();
+        setProductPics([]);
+    return;
   };
 
   const onHideModal = () => setModalShow(false);
   const onEditProduct = (e) => {
-    console.log("editando", e)
-  }
+    console.log("editando", e);
+  };
   const onDeleteProduct = (selectedProduct) => {
-    const newProducts = products.filter(product => product?.id !== selectedProduct?.id);
+    const newProducts = products.filter(
+      (product) => product?.id !== selectedProduct?.id
+    );
     setProducts(newProducts);
-  }
+  };
 
   return (
-    <div className='container '>
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-2" id="formStep4">
-      <Stepper step={CURRENT_PAGE} />
+    <div className="container ">
+      <form onSubmit={handleSubmit(onSubmit)} className="mx-2" id="formStep4">
+        <Stepper step={CURRENT_PAGE} />
 
-      <h3 className="step-title-custom d-flex justify-content-center mt-2 mt-lg-0">Sube tus productos</h3>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <h3 className="step-title-custom d-flex justify-content-center mt-2 mt-lg-0">
+          Sube tus productos
+        </h3>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="form-group mb-3">
+                <label className="body-text d-flex">
+                  Nombre del articulo <p className="asterisk"> *</p>
+                </label>
+                <input
+                  {...register("name", {
+                    required: { value: true, message: "El campo es requerido" },
+                    minLength: { value: 2, message: "Mínimo 2 caracteres" },
+                    maxLength: { value: 10, message: "Máximo 10 caracteres" },
+                  })}
+                  aria-invalid={errors.name ? "true" : "false"}
+                  className="border-input-text rounded-5 p-2"
+                  aria-label="Default"
+                />
+                {errors.name && (
+                  <p className="text-danger m-0">{errors.name.message}</p>
+                )}
+              </div>
+              <div className="form-group mb-3">
+                <label className="body-text d-flex">
+                  Agrega una descripcion del articulo
+                  <p className="asterisk"> *</p>
+                </label>
+                <textarea
+                  className="border-input-text form-control p-2"
+                  placeholder="Agrega una descripcion del articulo"
+                  aria-label="With textarea"
+                  {...register("description", {
+                    required: { value: true, message: "El campo es requerido" },
+                    minLength: { value: 2, message: "Mínimo 2 caracteres" },
+                    maxLength: { value: 200, message: "Máximo 10 caracteres" },
+                  })}
+                  aria-invalid={errors.description ? "true" : "false"}
+                ></textarea>
+                {errors.description && (
+                  <p className="m-0 text-danger">
+                    {errors.description.message}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="form-group mb-3">
+                <label className="body-text d-flex">
+                  Cantidad en inventario <p className="asterisk"> *</p>
+                </label>
+                <input
+                  type="number"
+                  className="border-input-text rounded-5 p-2"
+                  {...register("stock", {
+                    required: {value:true, message: "El campo es requerido"},
+                    min: {value: 1, message: "El valor mínimo es 1"},
+                    max: {value: 9999, message: "El valor máximo es 9999"}
+                  })}
+                  aria-invalid={errors.stock ? "true" : "false"}
+                  aria-label="Default"
+                />
+                {errors.stock && (
+                  <p className="m-0 text-danger">
+                   {errors.stock.message}
+                  </p>
+                )}
+              </div>
+              <small className="body-text d-flex ">
+                Precio del articulo <p className="asterisk"> *</p>
+              </small>
+              <input
+                type="number"
+                step="0.01"
+                className="border-input-text rounded-5 p-2"
+                placeholder="$ "
+                {...register("price", {
+                  required: {value: true, message: "El campo es requerido"},
+                  min: {value: 0, message: "El precio debe de ser mayor a 0"}
+                })}
+                aria-invalid={errors.price ? "true" : "false"}
+                aria-label="Default"
+              />
+              {errors.price && (
+                <p className="m-0 text-danger">
+                  {errors.price.message}
+                </p>
+              )}
+            </div>
             <small className="body-text d-flex">
-              Nombre del articulo <p className="asterisk"> *</p>
+              Fotos del articulo <p className="asterisk"> *</p>
             </small>
-            <input
-              {...register("name", {
-                required: true,
-                minLength: 2,
-                maxLength: 10,
-              })}
-              aria-invalid={errors.name ? "true" : "false"}
-              className="border-input-text rounded-5 p-2"
-              aria-label="Default"
-            />
-            {errors.name?.type === "required" && (
-              <p className="error-message-custom text-danger">
-                * Campo requerido
-              </p>
-            )}
-            {errors.name?.type === "minLength" && (
-              <p className="error-message-custom text-danger">
-                El nombre es muy corto
-              </p>
-            )}
-            {errors.name?.type === "maxLength" && (
-              <p className="error-message-custom text-danger">
-                Excediste el total de caracteres
-              </p>
-            )}
-            <small className="body-text d-flex">
-              Agrega una descripcion del articulo <p className="asterisk"> *</p>
-            </small>
-            <textarea
-              className="border-input-text form-control p-2"
-              placeholder="Agrega una descripcion del articulo"
-              aria-label="With textarea"
-              {...register("description", {
-                required: true,
-                minLength: 2,
-                maxLength: 200,
-              })}
-              aria-invalid={errors.description ? "true" : "false"}
-            ></textarea>
-            {errors.description?.type === "required" && (
-              <p className="error-message-custom text-danger">
-                * Campo requerido
-              </p>
-            )}
-            {errors.description?.type === "minLength" && (
-              <p className="error-message-custom text-danger">
-                La descripcion es muy corta
-              </p>
-            )}
-            {errors.description?.type === "maxLength" && (
-              <p className="error-message-custom text-danger">
-                Excediste el total de caracteres
-              </p>
-            )}
-          </div>
-          <div className="col-md-6">
-            <small className="body-text d-flex">
-              Cantidad en inventario <p className="asterisk"> *</p>
-            </small>
-            <input
-              type="number"
-              className="border-input-text rounded-5 p-2"
-              {...register("stock", {
-                required: true,
-                min: 0,
-                max: 9999,
-                pattern: /[0-9]/i,
-              })}
-              aria-invalid={errors.stock ? "true" : "false"}
-              aria-label="Default"
-            />
-            {errors.stock?.type === "required" && (
-              <p className="error-message-custom text-danger">
-                * Campo requerido
-              </p>
-            )}
-            {errors.stock?.type === "min" && (
-              <p className="error-message-custom text-danger">
-                La cantidad no es correcta
-              </p>
-            )}
-            {errors.stock?.type === "max" && (
-              <p className="error-message-custom text-danger">
-                Excediste la cantidad máxima
-              </p>
-            )}
-            {errors.stock?.type === "pattern" && (
-              <p className="error-message-custom text-danger">
-                Solo se permiten números
-              </p>
-            )}
-            <small className="body-text d-flex ">
-              Precio del articulo <p className="asterisk"> *</p>
-            </small>
-            <input
-              type="number"
-              step="0.01"
-              className="border-input-text rounded-5 p-2"
-              placeholder="$ "
-              {...register("price", {
-                required: true,
-                min: 0,
-                max: 100000,
-                pattern: /[0-9]/i,
-              })}
-              aria-invalid={errors.price ? "true" : "false"}
-              aria-label="Default"
-            />
-            {errors.price?.type === "required" && (
-              <p className="error-message-custom text-danger">
-                * Campo requerido
-              </p>
-            )}
-            {errors.price?.type === "min" && (
-              <p className="error-message-custom text-danger">
-                La cantidad no es correcta
-              </p>
-            )}
-            {errors.price?.type === "max" && (
-              <p className="error-message-custom text-danger">
-                Excediste la cantidad máxima
-              </p>
-            )}
-            {errors.stock?.type === "pattern" && (
-              <p className="error-message-custom text-danger">
-                Solo se permiten números
-              </p>
-            )}
-          </div>
-          <small className="body-text d-flex">
-            Fotos del articulo <p className="asterisk"> *</p>
-          </small>
 
-          <div className="container">
-            <div className="row">
+            <div className="container">
+              <div className="row">
                 <div className="col-md-6 col-lg-4">
-                    {productPics?.length < MAX_ALLOWED_FILES_PRODUCT && (
-                        <FormFile
-                        fileType="image/*"
-                        controlId="form-4"
-                        multiple={true}
-                        onChange={handleProductPicsChange}
-                        />
-                    )}
+                  {productPics?.length < MAX_ALLOWED_FILES_PRODUCT && (
+                    <FormFile
+                      fileType="image/*"
+                      controlId="form-4"
+                      multiple={true}
+                      onChange={handleProductPicsChange}
+                    />
+                  )}
                 </div>
 
                 {productPics.map((pic) => (
-                    <div key={`${pic} ${pic.lastModified}`} className="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center d-inline-block position-relative">
-                        <img
-                            key={pic}
-                            className="image-uploaded-container "
-                            src={URL.createObjectURL(pic)}
-                            alt="Selected file"
-                        />
-                    <i className='close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1' onClick={() => handleDeleteSelectedFile(pic)}></i>
-                    </div>
+                  <div
+                    key={`${pic} ${pic.lastModified}`}
+                    className="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center d-inline-block position-relative"
+                  >
+                    <img
+                      key={pic}
+                      className="image-uploaded-container "
+                      src={URL.createObjectURL(pic)}
+                      alt="Selected file"
+                    />
+                    <i
+                      className="close-icon-custom fa fa-trash-o position-absolute top-0 end-0 m-1"
+                      onClick={() => handleDeleteSelectedFile(pic)}
+                    ></i>
+                  </div>
                 ))}
+              </div>
             </div>
           </div>
+          <div className="d-flex d-md-inline justify-content-center mt-4">
+            <button className="add-show-product rounded-5 mb-2">
+              Añadir este articulo
+            </button>
+          </div>
         </div>
-        <div className="d-flex d-md-inline justify-content-center mt-4">
-          <button  className="add-show-product rounded-5 mb-2">
-            Añadir este articulo
-          </button>
-        </div>
+      </form>
+      <div className="modal-container container px-xs-5">
+        <button
+          type="text"
+          className="add-show-product mb-5 rounded-5"
+          onClick={() => setModalShow(true)}
+        >
+          Ver mis productos
+        </button>
+        <MydModalWithGrid
+          show={modalShow}
+          onHide={onHideModal}
+          products={products}
+          onEditProduct={onEditProduct}
+          onDeleteProduct={onDeleteProduct}
+        />
       </div>
-    </form>
-    <div className="modal-container container px-xs-5">
-      <button
-        type="text"
-        className="add-show-product mb-5 rounded-5"
-        onClick={() => setModalShow(true)}>
-        Ver mis productos
-      </button>
-      <MydModalWithGrid
-        show={modalShow}
-        onHide={onHideModal}
-        products={products}
-        onEditProduct={onEditProduct}
-        onDeleteProduct={onDeleteProduct}
-      />
+      <div className="container controllers-buttons-custom d-block d-md-flex flex-nowrap justify-content-center mt-4">
+        <div className="order-md-2 text-center mt-0">
+          <ButtonAction
+            buttonClass="button-primary"
+            text="Siguiente"
+            type="button"
+          ></ButtonAction>
+        </div>
+        <ButtonAction
+            buttonClass="button-secondary mr-3"
+            text="Atras"
+            action="../register/photos"
+          ></ButtonAction>
+      </div>
     </div>
-    <div className="container controllers-buttons-custom d-block d-md-flex flex-nowrap justify-content-center mt-4">
-    <div className='order-md-2 text-center mt-0'>
-              <ButtonAction
-                buttonClass="button-primary"
-                text="Siguiente"
-              ></ButtonAction>
-            </div>
-        <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
-          Atras
-      </button>
-    </div>
-   </div>
   );
-  
 };
 export default Page4;

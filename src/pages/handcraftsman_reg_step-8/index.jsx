@@ -2,6 +2,7 @@ import "./styles.css"
 import React from 'react';
 import { Button } from 'reactstrap';
 import Step8image from "/assets/reg_step-8.svg"
+import ButtonAction from "../../components/buttonAction";
 
 
 const Step_8 = () => {
@@ -18,9 +19,7 @@ const Step_8 = () => {
       </p>
 
       <div>
-      <Button color="primary" style={{ backgroundColor: "#e91e63", outline: "none" , border: 'none'}}>
-          Regresar a Artetopia
-        </Button>
+      <ButtonAction text="Regresar a Artetopia" buttonClass="button-primary" type="button"></ButtonAction>
       </div>
       </div>
     </>

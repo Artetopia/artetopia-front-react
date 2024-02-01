@@ -129,22 +129,22 @@ const {
           <div className="form-container m-0 p-0">
             <div className="form-container">
             <div className="row">
-              {websitePics?.length > 0 && 
-                <div className="col-md-6 col-lg-8 d-flex justify-content-center justify-content-lg-start mb-3">
-                  <ComponentCarousel 
-                  files={websitePics}/> 
-                </div>
-              }
               <div className="col-md-6 col-lg-4 ">
                 {websitePics?.length < MAX_ALLOWED_FILES_WEBSITE && (
-                    <FormFile
-                    fileType="image/*"
-                    controlId="form-3"
-                    multiple={true}
-                    onChange={handleWebsitePicsChange}
-                    />
-                )}
+                  <FormFile
+                  fileType="image/*"
+                  controlId="form-3"
+                  multiple={true}
+                  onChange={handleWebsitePicsChange}
+                  />
+                  )}
               </div>
+                  {websitePics?.length > 0 && 
+                    <div className="col-md-6 col-lg-8 d-flex justify-content-center justify-content-lg-start mb-3">
+                      <ComponentCarousel 
+                      files={websitePics}/> 
+                    </div>
+                  }
               
                     
               {websitePics.map((pic) => (
@@ -166,11 +166,10 @@ const {
               <ButtonAction
                 buttonClass="button-primary"
                 text="Siguiente"
+                type="submit"
               ></ButtonAction>
             </div>
-            <button className="order-md-1 back-button-custom w-100 text-decoration-underline">
-              Atras
-            </button>
+           <ButtonAction buttonClass="btn button-secondary mr-3" text="Atras" action="../register/siteInfo"></ButtonAction>
           </div>
           </div>
           </div>

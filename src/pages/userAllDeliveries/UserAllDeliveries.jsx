@@ -19,8 +19,8 @@ const UserAllDeliveries = () => {
 
   return (
     <>
-    <div className="hello p-5">
-    <section className="d-flex justify-content-between p-3">
+    <div className="p-5">
+    <div className="d-flex justify-content-between p-3">
       <h3>Mis Pedidos</h3>
       <Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
       <DropdownToggle caret>
@@ -32,7 +32,7 @@ const UserAllDeliveries = () => {
         <DropdownItem onClick={() => handleSelect(9)}>9 months</DropdownItem>
       </DropdownMenu>
     </Dropdown>
-    </section>
+    </div>
     <div className="d-flex justify-content-center flex-wrap gap-5">
     <UserDeliveryCart></UserDeliveryCart>
     <UserDeliveryCart></UserDeliveryCart>

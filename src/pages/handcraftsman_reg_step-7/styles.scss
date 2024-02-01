@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
-* {
-    font-family: "Karla", sans-serif;
-}
-
 p {
     margin-top: 0px;
     // margin: 19px;
@@ -11,7 +7,7 @@ p {
 }
 
 .step-7_payments_button {
-    border: 1px solid #e91e63;
+    border: 1px solid $primaryColor;
     background-color: white;
     width: 320px;
     height: 34px;
@@ -56,8 +52,8 @@ p {
     }
     .step-7_payments_button_tablet {
         display: block;
-        border: 1px solid #e91e63;
-        color: #e91e63;
+        border: 1px solid $primaryColor;
+        color: $primaryColor;
         background-color: white;
         width: 150px;
         height: 42px;

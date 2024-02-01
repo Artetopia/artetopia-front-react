@@ -16,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "../register_navbar_buttons";
 import ButtonAction from "../buttonAction";
 
-const Navbare = ({ onToggleSidebar }) => {
+const Navbare = ({toggleSidebar}) => {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -39,7 +39,7 @@ const Navbare = ({ onToggleSidebar }) => {
   return (
     <ReactstrapNavbar dark expand="md" className="navbar">
       <NavbarBrand href="/" className="logo"></NavbarBrand>
-      <FontAwesomeIcon icon={faBars} className="menuIcon" onClick={onToggleSidebar}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faBars} className="menuIcon" onClick={toggleSidebar}></FontAwesomeIcon>
       <NavbarToggler onClick={toggleNavbar}>
         {isOpen ? (
           <span className="navbar_icon">&times;</span>
@@ -76,9 +76,7 @@ const Navbare = ({ onToggleSidebar }) => {
             </NavItem>
             <NavbarText className="text-light"></NavbarText>
           </div>
-          <div className="desktop_buttons">
-            <Button></Button>
-          </div>
+          <ButtonAction text="Iniciar sesión" action="/login" buttonClass="button-primary mr-2"></ButtonAction>
         </Nav>
       </Collapse>
       <div className="d-flex align-items-center dropdown">

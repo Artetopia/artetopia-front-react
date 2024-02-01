@@ -11,6 +11,7 @@
     text-decoration: none;
     &:hover {
         color: $textColorWhite;
+        border: 1px solid $primaryColor;
     }
   }
   
@@ -26,5 +27,23 @@
       text-decoration: none;
       &:hover {
         color: $primaryColor;
+        border: 1px solid $primaryColor;
     }
+  }
+
+  a.button-secondary {
+    background-color: #ffffff;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    padding: 8px 10px;
+    border-radius: 4px;
+    min-width: 150px;
+    max-width: 250px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+  }
   }

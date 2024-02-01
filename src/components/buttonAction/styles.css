@@ -12,6 +12,7 @@
 }
 .button-primary:hover {
   color: #ffffff;
+  border: 1px solid #e91e63;
 }
 
 .button-secondary {
@@ -27,4 +28,22 @@
 }
 .button-secondary:hover {
   color: #e91e63;
+  border: 1px solid #e91e63;
+}
+
+a.button-secondary {
+  background-color: #ffffff;
+  border: 1px solid #e91e63;
+  color: #e91e63;
+  padding: 8px 10px;
+  border-radius: 4px;
+  min-width: 150px;
+  max-width: 250px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a.button-secondary:hover {
+  color: #e91e63;
+  border: 1px solid #e91e63;
 }/*# sourceMappingURL=styles.css.map */

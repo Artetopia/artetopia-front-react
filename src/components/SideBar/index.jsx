@@ -134,7 +134,7 @@ const SideBar = ({ isOpen, toggle, userRole }) => {
             {itemsMenuFilter.map((data) => {
               return (
                 <>
-                  <NavItem className={`navLink my-1 p-2 ${pathname.includes(data.url) ? "active" : ""}`}>
+                  <NavItem key={data.id} className={`navLink my-1 p-2 ${pathname.includes(data.url) ? "active" : ""}`}>
                     <Link to={data.goesTo}>
                       <FontAwesomeIcon icon={data.icon} className="mr-2" />
                       {data.name}

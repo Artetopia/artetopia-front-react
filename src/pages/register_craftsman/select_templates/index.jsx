@@ -118,7 +118,7 @@ const SelectTemplate = () => {
           <ButtonAction
             buttonClass="button-secondary m-3"
             text="Atras"
-            type="button"
+            action="../register/products"
           ></ButtonAction>
           <ButtonAction
             buttonClass="button-primary m-3"
