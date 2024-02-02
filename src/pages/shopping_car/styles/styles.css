@@ -18,6 +18,8 @@
 
 .image_card {
   height: 5rem !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container_checkout {

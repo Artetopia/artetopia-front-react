@@ -24,7 +24,8 @@
 }
 .send-again:hover {
   color: #fc6a9b;
-  text-decoration-color: #fc6a9b;
+  -webkit-text-decoration-color: #fc6a9b;
+          text-decoration-color: #fc6a9b;
 }
 
 /* Chrome, Safari, Edge, Opera */

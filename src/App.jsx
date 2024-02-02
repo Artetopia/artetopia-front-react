@@ -31,6 +31,9 @@ import Checkout from "./pages/checkout";
 import Artesano from "./pages/Artesano";
 import CraftsmanProfile from "./pages/CraftsmanProfile";
 import DashboardTemplate from "./pages/Dashboard_craft_template";
+import UserProfile from "./pages/userProfile/UserProfile";
+import UserDeliveries from "./pages/userDeliveries/UserDeliveries";
+import UserAllDeliveries from "./pages/userAllDeliveries/UserAllDeliveries";
 
 function App() {
   const [sidebarIsOpen, setSidebarOpen] = useState(true);
@@ -73,6 +76,11 @@ function App() {
         <Route path="/register/payment" element={<Step_7/>}></Route>
         <Route path="/register/complete" element={<Step_8/>}></Route>
         <Route path="/craftman/*" element={<Artesano isSidebarOpen={sidebarIsOpen} toggleSidebar={toggleSidebar} />}></Route>
+        {/* Route for user profile */}
+        <Route path="/user/profile" element={<UserProfile />}></Route>
+        <Route path="/user/deliveries" element={<UserDeliveries/>}></Route>
+        <Route path="/user/allDeliveries" element={<UserAllDeliveries/>}></Route>
+        {/* <Route path="/user/all/deliveries" element={<UserAllDeliveries/>}></Route> */}
       </Routes>
       <footer>
         <Footer></Footer>
