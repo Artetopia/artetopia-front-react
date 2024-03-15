@@ -4,13 +4,27 @@ import loginImage from "/assets/login_image.png";
 import { Link } from "react-router-dom";
 import ButtonAction from "../../components/buttonAction";
 import { useForm } from "react-hook-form";
+import artetopiaAPI from "../../lib/artetopiaAPI";
+import { ToastContainer, Toast, ToastHeader, ToastBody } from "react-bootstrap";
 
 const LoginForm = () => {
+
+  const [error, setError] = useState("");
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const login = async (loginData) => {
+    try {
+      const data = await artetopiaAPI.login(loginData);
+      console.log(data);
+    } catch (error) {
+      setError(error.error);
+    }
+  }
 
   return (
     <>
@@ -18,7 +32,7 @@ const LoginForm = () => {
       <div className="row justify-content-center align-items-center">
         <div className="col-12 col-lg-6">
           <h1 className="login__title text-center">Bienvenido</h1>
-          <form noValidate onSubmit={handleSubmit((data) => console.log(data))}>
+          <form noValidate onSubmit={handleSubmit((data) => login(data))}>
             <div className="form-group">
               <label htmlFor="">Email</label>
               <input type="email" className="form-control input_primary" name="email" id="email"   {...register("email", {
@@ -31,7 +45,7 @@ const LoginForm = () => {
             </div>
             <div className="form-group mt-2">
               <label htmlFor="">Contraseña</label>
-              <input type="text" className="form-control input_primary" {...register("password", {
+              <input type="password" className="form-control input_primary" {...register("password", {
                 required: {value: true, message: "El campo es requerido"}
               })}/>
              {errors.password && (
